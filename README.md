@@ -1,6 +1,8 @@
 # python-api-documentation
 API documentation to create plugins for Ikomia platform in Python
 
+Consult the documentation [here](https://ikomia-dev.github.io/python-api-documentation/).
+
 The aim of this API is to offer a simple interface to add user-defined plugin into the Ikomia platform. A plugin is the Python implementation of an algorithm executed on image based data.
 
 The software gives the possibility to build custom image processing pipelines through the use of a graph-based editor called workflow. A workflow is thus composed of several connected tasks that get inputs, process it and gives results through outputs. When you create your own task (ie plugin), there are some few essential components to deal with:
