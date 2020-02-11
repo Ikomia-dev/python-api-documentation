@@ -120,8 +120,8 @@
             
   <div class="section" id="welcome-to-ikomia-s-documentation">
 <h1>Welcome to Ikomia’s documentation<a class="headerlink" href="#welcome-to-ikomia-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>The aim of this API is to offer a simple interface to add user-defined plugin into the Ikomia platform. A plugin is the Python implementation of an algorithm executed on image based data.</p>
-<p>The software gives the possibility to build custom image processing pipelines through the use of a graph-based editor called <strong>workflow</strong>. A workflow is thus composed of several connected tasks that get inputs, process it and gives results through outputs. When you create your own task (ie plugin), there are some few essential components to deal with:</p>
+<p>The aim of this API is to offer a simple interface to add user-defined plugin into the Ikomia platform. A plugin is a Python implementation of an algorithm executed on image based data.</p>
+<p>The software gives the possibility to build custom image processing pipelines through the use of a graph-based editor called <strong>workflow</strong>. A workflow is thus composed of several connected tasks that get inputs, process them and give results through outputs. When you create your own task (i.e. plugin), there are some few essential components to deal with:</p>
 <blockquote>
 <div><ul class="simple">
 <li><dl class="field-list simple">
@@ -144,25 +144,25 @@
 </li>
 <li><dl class="field-list simple">
 <dt class="field-odd">Inputs</dt>
-<dd class="field-odd"><p>input data the task requires</p>
+<dd class="field-odd"><p>required input data</p>
 </dd>
 </dl>
 </li>
 <li><dl class="field-list simple">
 <dt class="field-odd">Outputs</dt>
-<dd class="field-odd"><p>output data the task produces</p>
+<dd class="field-odd"><p>produced output data</p>
 </dd>
 </dl>
 </li>
 <li><dl class="field-list simple">
 <dt class="field-odd">Widget</dt>
-<dd class="field-odd"><p>allows user interaction (to adjust parameters for example)</p>
+<dd class="field-odd"><p>user interaction interface (to adjust parameters for example)</p>
 </dd>
 </dl>
 </li>
 </ul>
 </div></blockquote>
-<p>Each of this components is implemented by a specific class. We use inheritance and factory design pattern to build the interface between Ikomia software and plugins. Once implemented, you will be able to handle your plugin like all others internal process. It means that you will be able to add it to a workflow and visualize your outputs directly.</p>
+<p>Each of these components is implemented by a specific class. We use inheritance and factory design pattern to build the interface between Ikomia software and plugins. Once implemented, you will be able to handle your plugin like all others internal processes. It means that you will be able to add it to a workflow and visualize your outputs directly.</p>
 <p>The API is composed of three main modules:</p>
 <blockquote>
 <div><ul class="simple">
