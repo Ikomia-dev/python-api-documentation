@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>PyCore.CProtocolTaskIO &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="PyCore.CProtocolTaskParam" href="PyCore.CProtocolTaskParam.html" />
+    <link rel="prev" title="PyCore.CProtocolTask" href="PyCore.CProtocolTask.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Image processing plugin (OpenCV)</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../PyCore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PyDataProcess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PyUtils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QtConversion.html">QtConversion</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../PyCore.html">PyCore</a><ul>
+      <li>Previous: <a href="PyCore.CProtocolTask.html" title="previous chapter">PyCore.CProtocolTask</a></li>
+      <li>Next: <a href="PyCore.CProtocolTaskParam.html" title="next chapter">PyCore.CProtocolTaskParam</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="PyCore.CProtocolTask.html" title="Previous document">PyCore.CProtocolTask</a>
+        </li>
+        <li>
+          <a href="PyCore.CProtocolTaskParam.html" title="Next document">PyCore.CProtocolTaskParam</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="pycore-cprotocoltaskio">
+<h1>PyCore.CProtocolTaskIO<a class="headerlink" href="#pycore-cprotocoltaskio" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="PyCore.CProtocolTaskIO">
+<em class="property">class </em><code class="sig-prename descclassname">PyCore.</code><code class="sig-name descname">CProtocolTaskIO</code><a class="headerlink" href="#PyCore.CProtocolTaskIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for the management of task inputs and outputs. Each task can have as many inputs and outputs, and each must be derived from this class.</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskIO.__init__" title="PyCore.CProtocolTaskIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>Default constructor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskIO.clearData" title="PyCore.CProtocolTaskIO.clearData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code></a>(self)</p></td>
+<td><p>Clear the data stored in the object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskIO.copyStaticData" title="PyCore.CProtocolTaskIO.copyStaticData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copyStaticData</span></code></a>(self, io)</p></td>
+<td><p>Copy the static data from the given input or ouput.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskIO.getUnitElementCount" title="PyCore.CProtocolTaskIO.getUnitElementCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnitElementCount</span></code></a>(self)</p></td>
+<td><p>Get the number of unit element in terms of processing scheme.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskIO.isDataAvailable" title="PyCore.CProtocolTaskIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
+<td><p>Check whether input or output objects contain valid data.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataType</span></code></p></td>
+<td><p>I/O data type</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimCount</span></code></p></td>
+<td><p>Number of dimensions</p></td>
+</tr>
+</tbody>
+</table>
+<p>See <a class="reference internal" href="PyCore.TaskIOData.html#PyCore.TaskIOData" title="PyCore.TaskIOData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskIOData</span></code></a> for available data types.</p>
+<dl class="method">
+<dt id="PyCore.CProtocolTaskIO.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CProtocolTaskIO.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor</p>
+<dl>
+<dt>__init__( (object)arg1, (TaskIOData)arg2) -&gt; None :</dt><dd><p>Constructor with parameters</p>
+<p>arg1 (<a class="reference internal" href="PyCore.TaskIOData.html#PyCore.TaskIOData" title="PyCore.TaskIOData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskIOData</span></code></a>): Data type</p>
+</dd>
+<dt>__init__( (object)arg1, (CProtocolTaskIO)arg2) -&gt; None :</dt><dd><p>Copy constructor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CProtocolTaskIO.clearData">
+<code class="sig-name descname">clearData</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CProtocolTaskIO.clearData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the data stored in the object. Should be overriden for custom input or output.</p>
+<p>clearData( (CProtocolTaskIO)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CProtocolTaskIO.copyStaticData">
+<code class="sig-name descname">copyStaticData</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em>, <em class="sig-param">(CProtocolTaskIO)io</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CProtocolTaskIO.copyStaticData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the static data from the given input or ouput. Static data are those which are not generated at runtime. Should be overriden for custom input or output.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>io (<a class="reference internal" href="#PyCore.CProtocolTaskIO" title="PyCore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a>): input or ouput instance from which data is copied.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>copyStaticData( (CProtocolTaskIO)self, (CProtocolTaskIO)io) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CProtocolTaskIO.getUnitElementCount">
+<code class="sig-name descname">getUnitElementCount</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#PyCore.CProtocolTaskIO.getUnitElementCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of unit element in terms of processing scheme. This value is used to define the number of progress steps for progress bar component. For an image, the count is 1. For Z-stack volume, the count is the number of Z levels. Should be overriden for custom input or output.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>int: number of unit element to process.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getUnitElementCount( (CProtocolTaskIO)self) -&gt; int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CProtocolTaskIO.isDataAvailable">
+<code class="sig-name descname">isDataAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#PyCore.CProtocolTaskIO.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether input or output objects contain valid data. For inputs, it is the case when the previous process contains valid output data. For outputs, it is the case when the associated task had been computed at least once. Should be overriden for custom input or output.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True if data is available, False otherwise.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>isDataAvailable( (CProtocolTaskIO)self) -&gt; bool</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="PyCore.CProtocolTask.html" title="Previous document">PyCore.CProtocolTask</a>
+        </li>
+        <li>
+          <a href="PyCore.CProtocolTaskParam.html" title="Next document">PyCore.CProtocolTaskParam</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummaryv/PyCore.CProtocolTaskIO.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

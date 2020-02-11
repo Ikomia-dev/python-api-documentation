@@ -1,0 +1,66 @@
+PyDataProcess.CImageProcess2d
+=============================
+
+.. currentmodule:: PyDataProcess
+
+.. autoclass:: CImageProcess2d
+   
+   .. rubric:: Methods
+   .. autosummary::
+      ~CImageProcess2d.__init__
+      ~CImageProcess2d.addInput
+      ~CImageProcess2d.addOutput
+      ~CImageProcess2d.applyGraphicsMask
+      ~CImageProcess2d.applyGraphicsMaskToBinary
+      ~CImageProcess2d.beginTaskRun
+      ~CImageProcess2d.createGraphicsMask
+      ~CImageProcess2d.emitGraphicsContextChanged
+      ~CImageProcess2d.emitStepProgress
+      ~CImageProcess2d.endTaskRun
+      ~CImageProcess2d.executeActions
+      ~CImageProcess2d.forwardInputImage
+      ~CImageProcess2d.getElapsedTime
+      ~CImageProcess2d.getGraphicsMask
+      ~CImageProcess2d.getInput
+      ~CImageProcess2d.getInputCount
+      ~CImageProcess2d.getInputDataType
+      ~CImageProcess2d.getInputs
+      ~CImageProcess2d.getOutput
+      ~CImageProcess2d.getOutputCount
+      ~CImageProcess2d.getOutputDataType
+      ~CImageProcess2d.getOutputs
+      ~CImageProcess2d.getParam
+      ~CImageProcess2d.getProgressSteps
+      ~CImageProcess2d.globalInputChanged
+      ~CImageProcess2d.graphicsChanged
+      ~CImageProcess2d.isMaskAvailable
+      ~CImageProcess2d.parametersModified
+      ~CImageProcess2d.run
+      ~CImageProcess2d.setActionFlag
+      ~CImageProcess2d.setActive
+      ~CImageProcess2d.setInput
+      ~CImageProcess2d.setInputDataType
+      ~CImageProcess2d.setInputs
+      ~CImageProcess2d.setOutput
+      ~CImageProcess2d.setOutputColorMap
+      ~CImageProcess2d.setOutputDataType
+      ~CImageProcess2d.setOutputs
+      ~CImageProcess2d.setParam
+      ~CImageProcess2d.updateStaticOutputs
+   
+   
+   .. rubric:: Attributes
+   .. autosummary::
+      ~CImageProcess2d.name
+      ~CImageProcess2d.type
+   
+
+   .. automethod:: __init__
+   .. automethod:: applyGraphicsMask
+   .. automethod:: applyGraphicsMaskToBinary
+   .. automethod:: createGraphicsMask
+   .. automethod:: forwardInputImage
+   .. automethod:: getGraphicsMask
+   .. automethod:: isMaskAvailable
+   .. automethod:: setOutputColorMap
+

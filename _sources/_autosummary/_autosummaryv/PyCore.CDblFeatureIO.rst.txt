@@ -1,0 +1,37 @@
+PyCore.CDblFeatureIO
+====================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: CDblFeatureIO
+
+      .. rubric:: Methods
+      .. autosummary::
+         ~CDblFeatureIO.__init__
+         ~CDblFeatureIO.addValueList
+         ~CDblFeatureIO.clearData
+         ~CDblFeatureIO.copyStaticData
+         ~CDblFeatureIO.getAllLabelList
+         ~CDblFeatureIO.getAllValueList
+         ~CDblFeatureIO.getOutputType
+         ~CDblFeatureIO.getPlotType
+         ~CDblFeatureIO.getUnitElementCount
+         ~CDblFeatureIO.getValueList
+         ~CDblFeatureIO.isDataAvailable
+         ~CDblFeatureIO.setOutputType
+         ~CDblFeatureIO.setPlotType
+   
+      .. rubric:: Attributes
+      .. autosummary::
+         ~CDblFeatureIO.dataType
+         ~CDblFeatureIO.dimCount
+
+      .. automethod:: __init__
+      .. automethod:: addValueList
+      .. automethod:: getAllLabelList
+      .. automethod:: getAllValueList
+      .. automethod:: getOutputType
+      .. automethod:: getPlotType
+      .. automethod:: getValueList
+      .. automethod:: setOutputType
+      .. automethod:: setPlotType

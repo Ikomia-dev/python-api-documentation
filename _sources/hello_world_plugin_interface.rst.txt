@@ -1,0 +1,31 @@
+Plugin interface
+==================
+
+Code example for Hello World plugin interface.
+
+.. code-block:: python
+
+    import sys
+    import numpy
+    import PyCore
+    import PyDataProcess
+    import HelloWorld_process as processMod
+    import HelloWorld_widget as widgetMod
+
+
+    # --------------------
+    # - Interface class to integrate the process with Ikomia application
+    # - Inherits PyDataProcess.CPluginProcessInterface from Ikomia API
+    # --------------------
+    class HelloWorld(PyDataProcess.CPluginProcessInterface):
+
+        def __init__(self):
+            PyDataProcess.CPluginProcessInterface.__init__(self)
+
+        def getProcessFactory(self):
+            # Instantiate process object
+            return processMod.HelloWorldProcessFactory()
+
+        def getWidgetFactory(self):
+            # Instantiate associated widget object
+            return widgetMod.HelloWorldWidgetFactory()

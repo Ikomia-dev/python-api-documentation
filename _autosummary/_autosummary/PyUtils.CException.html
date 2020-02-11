@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>PyUtils.CException &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="PyUtils.CMemoryInfo" href="PyUtils.CMemoryInfo.html" />
+    <link rel="prev" title="PyUtils" href="../PyUtils.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Image processing plugin (OpenCV)</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../PyCore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PyDataProcess.html">PyDataProcess</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../PyUtils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QtConversion.html">QtConversion</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../PyUtils.html">PyUtils</a><ul>
+      <li>Previous: <a href="../PyUtils.html" title="previous chapter">PyUtils</a></li>
+      <li>Next: <a href="PyUtils.CMemoryInfo.html" title="next chapter">PyUtils.CMemoryInfo</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="../PyUtils.html" title="Previous document">PyUtils</a>
+        </li>
+        <li>
+          <a href="PyUtils.CMemoryInfo.html" title="Next document">PyUtils.CMemoryInfo</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="pyutils-cexception">
+<h1>PyUtils.CException<a class="headerlink" href="#pyutils-cexception" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="PyUtils.CException">
+<em class="property">class </em><code class="sig-prename descclassname">PyUtils.</code><code class="sig-name descname">CException</code><a class="headerlink" href="#PyUtils.CException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for all Ikomia exceptions.</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyUtils.CException.__init__" title="PyUtils.CException.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>Default constructor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyUtils.CException.message" title="PyUtils.CException.message"><code class="xref py py-obj docutils literal notranslate"><span class="pre">message</span></code></a>(self)</p></td>
+<td><p>Get formatted exception message.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="PyUtils.CException.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyUtils.CException.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor</p>
+<dl>
+<dt>__init__( (object)arg1, (int)arg2, (str)arg3, (str)arg4, (str)arg5, (int)arg6) -&gt; None :</dt><dd><p>Constructor with parameters</p>
+<p>arg1 (int): Exception code</p>
+<p>arg2 (str): Exception message</p>
+<p>arg3 (str): Function from where exception is thrown</p>
+<p>arg4 (str): File from where exception is thrown</p>
+<p>arg5 (int): Line in source file from where exception is thrown</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyUtils.CException.message">
+<code class="sig-name descname">message</code><span class="sig-paren">(</span><em class="sig-param">(CException)self</em><span class="sig-paren">)</span> &#x2192; str :<a class="headerlink" href="#PyUtils.CException.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get formatted exception message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Exception message</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="../PyUtils.html" title="Previous document">PyUtils</a>
+        </li>
+        <li>
+          <a href="PyUtils.CMemoryInfo.html" title="Next document">PyUtils.CMemoryInfo</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummary/PyUtils.CException.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

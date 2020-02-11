@@ -1,0 +1,18 @@
+PyCore.CProtocolTaskParam
+=========================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: CProtocolTaskParam
+
+      .. rubric:: Methods
+      .. autosummary::
+            ~CProtocolTaskParam.__init__
+            ~CProtocolTaskParam.getHashValue
+            ~CProtocolTaskParam.getParam
+            ~CProtocolTaskParam.setParam
+
+      .. automethod:: __init__
+      .. automethod:: getHashValue
+      .. automethod:: getParam
+      .. automethod:: setParam

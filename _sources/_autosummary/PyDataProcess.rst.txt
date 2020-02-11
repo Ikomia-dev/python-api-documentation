@@ -1,0 +1,20 @@
+PyDataProcess
+=============
+
+.. automodule:: PyDataProcess
+
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree: _autosummary
+   
+      CImageProcess2d
+      CInteractiveImageProcess2d
+      CPluginProcessInterface
+      CProcessFactory
+      CProcessInfo
+      CVideoProcess
+      CVideoProcessOF
+      CVideoProcessTracking
+      CWidgetFactory
+      Language

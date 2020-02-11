@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Python environment &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Hello world plugin" href="hello_world_plugin.html" />
+    <link rel="prev" title="Welcome to Ikomia’s documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Image processing plugin (OpenCV)</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Ikomia’s documentation</a></li>
+      <li>Next: <a href="hello_world_plugin.html" title="next chapter">Hello world plugin</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">Welcome to Ikomia’s documentation</a>
+        </li>
+        <li>
+          <a href="hello_world_plugin.html" title="Next document">Hello world plugin</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="python-environment">
+<h1>Python environment<a class="headerlink" href="#python-environment" title="Permalink to this headline">¶</a></h1>
+<p>Ikomia software comes with its own Python environment,
+completely independant of the one you may install system-wide.
+In case of multi-users machine, Ikomia installs one Python environment per user.
+Initially, only required packages are already installed.
+The Python environment configuration may vary among your operating system:</p>
+<p><strong>Windows 10</strong></p>
+<ul class="simple">
+<li><p>Version: <em>3.7</em></p></li>
+<li><p>Path: <em>c:\Users\{username}IkomiaPython</em></p></li>
+<li><p>Installed packages: <em>pip, numpy, requests, PyQt5=5.11.2, opencv=4.2.0</em></p></li>
+</ul>
+<p><strong>Linux</strong></p>
+<ul class="simple">
+<li><p>Version: <em>3.8</em></p></li>
+<li><p>Path: <em>~/Ikomia/Python</em></p></li>
+<li><p>Installed packages: <em>pip, numpy, requests, PyQt5=5.11.2, sip, opencv=4.2.0</em></p></li>
+</ul>
+<p><strong>Mac OS X</strong></p>
+<ul class="simple">
+<li><p>Version: <em>3.7</em></p></li>
+<li><p>Path: <em>~/Ikomia/Python</em></p></li>
+<li><p>Installed packages: <em>pip, numpy, requests, PyQt5=5.11.2, sip, opencv=4.2.0</em></p></li>
+</ul>
+<p><strong>Note</strong>: to ensure interoperability with Qt, the PyQt5 package <strong>must not</strong> be updated with pip or other package manager.</p>
+<div class="section" id="package-management">
+<h2>Package management<a class="headerlink" href="#package-management" title="Permalink to this headline">¶</a></h2>
+<p><strong>pip</strong></p>
+<p>As it is a standalone Python environment, you can manage your packages with pip and all its features.</p>
+<p>Windows</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> c:<span class="se">\U</span>sers<span class="se">\{</span>username<span class="o">}</span><span class="se">\I</span>komia<span class="se">\P</span>ython
+python.exe -m pip install <span class="o">{</span>your_package<span class="o">}</span>
+</pre></div>
+</div>
+<p>Linux and Mac OS X</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Ikomia/Python
+python -m pip install <span class="o">{</span>your_package<span class="o">}</span>
+</pre></div>
+</div>
+<p><strong>Ikomia Plugin Manager</strong></p>
+<p>Ikomia includes a specific module to manage your packages from the GUI:</p>
+<ul class="simple">
+<li><p>The left table shows the list of all your plugins (a plugin in red means a missing dependency).</p></li>
+<li><p>The right table shows the list of the selected plugin dependencies (name, version and last version available).</p></li>
+</ul>
+<p>Then you can select a package and make the following actions:</p>
+<ul class="simple">
+<li><p>Install missing package.</p></li>
+<li><p>Update package to the latest version.</p></li>
+</ul>
+<img alt="_images/plugin_manager.jpg" src="_images/plugin_manager.jpg" />
+</div>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">Welcome to Ikomia’s documentation</a>
+        </li>
+        <li>
+          <a href="hello_world_plugin.html" title="Next document">Hello world plugin</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="_sources/python_env.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

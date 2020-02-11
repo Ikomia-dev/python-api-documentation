@@ -1,0 +1,32 @@
+PyCore.TaskIOData
+=================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: TaskIOData
+   
+   .. rubric:: Methods
+   .. autosummary::   
+
+      ~TaskIOData.__init__
+      ~TaskIOData.as_integer_ratio
+      ~TaskIOData.bit_length
+      ~TaskIOData.conjugate
+      ~TaskIOData.from_bytes
+      ~TaskIOData.to_bytes
+   
+
+   .. rubric:: Attributes
+   .. autosummary::   
+
+      ~TaskIOData.DESCRIPTORS
+      ~TaskIOData.GRAPHICS
+      ~TaskIOData.IMAGE
+      ~TaskIOData.IMAGE_BINARY
+      ~TaskIOData.IMAGE_LABEL
+      ~TaskIOData.NONE
+      ~TaskIOData.NUMERIC_VALUES
+      ~TaskIOData.VOLUME
+      ~TaskIOData.VOLUME_BINARY
+      ~TaskIOData.VOLUME_LABEL
+      ~TaskIOData.WIDGET

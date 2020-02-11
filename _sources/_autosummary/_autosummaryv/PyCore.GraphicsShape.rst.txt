@@ -1,0 +1,29 @@
+PyCore.GraphicsShape
+====================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: GraphicsShape
+   
+   .. rubric:: Methods
+   .. autosummary::
+      ~GraphicsShape.__init__
+      ~GraphicsShape.as_integer_ratio
+      ~GraphicsShape.bit_length
+      ~GraphicsShape.conjugate
+      ~GraphicsShape.from_bytes
+      ~GraphicsShape.to_bytes
+   
+
+   .. rubric:: Attributes
+   .. autosummary::
+      ~GraphicsShape.ELLIPSE
+      ~GraphicsShape.FREEHAND_POLYGON
+      ~GraphicsShape.FREEHAND_POLYLINE
+      ~GraphicsShape.LINE
+      ~GraphicsShape.POINT
+      ~GraphicsShape.POLYGON
+      ~GraphicsShape.POLYLINE
+      ~GraphicsShape.RECTANGLE
+      ~GraphicsShape.SELECTION
+      ~GraphicsShape.TEXT

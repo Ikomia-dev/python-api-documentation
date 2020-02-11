@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Plugin interface &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Process" href="opencv_plugin_process.html" />
+    <link rel="prev" title="Widget" href="hello_world_plugin_widget.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Image processing plugin (OpenCV)</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="examples.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="examples.html#hello-world-plugin">Hello World plugin</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="examples.html#opencv-plugin">OpenCV plugin</a></li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="examples.html">Examples</a><ul>
+      <li>Previous: <a href="hello_world_plugin_widget.html" title="previous chapter">Widget</a></li>
+      <li>Next: <a href="opencv_plugin_process.html" title="next chapter">Process</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="hello_world_plugin_widget.html" title="Previous document">Widget</a>
+        </li>
+        <li>
+          <a href="opencv_plugin_process.html" title="Next document">Process</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="plugin-interface">
+<h1>Plugin interface<a class="headerlink" href="#plugin-interface" title="Permalink to this headline">¶</a></h1>
+<p>Code example for OCVBasics plugin interface.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PyCore</span>
+<span class="kn">import</span> <span class="nn">PyDataProcess</span>
+<span class="kn">import</span> <span class="nn">OCVBasics_process</span> <span class="kn">as</span> <span class="nn">processMod</span>
+<span class="kn">import</span> <span class="nn">OCVBasics_widget</span> <span class="kn">as</span> <span class="nn">widgetMod</span>
+
+
+<span class="c1"># --------------------</span>
+<span class="c1"># - Interface class to integrate the process with Ikomia application</span>
+<span class="c1"># - Inherits PyDataProcess.CPluginProcessInterface from Ikomia API</span>
+<span class="c1"># --------------------</span>
+<span class="k">class</span> <span class="nc">OCVBasics</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CPluginProcessInterface</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CPluginProcessInterface</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">getProcessFactory</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Instantiate process object</span>
+        <span class="k">return</span> <span class="n">processMod</span><span class="o">.</span><span class="n">OCVBasicsProcessFactory</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">getWidgetFactory</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Instantiate associated widget object</span>
+        <span class="k">return</span> <span class="n">widgetMod</span><span class="o">.</span><span class="n">OCVBasicsWidgetFactory</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="hello_world_plugin_widget.html" title="Previous document">Widget</a>
+        </li>
+        <li>
+          <a href="opencv_plugin_process.html" title="Next document">Process</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="_sources/opencv_plugin_interface.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

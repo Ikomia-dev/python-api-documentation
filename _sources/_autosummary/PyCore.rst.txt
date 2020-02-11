@@ -1,0 +1,25 @@
+PyCore
+======
+
+.. automodule:: PyCore
+
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree: _autosummaryv
+   
+      ActionFlag
+      CDblFeatureIO
+      CImageProcessIO
+      CProtocolTask
+      CProtocolTaskIO
+      CProtocolTaskParam
+      CProtocolTaskWidget
+      CVideoProcessIO
+      CWidgetOutput
+      GraphicsShape
+      NumericOutputType
+      ParamMap
+      PlotType
+      TaskIOData
+      TaskType

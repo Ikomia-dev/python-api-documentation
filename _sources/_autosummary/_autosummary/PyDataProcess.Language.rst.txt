@@ -1,0 +1,25 @@
+PyDataProcess.Language
+======================
+
+.. currentmodule:: PyDataProcess
+
+.. autoclass:: Language
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Language.__init__
+      ~Language.as_integer_ratio
+      ~Language.bit_length
+      ~Language.conjugate
+      ~Language.from_bytes
+      ~Language.to_bytes
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Language.CPP
+      ~Language.PYTHON

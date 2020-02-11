@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to Ikomia’s documentation &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python environment" href="python_env.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="#">
+    <img class="logo" src="_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Image processing plugin (OpenCV)</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="python_env.html" title="next chapter">Python environment</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          <a href="python_env.html" title="Next document">Python environment</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-ikomia-s-documentation">
+<h1>Welcome to Ikomia’s documentation<a class="headerlink" href="#welcome-to-ikomia-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>The aim of this API is to offer a simple interface to add user-defined plugin into the Ikomia platform. A plugin is the Python implementation of an algorithm executed on image based data.</p>
+<p>The software gives the possibility to build custom image processing pipelines through the use of a graph-based editor called <strong>workflow</strong>. A workflow is thus composed of several connected tasks that get inputs, process it and gives results through outputs. When you create your own task (ie plugin), there are some few essential components to deal with:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="field-list simple">
+<dt class="field-odd">Task</dt>
+<dd class="field-odd"><p>algorithm implementation</p>
+</dd>
+</dl>
+</li>
+<li><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p>to setup the algorithm</p>
+</dd>
+</dl>
+</li>
+<li><dl class="field-list simple">
+<dt class="field-odd">Metadata</dt>
+<dd class="field-odd"><p>information attached to the task (description, icon, authors, articles…)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="field-list simple">
+<dt class="field-odd">Inputs</dt>
+<dd class="field-odd"><p>input data the task requires</p>
+</dd>
+</dl>
+</li>
+<li><dl class="field-list simple">
+<dt class="field-odd">Outputs</dt>
+<dd class="field-odd"><p>output data the task produces</p>
+</dd>
+</dl>
+</li>
+<li><dl class="field-list simple">
+<dt class="field-odd">Widget</dt>
+<dd class="field-odd"><p>allows user interaction (to adjust parameters for example)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>Each of this components is implemented by a specific class. We use inheritance and factory design pattern to build the interface between Ikomia software and plugins. Once implemented, you will be able to handle your plugin like all others internal process. It means that you will be able to add it to a workflow and visualize your outputs directly.</p>
+<p>The API is composed of three main modules:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="_autosummary/PyUtils.html#module-PyUtils" title="PyUtils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyUtils</span></code></a>: module offering various helper tools</p></li>
+<li><p><a class="reference internal" href="_autosummary/PyCore.html#module-PyCore" title="PyCore"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyCore</span></code></a>: module offering essential base classes to implement input/ouput, task, parameters and widget.</p></li>
+<li><p><a class="reference internal" href="_autosummary/PyDataProcess.html#module-PyDataProcess" title="PyDataProcess"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyDataProcess</span></code></a>: module offering the main interface structure to plug user-defined task and several class specializations to facilitate common process implementation.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>This section will help you understand the API structure and will guide you through the creation of your first plugins.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Image processing plugin (OpenCV)</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/PyCore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/PyDataProcess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/PyUtils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/QtConversion.html">QtConversion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#hello-world-plugin">Hello World plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#opencv-plugin">OpenCV plugin</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          <a href="python_env.html" title="Next document">Python environment</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

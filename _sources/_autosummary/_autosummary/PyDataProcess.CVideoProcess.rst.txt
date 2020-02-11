@@ -1,0 +1,66 @@
+PyDataProcess.CVideoProcess
+===========================
+
+.. currentmodule:: PyDataProcess
+
+.. autoclass:: CVideoProcess
+   
+   .. rubric:: Methods
+   .. autosummary::   
+      ~CVideoProcess.__init__
+      ~CVideoProcess.addInput
+      ~CVideoProcess.addOutput
+      ~CVideoProcess.applyGraphicsMask
+      ~CVideoProcess.applyGraphicsMaskToBinary
+      ~CVideoProcess.beginTaskRun
+      ~CVideoProcess.createGraphicsMask
+      ~CVideoProcess.emitGraphicsContextChanged
+      ~CVideoProcess.emitStepProgress
+      ~CVideoProcess.endTaskRun
+      ~CVideoProcess.executeActions
+      ~CVideoProcess.forwardInputImage
+      ~CVideoProcess.getElapsedTime
+      ~CVideoProcess.getGraphicsMask
+      ~CVideoProcess.getInput
+      ~CVideoProcess.getInputCount
+      ~CVideoProcess.getInputDataType
+      ~CVideoProcess.getInputs
+      ~CVideoProcess.getOutput
+      ~CVideoProcess.getOutputCount
+      ~CVideoProcess.getOutputDataType
+      ~CVideoProcess.getOutputs
+      ~CVideoProcess.getParam
+      ~CVideoProcess.getProgressSteps
+      ~CVideoProcess.globalInputChanged
+      ~CVideoProcess.graphicsChanged
+      ~CVideoProcess.isMaskAvailable
+      ~CVideoProcess.notifyVideoEnd
+      ~CVideoProcess.notifyVideoStart
+      ~CVideoProcess.parametersModified
+      ~CVideoProcess.run
+      ~CVideoProcess.setActionFlag
+      ~CVideoProcess.setActive
+      ~CVideoProcess.setInput
+      ~CVideoProcess.setInputDataType
+      ~CVideoProcess.setInputs
+      ~CVideoProcess.setOutput
+      ~CVideoProcess.setOutputColorMap
+      ~CVideoProcess.setOutputDataType
+      ~CVideoProcess.setOutputs
+      ~CVideoProcess.setParam
+      ~CVideoProcess.updateStaticOutputs
+   
+
+   .. rubric:: Attributes
+   .. autosummary::
+      ~CVideoProcess.name
+      ~CVideoProcess.type
+
+   
+   .. automethod:: __init__
+   .. automethod:: beginTaskRun
+   .. automethod:: notifyVideoEnd
+   .. automethod:: notifyVideoStart
+   .. automethod:: updateStaticOutputs
+   
+   

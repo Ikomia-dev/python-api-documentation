@@ -1,0 +1,23 @@
+Examples
+========
+
+Hello World plugin
+------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    hello_world_plugin_interface
+    hello_world_plugin_process
+    hello_world_plugin_widget
+
+
+OpenCV plugin
+------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    opencv_plugin_interface
+    opencv_plugin_process
+    opencv_plugin_widget

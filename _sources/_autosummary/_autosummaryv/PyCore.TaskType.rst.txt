@@ -1,0 +1,26 @@
+PyCore.TaskType
+===============
+
+.. currentmodule:: PyCore
+
+.. autoclass:: TaskType
+
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TaskType.__init__
+      ~TaskType.as_integer_ratio
+      ~TaskType.bit_length
+      ~TaskType.conjugate
+      ~TaskType.from_bytes
+      ~TaskType.to_bytes
+
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskType.GENERIC
+      ~TaskType.IMAGE_PROCESS_2D
+      ~TaskType.IMAGE_PROCESS_3D

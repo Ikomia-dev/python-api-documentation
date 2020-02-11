@@ -1,0 +1,667 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>PyCore.CVideoProcessIO &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="PyCore.CWidgetOutput" href="PyCore.CWidgetOutput.html" />
+    <link rel="prev" title="PyCore.CProtocolTaskWidget" href="PyCore.CProtocolTaskWidget.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Image processing plugin (OpenCV)</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../PyCore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PyDataProcess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PyUtils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QtConversion.html">QtConversion</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../PyCore.html">PyCore</a><ul>
+      <li>Previous: <a href="PyCore.CProtocolTaskWidget.html" title="previous chapter">PyCore.CProtocolTaskWidget</a></li>
+      <li>Next: <a href="PyCore.CWidgetOutput.html" title="next chapter">PyCore.CWidgetOutput</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="PyCore.CProtocolTaskWidget.html" title="Previous document">PyCore.CProtocolTaskWidget</a>
+        </li>
+        <li>
+          <a href="PyCore.CWidgetOutput.html" title="Next document">PyCore.CWidgetOutput</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="pycore-cvideoprocessio">
+<h1>PyCore.CVideoProcessIO<a class="headerlink" href="#pycore-cvideoprocessio" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="PyCore.CVideoProcessIO">
+<em class="property">class </em><code class="sig-prename descclassname">PyCore.</code><code class="sig-name descname">CVideoProcessIO</code><a class="headerlink" href="#PyCore.CVideoProcessIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define an input or output for a task dedicated to video management. This class is designed to handle video and instance can be added as input or output to a <a class="reference internal" href="PyCore.CProtocolTask.html#PyCore.CProtocolTask" title="PyCore.CProtocolTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTask</span></code></a> or derived object. It is the base class to define input or output of a video processing task. Several video output type can be defined according to the nature of the algorithm:</p>
+<ul class="simple">
+<li><p>binary video</p></li>
+<li><p>labelled video (graylevel connected components)</p></li>
+<li><p>standard video</p></li>
+</ul>
+<p>Source video can be either a file, an image sequence or a stream. Image data is stored as a numpy array.</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.__init__" title="PyCore.CVideoProcessIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>Default constructor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.addVideoImage" title="PyCore.CVideoProcessIO.addVideoImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addVideoImage</span></code></a>(self, image)</p></td>
+<td><p>Append image frame to the video.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.clearData" title="PyCore.CVideoProcessIO.clearData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code></a>(self)</p></td>
+<td><p>Clear the current image at the current frame index.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copyStaticData</span></code>(arg1, self)</p></td>
+<td><p>See <a class="reference internal" href="PyCore.CProtocolTaskIO.html#PyCore.CProtocolTaskIO.copyStaticData" title="PyCore.CProtocolTaskIO.copyStaticData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CProtocolTaskIO.copyStaticData()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getChannelCount" title="PyCore.CVideoProcessIO.getChannelCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getChannelCount</span></code></a>(self)</p></td>
+<td><p>Get the static channel count information.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getCurrentPos" title="PyCore.CVideoProcessIO.getCurrentPos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentPos</span></code></a>(self)</p></td>
+<td><p>Get the current frame index of the video or stream.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getData" title="PyCore.CVideoProcessIO.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>(self)</p></td>
+<td><p>Get the image data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getImage" title="PyCore.CVideoProcessIO.getImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImage</span></code></a>(self)</p></td>
+<td><p>Get the image at the current frame index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getOverlayMask" title="PyCore.CVideoProcessIO.getOverlayMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOverlayMask</span></code></a>(self)</p></td>
+<td><p>Get the overlay mask.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getSnapshot" title="PyCore.CVideoProcessIO.getSnapshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSnapshot</span></code></a>(self, position)</p></td>
+<td><p>Get image of a single frame.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getUnitElementCount" title="PyCore.CVideoProcessIO.getUnitElementCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnitElementCount</span></code></a>(self)</p></td>
+<td><p>Get the number of unit elements to process, ie the number of frames for a video.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getVideoFrameCount" title="PyCore.CVideoProcessIO.getVideoFrameCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVideoFrameCount</span></code></a>(self)</p></td>
+<td><p>Get the total frames number of the video.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getVideoImages" title="PyCore.CVideoProcessIO.getVideoImages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVideoImages</span></code></a>(self)</p></td>
+<td><p>Get all image frames extracted from the video.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getVideoPath" title="PyCore.CVideoProcessIO.getVideoPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVideoPath</span></code></a>(self)</p></td>
+<td><p>Get the path to the source video.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.getVideoResultPath" title="PyCore.CVideoProcessIO.getVideoResultPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVideoResultPath</span></code></a>(self)</p></td>
+<td><p>Get the path to the processed video (for output only).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.hasVideo" title="PyCore.CVideoProcessIO.hasVideo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasVideo</span></code></a>(self)</p></td>
+<td><p>Check whether the input or output has a video source.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.isDataAvailable" title="PyCore.CVideoProcessIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
+<td><p>Check whether the video contains valid data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.isOverlayAvailable" title="PyCore.CVideoProcessIO.isOverlayAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isOverlayAvailable</span></code></a>(self)</p></td>
+<td><p>Check whether the input/output have valid overlay mask or not</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.setChannelCount" title="PyCore.CVideoProcessIO.setChannelCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setChannelCount</span></code></a>(self, nb)</p></td>
+<td><p>Set the channel count of the image data.This property holds the required channel count as a static information.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.setImage" title="PyCore.CVideoProcessIO.setImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setImage</span></code></a>(self, image)</p></td>
+<td><p>Set the image</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.setOverlayMask" title="PyCore.CVideoProcessIO.setOverlayMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOverlayMask</span></code></a>(self, mask)</p></td>
+<td><p>Set the associated overlay mask.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.setVideoPath" title="PyCore.CVideoProcessIO.setVideoPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVideoPath</span></code></a>(self, path)</p></td>
+<td><p>Set the source path of the video.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.setVideoPos" title="PyCore.CVideoProcessIO.setVideoPos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVideoPos</span></code></a>(self, position)</p></td>
+<td><p>Set the current frame of the video.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.setVideoTaskName" title="PyCore.CVideoProcessIO.setVideoTaskName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVideoTaskName</span></code></a>(self, name)</p></td>
+<td><p>Set the task name containing the input or output.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.startVideo" title="PyCore.CVideoProcessIO.startVideo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startVideo</span></code></a>(self)</p></td>
+<td><p>Start playing the video.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.startVideoWrite" title="PyCore.CVideoProcessIO.startVideoWrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startVideoWrite</span></code></a>(self, filename)</p></td>
+<td><p>Write the video to disk.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.stopVideo" title="PyCore.CVideoProcessIO.stopVideo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopVideo</span></code></a>(self)</p></td>
+<td><p>Stop playing the video.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.stopVideoWrite" title="PyCore.CVideoProcessIO.stopVideoWrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopVideoWrite</span></code></a>(self)</p></td>
+<td><p>Stop writting to disk.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CVideoProcessIO.writeImage" title="PyCore.CVideoProcessIO.writeImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeImage</span></code></a>(self, image)</p></td>
+<td><p>Append a new image to the list of images to write to disk.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataType</span></code></p></td>
+<td><p>I/O data type</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimCount</span></code></p></td>
+<td><p>Number of dimensions</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor</p>
+<dl>
+<dt>__init__( (object)arg1, (object)arg2) -&gt; None :</dt><dd><p>Construct a CVideoProcessIO instance with the given image. By default, the image output type is set to the standard one (TaskIOData.IMAGE). See <a class="reference internal" href="PyCore.TaskIOData.html#PyCore.TaskIOData" title="PyCore.TaskIOData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskIOData</span></code></a> for details.</p>
+<dl>
+<dt>Args:</dt><dd><p>arg1: self</p>
+<p>arg2 (Numpy array): 2D image</p>
+</dd>
+</dl>
+</dd>
+<dt>__init__( (object)arg1, (TaskIOData)arg2) -&gt; None :</dt><dd><p>Construct a CVideoProcessIO instance with the given data type. The data type must be one of these values:</p>
+<ul class="simple">
+<li><p>TaskIOData.VIDEO</p></li>
+<li><p>TaskIOData.VIDEO_BINARY</p></li>
+<li><p>TaskIOData.VIDEO_LABEL</p></li>
+<li><p>TaskIOData.LIVE_STREAM</p></li>
+<li><p>TaskIOData.LIVE_STREAM_BINARY</p></li>
+<li><p>TaskIOData.LIVE_STREAM_LABEL</p></li>
+</ul>
+<p>Please note that internal image structure is empty</p>
+<dl>
+<dt>Args:</dt><dd><p>arg1: self</p>
+<p>arg2 (<a class="reference internal" href="PyCore.TaskIOData.html#PyCore.TaskIOData" title="PyCore.TaskIOData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskIOData</span></code></a>): data type</p>
+</dd>
+</dl>
+</dd>
+<dt>__init__( (object)arg1, (TaskIOData)arg2, (object)arg3) -&gt; None :</dt><dd><p>Construct a CVideoProcessIO instance with the given data type and the given image. The data type must be one of these values:</p>
+<ul class="simple">
+<li><p>TaskIOData.VIDEO</p></li>
+<li><p>TaskIOData.VIDEO_BINARY</p></li>
+<li><p>TaskIOData.VIDEO_LABEL</p></li>
+<li><p>TaskIOData.LIVE_STREAM</p></li>
+<li><p>TaskIOData.LIVE_STREAM_BINARY</p></li>
+<li><p>TaskIOData.LIVE_STREAM_LABEL</p></li>
+</ul>
+<dl>
+<dt>Args:</dt><dd><p>arg1: self</p>
+<p>arg2 (<a class="reference internal" href="PyCore.TaskIOData.html#PyCore.TaskIOData" title="PyCore.TaskIOData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskIOData</span></code></a>): data type</p>
+<p>arg3 (Numpy array): 2D image</p>
+</dd>
+</dl>
+</dd>
+<dt>__init__( (object)arg1, (CVideoProcessIO)arg2) -&gt; None :</dt><dd><p>Copy constructor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.addVideoImage">
+<code class="sig-name descname">addVideoImage</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em>, <em class="sig-param">(object)image</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.addVideoImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append image frame to the video.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>Numpy array</em>) – 2D image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.clearData">
+<code class="sig-name descname">clearData</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.clearData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the current image at the current frame index.</p>
+<p>clearData( (CVideoProcessIO)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getChannelCount">
+<code class="sig-name descname">getChannelCount</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#PyCore.CVideoProcessIO.getChannelCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the static channel count information. The method does not get the channel count property from the image data structure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of channel required for the input/output</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getCurrentPos">
+<code class="sig-name descname">getCurrentPos</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#PyCore.CVideoProcessIO.getCurrentPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current frame index of the video or stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>current frame index</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getData">
+<code class="sig-name descname">getData</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#PyCore.CVideoProcessIO.getData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the image data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>either 2D or 3D image buffer</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getImage">
+<code class="sig-name descname">getImage</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#PyCore.CVideoProcessIO.getImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the image at the current frame index.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>Numpy array: 2D image buffer</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getImage( (CVideoProcessIO)self) -&gt; object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getOverlayMask">
+<code class="sig-name descname">getOverlayMask</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#PyCore.CVideoProcessIO.getOverlayMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the overlay mask. See <a class="reference internal" href="#PyCore.CVideoProcessIO.setOverlayMask" title="PyCore.CVideoProcessIO.setOverlayMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOverlayMask()</span></code></a> for more information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>2D image buffer (8 bits - 1 channel)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getSnapshot">
+<code class="sig-name descname">getSnapshot</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em>, <em class="sig-param">(int)position</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#PyCore.CVideoProcessIO.getSnapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get image of a single frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>int</em>) – index of the frame</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>2D image buffer</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getUnitElementCount">
+<code class="sig-name descname">getUnitElementCount</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#PyCore.CVideoProcessIO.getUnitElementCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of unit elements to process, ie the number of frames for a video. Used to determine the number of steps for progress bar.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>int: frames number of the video</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getUnitElementCount( (CVideoProcessIO)self) -&gt; int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getVideoFrameCount">
+<code class="sig-name descname">getVideoFrameCount</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#PyCore.CVideoProcessIO.getVideoFrameCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total frames number of the video.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>frames number</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getVideoImages">
+<code class="sig-name descname">getVideoImages</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#PyCore.CVideoProcessIO.getVideoImages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all image frames extracted from the video.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of 2D images</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Numpy array list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getVideoPath">
+<code class="sig-name descname">getVideoPath</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; str :<a class="headerlink" href="#PyCore.CVideoProcessIO.getVideoPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path to the source video. It can be a file path, a device ID or an url.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>source video path</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.getVideoResultPath">
+<code class="sig-name descname">getVideoResultPath</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; str :<a class="headerlink" href="#PyCore.CVideoProcessIO.getVideoResultPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path to the processed video (for output only). Can only be a file path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>file path</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.hasVideo">
+<code class="sig-name descname">hasVideo</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#PyCore.CVideoProcessIO.hasVideo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the input or output has a video source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the source is valid, False otherwise</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.isDataAvailable">
+<code class="sig-name descname">isDataAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#PyCore.CVideoProcessIO.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the video contains valid data.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True if there is some valid data, False otherwise</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>isDataAvailable( (CVideoProcessIO)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.isOverlayAvailable">
+<code class="sig-name descname">isOverlayAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#PyCore.CVideoProcessIO.isOverlayAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the input/output have valid overlay mask or not</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if overlay mask is not empty, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.setChannelCount">
+<code class="sig-name descname">setChannelCount</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em>, <em class="sig-param">(int)nb</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.setChannelCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the channel count of the image data.This property holds the required channel count as a static information. Such information can be useful when one designs a workflow and wants to inform about specific image structure towards future connected tasks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nb</strong> (<em>int</em>) – channel count, 1 for monochrome image, 3 for color image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.setImage">
+<code class="sig-name descname">setImage</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em>, <em class="sig-param">(object)image</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.setImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>Numpy array</em>) – image buffer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.setOverlayMask">
+<code class="sig-name descname">setOverlayMask</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em>, <em class="sig-param">(object)mask</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.setOverlayMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the associated overlay mask. Ikomia software is able to display overlay mask on top of image. This method sets this mask, it will be displayed automatically according to a predefined color map. Zero pixels of the mask will be completely transparent, non-zero will be displayed according to the corresponding color in the color map. The color map must be defined in the task implementation. See <a class="reference internal" href="../_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d.setOutputColorMap" title="PyDataProcess.CImageProcess2d.setOutputColorMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PyDataProcess.CImageProcess2d.setOutputColorMap()</span></code></a> for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>Numpy array</em>) – image buffer (8 bits - 1 channel)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.setVideoPath">
+<code class="sig-name descname">setVideoPath</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em>, <em class="sig-param">(str)path</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.setVideoPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the source path of the video.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – can be a file path, a device ID (internal webcam) or an url (IP camera)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.setVideoPos">
+<code class="sig-name descname">setVideoPos</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em>, <em class="sig-param">(int)position</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.setVideoPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the current frame of the video.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>int</em>) – index of the frame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.setVideoTaskName">
+<code class="sig-name descname">setVideoTaskName</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em>, <em class="sig-param">(str)name</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.setVideoTaskName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the task name containing the input or output. This name is used to set the file name when the system save the processed video.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – name of the task</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.startVideo">
+<code class="sig-name descname">startVideo</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.startVideo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start playing the video.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.startVideoWrite">
+<code class="sig-name descname">startVideoWrite</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em>, <em class="sig-param">(str)filename</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.startVideoWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the video to disk. The path is built from the current video path and the given name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – file name appended to the current path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.stopVideo">
+<code class="sig-name descname">stopVideo</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.stopVideo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop playing the video.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.stopVideoWrite">
+<code class="sig-name descname">stopVideoWrite</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.stopVideoWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop writting to disk.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CVideoProcessIO.writeImage">
+<code class="sig-name descname">writeImage</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessIO)self</em>, <em class="sig-param">(object)image</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CVideoProcessIO.writeImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append a new image to the list of images to write to disk. The write process is launched using <a class="reference internal" href="#PyCore.CVideoProcessIO.startVideoWrite" title="PyCore.CVideoProcessIO.startVideoWrite"><code class="xref py py-meth docutils literal notranslate"><span class="pre">startVideoWrite()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>Numpy array</em>) – 2D image</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="PyCore.CProtocolTaskWidget.html" title="Previous document">PyCore.CProtocolTaskWidget</a>
+        </li>
+        <li>
+          <a href="PyCore.CWidgetOutput.html" title="Next document">PyCore.CWidgetOutput</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummaryv/PyCore.CVideoProcessIO.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

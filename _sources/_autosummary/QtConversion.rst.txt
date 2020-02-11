@@ -1,0 +1,11 @@
+QtConversion
+============
+
+.. automodule:: QtConversion
+
+   .. rubric:: Functions
+
+   .. autosummary::
+
+      PyQtToQt
+      PySideToQt

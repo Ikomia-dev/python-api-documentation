@@ -1,0 +1,65 @@
+PyDataProcess.CVideoProcessTracking
+===================================
+
+.. currentmodule:: PyDataProcess
+
+.. autoclass:: CVideoProcessTracking
+   
+   .. rubric:: Methods
+   .. autosummary::
+      ~CVideoProcessTracking.__init__
+      ~CVideoProcessTracking.addInput
+      ~CVideoProcessTracking.addOutput
+      ~CVideoProcessTracking.applyGraphicsMask
+      ~CVideoProcessTracking.applyGraphicsMaskToBinary
+      ~CVideoProcessTracking.beginTaskRun
+      ~CVideoProcessTracking.createGraphicsMask
+      ~CVideoProcessTracking.emitGraphicsContextChanged
+      ~CVideoProcessTracking.emitStepProgress
+      ~CVideoProcessTracking.endTaskRun
+      ~CVideoProcessTracking.executeActions
+      ~CVideoProcessTracking.forwardInputImage
+      ~CVideoProcessTracking.getElapsedTime
+      ~CVideoProcessTracking.getGraphicsMask
+      ~CVideoProcessTracking.getInput
+      ~CVideoProcessTracking.getInputCount
+      ~CVideoProcessTracking.getInputDataType
+      ~CVideoProcessTracking.getInputs
+      ~CVideoProcessTracking.getOutput
+      ~CVideoProcessTracking.getOutputCount
+      ~CVideoProcessTracking.getOutputDataType
+      ~CVideoProcessTracking.getOutputs
+      ~CVideoProcessTracking.getParam
+      ~CVideoProcessTracking.getProgressSteps
+      ~CVideoProcessTracking.globalInputChanged
+      ~CVideoProcessTracking.graphicsChanged
+      ~CVideoProcessTracking.isMaskAvailable
+      ~CVideoProcessTracking.manageOutputs
+      ~CVideoProcessTracking.notifyVideoEnd
+      ~CVideoProcessTracking.notifyVideoStart
+      ~CVideoProcessTracking.parametersModified
+      ~CVideoProcessTracking.run
+      ~CVideoProcessTracking.setActionFlag
+      ~CVideoProcessTracking.setActive
+      ~CVideoProcessTracking.setInput
+      ~CVideoProcessTracking.setInputDataType
+      ~CVideoProcessTracking.setInputs
+      ~CVideoProcessTracking.setOutput
+      ~CVideoProcessTracking.setOutputColorMap
+      ~CVideoProcessTracking.setOutputDataType
+      ~CVideoProcessTracking.setOutputs
+      ~CVideoProcessTracking.setParam
+      ~CVideoProcessTracking.setRoiToTrack
+      ~CVideoProcessTracking.updateStaticOutputs
+   
+   
+   .. rubric:: Attributes
+   .. autosummary::
+      ~CVideoProcessTracking.name
+      ~CVideoProcessTracking.type
+
+   
+   .. automethod:: __init__
+   .. automethod:: manageOutputs
+   .. automethod:: setRoiToTrack
+

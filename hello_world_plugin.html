@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello world plugin &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Image processing plugin (OpenCV)" href="opencv_plugin.html" />
+    <link rel="prev" title="Python environment" href="python_env.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Image processing plugin (OpenCV)</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="python_env.html" title="previous chapter">Python environment</a></li>
+      <li>Next: <a href="opencv_plugin.html" title="next chapter">Image processing plugin (OpenCV)</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="python_env.html" title="Previous document">Python environment</a>
+        </li>
+        <li>
+          <a href="opencv_plugin.html" title="Next document">Image processing plugin (OpenCV)</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="hello-world-plugin">
+<h1>Hello world plugin<a class="headerlink" href="#hello-world-plugin" title="Permalink to this headline">¶</a></h1>
+<p>In this first tutorial, we will create an empty plugin and introduce the core mechanisms.
+Basically, first steps of plugin creation can be done either manually or with our dedicated module.</p>
+<div class="section" id="with-ikomia-plugin-manager">
+<h2>With Ikomia Plugin Manager<a class="headerlink" href="#with-ikomia-plugin-manager" title="Permalink to this headline">¶</a></h2>
+<p>The simplest way to create plugins is to use the integrated Plugin Manager:</p>
+<img alt="_images/plugin_manager.jpg" src="_images/plugin_manager.jpg" />
+<p>The left table shows the list of all your plugins, you will find a list of action buttons to its right.
+Click on the first button to start creating a plugin:</p>
+<img alt="_images/new_plugin.jpg" src="_images/new_plugin.jpg" />
+<p>Set parameters:</p>
+<ul>
+<li><p><em>Plugin name</em>: must be <strong>unique</strong> as it is the identifier of the plugin. The given name will appear in the Ikomia process library.</p></li>
+<li><p><em>Process type</em>: rely on the source data type. This choice determines the base class on which the process class will be derived from:</p>
+<blockquote>
+<div><ul>
+<li><p><em>Generic process</em>: no input/output and no data structure pre-defined. See <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTask.html#PyCore.CProtocolTask" title="PyCore.CProtocolTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyCore.CProtocolTask</span></code></a>.</p></li>
+<li><p><em>Image process</em>: image processing plugin.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>inputs: image + graphics layer</p></li>
+<li><p>ouputs: image</p></li>
+</ul>
+<p>See <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CImageProcess2d</span></code></a>.</p>
+</div></blockquote>
+</li>
+<li><p><em>Interactive image process</em>: image processing plugin with user interation capability. Same inputs/outputs as image process option. See <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CInteractiveImageProcess2d.html#PyDataProcess.CInteractiveImageProcess2d" title="PyDataProcess.CInteractiveImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CInteractiveImageProcess2d</span></code></a>.</p></li>
+<li><p><em>Video process</em>: video processing plugin.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>inputs: video + graphics layer</p></li>
+<li><p>ouputs: video</p></li>
+</ul>
+<p>See <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CVideoProcess.html#PyDataProcess.CVideoProcess" title="PyDataProcess.CVideoProcess"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CVideoProcess</span></code></a>.</p>
+</div></blockquote>
+</li>
+<li><p><em>Optical flow process</em>: video processing plugin dedicated to Optical Flow. Same inputs/outputs as video process option. See <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CVideoProcessOF.html#PyDataProcess.CVideoProcessOF" title="PyDataProcess.CVideoProcessOF"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CVideoProcessOF</span></code></a>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em>Widget type</em>: empty widget only (for instance). User must create his own widget according to algorithm parameters. Basic knowledge of Qt framework is recommended. See <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTaskWidget.html#PyCore.CProtocolTaskWidget" title="PyCore.CProtocolTaskWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyCore.CProtocolTaskWidget</span></code></a>.</p></li>
+<li><p><em>GUI framework</em>: Qt based Python framework. PyQt5 recommended.</p></li>
+</ul>
+<p>Click on <strong>Generate</strong> button.</p>
+<p>Your plugin is now <strong>created</strong> and <strong>ready to use</strong>. It is automatically loaded and you can access it from the process library of Ikomia.
+At this point, the plugin can be added to any workflow but does nothing.</p>
+<p>The minimal structure of a plugin is composed by these files:</p>
+<ul class="simple">
+<li><p><em>__init__.py</em>: Python regular package</p></li>
+<li><p><a class="reference internal" href="hello_world_plugin_interface.html"><span class="doc">HelloWorld.py</span></a>: implementation of plugin interface. See <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CPluginProcessInterface.html#PyDataProcess.CPluginProcessInterface" title="PyDataProcess.CPluginProcessInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CPluginProcessInterface</span></code></a>.</p></li>
+<li><p><a class="reference internal" href="hello_world_plugin_process.html"><span class="doc">HelloWorld_process.py</span></a>: implementation of the algorithm, its parameters, its metadata and the factory to create process instance.</p></li>
+<li><p><a class="reference internal" href="hello_world_plugin_widget.html"><span class="doc">HelloWorld_widget.py</span></a>: implementation of the widget and the factory to create an instance.</p></li>
+</ul>
+<p><strong>Note</strong>: the code generated by the Plugin Manager is self documented and will guide you through all the required step.</p>
+</div>
+<div class="section" id="with-you-prefered-python-ide">
+<h2>With you prefered Python IDE<a class="headerlink" href="#with-you-prefered-python-ide" title="Permalink to this headline">¶</a></h2>
+<p>Because an Ikomia plugin is a regular Python package, you can create it from scratch with the IDE of your choice.</p>
+<p>Here are the steps you should follow:</p>
+<ol class="arabic">
+<li><dl>
+<dt>Create a new folder into our dedicated folder with the name of your plugin</dt><dd><p>Windows</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir c:<span class="se">\U</span>sers<span class="se">\{</span>username<span class="o">}</span><span class="se">\I</span>komia<span class="se">\P</span>lugins<span class="se">\P</span>ython<span class="se">\H</span>elloWorld
+</pre></div>
+</div>
+<p>Linux and Mac OS X</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir ~/Ikomia/Plugins/Python/HelloWorld
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>Create your project (optional)</p></li>
+<li><p>Choose the Ikomia Python interpreter (optional). Ikomia Python interpreter is located in:</p>
+<blockquote>
+<div><p>Windows</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c:<span class="se">\U</span>sers<span class="se">\{</span>username<span class="o">}</span><span class="se">\I</span>komia<span class="se">\P</span>ython<span class="se">\</span>
+</pre></div>
+</div>
+<p>Linux and Mac OS X</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/Ikomia/Python/
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><dl>
+<dt>Create the 4 required Python files from your IDE</dt><dd><ul class="simple">
+<li><p><em>__init__.py</em></p></li>
+<li><p><em>HelloWorld.py</em></p></li>
+<li><p><em>HelloWorld_process.py</em></p></li>
+<li><p><em>HelloWorld_widget.py</em></p></li>
+</ul>
+<p><strong>Note</strong>: the naming scheme of these files is very important: <em>pluginname.py, pluginname_process.py and pluginname_widget.py</em>.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p>Implement the plugin interface that will allow your plugin to be loaded in Ikomia. See example <a class="reference internal" href="hello_world_plugin_interface.html"><span class="doc">HelloWorld.py</span></a>.</p></li>
+<li><p>Implement your process. See example <a class="reference internal" href="hello_world_plugin_process.html"><span class="doc">HelloWorld_process.py</span></a>.</p></li>
+<li><p>Implement your widget. See example <a class="reference internal" href="hello_world_plugin_widget.html"><span class="doc">HelloWorld_widget.py</span></a>.</p></li>
+</ol>
+<p>That’s it. Launch Ikomia, your plugin will be loaded automatically.</p>
+</div>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="python_env.html" title="Previous document">Python environment</a>
+        </li>
+        <li>
+          <a href="opencv_plugin.html" title="Next document">Image processing plugin (OpenCV)</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="_sources/hello_world_plugin.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

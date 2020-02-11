@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Image processing plugin (OpenCV) &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Modules" href="modules.html" />
+    <link rel="prev" title="Hello world plugin" href="hello_world_plugin.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Image processing plugin (OpenCV)</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="hello_world_plugin.html" title="previous chapter">Hello world plugin</a></li>
+      <li>Next: <a href="modules.html" title="next chapter">API Modules</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="hello_world_plugin.html" title="Previous document">Hello world plugin</a>
+        </li>
+        <li>
+          <a href="modules.html" title="Next document">API Modules</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="image-processing-plugin-opencv">
+<h1>Image processing plugin (OpenCV)<a class="headerlink" href="#image-processing-plugin-opencv" title="Permalink to this headline">¶</a></h1>
+<p>This section will show how to create a fully functional plugin applying basics OpenCV methods to images. It takes image as input and delivers processed image as output.</p>
+<p>We skip here all steps to create a new empty plugin. Please refer to <a class="reference internal" href="hello_world_plugin.html"><span class="doc">Hello World tutorial</span></a> if you are not familiar with it.</p>
+<dl class="simple">
+<dt>At this point, a plugin called <em>OCVBasics</em> is created with the following structure:</dt><dd><dl class="simple">
+<dt>…/<em>BasicsOpenCV/</em></dt><dd><ul class="simple">
+<li><p><em>__init__.py</em></p></li>
+<li><p><em>OCVBasics.py</em></p></li>
+<li><p><em>OCVBasics_process.py</em></p></li>
+<li><p><em>OCVBasics_widget.py</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="interface-implementation">
+<h2>Interface implementation<a class="headerlink" href="#interface-implementation" title="Permalink to this headline">¶</a></h2>
+<p>No features added from the default implementation.
+See <a class="reference internal" href="opencv_plugin_interface.html"><span class="doc">OCVBasics.py</span></a>.</p>
+</div>
+<div class="section" id="process-implementation">
+<h2>Process implementation<a class="headerlink" href="#process-implementation" title="Permalink to this headline">¶</a></h2>
+<p>The aim of our plugin is to process images, so our task is derived from <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CImageProcess2d</span></code></a>.
+This base class comes with default inputs (image + graphics) and outputs (image) that fit our needs.</p>
+<p>Our process pipeline will be: <em>Convert to grayscale</em> -&gt; <em>Gaussian blur</em> -&gt; <em>Canny filter</em>.</p>
+<p>The first thing to do in our <em>OCVBasics_process.py</em> is importing OpenCV package (already installed):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PyCore</span>
+<span class="kn">import</span> <span class="nn">PyDataProcess</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="c1"># Your imports below</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+</pre></div>
+</div>
+<p>In the <em>run</em> method, we now have to retrieve source image from input, add OpenCV calls and set the output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+
+    <span class="c1">#...</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Core function of your process</span>
+        <span class="c1"># Call beginTaskRun for initialization</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beginTaskRun</span><span class="p">()</span>
+
+        <span class="c1"># Get input :</span>
+        <span class="n">input_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getInput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Get image from input (numpy array):</span>
+        <span class="n">src_image</span> <span class="o">=</span> <span class="n">input_img</span><span class="o">.</span><span class="n">getImage</span><span class="p">()</span>
+
+        <span class="c1"># Call to the process main routine</span>
+        <span class="c1"># Grayscale conversion</span>
+        <span class="n">proc_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">src_image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_RGB2GRAY</span><span class="p">)</span>
+        <span class="c1"># Gaussian blur</span>
+        <span class="n">proc_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">proc_img</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># Canny filter</span>
+        <span class="n">proc_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Canny</span><span class="p">(</span><span class="n">proc_img</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+
+        <span class="c1"># Get output :</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Set image of output (numpy array):</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">proc_img</span><span class="p">)</span>
+
+        <span class="c1"># Step progress bar:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">emitStepProgress</span><span class="p">()</span>
+
+        <span class="c1"># Call endTaskRun to finalize process</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">endTaskRun</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Reload plugin in Ikomia software (with Plugin Manager or in the main menu), add it to a new workflow to test the results. You should have this:</p>
+<img alt="_images/opencv_plugin.jpg" src="_images/opencv_plugin.jpg" />
+</div>
+<div class="section" id="process-parameters">
+<h2>Process parameters<a class="headerlink" href="#process-parameters" title="Permalink to this headline">¶</a></h2>
+<p>We will focus now on adding some parameters to our process ((in <em>OCVBasics_process.py</em>).
+Let’s say we want to control blur strengh of the Gaussian filter, we have to manage at least 3 parameters:</p>
+<ul class="simple">
+<li><p>Kernel size</p></li>
+<li><p>Sigma X</p></li>
+<li><p>Sigma Y</p></li>
+</ul>
+<p>First, we add member variables in the parameters class, they will be accessible from the process.
+Note the presence of functions <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTaskParam.html#PyCore.CProtocolTaskParam.setParam" title="PyCore.CProtocolTaskParam.setParam"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setParam()</span></code></a> and <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTaskParam.html#PyCore.CProtocolTaskParam.getParam" title="PyCore.CProtocolTaskParam.getParam"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getParam()</span></code></a> which are required to save/load values when user wants to save his workflow.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcessParam</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="c1"># Place default value initialization here</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma_x</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma_y</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+    <span class="k">def</span> <span class="nf">setParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramMap</span><span class="p">):</span>
+        <span class="c1"># Set parameters values from Ikomia application (user inputs)</span>
+        <span class="c1"># Parameters values are stored as string and accessible like a python dict</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;kernel_size_x&quot;</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;kernel_size_y&quot;</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma_x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;sigma_x&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma_y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;sigma_y&quot;</span><span class="p">])</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">getParam</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Send parameters values to Ikomia application (workflow)</span>
+        <span class="c1"># Create the specific dict structure (string container)</span>
+        <span class="n">paramMap</span> <span class="o">=</span> <span class="n">PyCore</span><span class="o">.</span><span class="n">ParamMap</span><span class="p">()</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;kernel_size_x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;kernel_size_y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;sigma_x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma_x</span><span class="p">)</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;sigma_y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma_y</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">paramMap</span>
+</pre></div>
+</div>
+<p>We are now able to manage parameters from the process. The constructor receives an instance of the parameters structure that we should copy. This instance has values set from the Ikomia application (default or user-defined).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+        <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+        <span class="c1">#Create parameters class</span>
+        <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">OCVBasicsProcessParam</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">param</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Finally, we modify the <em>run</em> method to pass parameters to GaussianBlur function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Core function of your process</span>
+        <span class="c1"># Call beginTaskRun for initialization</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beginTaskRun</span><span class="p">()</span>
+
+        <span class="c1"># Get parameters :</span>
+        <span class="n">param</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">()</span>
+
+        <span class="c1">#...</span>
+
+        <span class="c1"># Gaussian blur</span>
+        <span class="n">proc_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">proc_img</span><span class="p">,</span> <span class="n">param</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span> <span class="n">param</span><span class="o">.</span><span class="n">sigma_x</span><span class="p">,</span> <span class="n">param</span><span class="o">.</span><span class="n">sigma_y</span><span class="p">)</span>
+
+        <span class="c1">#...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="process-widget">
+<h2>Process widget<a class="headerlink" href="#process-widget" title="Permalink to this headline">¶</a></h2>
+<p>At this point, parameters are only available from source code.
+The role of the plugin widget is to open parameters configuration to the user.
+We will use PyQt framework for this example.</p>
+<p>We implement the widget part in the file <em>OCVBasics_widget.py</em>.
+The widget layout is created in the constructor.
+Like the process class, the constructor receives an instance of the parameters structure to initialize the widget components.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+        <span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">processMod</span><span class="o">.</span><span class="n">OCVBasicsProcessParam</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">param</span>
+
+        <span class="c1"># Create layout : QGridLayout by default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
+
+        <span class="c1"># Kernel size</span>
+        <span class="n">label_kernel_size</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;Kernel size:&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_x</span> <span class="o">=</span> <span class="n">QSpinBox</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_x</span><span class="o">.</span><span class="n">setRange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_x</span><span class="o">.</span><span class="n">setSingleStep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_x</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_y</span> <span class="o">=</span> <span class="n">QSpinBox</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_y</span><span class="o">.</span><span class="n">setRange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_y</span><span class="o">.</span><span class="n">setSingleStep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_y</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">label_kernel_size</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_y</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="c1"># Sigma X</span>
+        <span class="n">label_sigma_x</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;Sigma X:&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_x</span> <span class="o">=</span> <span class="n">QDoubleSpinBox</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_x</span><span class="o">.</span><span class="n">setRange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">255.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_x</span><span class="o">.</span><span class="n">setSingleStep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_x</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">sigma_x</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">label_sigma_x</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_x</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># Sigma Y</span>
+        <span class="n">label_sigma_y</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;Sigma Y:&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_y</span> <span class="o">=</span> <span class="n">QDoubleSpinBox</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_y</span><span class="o">.</span><span class="n">setRange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">255.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_y</span><span class="o">.</span><span class="n">setSingleStep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_y</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">sigma_y</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">label_sigma_y</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_y</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># PyQt -&gt; Qt wrapping (C++ handle)</span>
+        <span class="n">layoutPtr</span> <span class="o">=</span> <span class="n">QtConversion</span><span class="o">.</span><span class="n">PyQtToQt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="p">)</span>
+
+        <span class="c1"># Set widget layout</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layoutPtr</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In Ikomia, plugin widgets are shown in 2 different places:</p>
+<ul class="simple">
+<li><p>in a popup windows when you add a plugin to the workflow (from the process library pane)</p></li>
+<li><p>in the Workflow Creator window where you can see parameters of the current task</p></li>
+</ul>
+<p>Let’s see how our widget looks:</p>
+<img alt="_images/opencv_plugin_widget.jpg" src="_images/opencv_plugin_widget.jpg" />
+<p>Last thing, we have to update process parameters when a user change values through the widget.
+We do that by overriding <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTaskWidget.html#PyCore.CProtocolTaskWidget.onApply" title="PyCore.CProtocolTaskWidget.onApply"><code class="xref py py-meth docutils literal notranslate"><span class="pre">onApply()</span></code></a> method.
+It is called when user clicks the <em>Apply</em> button.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+    <span class="c1"># ...</span>
+
+    <span class="k">def</span> <span class="nf">onApply</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Apply button has been pressed</span>
+        <span class="c1"># Get parameters value from widget components</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_x</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">spin_kernel_y</span><span class="o">.</span><span class="n">value</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">sigma_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_x</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">sigma_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_y</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+
+        <span class="c1"># Send signal to launch the process</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">emitApply</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Our plugin is now fully functional!</p>
+</div>
+<div class="section" id="process-metadata">
+<h2>Process metadata<a class="headerlink" href="#process-metadata" title="Permalink to this headline">¶</a></h2>
+<p>Finally, we will add some useful information about our plugin.
+Ikomia software manages such information and display it to the user (parameters widget, Ikomia Store).
+Metadata can be added in the constructor of the process factory class in <em>OCVBasics_process.py</em>.
+We have to fill the member object <em>info</em>, see <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CProcessInfo.html#PyDataProcess.CProcessInfo" title="PyDataProcess.CProcessInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProcessInfo</span></code></a> for details.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcessFactory</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="c1"># Set process information as string here</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;OCVBasics&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">shortDescription</span> <span class="o">=</span> <span class="s2">&quot;OpenCV Canny&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Simple OpenCV pipeline that computes Canny filter&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">authors</span> <span class="o">=</span> <span class="s2">&quot;Ikomia team&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">article</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">journal</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="mi">2020</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">license</span> <span class="o">=</span> <span class="s2">&quot;MIT License&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;1.0.0&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">repo</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/Ikomia-dev&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">documentationLink</span> <span class="o">=</span> <span class="s2">&quot;https://ikomia.com&quot;</span>
+        <span class="c1"># relative path -&gt; as displayed in Ikomia application process tree</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;Plugins/Python/Ikomia/Examples&quot;</span>
+        <span class="c1"># If you want to customize plugin icon</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">iconPath</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="c1"># Associated keywords, for search</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">keywords</span> <span class="o">=</span> <span class="s2">&quot;OpenCV,blur,grayscale,canny,edge,gaussian&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="source-code">
+<h2>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="opencv_plugin_interface.html"><span class="doc">OCVBasics.py</span></a></p>
+<p><a class="reference internal" href="opencv_plugin_process.html"><span class="doc">OCVBasics_process.py</span></a></p>
+<p><a class="reference internal" href="opencv_plugin_widget.html"><span class="doc">OCVBasics_widget.py</span></a></p>
+</div>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="hello_world_plugin.html" title="Previous document">Hello world plugin</a>
+        </li>
+        <li>
+          <a href="modules.html" title="Next document">API Modules</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="_sources/opencv_plugin.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

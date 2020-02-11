@@ -1,0 +1,17 @@
+PyDataProcess.CPluginProcessInterface
+=====================================
+
+.. currentmodule:: PyDataProcess
+
+.. autoclass:: CPluginProcessInterface
+   
+   .. rubric:: Methods
+   .. autosummary::
+      ~CPluginProcessInterface.__init__
+      ~CPluginProcessInterface.getProcessFactory
+      ~CPluginProcessInterface.getWidgetFactory
+   
+   
+   .. automethod:: __init__
+   .. automethod:: getProcessFactory
+   .. automethod:: getWidgetFactory

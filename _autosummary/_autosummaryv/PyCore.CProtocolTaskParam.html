@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>PyCore.CProtocolTaskParam &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="PyCore.CProtocolTaskWidget" href="PyCore.CProtocolTaskWidget.html" />
+    <link rel="prev" title="PyCore.CProtocolTaskIO" href="PyCore.CProtocolTaskIO.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Image processing plugin (OpenCV)</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../PyCore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PyDataProcess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PyUtils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QtConversion.html">QtConversion</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../PyCore.html">PyCore</a><ul>
+      <li>Previous: <a href="PyCore.CProtocolTaskIO.html" title="previous chapter">PyCore.CProtocolTaskIO</a></li>
+      <li>Next: <a href="PyCore.CProtocolTaskWidget.html" title="next chapter">PyCore.CProtocolTaskWidget</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="PyCore.CProtocolTaskIO.html" title="Previous document">PyCore.CProtocolTaskIO</a>
+        </li>
+        <li>
+          <a href="PyCore.CProtocolTaskWidget.html" title="Next document">PyCore.CProtocolTaskWidget</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="pycore-cprotocoltaskparam">
+<h1>PyCore.CProtocolTaskParam<a class="headerlink" href="#pycore-cprotocoltaskparam" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="PyCore.CProtocolTaskParam">
+<em class="property">class </em><code class="sig-prename descclassname">PyCore.</code><code class="sig-name descname">CProtocolTaskParam</code><a class="headerlink" href="#PyCore.CProtocolTaskParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for the management of task parameters. It consists of two virtual methods that should be overriden to fill or get the structure holding parameters value. This structure is used internally by the system to save and load parameters values of task used in a workflow.</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskParam.__init__" title="PyCore.CProtocolTaskParam.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>Default constructor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskParam.getHashValue" title="PyCore.CProtocolTaskParam.getHashValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHashValue</span></code></a>(self)</p></td>
+<td><p>Get hash value from parameters values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskParam.getParam" title="PyCore.CProtocolTaskParam.getParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParam</span></code></a>(self)</p></td>
+<td><p>Get task parameter names and values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskParam.setParam" title="PyCore.CProtocolTaskParam.setParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParam</span></code></a>(self, params)</p></td>
+<td><p>Set task parameter names and values from the given <a class="reference internal" href="PyCore.ParamMap.html#PyCore.ParamMap" title="PyCore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a> object (same use as Python dict).</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="PyCore.CProtocolTaskParam.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CProtocolTaskParam.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CProtocolTaskParam.getHashValue">
+<code class="sig-name descname">getHashValue</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskParam)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#PyCore.CProtocolTaskParam.getHashValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get hash value from parameters values. The system uses this method to determine if task configuration has changed.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>int: hash value</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getHashValue( (CProtocolTaskParam)self) -&gt; int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CProtocolTaskParam.getParam">
+<code class="sig-name descname">getParam</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskParam)self</em><span class="sig-paren">)</span> &#x2192; ParamMap :<a class="headerlink" href="#PyCore.CProtocolTaskParam.getParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get task parameter names and values.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p><a class="reference internal" href="PyCore.ParamMap.html#PyCore.ParamMap" title="PyCore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a>: dict-like structure storing pairs of string (parameter name, parameter value)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getParam( (CProtocolTaskParam)self) -&gt; ParamMap</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyCore.CProtocolTaskParam.setParam">
+<code class="sig-name descname">setParam</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskParam)self</em>, <em class="sig-param">(ParamMap)params</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CProtocolTaskParam.setParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set task parameter names and values from the given <a class="reference internal" href="PyCore.ParamMap.html#PyCore.ParamMap" title="PyCore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a> object (same use as Python dict).</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>params (<a class="reference internal" href="PyCore.ParamMap.html#PyCore.ParamMap" title="PyCore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a>): pairs of string (parameter name, parameter value)</dt><dd><p>Numeric values must be converted from str to the desired numeric type before use</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>setParam( (CProtocolTaskParam)self, (ParamMap)params) -&gt; None</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="PyCore.CProtocolTaskIO.html" title="Previous document">PyCore.CProtocolTaskIO</a>
+        </li>
+        <li>
+          <a href="PyCore.CProtocolTaskWidget.html" title="Next document">PyCore.CProtocolTaskWidget</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummaryv/PyCore.CProtocolTaskParam.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

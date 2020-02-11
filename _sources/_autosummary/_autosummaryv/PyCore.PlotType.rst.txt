@@ -1,0 +1,27 @@
+PyCore.PlotType
+===============
+
+.. currentmodule:: PyCore
+
+.. autoclass:: PlotType
+
+   .. rubric:: Methods
+   .. autosummary::
+
+      ~PlotType.__init__
+      ~PlotType.as_integer_ratio
+      ~PlotType.bit_length
+      ~PlotType.conjugate
+      ~PlotType.from_bytes
+      ~PlotType.to_bytes
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PlotType.BAR
+      ~PlotType.CURVE
+      ~PlotType.HISTOGRAM
+      ~PlotType.MULTIBAR
+      ~PlotType.PIE

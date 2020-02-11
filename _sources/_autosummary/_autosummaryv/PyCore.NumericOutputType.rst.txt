@@ -1,0 +1,23 @@
+PyCore.NumericOutputType
+========================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: NumericOutputType
+   
+   .. rubric:: Methods
+   .. autosummary::
+      ~NumericOutputType.__init__
+      ~NumericOutputType.as_integer_ratio
+      ~NumericOutputType.bit_length
+      ~NumericOutputType.conjugate
+      ~NumericOutputType.from_bytes
+      ~NumericOutputType.to_bytes
+   
+   
+   .. rubric:: Attributes
+   .. autosummary::
+      ~NumericOutputType.NONE
+      ~NumericOutputType.NUMERIC_FILE
+      ~NumericOutputType.PLOT
+      ~NumericOutputType.TABLE

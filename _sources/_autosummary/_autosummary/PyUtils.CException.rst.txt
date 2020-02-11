@@ -1,0 +1,16 @@
+PyUtils.CException
+==================
+
+.. currentmodule:: PyUtils
+
+.. autoclass:: CException
+
+      .. rubric:: Methods
+
+      .. autosummary::
+            ~CException.__init__
+            ~CException.message
+      
+      
+      .. automethod:: __init__
+      .. automethod:: message

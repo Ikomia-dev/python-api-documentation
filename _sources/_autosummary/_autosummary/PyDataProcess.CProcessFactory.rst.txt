@@ -1,0 +1,22 @@
+PyDataProcess.CProcessFactory
+=============================
+
+.. currentmodule:: PyDataProcess
+
+.. autoclass:: CProcessFactory
+   
+   .. rubric:: Methods
+   .. autosummary::
+      ~CProcessFactory.__init__
+      ~CProcessFactory.create
+   
+   
+   .. rubric:: Attributes
+   .. autosummary::
+      ~CProcessFactory.info
+
+
+   .. automethod:: __init__
+   .. automethod:: create
+   
+   .. autoattribute:: info
