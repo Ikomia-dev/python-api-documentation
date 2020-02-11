@@ -29,7 +29,7 @@
         <div class="sphinxsidebarwrapper">
 <p class="logo">
   <a href="index.html">
-    <img class="logo" src="_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    <img class="logo" src="_static/app.png" alt="Logo"/>
     
     <h1 class="logo logo-name">Ikomia</h1>
     
@@ -244,7 +244,7 @@ Note the presence of functions <a class="reference internal" href="_autosummary/
         <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 
         <span class="c1">#Create parameters class</span>
-        <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">OCVBasicsProcessParam</span><span class="p">())</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">param</span><span class="p">))</span>
@@ -283,7 +283,7 @@ Like the process class, the constructor receives an instance of the parameters s
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
         <span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">processMod</span><span class="o">.</span><span class="n">OCVBasicsProcessParam</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">param</span>

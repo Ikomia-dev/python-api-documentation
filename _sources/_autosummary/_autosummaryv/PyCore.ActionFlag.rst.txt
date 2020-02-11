@@ -6,13 +6,9 @@ PyCore.ActionFlag
 .. autoclass:: ActionFlag
 
    
-   .. automethod:: __init__
-
-   
    .. rubric:: Methods
-
    .. autosummary::
-   
+
       ~ActionFlag.__init__
       ~ActionFlag.as_integer_ratio
       ~ActionFlag.bit_length
@@ -20,21 +16,8 @@ PyCore.ActionFlag
       ~ActionFlag.from_bytes
       ~ActionFlag.to_bytes
    
-   
 
-   
-   
    .. rubric:: Attributes
-
    .. autosummary::
    
       ~ActionFlag.APPLY_VOLUME
-      ~ActionFlag.denominator
-      ~ActionFlag.imag
-      ~ActionFlag.name
-      ~ActionFlag.names
-      ~ActionFlag.numerator
-      ~ActionFlag.real
-      ~ActionFlag.values
-   
-   

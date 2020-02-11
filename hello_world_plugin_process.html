@@ -29,7 +29,7 @@
         <div class="sphinxsidebarwrapper">
 <p class="logo">
   <a href="index.html">
-    <img class="logo" src="_static/../../../../../../App/Images/app.png" alt="Logo"/>
+    <img class="logo" src="_static/app.png" alt="Logo"/>
     
     <h1 class="logo logo-name">Ikomia</h1>
     
@@ -176,7 +176,7 @@
         <span class="c1">#           self.addOutput(PyCore.CImageProcessIO())</span>
 
         <span class="c1">#Create parameters class</span>
-        <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">HelloWorldProcessParam</span><span class="p">())</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">param</span><span class="p">))</span>
@@ -234,7 +234,7 @@
         <span class="c1"># self.info.iconPath = &quot;your path to a specific icon&quot;</span>
         <span class="c1"># self.info.keywords = &quot;your keywords&quot; -&gt; for search</span>
 
-    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="c1"># Create process object</span>
         <span class="k">return</span> <span class="n">HelloWorldProcess</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
 </pre></div>
