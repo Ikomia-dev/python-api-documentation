@@ -1,0 +1,24 @@
+PyCore.CGraphicsItem
+====================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: CGraphicsItem
+
+   .. rubric:: Methods
+   .. autosummary::
+   
+      ~CGraphicsItem.__init__
+      ~CGraphicsItem.getCategory
+      ~CGraphicsItem.getId
+      ~CGraphicsItem.getType
+      ~CGraphicsItem.isTextItem
+      ~CGraphicsItem.setCategory
+   
+   .. automethod:: __init__
+   .. automethod:: getCategory
+   .. automethod:: getId
+   .. automethod:: getType
+   .. automethod:: isTextItem
+   .. automethod:: setCategory 
+   

@@ -1,0 +1,19 @@
+PyCore.GraphicsPointProperty
+============================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: GraphicsPointProperty
+
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~GraphicsPointProperty.brush_color
+      ~GraphicsPointProperty.category
+      ~GraphicsPointProperty.opacity
+      ~GraphicsPointProperty.pen_color
+      ~GraphicsPointProperty.size
+   
+   

@@ -1,0 +1,46 @@
+PyCore.CGraphicsOutput
+======================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: CGraphicsOutput
+  
+   .. rubric:: Methods
+   .. autosummary::
+   
+      ~CGraphicsOutput.__init__
+      ~CGraphicsOutput.addComplexPolygon
+      ~CGraphicsOutput.addEllipse
+      ~CGraphicsOutput.addItem
+      ~CGraphicsOutput.addPoint
+      ~CGraphicsOutput.addPolygon
+      ~CGraphicsOutput.addPolyline
+      ~CGraphicsOutput.addRectangle
+      ~CGraphicsOutput.addText
+      ~CGraphicsOutput.clearData
+      ~CGraphicsOutput.isDataAvailable
+      ~CGraphicsOutput.setImageIndex
+      ~CGraphicsOutput.setNewLayer
+   
+   
+   .. rubric:: Attributes
+   .. autosummary::
+   
+      ~CGraphicsOutput.dataType
+      ~CGraphicsOutput.dimCount
+   
+
+   .. automethod:: __init__
+   .. automethod:: addComplexPolygon
+   .. automethod:: addEllipse
+   .. automethod:: addItem
+   .. automethod:: addPoint
+   .. automethod:: addPolygon
+   .. automethod:: addPolyline
+   .. automethod:: addRectangle
+   .. automethod:: addText
+   .. automethod:: clearData
+   .. automethod:: isDataAvailable
+   .. automethod:: setImageIndex
+   .. automethod:: setNewLayer
+   

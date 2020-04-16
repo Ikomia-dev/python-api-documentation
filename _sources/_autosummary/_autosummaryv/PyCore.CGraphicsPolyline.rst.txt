@@ -1,0 +1,30 @@
+PyCore.CGraphicsPolyline
+========================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: CGraphicsPolyline
+   
+   .. rubric:: Methods
+   .. autosummary::
+   
+      ~CGraphicsPolyline.__init__
+      ~CGraphicsPolyline.getCategory
+      ~CGraphicsPolyline.getId
+      ~CGraphicsPolyline.getType
+      ~CGraphicsPolyline.isTextItem
+      ~CGraphicsPolyline.setCategory
+   
+   
+   .. rubric:: Attributes
+   .. autosummary::
+   
+      ~CGraphicsPolyline.points
+
+   .. automethod:: __init__
+   .. automethod:: getCategory
+   .. automethod:: getId
+   .. automethod:: getType
+   .. automethod:: isTextItem
+   .. automethod:: setCategory
+   

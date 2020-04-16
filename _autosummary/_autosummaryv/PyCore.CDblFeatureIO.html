@@ -7,15 +7,15 @@
     <title>PyCore.CDblFeatureIO &#8212; Ikomia 0.1.0 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PyCore.CImageProcessIO" href="PyCore.CImageProcessIO.html" />
-    <link rel="prev" title="PyCore.ActionFlag" href="PyCore.ActionFlag.html" />
+    <link rel="next" title="PyCore.CGraphicsInput" href="PyCore.CGraphicsInput.html" />
+    <link rel="prev" title="PyCore" href="../PyCore.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -86,8 +86,8 @@
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../../modules.html">API Modules</a><ul>
   <li><a href="../PyCore.html">PyCore</a><ul>
-      <li>Previous: <a href="PyCore.ActionFlag.html" title="previous chapter">PyCore.ActionFlag</a></li>
-      <li>Next: <a href="PyCore.CImageProcessIO.html" title="next chapter">PyCore.CImageProcessIO</a></li>
+      <li>Previous: <a href="../PyCore.html" title="previous chapter">PyCore</a></li>
+      <li>Next: <a href="PyCore.CGraphicsInput.html" title="next chapter">PyCore.CGraphicsInput</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -102,7 +102,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -121,10 +121,10 @@
     <ul>
         <li>
           &larr;
-          <a href="PyCore.ActionFlag.html" title="Previous document">PyCore.ActionFlag</a>
+          <a href="../PyCore.html" title="Previous document">PyCore</a>
         </li>
         <li>
-          <a href="PyCore.CImageProcessIO.html" title="Next document">PyCore.CImageProcessIO</a>
+          <a href="PyCore.CGraphicsInput.html" title="Next document">PyCore.CGraphicsInput</a>
           &rarr;
         </li>
     </ul>
@@ -231,17 +231,17 @@
 </dd>
 </dl>
 </dd>
-<dt>addValueList( (CDblFeatureIO)self, (object)values, (object)labels) -&gt; None :</dt><dd><p>Append a new value list with the corresponding header label and a label for each value.</p>
+<dt>addValueList( (CDblFeatureIO)self, (object)values, (object)labels) -&gt; None :</dt><dd><p>Append a new value list with a label for each value.</p>
 <dl>
 <dt>Args:</dt><dd><p>values (list): list of float values</p>
-<p>header_label (str): header label</p>
 <p>labels (list of str): store label for each numeric value</p>
 </dd>
 </dl>
 </dd>
-<dt>addValueList( (CDblFeatureIO)arg1, (object)self, (str)values, (object)labels) -&gt; None :</dt><dd><p>Append a new value list with a label for each value.</p>
+<dt>addValueList( (CDblFeatureIO)self, (object)values, (str)header_label, (object)labels) -&gt; None :</dt><dd><p>Append a new value list with the corresponding header label and a label for each value.</p>
 <dl>
 <dt>Args:</dt><dd><p>values (list): list of float values</p>
+<p>header_label (str): header label</p>
 <p>labels (list of str): store label for each numeric value</p>
 </dd>
 </dl>
@@ -356,10 +356,10 @@
     <ul>
         <li>
           &larr;
-          <a href="PyCore.ActionFlag.html" title="Previous document">PyCore.ActionFlag</a>
+          <a href="../PyCore.html" title="Previous document">PyCore</a>
         </li>
         <li>
-          <a href="PyCore.CImageProcessIO.html" title="Next document">PyCore.CImageProcessIO</a>
+          <a href="PyCore.CGraphicsInput.html" title="Next document">PyCore.CGraphicsInput</a>
           &rarr;
         </li>
     </ul>

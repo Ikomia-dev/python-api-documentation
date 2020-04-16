@@ -7,11 +7,11 @@
     <title>Image processing plugin (OpenCV) &#8212; Ikomia 0.1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="API Modules" href="modules.html" />
@@ -92,7 +92,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -208,7 +208,7 @@ Let’s say we want to control blur strengh of the Gaussian filter, we have to m
 <li><p>Sigma Y</p></li>
 </ul>
 <p>First, we add member variables in the parameters class, they will be accessible from the process.
-Note the presence of functions <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTaskParam.html#PyCore.CProtocolTaskParam.setParam" title="PyCore.CProtocolTaskParam.setParam"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setParam()</span></code></a> and <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTaskParam.html#PyCore.CProtocolTaskParam.getParam" title="PyCore.CProtocolTaskParam.getParam"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getParam()</span></code></a> which are required to save/load values when user wants to save his workflow.</p>
+Note the presence of functions <code class="xref py py-meth docutils literal notranslate"><span class="pre">setParam()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">getParam()</span></code> which are required to save/load values when user wants to save his workflow.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcessParam</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

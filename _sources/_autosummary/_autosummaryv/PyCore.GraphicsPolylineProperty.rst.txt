@@ -1,0 +1,18 @@
+PyCore.GraphicsPolylineProperty
+===============================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: GraphicsPolylineProperty
+
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~GraphicsPolylineProperty.category
+      ~GraphicsPolylineProperty.line_size
+      ~GraphicsPolylineProperty.opacity
+      ~GraphicsPolylineProperty.pen_color
+   
+   

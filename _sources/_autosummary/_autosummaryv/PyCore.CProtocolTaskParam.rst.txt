@@ -9,10 +9,10 @@ PyCore.CProtocolTaskParam
       .. autosummary::
             ~CProtocolTaskParam.__init__
             ~CProtocolTaskParam.getHashValue
-            ~CProtocolTaskParam.getParam
-            ~CProtocolTaskParam.setParam
+            ~CProtocolTaskParam.getParamMap
+            ~CProtocolTaskParam.setParamMap
 
       .. automethod:: __init__
       .. automethod:: getHashValue
-      .. automethod:: getParam
-      .. automethod:: setParam
+      .. automethod:: getParamMap
+      .. automethod:: setParamMap

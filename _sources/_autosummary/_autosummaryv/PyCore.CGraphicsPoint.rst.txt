@@ -1,0 +1,31 @@
+PyCore.CGraphicsPoint
+=====================
+
+.. currentmodule:: PyCore
+
+.. autoclass:: CGraphicsPoint
+   
+   .. rubric:: Methods
+   .. autosummary::
+   
+      ~CGraphicsPoint.__init__
+      ~CGraphicsPoint.getCategory
+      ~CGraphicsPoint.getId
+      ~CGraphicsPoint.getType
+      ~CGraphicsPoint.isTextItem
+      ~CGraphicsPoint.setCategory
+   
+
+   .. rubric:: Attributes
+   .. autosummary::
+   
+      ~CGraphicsPoint.point
+
+
+   .. automethod:: __init__
+   .. automethod:: getCategory
+   .. automethod:: getId
+   .. automethod:: getType
+   .. automethod:: isTextItem
+   .. automethod:: setCategory
+   

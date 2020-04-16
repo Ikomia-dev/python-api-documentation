@@ -7,15 +7,15 @@
     <title>PyCore.CProtocolTaskParam &#8212; Ikomia 0.1.0 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PyCore.CProtocolTaskWidget" href="PyCore.CProtocolTaskWidget.html" />
-    <link rel="prev" title="PyCore.CProtocolTaskIO" href="PyCore.CProtocolTaskIO.html" />
+    <link rel="next" title="PyCore.ParamMap" href="PyCore.ParamMap.html" />
+    <link rel="prev" title="PyCore.TaskType" href="PyCore.TaskType.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -86,8 +86,8 @@
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../../modules.html">API Modules</a><ul>
   <li><a href="../PyCore.html">PyCore</a><ul>
-      <li>Previous: <a href="PyCore.CProtocolTaskIO.html" title="previous chapter">PyCore.CProtocolTaskIO</a></li>
-      <li>Next: <a href="PyCore.CProtocolTaskWidget.html" title="next chapter">PyCore.CProtocolTaskWidget</a></li>
+      <li>Previous: <a href="PyCore.TaskType.html" title="previous chapter">PyCore.TaskType</a></li>
+      <li>Next: <a href="PyCore.ParamMap.html" title="next chapter">PyCore.ParamMap</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -102,7 +102,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -121,10 +121,10 @@
     <ul>
         <li>
           &larr;
-          <a href="PyCore.CProtocolTaskIO.html" title="Previous document">PyCore.CProtocolTaskIO</a>
+          <a href="PyCore.TaskType.html" title="Previous document">PyCore.TaskType</a>
         </li>
         <li>
-          <a href="PyCore.CProtocolTaskWidget.html" title="Next document">PyCore.CProtocolTaskWidget</a>
+          <a href="PyCore.ParamMap.html" title="Next document">PyCore.ParamMap</a>
           &rarr;
         </li>
     </ul>
@@ -153,10 +153,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskParam.getHashValue" title="PyCore.CProtocolTaskParam.getHashValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHashValue</span></code></a>(self)</p></td>
 <td><p>Get hash value from parameters values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskParam.getParam" title="PyCore.CProtocolTaskParam.getParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParam</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskParam.getParamMap" title="PyCore.CProtocolTaskParam.getParamMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParamMap</span></code></a>(self)</p></td>
 <td><p>Get task parameter names and values.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskParam.setParam" title="PyCore.CProtocolTaskParam.setParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParam</span></code></a>(self, params)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#PyCore.CProtocolTaskParam.setParamMap" title="PyCore.CProtocolTaskParam.setParamMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParamMap</span></code></a>(self, params)</p></td>
 <td><p>Set task parameter names and values from the given <a class="reference internal" href="PyCore.ParamMap.html#PyCore.ParamMap" title="PyCore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a> object (same use as Python dict).</p></td>
 </tr>
 </tbody>
@@ -181,8 +181,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="PyCore.CProtocolTaskParam.getParam">
-<code class="sig-name descname">getParam</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskParam)self</em><span class="sig-paren">)</span> &#x2192; ParamMap :<a class="headerlink" href="#PyCore.CProtocolTaskParam.getParam" title="Permalink to this definition">¶</a></dt>
+<dt id="PyCore.CProtocolTaskParam.getParamMap">
+<code class="sig-name descname">getParamMap</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskParam)self</em><span class="sig-paren">)</span> &#x2192; ParamMap :<a class="headerlink" href="#PyCore.CProtocolTaskParam.getParamMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get task parameter names and values.</p>
 <blockquote>
 <div><dl class="simple">
@@ -190,12 +190,12 @@
 </dd>
 </dl>
 </div></blockquote>
-<p>getParam( (CProtocolTaskParam)self) -&gt; ParamMap</p>
+<p>getParamMap( (CProtocolTaskParam)self) -&gt; ParamMap</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="PyCore.CProtocolTaskParam.setParam">
-<code class="sig-name descname">setParam</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskParam)self</em>, <em class="sig-param">(ParamMap)params</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CProtocolTaskParam.setParam" title="Permalink to this definition">¶</a></dt>
+<dt id="PyCore.CProtocolTaskParam.setParamMap">
+<code class="sig-name descname">setParamMap</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskParam)self</em>, <em class="sig-param">(ParamMap)params</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#PyCore.CProtocolTaskParam.setParamMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set task parameter names and values from the given <a class="reference internal" href="PyCore.ParamMap.html#PyCore.ParamMap" title="PyCore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a> object (same use as Python dict).</p>
 <blockquote>
 <div><dl class="simple">
@@ -206,7 +206,7 @@
 </dd>
 </dl>
 </div></blockquote>
-<p>setParam( (CProtocolTaskParam)self, (ParamMap)params) -&gt; None</p>
+<p>setParamMap( (CProtocolTaskParam)self, (ParamMap)params) -&gt; None</p>
 </dd></dl>
 
 </dd></dl>
@@ -221,10 +221,10 @@
     <ul>
         <li>
           &larr;
-          <a href="PyCore.CProtocolTaskIO.html" title="Previous document">PyCore.CProtocolTaskIO</a>
+          <a href="PyCore.TaskType.html" title="Previous document">PyCore.TaskType</a>
         </li>
         <li>
-          <a href="PyCore.CProtocolTaskWidget.html" title="Next document">PyCore.CProtocolTaskWidget</a>
+          <a href="PyCore.ParamMap.html" title="Next document">PyCore.ParamMap</a>
           &rarr;
         </li>
     </ul>
