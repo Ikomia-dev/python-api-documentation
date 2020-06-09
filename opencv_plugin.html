@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Image processing plugin (OpenCV) &#8212; Ikomia 0.1.0 documentation</title>
+    <title>Simple OpenCV plugin &#8212; Ikomia 0.1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -14,7 +14,7 @@
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="API Modules" href="modules.html" />
+    <link rel="next" title="Interactive plugin" href="interactive_plugin.html" />
     <link rel="prev" title="Hello world plugin" href="hello_world_plugin.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -53,10 +53,14 @@
 
 
 <h3>Navigation</h3>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies management</a></li>
+</ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Image processing plugin (OpenCV)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactive_plugin.html">Interactive plugin</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
@@ -79,7 +83,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="hello_world_plugin.html" title="previous chapter">Hello world plugin</a></li>
-      <li>Next: <a href="modules.html" title="next chapter">API Modules</a></li>
+      <li>Next: <a href="interactive_plugin.html" title="next chapter">Interactive plugin</a></li>
   </ul></li>
 </ul>
 </div>
@@ -114,7 +118,7 @@
           <a href="hello_world_plugin.html" title="Previous document">Hello world plugin</a>
         </li>
         <li>
-          <a href="modules.html" title="Next document">API Modules</a>
+          <a href="interactive_plugin.html" title="Next document">Interactive plugin</a>
           &rarr;
         </li>
     </ul>
@@ -124,8 +128,8 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="image-processing-plugin-opencv">
-<h1>Image processing plugin (OpenCV)<a class="headerlink" href="#image-processing-plugin-opencv" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="simple-opencv-plugin">
+<h1>Simple OpenCV plugin<a class="headerlink" href="#simple-opencv-plugin" title="Permalink to this headline">¶</a></h1>
 <p>This section will show how to create a fully functional plugin applying basics OpenCV methods to images. It takes image as input and delivers processed image as output.</p>
 <p>We skip here all steps to create a new empty plugin. Please refer to <a class="reference internal" href="hello_world_plugin.html"><span class="doc">Hello World tutorial</span></a> if you are not familiar with it.</p>
 <dl class="simple">
@@ -147,7 +151,7 @@ See <a class="reference internal" href="opencv_plugin_interface.html"><span clas
 </div>
 <div class="section" id="process-implementation">
 <h2>Process implementation<a class="headerlink" href="#process-implementation" title="Permalink to this headline">¶</a></h2>
-<p>The aim of our plugin is to process images, so our task is derived from <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CImageProcess2d</span></code></a>.
+<p>The aim of our plugin is to process images, so our task is derived from <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>.
 This base class comes with default inputs (image + graphics) and outputs (image) that fit our needs.</p>
 <p>Our process pipeline will be: <em>Convert to grayscale</em> -&gt; <em>Gaussian blur</em> -&gt; <em>Canny filter</em>.</p>
 <p>The first thing to do in our <em>OCVBasics_process.py</em> is importing OpenCV package (already installed):</p>
@@ -411,7 +415,7 @@ We have to fill the member object <em>info</em>, see <a class="reference interna
           <a href="hello_world_plugin.html" title="Previous document">Hello world plugin</a>
         </li>
         <li>
-          <a href="modules.html" title="Next document">API Modules</a>
+          <a href="interactive_plugin.html" title="Next document">Interactive plugin</a>
           &rarr;
         </li>
     </ul>

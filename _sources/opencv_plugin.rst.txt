@@ -1,5 +1,5 @@
-Image processing plugin (OpenCV)
-================================
+Simple OpenCV plugin
+====================
 
 This section will show how to create a fully functional plugin applying basics OpenCV methods to images. It takes image as input and delivers processed image as output.
 
@@ -22,7 +22,7 @@ See :doc:`OCVBasics.py <opencv_plugin_interface>`.
 Process implementation
 ----------------------
 
-The aim of our plugin is to process images, so our task is derived from :py:class:`PyDataProcess.CImageProcess2d`. 
+The aim of our plugin is to process images, so our task is derived from :py:class:`~PyDataProcess.CImageProcess2d`. 
 This base class comes with default inputs (image + graphics) and outputs (image) that fit our needs.
 
 Our process pipeline will be: *Convert to grayscale* -> *Gaussian blur* -> *Canny filter*.

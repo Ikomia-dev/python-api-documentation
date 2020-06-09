@@ -14,7 +14,7 @@
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hello world plugin" href="hello_world_plugin.html" />
+    <link rel="next" title="Dependencies management" href="dependencies.html" />
     <link rel="prev" title="Welcome to Ikomia’s documentation" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -55,8 +55,12 @@
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Image processing plugin (OpenCV)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactive_plugin.html">Interactive plugin</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
@@ -79,7 +83,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="index.html" title="previous chapter">Welcome to Ikomia’s documentation</a></li>
-      <li>Next: <a href="hello_world_plugin.html" title="next chapter">Hello world plugin</a></li>
+      <li>Next: <a href="dependencies.html" title="next chapter">Dependencies management</a></li>
   </ul></li>
 </ul>
 </div>
@@ -114,7 +118,7 @@
           <a href="index.html" title="Previous document">Welcome to Ikomia’s documentation</a>
         </li>
         <li>
-          <a href="hello_world_plugin.html" title="Next document">Hello world plugin</a>
+          <a href="dependencies.html" title="Next document">Dependencies management</a>
           &rarr;
         </li>
     </ul>
@@ -135,7 +139,7 @@ The Python environment configuration may vary among your operating system:</p>
 <ul class="simple">
 <li><p>Version: <em>3.7</em></p></li>
 <li><p>Path: <em>c:\Users\{username}IkomiaPython</em></p></li>
-<li><p>Installed packages: <em>pip, numpy, requests, PyQt5=5.11.2, opencv=4.2.0</em></p></li>
+<li><p>Installed packages: <em>pip, numpy, requests, PyQt5=5.14.2, opencv=4.2.0</em></p></li>
 </ul>
 <p><strong>Linux</strong></p>
 <ul class="simple">
@@ -160,8 +164,8 @@ python.exe -m pip install <span class="o">{</span>your_package<span class="o">}<
 </pre></div>
 </div>
 <p>Linux and Mac OS X</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Ikomia/Python
-python -m pip install <span class="o">{</span>your_package<span class="o">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Ikomia/Python/bin
+./python37m -m pip install <span class="o">{</span>your_package<span class="o">}</span>
 </pre></div>
 </div>
 <p><strong>Ikomia Plugin Manager</strong></p>
@@ -190,7 +194,7 @@ python -m pip install <span class="o">{</span>your_package<span class="o">}</spa
           <a href="index.html" title="Previous document">Welcome to Ikomia’s documentation</a>
         </li>
         <li>
-          <a href="hello_world_plugin.html" title="Next document">Hello world plugin</a>
+          <a href="dependencies.html" title="Next document">Dependencies management</a>
           &rarr;
         </li>
     </ul>

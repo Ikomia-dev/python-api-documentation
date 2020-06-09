@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Interactive plugin &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Modules" href="modules.html" />
+    <link rel="prev" title="Simple OpenCV plugin" href="opencv_plugin.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies management</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interactive plugin</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="opencv_plugin.html" title="previous chapter">Simple OpenCV plugin</a></li>
+      <li>Next: <a href="modules.html" title="next chapter">API Modules</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="opencv_plugin.html" title="Previous document">Simple OpenCV plugin</a>
+        </li>
+        <li>
+          <a href="modules.html" title="Next document">API Modules</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="interactive-plugin">
+<h1>Interactive plugin<a class="headerlink" href="#interactive-plugin" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, we will see how to implement a plugin managing user interaction through graphics objects input.
+We will illustrate this through the implementation of active contour algorithms from scikit-image library :</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://scikit-image.org/docs/stable/api/skimage.segmentation.html#morphological-geodesic-active-contour">morphological_geodesic_active_contour</a></p></li>
+<li><p><a class="reference external" href="https://scikit-image.org/docs/stable/api/skimage.segmentation.html#morphological-chan-vese">morphological_chan_vese</a></p></li>
+</ul>
+<p>Active contour algorithms, also called «snakes», are segmentation methods matching a deformable model to an image region by means
+of energy minimization. They require initial regions or seeds in the form of a binary mask from which an iterative update strategy
+will be applied (growth or shrinkage). Initial binary mask can be either the result of a previous task in workflow or manual
+shapes drawn by users (Ikomia graphics objects).</p>
+<p>Here are the steps we will follow:</p>
+<ul class="simple">
+<li><p>Define required inputs and outputs</p></li>
+<li><p>Get initial contour from user graphics input or binary mask directly</p></li>
+<li><p>Call active contour method</p></li>
+<li><p>Generate results</p></li>
+</ul>
+<p>We skip here all steps to create a new empty plugin.
+Please refer to <a class="reference internal" href="hello_world_plugin.html"><span class="doc">Hello World tutorial</span></a> if you are not familiar with it.</p>
+<p><strong>Table of contents</strong></p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="#files-structure"><span class="std std-ref">Plugin files structure</span></a></div>
+<div class="line"><a class="reference internal" href="#dependencies"><span class="std std-ref">Dependencies</span></a></div>
+<div class="line"><a class="reference internal" href="#interface-implementation"><span class="std std-ref">Interface implementation</span></a></div>
+<div class="line"><a class="reference internal" href="#process-implementation"><span class="std std-ref">Process implementation</span></a></div>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="#inputs"><span class="std std-ref">Inputs</span></a></div>
+<div class="line"><a class="reference internal" href="#outputs"><span class="std std-ref">Outputs</span></a></div>
+<div class="line"><a class="reference internal" href="#active-contour-methods"><span class="std std-ref">Active contour methods</span></a></div>
+<div class="line"><a class="reference internal" href="#results"><span class="std std-ref">Results</span></a></div>
+<div class="line"><a class="reference internal" href="#progress-bar"><span class="std std-ref">Progress bar</span></a></div>
+</div>
+<div class="line"><a class="reference internal" href="#process-parameters"><span class="std std-ref">Process parameters</span></a></div>
+<div class="line"><a class="reference internal" href="#process-widget"><span class="std std-ref">Process widget</span></a></div>
+<div class="line"><a class="reference internal" href="#process-metadata"><span class="std std-ref">Process metadata</span></a></div>
+<div class="line"><a class="reference internal" href="#id13"><span class="std std-ref">Source code</span></a></div>
+</div>
+<div class="section" id="plugin-files-structure">
+<span id="files-structure"></span><h2>Plugin files structure<a class="headerlink" href="#plugin-files-structure" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>scikit_MorphoSnakes</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>__init__.py</p></li>
+<li><p>requirements.txt</p></li>
+<li><p>scikit_MorphoSnakes.py</p></li>
+<li><p>scikit_MorphoSnakes_process.py</p></li>
+<li><p>scikit_MorphoSnakes_widget.py</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="dependencies">
+<span id="id1"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>OpenCV: basic image operations (built-in in Ikomia software)</p></li>
+<li><p>scikit-image: active contour algorithms</p></li>
+</ul>
+<p>Plugin dependencies are listed in <em>requirements.txt</em> so that they will be automatically installed by Ikomia software
+during plugin installation. More information about dependency management <a class="reference internal" href="dependencies.html"><span class="doc">here</span></a>.</p>
+</div>
+<div class="section" id="interface-implementation">
+<span id="id2"></span><h2>Interface implementation<a class="headerlink" href="#interface-implementation" title="Permalink to this headline">¶</a></h2>
+<p>No features added from the default implementation.
+See <a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/scikit_MorphoSnakes.py">scikit_MorphoSnakes.py</a>.</p>
+</div>
+<div class="section" id="process-implementation">
+<span id="id3"></span><h2>Process implementation<a class="headerlink" href="#process-implementation" title="Permalink to this headline">¶</a></h2>
+<p>Import statements in <em>scikit_MorphoSnakes_process.py</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PyCore</span>
+<span class="kn">import</span> <span class="nn">PyDataProcess</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="c1"># your imports below</span>
+<span class="kn">from</span> <span class="nn">skimage.segmentation</span> <span class="kn">import</span> <span class="p">(</span><span class="n">morphological_geodesic_active_contour</span><span class="p">,</span> <span class="n">inverse_gaussian_gradient</span><span class="p">,</span> <span class="n">morphological_chan_vese</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">img_as_float</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">PyCore</span> <span class="kn">import</span> <span class="n">CImageProcessIO</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+</pre></div>
+</div>
+<div class="section" id="inputs">
+<span id="id4"></span><h3>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
+<p>Our active contour methods are designed to process 2D images, the corresponding base class from which our
+scikit_MorphoSnakesProcess class inherits is <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>. It comes with built-in inputs :</p>
+<ul class="simple">
+<li><p>Source image (<a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CImageProcessIO.html#PyCore.CImageProcessIO" title="PyCore.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a>)</p></li>
+<li><p>Graphics (<a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CGraphicsInput.html#PyCore.CGraphicsInput" title="PyCore.CGraphicsInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a>)</p></li>
+</ul>
+<p>As we discuss earlier, seeds for active contour methods can be set from graphics (user input) or binary mask directly.
+So we need to add a new image-based input of type <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CImageProcessIO.html#PyCore.CImageProcessIO" title="PyCore.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a> to handle binary mask initialization.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+        <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="o">...</span>
+        <span class="c1"># add input -&gt; initial level set</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addInput</span><span class="p">(</span><span class="n">CImageProcessIO</span><span class="p">())</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="id5"></span><h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<p>Here are outputs that our plugin should returned:</p>
+<ul class="simple">
+<li><p>Final level set as binary mask representing segmented objects (<a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>): directly consummable by connected tasks in workflow.</p></li>
+<li><p>Image with overlay containing segmented objects displayed on top of the original image (<a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>): for visualization purpose.</p></li>
+</ul>
+<p><a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>-based class comes also with built-in output:</p>
+<ul class="simple">
+<li><p>Image (<a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CImageProcessIO.html#PyCore.CImageProcessIO" title="PyCore.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a>)</p></li>
+</ul>
+<p>So we need to add a new image-based output of type <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CImageProcessIO.html#PyCore.CImageProcessIO" title="PyCore.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+        <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="o">...</span>
+        <span class="c1"># add output -&gt; results image</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addOutput</span><span class="p">(</span><span class="n">CImageProcessIO</span><span class="p">())</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="active-contour-methods">
+<span id="id6"></span><h3>Active contour methods<a class="headerlink" href="#active-contour-methods" title="Permalink to this headline">¶</a></h3>
+<p>First, we should check the input type the user gives us for the initial level set.
+User can give us 2 types of input to define initial contour:</p>
+<ul class="simple">
+<li><p>Binary mask</p></li>
+<li><p>Graphics objects</p></li>
+</ul>
+<p>If both of them are given, we have to make an arbitrary choice, so we will process the binary image first.
+Otherwise we will process graphics input. Let’s implement that in the <em>run()</em> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="c1"># initial level set</span>
+    <span class="n">initlevelSetInput</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getInput</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">initlevelSetInput</span><span class="o">.</span><span class="n">isDataAvailable</span><span class="p">():</span>
+        <span class="c1"># input set by previous operation in worflow</span>
+        <span class="o">...</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="c1"># input set by user</span>
+        <span class="n">graphInput</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getInput</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">graphInput</span><span class="o">.</span><span class="n">isDataAvailable</span><span class="p">():</span>
+            <span class="o">...</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;No initial level-set given: it must be graphics input or binary image.&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>In the case of binary mask input, no extra code is needed and we just have to pass the input content to
+the scikit-image functions as both structures are numpy arrays.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="k">if</span> <span class="n">initlevelSetInput</span><span class="o">.</span><span class="n">isDataAvailable</span><span class="p">():</span>
+        <span class="n">initlevelSetBinary</span> <span class="o">=</span> <span class="n">initlevelSetInput</span><span class="o">.</span><span class="n">getImage</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">param</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;mgac&quot;</span><span class="p">:</span>
+            <span class="n">proc_img</span> <span class="o">=</span> <span class="n">morphological_geodesic_active_contour</span><span class="p">(</span><span class="n">gimage</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">init_level_set</span><span class="o">=</span><span class="n">initlevelSetBinary</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">proc_img</span> <span class="o">=</span> <span class="n">morphological_chan_vese</span><span class="p">(</span><span class="n">gimage</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">init_level_set</span><span class="o">=</span><span class="n">initlevelSetBinary</span><span class="p">)</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>For graphics input, we need to generate a binary mask representing active contour seeds from graphics drawn by users.
+We will use 2 methods of <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a> to achieve that:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d.createGraphicsMask" title="PyDataProcess.CImageProcess2d.createGraphicsMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">createGraphicsMask()</span></code></a>: create a binary mask from <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CGraphicsInput.html#PyCore.CGraphicsInput" title="PyCore.CGraphicsInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a> and append it to the internal mask list.</p></li>
+<li><p><a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d.getGraphicsMask" title="PyDataProcess.CImageProcess2d.getGraphicsMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getGraphicsMask()</span></code></a>: get a mask from the internal mask list as numpy array.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="k">if</span> <span class="n">graphInput</span><span class="o">.</span><span class="n">isDataAvailable</span><span class="p">():</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">createGraphicsMask</span><span class="p">(</span><span class="n">imagef</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">imagef</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">graphInput</span><span class="p">)</span>
+        <span class="n">binImg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getGraphicsMask</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="o">...</span>
+        <span class="n">proc_img</span> <span class="o">=</span> <span class="n">morphological_geodesic_active_contour</span><span class="p">(</span><span class="n">gimage</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">init_level_set</span><span class="o">=</span><span class="n">binImg</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+        <span class="o">...</span>
+        <span class="n">proc_img</span> <span class="o">=</span> <span class="n">morphological_chan_vese</span><span class="p">(</span><span class="n">gimage</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span>  <span class="n">init_level_set</span><span class="o">=</span><span class="n">binImg</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>The following example illustrates the use of user graphics input to define initial level set:</p>
+<img alt="_images/interactive_plugin.jpg" src="_images/interactive_plugin.jpg" />
+</div>
+<div class="section" id="results">
+<span id="id7"></span><h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
+<p>The first result is the binary mask representing the final level set of the active contour method.
+We simply have to set the content of the corresponding output with the numpy array returned
+by the scikit-image functions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get output</span>
+<span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># set output mask binary image</span>
+<span class="n">output</span><span class="o">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">proc_img</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The second result is the visualization of the segmented objects on top of the original image.
+We will use the color mask visualization offered by Ikomia software. This feature enables to
+take an output mask (binary or grayscale image) and use it as color mask for another image output.
+Ikomia software will then display the mask in a transparent overlay on top of this image.
+Colors are fully customizable, you can set a single color for binary mask or a complete colormap for grayscale mask.</p>
+<p>In our example, we want to display the final level set on top of the original image, so we need
+to forward the original input to a given output (see <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d.forwardInputImage" title="PyDataProcess.CImageProcess2d.forwardInputImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forwardInputImage()</span></code></a>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">forwardInputImage</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And we apply the color mask vizualisation in red (see <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d.setOutputColorMap" title="PyDataProcess.CImageProcess2d.setOutputColorMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOutputColorMap()</span></code></a>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">setOutputColorMap</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[[</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="progress-bar">
+<span id="id8"></span><h3>Progress bar<a class="headerlink" href="#progress-bar" title="Permalink to this headline">¶</a></h3>
+<p>Note that functions <em>morphological_geodesic_active_contour()</em> and <em>morphological_chan_vese()</em> from scikit-image
+have one specificity that can be usefull for us. They have an <em>iter_callback</em> parameter called once per iteration
+we can use to refresh the progress bar of Ikomia software. We call <code class="xref py py-meth docutils literal notranslate"><span class="pre">emitProgressSteps()</span></code>
+in a lambda function given <em>to iter_callback</em> parameter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">proc_img</span> <span class="o">=</span> <span class="n">morphological_geodesic_active_contour</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">iter_callback</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">callback</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">emitStepProgress</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>We also need to specify the number of iterations (steps) to our progress bar by overriding
+<a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTask.html#PyCore.CProtocolTask.getProgressSteps" title="PyCore.CProtocolTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">getProgressSteps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eltCount</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">param</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">param</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;mgac&quot;</span><span class="p">:</span>
+            <span class="n">nb_iter</span> <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">mgac_iterations</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">nb_iter</span> <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">mcv_iterations</span>
+
+        <span class="k">return</span> <span class="n">nb_iter</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="process-parameters">
+<span id="id9"></span><h2>Process parameters<a class="headerlink" href="#process-parameters" title="Permalink to this headline">¶</a></h2>
+<p>We will now focus on adding some parameters to our process. We want to control available parameters from scikit-image methods.</p>
+<p>Morphological active contour:</p>
+<ul class="simple">
+<li><p>gImage : (M, N) or (L, M, N) array, preprocessed image or volume to be segmented.</p></li>
+<li><p>iterations : uint, number of iterations to run.</p></li>
+<li><p>init_level_set : (M, N) array, or (L, M, N) array</p></li>
+<li><p>smoothing : uint, optional, number of time the smoothing operator is applied per iteration.</p></li>
+<li><p>threshold :  float, optional, areas of the image with a value smaller than this threshold will be considered borders.</p></li>
+<li><p>balloon :  float, optional, force to guide the contour, positive value → expand the contour / negative value → shrink the contour.</p></li>
+<li><p>iter_callback : function called once per iteration, optional</p></li>
+</ul>
+<p>Morphological Chan Vese:</p>
+<ul class="simple">
+<li><p>gImage : (M, N) or (L, M, N) array, preprocessed image or volume to be segmented.</p></li>
+<li><p>iterations : uint, number of iterations to run.</p></li>
+<li><p>init_level_set : (M, N) array, or (L, M, N) array</p></li>
+<li><p>smoothing : uint, optional, number of time the smoothing operator is applied per iteration.</p></li>
+<li><p>lamnda1 : float, optional, weight parameter for the outer region.</p></li>
+<li><p>lamnda2 : float, optional,weight parameter for the inner region.</p></li>
+<li><p>iter_callback : function called once per iteration, optional</p></li>
+</ul>
+<p>First, we add member variables in the parameters class, they will be accessible from the process.
+Note the presence of functions <code class="xref py py-meth docutils literal notranslate"><span class="pre">setParam()</span></code> and
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">getParam()</span></code> which are required to save/load values when user wants to save his workflow.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesParam</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="c1"># parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;mgac&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac_amplification_contour</span> <span class="o">=</span> <span class="s2">&quot;Inverse gaussian gradient&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac_iterations</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac_smoothing</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac_threshold</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac_balloon</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mcv_iterations</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mcv_smoothing</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mcv_lambda1</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mcv_lambda2</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">setParamMap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramMap</span><span class="p">):</span>
+        <span class="c1"># Set parameters values from Ikomia application</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;method&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac_amplification_contour</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_amplification_contour&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac_iterations</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_iterations&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac_smoothing</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_smoothing&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac_threshold</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_threshold&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac_balloon</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_balloon&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mcv_iterations</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mcv_iterations&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mcv_smoothing</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mcv_smoothing&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mcv_lambda1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mcv_lambda1&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mcv_lambda2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mcv_lambda2&quot;</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">getParamMap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Send parameters values to Ikomia application</span>
+        <span class="c1"># Create the specific dict structure (string container)</span>
+        <span class="n">paramMap</span> <span class="o">=</span> <span class="n">PyCore</span><span class="o">.</span><span class="n">ParamMap</span><span class="p">()</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;method&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_amplification_contour&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mgac_amplification_contour</span><span class="p">)</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_iterations&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mgac_iterations</span><span class="p">)</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_smoothing&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mgac_smoothing</span><span class="p">)</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_threshold&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mgac_threshold</span><span class="p">)</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_balloon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mgac_balloon</span><span class="p">)</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mcv_iterations&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mcv_iterations</span><span class="p">)</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mcv_smoothing&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mcv_smoothing</span><span class="p">)</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mcv_lambda1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mcv_lambda1</span><span class="p">)</span>
+        <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mcv_lambda2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mcv_lambda2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">paramMap</span>
+</pre></div>
+</div>
+<p>We now modify the <em>run()</em> method to give parameters to our function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+        <span class="c1"># Get parameters</span>
+        <span class="n">param</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">()</span>
+        <span class="o">...</span>
+
+        <span class="n">proc_img</span> <span class="o">=</span> <span class="n">morphological_geodesic_active_contour</span><span class="p">(</span>
+            <span class="n">gimage</span><span class="p">,</span>
+            <span class="n">param</span><span class="o">.</span><span class="n">mgac_iterations</span><span class="p">,</span>
+            <span class="n">init_level_set</span><span class="o">=</span><span class="n">initlevelSetBinary</span><span class="p">,</span>
+            <span class="n">smoothing</span><span class="o">=</span><span class="n">param</span><span class="o">.</span><span class="n">mgac_smoothing</span><span class="p">,</span>
+            <span class="n">threshold</span><span class="o">=</span><span class="n">param</span><span class="o">.</span><span class="n">mgac_threshold</span><span class="p">,</span>
+            <span class="n">balloon</span><span class="o">=</span><span class="n">param</span><span class="o">.</span><span class="n">mgac_balloon</span><span class="p">,</span>
+            <span class="n">iter_callback</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">callback</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">emitStepProgress</span><span class="p">()))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span> <span class="o">*</span> <span class="mi">255</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="process-widget">
+<span id="id10"></span><h2>Process widget<a class="headerlink" href="#process-widget" title="Permalink to this headline">¶</a></h2>
+<p>At this point, parameters are only available from source code. The role of the plugin widget is to open parameters
+configuration to the user. We will use PyQt framework for this example. We implement the widget part in the file
+<em>scikit_MorphoSnakes_widget.py</em>. The widget layout is created in the constructor. Like the process class,
+the constructor receives an instance of the parameters structure to initialize the widget components.</p>
+<p>We let the user choose the active contour method, so we need him to select the method in order to display
+the appropriate parameters. We will use the <strong>QStackedWidget</strong> component.</p>
+<img alt="_images/qstacked_widget.jpg" src="_images/qstacked_widget.jpg" />
+<p>Global widget initialization</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+        <span class="c1"># Create layout : QGridLayout by default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
+
+        <span class="c1"># snake methods available</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgac</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chanVese</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+
+        <span class="c1"># set all parameters widgets</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">methodWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgacWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chanVeseWidget</span><span class="p">()</span>
+
+        <span class="c1"># main widget</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stack</span> <span class="o">=</span> <span class="n">QStackedWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mgac</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chanVese</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">setRowStretch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+        <span class="c1"># PyQt -&gt; Qt wrapping</span>
+        <span class="n">layoutPtr</span> <span class="o">=</span> <span class="n">QtConversion</span><span class="o">.</span><span class="n">PyQtToQt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="p">)</span>
+
+        <span class="c1"># Set widget layout</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layoutPtr</span><span class="p">)</span>
+
+        <span class="c1"># update left parameter panel</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">method</span> <span class="o">!=</span> <span class="s2">&quot;mgac&quot;</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note: <em>self.gridLayout.setRowStretch(n, n)</em> forces items to stay on top of the gridlayout.</p>
+<p>Method selection:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="k">def</span> <span class="nf">methodWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">label_method</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Methods :&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span> <span class="o">=</span> <span class="n">QComboBox</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s2">&quot;Morphological Geodesic Active Contour&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="s2">&quot;Morphological Chan Vese&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span><span class="o">.</span><span class="n">currentIndexChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">OnMethodChange</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">setRowStretch</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">label_method</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">setRowStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">setRowStretch</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>MGAC method parameters (see <a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/scikit_MorphoSnakes_widget.py">source code</a> for details)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">mgacWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+<p>Chan Vese method parameters (see <a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/scikit_MorphoSnakes_widget.py">source code</a> for details)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">chanVeseWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+<p>We use the slot <em>self.OnMethodChange()</em> to change current index of our QStackWidget according to the selected method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+    <span class="c1">#pySlot</span>
+    <span class="k">def</span> <span class="nf">OnMethodChange</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Morphological Geodesic Active Contour&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let’s see how our widget looks:</p>
+<a class="reference internal image-reference" href="_images/parameters_CV.jpg"><img alt="_images/parameters_CV.jpg" src="_images/parameters_CV.jpg" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="_images/parameters_MGAC.jpg"><img alt="_images/parameters_MGAC.jpg" src="_images/parameters_MGAC.jpg" style="width: 47%;" /></a>
+<p>Last thing, we have to update process parameters when a user change values through the widget.
+We do that by overriding <em>onApply()</em> method which is called when user clicks the <em>Apply</em> button.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">onApply</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Apply button clicked slot</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Morphological Geodesic Active Contour&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;mgac&quot;</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgac_coutour_check</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mgac_amplification_contour</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgac_stack_comboContour</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span>
+            <span class="k">else</span> <span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mgac_amplification_contour</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mgac_iterations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgac_spin_iterations</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mgac_smoothing</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgac_spin_smooth</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgac_threshold_check</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mgac_threshold</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span>
+            <span class="k">else</span> <span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mgac_threshold</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgac_spin_threshold</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mgac_balloon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgac_spin_balloon</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;mcv&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mcv_iterations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mcv_spin_iterations</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mcv_smoothing</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mcv_spin_smooth</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mcv_lambda1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mcv_spin_lambda1</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">mcv_lambda2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mcv_spin_lambda2</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+
+        <span class="c1"># Send signal to launch the process</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">emitApply</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="process-metadata">
+<span id="id12"></span><h2>Process metadata<a class="headerlink" href="#process-metadata" title="Permalink to this headline">¶</a></h2>
+<p>Finally, we will add some useful information about our plugin. Ikomia software manages such information and
+display it to the user (parameters widget, Ikomia Apps). Metadata can be added in the constructor of the process
+factory class in <em>scikit_MorphoSnakes_process.py</em>. We have to fill the member object info,
+see <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CProcessInfo.html#PyDataProcess.CProcessInfo" title="PyDataProcess.CProcessInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProcessInfo</span></code></a> for details.</p>
+<p><strong>Our plugin is now fully functional and interactive !</strong></p>
+</div>
+<div class="section" id="id13">
+<span id="id14"></span><h2>Source code<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/requirements.txt">requirements.txt</a></p>
+<p><a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/scikit_MorphoSnakes.py">scikit_MorphoSnakes.py</a></p>
+<p><a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/scikit_MorphoSnakes_process.py">scikit_MorphoSnakes_process.py</a></p>
+<p><a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/scikit_MorphoSnakes_widget.py">scikit_MorphoSnakes_widget.py</a></p>
+</div>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="opencv_plugin.html" title="Previous document">Simple OpenCV plugin</a>
+        </li>
+        <li>
+          <a href="modules.html" title="Next document">API Modules</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="_sources/interactive_plugin.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

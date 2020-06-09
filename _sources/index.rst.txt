@@ -30,12 +30,22 @@ This section will help you understand the API structure and will guide you throu
     :maxdepth: 1
 
     python_env
+    dependencies
+
+
+Tutorials
+
+.. toctree::
+    :maxdepth: 1
+
     hello_world_plugin
     opencv_plugin
+    interactive_plugin
 
 
 API Reference
 =============
+This section provides the auto-generated documentation from the Python code.
 
 .. toctree::
    :maxdepth: 2

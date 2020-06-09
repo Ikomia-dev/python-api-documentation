@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dependencies management &#8212; Ikomia 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Hello world plugin" href="hello_world_plugin.html" />
+    <link rel="prev" title="Python environment" href="python_env.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="python_env.html" title="previous chapter">Python environment</a></li>
+      <li>Next: <a href="hello_world_plugin.html" title="next chapter">Hello world plugin</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="python_env.html" title="Previous document">Python environment</a>
+        </li>
+        <li>
+          <a href="hello_world_plugin.html" title="Next document">Hello world plugin</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dependencies-management">
+<h1>Dependencies management<a class="headerlink" href="#dependencies-management" title="Permalink to this headline">¶</a></h1>
+<p>As of any Python project, an Ikomia plugin may have some Python module dependencies.
+The philosophy behind Ikomia is to offer ready to use algorithms to users.
+From the plugin author perspective, it means that the plugin must include directives
+to install these dependencies automatically.</p>
+<p>To achieve this goal, Ikomia software includes a system based on pip requirements files.
+During the plugin installation, Ikomia software will parse the plugin directory to find requirements files
+and install dependencies automatically.</p>
+<p><strong>Before publishing plugins, authors must include the necessary requirements files.</strong></p>
+<div class="section" id="requirements-file-structure">
+<h2>Requirements file structure<a class="headerlink" href="#requirements-file-structure" title="Permalink to this headline">¶</a></h2>
+<p>Ikomia dependency management is fully based on pip. Please consult the pip official documentation
+to know about all features:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pip.pypa.io/en/stable/user_guide/">pip user guide</a></p></li>
+<li><p><a class="reference external" href="https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format">requirements file format</a></p></li>
+</ul>
+</div>
+<div class="section" id="multi-steps-installation">
+<h2>Multi-steps installation<a class="headerlink" href="#multi-steps-installation" title="Permalink to this headline">¶</a></h2>
+<p>In some cases, it could be necessary to split the installation process to force installation of dependencies
+prior to others. As such, Ikomia dependency system handles multiple requirements files
+and apply alphanumeric sort to define installation order. Authors can then insert several requirements file into the
+plugin directory to solve dependencies issues.</p>
+<p>Example of plugin structure:</p>
+<ul>
+<li><p>MyPlugin</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>__init__.py</p></li>
+<li><p>MyPlugin.py</p></li>
+<li><p>MyPlugin_process.py</p></li>
+<li><p>MyPlugin_widget.py</p></li>
+<li><p>requirements1.txt</p></li>
+<li><p>requirements2.txt</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>In this configuration, Ikomia software will first install Python packages listed <em>requirements1.txt</em> and
+then those listed in the file <em>requirements2.txt</em>.</p>
+</div>
+<div class="section" id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<p>The standard way to manage dependencies in Python and its pip package installer is to provide a valid <em>setup.py</em> script.
+Then, Python package can either be distributed from Wheel or from source. For the moment, Ikomia software can only install
+dependencies available in the official Python Package Index (PyPI). Support for manual installation through direct call to
+<em>setup.py</em> script (setuptools) is in our roadmap and will be available soon.</p>
+</div>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="python_env.html" title="Previous document">Python environment</a>
+        </li>
+        <li>
+          <a href="hello_world_plugin.html" title="Next document">Hello world plugin</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="_sources/dependencies.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

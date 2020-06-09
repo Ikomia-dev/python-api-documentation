@@ -11,7 +11,7 @@ The Python environment configuration may vary among your operating system:
 
 - Version: *3.7*
 - Path: *c:\\Users\\{username}\Ikomia\Python*
-- Installed packages: *pip, numpy, requests, PyQt5=5.11.2, opencv=4.2.0*
+- Installed packages: *pip, numpy, requests, PyQt5=5.14.2, opencv=4.2.0*
 
 **Linux**
 
@@ -45,8 +45,8 @@ Linux and Mac OS X
 
 .. code-block:: bash
 
-    cd ~/Ikomia/Python
-    python -m pip install {your_package}
+    cd ~/Ikomia/Python/bin
+    ./python37m -m pip install {your_package}
 
 
 **Ikomia Plugin Manager**
