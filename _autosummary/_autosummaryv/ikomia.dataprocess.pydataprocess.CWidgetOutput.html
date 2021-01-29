@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CWidgetOutput &#8212; Ikomia  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CDatasetIO" href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" />
+    <link rel="prev" title="CGraphicsOutput" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul>
+      <li>Previous: <a href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html" title="previous chapter">CGraphicsOutput</a></li>
+      <li>Next: <a href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" title="next chapter">CDatasetIO</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html" title="Previous document">CGraphicsOutput</a>
+        </li>
+        <li>
+          <a href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" title="Next document">CDatasetIO</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="cwidgetoutput">
+<h1>CWidgetOutput<a class="headerlink" href="#cwidgetoutput" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput">
+<em class="property">class </em><code class="sig-prename descclassname">ikomia.dataprocess.pydataprocess.</code><code class="sig-name descname">CWidgetOutput</code><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define a widget output for a task. This class is designed to handle widget as output of a workflow task. A widget must be a derived object from QWidget of the Qt framework (PyQt5 or PySide2).
+Derived from <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a>.</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">dataprocess</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.__init__" title="ikomia.dataprocess.pydataprocess.CWidgetOutput.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>Default constructor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.setWidget" title="ikomia.dataprocess.pydataprocess.CWidgetOutput.setWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setWidget</span></code></a>(self, widget)</p></td>
+<td><p>Set the widget instance: use <code class="xref py py-mod docutils literal notranslate"><span class="pre">IkQtConversion</span></code> module to get C++ handle from Python Qt-based framework.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Overridden methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.clearData" title="ikomia.dataprocess.pydataprocess.CWidgetOutput.clearData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code></a>(self)</p></td>
+<td><p>Clear the output data: sets the widget handle to null.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CWidgetOutput.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
+<td><p>Check whether the output contains a valid widget.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Inherited methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.copyStaticData" title="ikomia.dataprocess.pydataprocess.CWidgetOutput.copyStaticData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copyStaticData</span></code></a>(self, io)</p></td>
+<td><p>Copy the static data from the given input or ouput.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.getUnitElementCount" title="ikomia.dataprocess.pydataprocess.CWidgetOutput.getUnitElementCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnitElementCount</span></code></a>(self)</p></td>
+<td><p>Get the number of unit element in terms of processing scheme.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.isAutoInput" title="ikomia.dataprocess.pydataprocess.CWidgetOutput.isAutoInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAutoInput</span></code></a>(self)</p></td>
+<td><p>Check whether input data from external source is mandatory.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataType</span></code></p></td>
+<td><p>I/O data type</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimCount</span></code></p></td>
+<td><p>Number of dimensions</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor</p>
+<dl class="simple">
+<dt>__init__( (object)arg1, (IODataType)arg2) -&gt; None :</dt><dd><p>Construct a CWidgetOutput instance with the given data type.By default, the widget data type is IODataType.WIDGET (see <a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.clearData">
+<code class="sig-name descname">clearData</code><span class="sig-paren">(</span><em class="sig-param">(CWidgetOutput)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.clearData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the output data: sets the widget handle to null.</p>
+<p>clearData( (CWidgetOutput)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.copyStaticData">
+<code class="sig-name descname">copyStaticData</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em>, <em class="sig-param">(CProtocolTaskIO)io</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.copyStaticData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the static data from the given input or ouput. Static data are those which are not generated at runtime. Should be overriden for custom input or output.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>io (<a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a>): input or ouput instance from which data is copied.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>copyStaticData( (CProtocolTaskIO)self, (CProtocolTaskIO)io) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.getUnitElementCount">
+<code class="sig-name descname">getUnitElementCount</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.getUnitElementCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of unit element in terms of processing scheme. This value is used to define the number of progress steps for progress bar component. For an image, the count is 1. For Z-stack volume, the count is the number of Z levels. Should be overriden for custom input or output.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>int: number of unit element to process.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getUnitElementCount( (CProtocolTaskIO)self) -&gt; int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.isAutoInput">
+<code class="sig-name descname">isAutoInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.isAutoInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether input data from external source is mandatory.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True or False.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>isAutoInput( (CProtocolTaskIO)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.isDataAvailable">
+<code class="sig-name descname">isDataAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CWidgetOutput)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the output contains a valid widget.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True if the widget handle is valid, False otherwise</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>isDataAvailable( (CWidgetOutput)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.setWidget">
+<code class="sig-name descname">setWidget</code><span class="sig-paren">(</span><em class="sig-param">(CWidgetOutput)self</em>, <em class="sig-param">(int)widget</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.setWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the widget instance: use <code class="xref py py-mod docutils literal notranslate"><span class="pre">IkQtConversion</span></code> module to get C++ handle from Python Qt-based framework.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>widget</strong> – compatible C++ widget handle</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html" title="Previous document">CGraphicsOutput</a>
+        </li>
+        <li>
+          <a href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" title="Next document">CDatasetIO</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetOutput.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

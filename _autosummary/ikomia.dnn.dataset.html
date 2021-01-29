@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dataset &#8212; Ikomia  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Torchvision models" href="ikomia.dnn.torch.models.html" />
+    <link rel="prev" title="IkDatasetIO" href="_autosummaryv/ikomia.dnn.datasetio.IkDatasetIO.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../modules.html">API Modules</a><ul>
+      <li>Previous: <a href="_autosummaryv/ikomia.dnn.datasetio.IkDatasetIO.html" title="previous chapter">IkDatasetIO</a></li>
+      <li>Next: <a href="ikomia.dnn.torch.models.html" title="next chapter">Torchvision models</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="_autosummaryv/ikomia.dnn.datasetio.IkDatasetIO.html" title="Previous document">IkDatasetIO</a>
+        </li>
+        <li>
+          <a href="ikomia.dnn.torch.models.html" title="Next document">Torchvision models</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-ikomia.dnn.dataset">
+<span id="dataset"></span><h1>Dataset<a class="headerlink" href="#module-ikomia.dnn.dataset" title="Permalink to this headline">¶</a></h1>
+<p>Module providing dataset loaders from different source format.</p>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dataset.load_coco_dataset" title="ikomia.dnn.dataset.load_coco_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_coco_dataset</span></code></a>(path, image_folder)</p></td>
+<td><p>Load COCO dataset (2017 version).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dataset.load_pascalvoc_dataset" title="ikomia.dnn.dataset.load_pascalvoc_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_pascalvoc_dataset</span></code></a>(annotation_folder, …)</p></td>
+<td><p>Load PASCAL-VOC dataset (version 2012).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dataset.load_via_dataset" title="ikomia.dnn.dataset.load_via_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_via_dataset</span></code></a>(path)</p></td>
+<td><p>Load VGG Image Annotator (VIA) dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dataset.load_yolo_dataset" title="ikomia.dnn.dataset.load_yolo_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_yolo_dataset</span></code></a>(folder_path, class_path)</p></td>
+<td><p>Load YOLO dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dataset.polygon_to_mask" title="ikomia.dnn.dataset.polygon_to_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polygon_to_mask</span></code></a>(polygons, width, height)</p></td>
+<td><p>Helper function to generate image mask from a list of polygons.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dataset.read_class_names" title="ikomia.dnn.dataset.read_class_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_class_names</span></code></a>(txt_path)</p></td>
+<td><p>Helper function to parse text file and extract class names.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="function">
+<dt id="ikomia.dnn.dataset.load_coco_dataset">
+<code class="sig-prename descclassname">ikomia.dnn.dataset.</code><code class="sig-name descname">load_coco_dataset</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">image_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dataset.load_coco_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load COCO dataset (2017 version).
+COCO dataset consists in a JSON file describing annotations
+and an image folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – path to the JSON annotation file</p></li>
+<li><p><strong>image_folder</strong> (<em>str</em>) – path to the image folder</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Ikomia dataset structure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ikomia.dnn.dataset.load_pascalvoc_dataset">
+<code class="sig-prename descclassname">ikomia.dnn.dataset.</code><code class="sig-name descname">load_pascalvoc_dataset</code><span class="sig-paren">(</span><em class="sig-param">annotation_folder</em>, <em class="sig-param">img_folder</em>, <em class="sig-param">instance_seg_folder</em>, <em class="sig-param">class_path</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dataset.load_pascalvoc_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load PASCAL-VOC dataset (version 2012).
+PASCAL-VOC dataset is structured in different folders:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>image folder</p></li>
+<li><p>annotation folder: text files (same name as corresponding image files)</p></li>
+<li><p>instance segmentation folder: image file (same name as corresponding image files)</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotation_folder</strong> (<em>str</em>) – path to annotations folder</p></li>
+<li><p><strong>img_folder</strong> (<em>str</em>) – path to images folder</p></li>
+<li><p><strong>instance_seg_folder</strong> – path to segmentation masks folder</p></li>
+<li><p><strong>class_path</strong> – path to text file containing class names</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Ikomia dataset structure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ikomia.dnn.dataset.load_via_dataset">
+<code class="sig-prename descclassname">ikomia.dnn.dataset.</code><code class="sig-name descname">load_via_dataset</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dataset.load_via_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load VGG Image Annotator (VIA) dataset.
+VIA dataset is a single JSON file containing all information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path to the JSON file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Ikomia dataset structure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ikomia.dnn.dataset.load_yolo_dataset">
+<code class="sig-prename descclassname">ikomia.dnn.dataset.</code><code class="sig-name descname">load_yolo_dataset</code><span class="sig-paren">(</span><em class="sig-param">folder_path</em>, <em class="sig-param">class_path</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dataset.load_yolo_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load YOLO dataset.
+YOLO dataset consists of a list of text files with
+the same name as the corresponding image. Each line
+represent a bounding box with the following information:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>class number x_center y_center width height</p></li>
+</ul>
+</div></blockquote>
+<p>Note that center coordinates and box size are relative to
+the image size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – path to the dataset folder (image + text files)</p></li>
+<li><p><strong>class_path</strong> (<em>str</em>) – path the text file containing all class names</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Ikomia dataset structure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ikomia.dnn.dataset.polygon_to_mask">
+<code class="sig-prename descclassname">ikomia.dnn.dataset.</code><code class="sig-name descname">polygon_to_mask</code><span class="sig-paren">(</span><em class="sig-param">polygons</em>, <em class="sig-param">width</em>, <em class="sig-param">height</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dataset.polygon_to_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function to generate image mask from a list of polygons.
+The function assumes that each polygon is a list of xy coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polygons</strong> – list of polygons</p></li>
+<li><p><strong>width</strong> (<em>int</em>) – width of the future mask</p></li>
+<li><p><strong>height</strong> (<em>int</em>) – height of the future mask</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>image mask</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ikomia.dnn.dataset.read_class_names">
+<code class="sig-prename descclassname">ikomia.dnn.dataset.</code><code class="sig-name descname">read_class_names</code><span class="sig-paren">(</span><em class="sig-param">txt_path</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dataset.read_class_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function to parse text file and extract class names.
+The text file must be structured so that one line = one class name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>txt_path</strong> (<em>str</em>) – path to the text file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of class names</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="_autosummaryv/ikomia.dnn.datasetio.IkDatasetIO.html" title="Previous document">IkDatasetIO</a>
+        </li>
+        <li>
+          <a href="ikomia.dnn.torch.models.html" title="Next document">Torchvision models</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../_sources/_autosummary/ikomia.dnn.dataset.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

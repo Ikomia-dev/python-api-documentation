@@ -1,0 +1,974 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CVideoProcessTracking &#8212; Ikomia  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CProcessInfo" href="ikomia.dataprocess.pydataprocess.CProcessInfo.html" />
+    <link rel="prev" title="CVideoProcessOF" href="ikomia.dataprocess.pydataprocess.CVideoProcessOF.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul>
+      <li>Previous: <a href="ikomia.dataprocess.pydataprocess.CVideoProcessOF.html" title="previous chapter">CVideoProcessOF</a></li>
+      <li>Next: <a href="ikomia.dataprocess.pydataprocess.CProcessInfo.html" title="next chapter">CProcessInfo</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dataprocess.pydataprocess.CVideoProcessOF.html" title="Previous document">CVideoProcessOF</a>
+        </li>
+        <li>
+          <a href="ikomia.dataprocess.pydataprocess.CProcessInfo.html" title="Next document">CProcessInfo</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="cvideoprocesstracking">
+<h1>CVideoProcessTracking<a class="headerlink" href="#cvideoprocesstracking" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking">
+<em class="property">class </em><code class="sig-prename descclassname">ikomia.dataprocess.pydataprocess.</code><code class="sig-name descname">CVideoProcessTracking</code><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add specific features for tracking task. This class handles the graphics input to extract the region of interest to track. This region is limited to rectangle region. It also generates the tracking results as a binary mask and a dedicated graphics layer.</p>
+<p>Derived from <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoProcess.html#ikomia.dataprocess.pydataprocess.CVideoProcess" title="ikomia.dataprocess.pydataprocess.CVideoProcess"><code class="xref py py-class docutils literal notranslate"><span class="pre">CVideoProcess</span></code></a>.</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">dataprocess</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.__init__" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.manageOutputs" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.manageOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">manageOutputs</span></code></a>(self)</p></td>
+<td><p>Fill all the outputs generated by tracking algorithm.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setRoiToTrack" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setRoiToTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRoiToTrack</span></code></a>(self)</p></td>
+<td><p>Extract region of interest to track from graphics input.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Overridden methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.notifyVideoEnd" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.notifyVideoEnd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">notifyVideoEnd</span></code></a>(self)</p></td>
+<td><p>Notify that the end of the video is reached.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.notifyVideoStart" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.notifyVideoStart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">notifyVideoStart</span></code></a>(self, frame_count)</p></td>
+<td><p>Notify that the video has started.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Inherited methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.addInput" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.addInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addInput</span></code></a>(self, input)</p></td>
+<td><p>Add new input to the task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.addOutput" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.addOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addOutput</span></code></a>(self, output)</p></td>
+<td><p>Add new output to the task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.applyGraphicsMask" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.applyGraphicsMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">applyGraphicsMask</span></code></a>(self, src, dst, index)</p></td>
+<td><p>Apply the mask generated from graphics input to the result image so that only masked areas seems to be processed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.applyGraphicsMaskToBinary" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.applyGraphicsMaskToBinary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">applyGraphicsMaskToBinary</span></code></a>(self, src, dst, index)</p></td>
+<td><p>Apply the mask generated from graphics input to the binary source image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.beginTaskRun" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.beginTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">beginTaskRun</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoProcess.html#ikomia.dataprocess.pydataprocess.CVideoProcess.beginTaskRun" title="ikomia.dataprocess.pydataprocess.CVideoProcess.beginTaskRun"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CVideoProcess.beginTaskRun()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.createGraphicsMask" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.createGraphicsMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createGraphicsMask</span></code></a>(self, width, height, graphics)</p></td>
+<td><p>Generate a binary mask image from the given graphics input.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitGraphicsContextChanged" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitGraphicsContextChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitGraphicsContextChanged</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitGraphicsContextChanged" title="ikomia.core.pycore.CProtocolTask.emitGraphicsContextChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitGraphicsContextChanged()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitOutputChanged" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitOutputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitOutputChanged</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitOutputChanged" title="ikomia.core.pycore.CProtocolTask.emitOutputChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitOutputChanged()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitStepProgress" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitStepProgress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitStepProgress</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitStepProgress" title="ikomia.core.pycore.CProtocolTask.emitStepProgress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitStepProgress()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.endTaskRun" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.endTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">endTaskRun</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.endTaskRun" title="ikomia.core.pycore.CProtocolTask.endTaskRun"><code class="xref py py-meth docutils literal notranslate"><span class="pre">endTaskRun()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.executeActions" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.executeActions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">executeActions</span></code></a>(self, action)</p></td>
+<td><p>Execute actions according to the specific defined behavior.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.forwardInputImage" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.forwardInputImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">forwardInputImage</span></code></a>(self, input_index, …)</p></td>
+<td><p>Forward input image at position input_index to output at position output_index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getElapsedTime" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getElapsedTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElapsedTime</span></code></a>(self)</p></td>
+<td><p>Get the time of the last execution in milliseconds.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getGraphicsMask" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getGraphicsMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGraphicsMask</span></code></a>(self, index)</p></td>
+<td><p>Get the binary mask generated from graphics input at position index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInput" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>(self, index)</p></td>
+<td><p>Get input at position index.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputCount" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputCount</span></code></a>(self)</p></td>
+<td><p>Get the number of inputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputDataType" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputDataType</span></code></a>(self, index)</p></td>
+<td><p>Get input data type at position index.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputs" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputs</span></code></a>(self)</p></td>
+<td><p>Get the whole list of inputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutput" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>(self, index)</p></td>
+<td><p>Get output at position index.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputCount" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputCount</span></code></a>(self)</p></td>
+<td><p>Get the number of outputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputDataType" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputDataType</span></code></a>(self, index)</p></td>
+<td><p>Get output data type at position index.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputs" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputs</span></code></a>(self)</p></td>
+<td><p>Get the whole list of outputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getParam" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParam</span></code></a>(self)</p></td>
+<td><p>Get task parameters.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getProgressSteps" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getProgressSteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProgressSteps</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.getProgressSteps" title="ikomia.core.pycore.CProtocolTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.globalInputChanged" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.globalInputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalInputChanged</span></code></a>(self, is_new_sequence)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.globalInputChanged" title="ikomia.core.pycore.CProtocolTask.globalInputChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">globalInputChanged()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.graphicsChanged" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.graphicsChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">graphicsChanged</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.graphicsChanged" title="ikomia.core.pycore.CProtocolTask.graphicsChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">graphicsChanged()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.isGraphicsChangedListening" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.isGraphicsChangedListening"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isGraphicsChangedListening</span></code></a>(self)</p></td>
+<td><p>Check whether the task is listening to graphics changed event.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.isMaskAvailable" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.isMaskAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMaskAvailable</span></code></a>(self, index)</p></td>
+<td><p>Check whether a binary mask from graphics input is available at position index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.parametersModified" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.parametersModified"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parametersModified</span></code></a>(self)</p></td>
+<td><p>Notify that the task parameters have changed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.removeInput" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.removeInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeInput</span></code></a>(self, index)</p></td>
+<td><p>Remove input at the given position.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.run" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.run" title="ikomia.core.pycore.CProtocolTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setActionFlag" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setActionFlag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActionFlag</span></code></a>(self, action, is_enable)</p></td>
+<td><p>Enable or disable the given action.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setActive" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setActive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActive</span></code></a>(self, is_active)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.setActive" title="ikomia.core.pycore.CProtocolTask.setActive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setActive()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInput" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInput</span></code></a>(self, input, index, is_new_sequence)</p></td>
+<td><p>Set input at position index with the given one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInputDataType" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInputDataType</span></code></a>(self, data_type, index)</p></td>
+<td><p>Set the data type for the input at position index.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInputs" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInputs</span></code></a>(self, inputs, is_new_sequence)</p></td>
+<td><p>Set the whole list of inputs with the given one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutput" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutput</span></code></a>(self, output, index)</p></td>
+<td><p>Set output at position index with the given one.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputColorMap" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputColorMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputColorMap</span></code></a>(self, index, mask_index, …)</p></td>
+<td><p>Bind a display color map to an image output.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputDataType" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputDataType</span></code></a>(self, data_type, index)</p></td>
+<td><p>Set the data type for the output at position index.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputs" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputs</span></code></a>(self, outputs)</p></td>
+<td><p>Set the whole list of outputs with the given one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setParam" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParam</span></code></a>(self, param)</p></td>
+<td><p>Set the task parameters object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.stop" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.stop" title="ikomia.core.pycore.CProtocolTask.stop"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stop()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.updateStaticOutputs" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.updateStaticOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateStaticOutputs</span></code></a>(self)</p></td>
+<td><p>Determine output data type automatically from input data types.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>Task name (must be unique)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></p></td>
+<td><p>Main purpose or data type on which the task is dedicated to.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl>
+<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+</dd>
+<dt>__init__( (object)arg1, (str)arg2) -&gt; None :</dt><dd><p>Construct CVideoProcessTracking object with the given name.</p>
+<p>Inputs: same as <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoProcess.html#ikomia.dataprocess.pydataprocess.CVideoProcess" title="ikomia.dataprocess.pydataprocess.CVideoProcess"><code class="xref py py-class docutils literal notranslate"><span class="pre">CVideoProcess</span></code></a>.</p>
+<p>Outputs:</p>
+<ul class="simple">
+<li><p>binary mask (video frame)</p></li>
+<li><p>original image (video frame)</p></li>
+<li><p>graphics layer</p></li>
+<li><p>dedicated measures</p></li>
+</ul>
+<dl>
+<dt>Args:</dt><dd><p>arg1 (self)</p>
+<p>arg2 (str): task name, must be unique</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.addInput">
+<code class="sig-name descname">addInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(CProtocolTaskIO)input</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.addInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new input to the task.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>input: <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>addInput( (CProtocolTask)self, (CProtocolTaskIO)input) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.addOutput">
+<code class="sig-name descname">addOutput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(CProtocolTaskIO)output</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.addOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new output to the task.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>output: <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>addOutput( (CProtocolTask)self, (CProtocolTaskIO)output) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.applyGraphicsMask">
+<code class="sig-name descname">applyGraphicsMask</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcess2d)self</em>, <em class="sig-param">(object)src</em>, <em class="sig-param">(object)dst</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.applyGraphicsMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the mask generated from graphics input to the result image so that only masked areas seems to be processed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>src</strong> (<em>Numpy array</em>) – source image of the task</p></li>
+<li><p><strong>dst</strong> (<em>Numpy array</em>) – result image</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the mask</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.applyGraphicsMaskToBinary">
+<code class="sig-name descname">applyGraphicsMaskToBinary</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcess2d)self</em>, <em class="sig-param">(object)src</em>, <em class="sig-param">(object)dst</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.applyGraphicsMaskToBinary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the mask generated from graphics input to the binary source image. Only white areas on both image and mask are kept in the result image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>src</strong> (<em>Numpy array</em>) – source image of the task</p></li>
+<li><p><strong>dst</strong> (<em>Numpy array</em>) – result image</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the mask</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.beginTaskRun">
+<code class="sig-name descname">beginTaskRun</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.beginTaskRun" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoProcess.html#ikomia.dataprocess.pydataprocess.CVideoProcess.beginTaskRun" title="ikomia.dataprocess.pydataprocess.CVideoProcess.beginTaskRun"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CVideoProcess.beginTaskRun()</span></code></a>.</p>
+<p>beginTaskRun( (CVideoProcessTracking)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.createGraphicsMask">
+<code class="sig-name descname">createGraphicsMask</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcess2d)self</em>, <em class="sig-param">(int)width</em>, <em class="sig-param">(int)height</em>, <em class="sig-param">(CGraphicsInput)graphics</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.createGraphicsMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a binary mask image from the given graphics input. The new mask is appended to the internal mask list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<em>int</em>) – mask width (should be the width of the source image)</p></li>
+<li><p><strong>height</strong> (<em>int</em>) – mask height (should be the height of the source image)</p></li>
+<li><p><strong>graphics</strong> (<a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput" title="ikomia.dataprocess.pydataprocess.CGraphicsInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a>) – graphics items become white blobs in the black background mask</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitGraphicsContextChanged">
+<code class="sig-name descname">emitGraphicsContextChanged</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitGraphicsContextChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitGraphicsContextChanged" title="ikomia.core.pycore.CProtocolTask.emitGraphicsContextChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitGraphicsContextChanged()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitOutputChanged">
+<code class="sig-name descname">emitOutputChanged</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitOutputChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitOutputChanged" title="ikomia.core.pycore.CProtocolTask.emitOutputChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitOutputChanged()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitStepProgress">
+<code class="sig-name descname">emitStepProgress</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.emitStepProgress" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitStepProgress" title="ikomia.core.pycore.CProtocolTask.emitStepProgress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitStepProgress()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.endTaskRun">
+<code class="sig-name descname">endTaskRun</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.endTaskRun" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.endTaskRun" title="ikomia.core.pycore.CProtocolTask.endTaskRun"><code class="xref py py-meth docutils literal notranslate"><span class="pre">endTaskRun()</span></code></a>.</p>
+<p>endTaskRun( (CVideoProcessTracking)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.executeActions">
+<code class="sig-name descname">executeActions</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)action</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.executeActions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute actions according to the specific defined behavior. In this base class, the method does nothing.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>action: see <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a> for possible values</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>executeActions( (CProtocolTask)self, (int)action) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.forwardInputImage">
+<code class="sig-name descname">forwardInputImage</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcess2d)self</em>, <em class="sig-param">(int)input_index</em>, <em class="sig-param">(int)output_index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.forwardInputImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forward input image at position input_index to output at position output_index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_index</strong> (<em>int</em>) – zero-based index of the input</p></li>
+<li><p><strong>output_index</strong> (<em>int</em>) – zero-based index of the output</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getElapsedTime">
+<code class="sig-name descname">getElapsedTime</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; float :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getElapsedTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the time of the last execution in milliseconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>elapsed time in ms</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getGraphicsMask">
+<code class="sig-name descname">getGraphicsMask</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcess2d)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getGraphicsMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the binary mask generated from graphics input at position index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based index of the mask</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>binary mask (8 bits - 1 channel)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInput">
+<code class="sig-name descname">getInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; CProtocolTaskIO :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get input at position index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – input index</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputCount">
+<code class="sig-name descname">getInputCount</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>inputs count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputDataType">
+<code class="sig-name descname">getInputDataType</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; IODataType :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get input data type at position index. This data type can differ from the original type because it can change at runtime according to the data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>input data type</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputs">
+<code class="sig-name descname">getInputs</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getInputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the whole list of inputs.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>list: list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl>
+<dt>getInputs( (CProtocolTask)self, (object)types) -&gt; object :</dt><dd><p>Get the whole list of inputs.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list: list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutput">
+<code class="sig-name descname">getOutput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; CProtocolTaskIO :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get output at position index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – output index</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputCount">
+<code class="sig-name descname">getOutputCount</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of outputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>outputs count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputDataType">
+<code class="sig-name descname">getOutputDataType</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; IODataType :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get output data type at position index. This data type can differ from the original type because it can change at runtime according to the data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output data type</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputs">
+<code class="sig-name descname">getOutputs</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getOutputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the whole list of outputs.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>list: list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl>
+<dt>getOutputs( (CProtocolTask)self, (object)types) -&gt; object :</dt><dd><p>Get the list of outputs of the given data type.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list: list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getParam">
+<code class="sig-name descname">getParam</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; CProtocolTaskParam :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get task parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskParam.html#ikomia.core.pycore.CProtocolTaskParam" title="ikomia.core.pycore.CProtocolTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskParam</span></code></a> based object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getProgressSteps">
+<code class="sig-name descname">getProgressSteps</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.getProgressSteps" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.getProgressSteps" title="ikomia.core.pycore.CProtocolTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p>
+<p>getProgressSteps( (CVideoProcessTracking)self) -&gt; int</p>
+<dl class="simple">
+<dt>getProgressSteps( (CVideoProcessTracking)arg1, (int)selfunit_elt_count) -&gt; int :</dt><dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.getProgressSteps" title="ikomia.core.pycore.CProtocolTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p>
+</dd>
+</dl>
+<p>getProgressSteps( (CVideoProcessTracking)arg1, (int)selfunit_elt_count) -&gt; int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.globalInputChanged">
+<code class="sig-name descname">globalInputChanged</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em>, <em class="sig-param">(bool)is_new_sequence</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.globalInputChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.globalInputChanged" title="ikomia.core.pycore.CProtocolTask.globalInputChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">globalInputChanged()</span></code></a>.</p>
+<p>globalInputChanged( (CVideoProcessTracking)self, (bool)is_new_sequence) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.graphicsChanged">
+<code class="sig-name descname">graphicsChanged</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.graphicsChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.graphicsChanged" title="ikomia.core.pycore.CProtocolTask.graphicsChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">graphicsChanged()</span></code></a>.</p>
+<p>graphicsChanged( (CVideoProcessTracking)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.isGraphicsChangedListening">
+<code class="sig-name descname">isGraphicsChangedListening</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.isGraphicsChangedListening" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the task is listening to graphics changed event.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True or False</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>isGraphicsChangedListening( (CProtocolTask)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.isMaskAvailable">
+<code class="sig-name descname">isMaskAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcess2d)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.isMaskAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether a binary mask from graphics input is available at position index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based index of the mask</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if mask is available, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.manageOutputs">
+<code class="sig-name descname">manageOutputs</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.manageOutputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill all the outputs generated by tracking algorithm.</p>
+<ul class="simple">
+<li><p>Output #1: binary mask of the tracked region</p></li>
+<li><p>Output #2: original frame with tracked graphics item (overlay)</p></li>
+<li><p>Output #3: graphics layer (tracked item)</p></li>
+<li><p>Output #4: tracked region coordinates</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.notifyVideoEnd">
+<code class="sig-name descname">notifyVideoEnd</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcess)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.notifyVideoEnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify that the end of the video is reached.</p>
+<p>notifyVideoEnd( (CVideoProcess)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.notifyVideoStart">
+<code class="sig-name descname">notifyVideoStart</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcess)self</em>, <em class="sig-param">(int)frame_count</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.notifyVideoStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify that the video has started.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>frame_count (int): total number of frames</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>notifyVideoStart( (CVideoProcess)self, (int)frame_count) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.parametersModified">
+<code class="sig-name descname">parametersModified</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.parametersModified" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify that the task parameters have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
+<p>parametersModified( (CProtocolTask)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.removeInput">
+<code class="sig-name descname">removeInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.removeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove input at the given position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – zero-based input index</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.run" title="ikomia.core.pycore.CProtocolTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a>.</p>
+<p>run( (CVideoProcessTracking)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setActionFlag">
+<code class="sig-name descname">setActionFlag</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(ActionFlag)action</em>, <em class="sig-param">(bool)is_enable</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setActionFlag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable the given action. If the action does not exist, it is added to the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> – action to enable or disable, see <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a> for possible values</p></li>
+<li><p><strong>is_enable</strong> (<em>bool</em>) – True or False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setActive">
+<code class="sig-name descname">setActive</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em>, <em class="sig-param">(bool)is_active</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setActive" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.setActive" title="ikomia.core.pycore.CProtocolTask.setActive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setActive()</span></code></a>.</p>
+<p>setActive( (CVideoProcessTracking)self, (bool)is_active) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInput">
+<code class="sig-name descname">setInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(CProtocolTaskIO)input</em>, <em class="sig-param">(int)index</em>, <em class="sig-param">(bool)is_new_sequence</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set input at position index with the given one. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the input at position index.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>input: <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
+<p>index (int): zero-based input index</p>
+<p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setInput( (CProtocolTask)self, (CProtocolTaskIO)input, (int)index, (bool)is_new_sequence) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInputDataType">
+<code class="sig-name descname">setInputDataType</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(IODataType)data_type</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInputDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the data type for the input at position index. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the data type for the input at position index.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>data_type (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): input data type</p>
+<p>index (int): zero-based input index</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setInputDataType( (CProtocolTask)self, (IODataType)data_type, (int)index) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInputs">
+<code class="sig-name descname">setInputs</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(object)inputs</em>, <em class="sig-param">(bool)is_new_sequence</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setInputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the whole list of inputs with the given one.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>inputs (list): list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects
+is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setInputs( (CProtocolTask)self, (object)inputs, (bool)is_new_sequence) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutput">
+<code class="sig-name descname">setOutput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(CProtocolTaskIO)output</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set output at position index with the given one. If the output at position index does not exist, the function creates as many generic outputs to reach the number of index+1 and sets the output at position index.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>output: <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
+<p>index (int): zero-based output index</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setOutput( (CProtocolTask)self, (CProtocolTaskIO)output, (int)index) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputColorMap">
+<code class="sig-name descname">setOutputColorMap</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcess2d)self</em>, <em class="sig-param">(int)index</em>, <em class="sig-param">(int)mask_index</em>, <em class="sig-param">(object)colors</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputColorMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bind a display color map to an image output. The color mask is generated from an output mask generated by the task itself (binary or labelled image).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output to be displayed with the color map. The output must be a <a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageProcessIO.html#ikomia.dataprocess.pydataprocess.CImageProcessIO" title="ikomia.dataprocess.pydataprocess.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a> or derived.</p></li>
+<li><p><strong>mask_index</strong> (<em>int</em>) – zero-based index of the output representing the mask used to generate the color overlay.</p></li>
+<li><p><strong>colors</strong> (<em>list</em>) – list of tuples (r,g,b values) for the color map. If empty, the system generates random colors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputDataType">
+<code class="sig-name descname">setOutputDataType</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(IODataType)data_type</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the data type for the output at position index. If the output at position index does not exist, the function creates as many generic outputs to reach the number of index+1 and sets the data type for the output at position index.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>data_type (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): output data type</p>
+<p>index (int): zero-based output index</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setOutputDataType( (CProtocolTask)self, (IODataType)data_type, (int)index) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputs">
+<code class="sig-name descname">setOutputs</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(object)outputs</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setOutputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the whole list of outputs with the given one.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>outputs (list): list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setOutputs( (CProtocolTask)self, (object)outputs) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setParam">
+<code class="sig-name descname">setParam</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(CProtocolTaskParam)param</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the task parameters object. Task can have only one parameters object.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>param: <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTaskParam.html#ikomia.core.pycore.CProtocolTaskParam" title="ikomia.core.pycore.CProtocolTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskParam</span></code></a> based object</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setParam( (CProtocolTask)self, (CProtocolTaskParam)param) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setRoiToTrack">
+<code class="sig-name descname">setRoiToTrack</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.setRoiToTrack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract region of interest to track from graphics input.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.stop">
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.stop" title="ikomia.core.pycore.CProtocolTask.stop"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stop()</span></code></a>.</p>
+<p>stop( (CVideoProcessTracking)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CVideoProcessTracking.updateStaticOutputs">
+<code class="sig-name descname">updateStaticOutputs</code><span class="sig-paren">(</span><em class="sig-param">(CVideoProcessTracking)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoProcessTracking.updateStaticOutputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine output data type automatically from input data types. Don’t forget to call this method in overriden methods. See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.updateStaticOutputs" title="ikomia.core.pycore.CProtocolTask.updateStaticOutputs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">updateStaticOutputs()</span></code></a>.</p>
+<p>updateStaticOutputs( (CVideoProcessTracking)self) -&gt; None</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dataprocess.pydataprocess.CVideoProcessOF.html" title="Previous document">CVideoProcessOF</a>
+        </li>
+        <li>
+          <a href="ikomia.dataprocess.pydataprocess.CProcessInfo.html" title="Next document">CProcessInfo</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcessTracking.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

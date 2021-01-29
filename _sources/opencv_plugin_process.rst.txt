@@ -5,20 +5,19 @@ Code example for OCVBasics process implementation
 
 .. code-block:: python
 
-    import PyCore
-    import PyDataProcess
+    from ikomia import core, dataprocess
     import copy
     # Your imports below
     import cv2
 
     # --------------------
     # - Class to handle the process parameters
-    # - Inherits PyCore.CProtocolTaskParam from Ikomia API
+    # - Inherits core.CProtocolTaskParam from Ikomia API
     # --------------------
-    class OCVBasicsProcessParam(PyCore.CProtocolTaskParam):
+    class OCVBasicsProcessParam(core.CProtocolTaskParam):
 
         def __init__(self):
-            PyCore.CProtocolTaskParam.__init__(self)
+            core.CProtocolTaskParam.__init__(self)
             # Place default value initialization here
             self.kernel_size = (3, 3)
             self.sigma_x = 1.0
@@ -35,7 +34,7 @@ Code example for OCVBasics process implementation
         def getParam(self):
             # Send parameters values to Ikomia application (workflow)
             # Create the specific dict structure (string container)
-            paramMap = PyCore.ParamMap()
+            paramMap = core.ParamMap()
             paramMap["kernel_size_x"] = str(self.kernel_size[0])
             paramMap["kernel_size_y"] = str(self.kernel_size[1])
             paramMap["sigma_x"] = str(self.sigma_x)
@@ -45,15 +44,15 @@ Code example for OCVBasics process implementation
 
     # --------------------
     # - Class which implements the process
-    # - Inherits PyCore.CProtocolTask or derived from Ikomia API
+    # - Inherits core.CProtocolTask or derived from Ikomia API
     # --------------------
-    class OCVBasicsProcess(PyDataProcess.CImageProcess2d):
+    class OCVBasicsProcess(dataprocess.CImageProcess2d):
 
         def __init__(self, name, param):
-            PyDataProcess.CImageProcess2d.__init__(self, name)
+            dataprocess.CImageProcess2d.__init__(self, name)
             # Add input/output of the process here
-            # Example :  self.addInput(PyCore.CImageProcessIO())
-            #           self.addOutput(PyCore.CImageProcessIO())
+            # Example :  self.addInput(core.CImageProcessIO())
+            #           self.addOutput(core.CImageProcessIO())
 
             #Create parameters class
             if param is None:
@@ -103,12 +102,12 @@ Code example for OCVBasics process implementation
 
     # --------------------
     # - Factory class to build process object
-    # - Inherits PyDataProcess.CProcessFactory from Ikomia API
+    # - Inherits dataprocess.CProcessFactory from Ikomia API
     # --------------------
-    class OCVBasicsProcessFactory(PyDataProcess.CProcessFactory):
+    class OCVBasicsProcessFactory(dataprocess.CProcessFactory):
 
         def __init__(self):
-            PyDataProcess.CProcessFactory.__init__(self)
+            dataprocess.CProcessFactory.__init__(self)
             # Set process information as string here
             self.info.name = "OCVBasics"
             self.info.shortDescription = "OpenCV Canny"

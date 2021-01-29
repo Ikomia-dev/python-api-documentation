@@ -9,15 +9,15 @@ The Python environment configuration may vary among your operating system:
 
 **Windows 10**
 
-- Version: *3.7*
+- Version: *3.8*
 - Path: *c:\\Users\\{username}\Ikomia\Python*
-- Installed packages: *pip, numpy, requests, PyQt5=5.14.2, opencv=4.2.0*
+- Installed packages: *pip, numpy=1.18.5, requests, PyQt5=5.15.2, opencv=4.5.0, MLflow=1.12.1*
 
 **Linux**
 
-- Version: *3.8*
+- Version: *3.7*
 - Path: *~/Ikomia/Python*
-- Installed packages: *pip, numpy, requests, PyQt5=5.11.2, sip, opencv=4.2.0*
+- Installed packages: *pip, numpy, requests, PyQt5=5.15.2, sip, opencv=4.5.0, MLflow=1.12.1*
 
 **Mac OS X**
 

@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CDatasetIO &#8212; Ikomia  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CPathIO" href="ikomia.dataprocess.pydataprocess.CPathIO.html" />
+    <link rel="prev" title="CWidgetOutput" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul>
+      <li>Previous: <a href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" title="previous chapter">CWidgetOutput</a></li>
+      <li>Next: <a href="ikomia.dataprocess.pydataprocess.CPathIO.html" title="next chapter">CPathIO</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" title="Previous document">CWidgetOutput</a>
+        </li>
+        <li>
+          <a href="ikomia.dataprocess.pydataprocess.CPathIO.html" title="Next document">CPathIO</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="cdatasetio">
+<h1>CDatasetIO<a class="headerlink" href="#cdatasetio" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO">
+<em class="property">class </em><code class="sig-prename descclassname">ikomia.dataprocess.pydataprocess.</code><code class="sig-name descname">CDatasetIO</code><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Virtual base classe to define task input or output containing deep learning dataset structure. Derived from <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a>.
+Instances can be added as input or output of a <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask" title="ikomia.core.pycore.CProtocolTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTask</span></code></a> or derived object. Such input or output is required for deep learning training task. Custom dataset loader must inherit this class and implements required virtual methods.</p>
+<p>Dataset structure is composed of a dict for each image and some common metadata with the following specifications (mandatory fields may vary depending on the training goal).</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>images (list[dict]): image information and corresponding annotations:</dt><dd><ul>
+<li><p>filename (str): full path of the image file.</p></li>
+<li><p>height, width (int): size of the image.</p></li>
+<li><p>image_id (int): unique image identifier.</p></li>
+<li><dl class="simple">
+<dt>annotations (list[dict]): each dict corresponds to annotations of one instance in this image.</dt><dd><ul>
+<li><p>bbox (list[float]): x, y, width, height of the bounding box.</p></li>
+<li><p>category_id (int): integer representing the category label.</p></li>
+<li><p>segmentation_poly (list[list[float]]): list of polygons, one for each connected component.</p></li>
+<li><p>keypoints (list[float]).</p></li>
+<li><p>iscrowd (boolean): whether the instance is labelled as a crowd region (COCO).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>segmentation_masks (numpy array [N, H, W]).</p></li>
+<li><p>segmentation_masks_file: full path of the ground thruth semantic segmentation image file.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>metadata (dict): key-value mapping that contains information that’s shared among the entire dataset:</dt><dd><ul>
+<li><p>category_names (list[str]).</p></li>
+<li><p>category_colors (list[tuple(r,g,b)]).</p></li>
+<li><p>keypoint_names (list[str]).</p></li>
+<li><p>keypoint_connection_rules (list[tuple(str, str, (r,g,b))]): each tuple specifies a pair of keypoints that are connected and the color to use for the line between them.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">dataprocess</span>
+</pre></div>
+</div>
+<p><strong>Note</strong>: a default implementation is provided in the pure Python API.
+See <code class="xref py py-mod docutils literal notranslate"><span class="pre">datasetio</span></code> for details.</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.__init__" title="ikomia.dataprocess.pydataprocess.CDatasetIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getCategories" title="ikomia.dataprocess.pydataprocess.CDatasetIO.getCategories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCategories</span></code></a>(arg1)</p></td>
+<td><p>Virtual method to reimplement, return the categories of the dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getCategoryCount" title="ikomia.dataprocess.pydataprocess.CDatasetIO.getCategoryCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCategoryCount</span></code></a>(arg1)</p></td>
+<td><p>Virtual method to reimplement, return the number of instance categories (ie classes) in the dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getGraphicsAnnotations" title="ikomia.dataprocess.pydataprocess.CDatasetIO.getGraphicsAnnotations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGraphicsAnnotations</span></code></a>(arg1, arg2)</p></td>
+<td><p>Virtual method to reimplement, return the list of graphics items corresponding to dataset annotations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getImagePaths" title="ikomia.dataprocess.pydataprocess.CDatasetIO.getImagePaths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImagePaths</span></code></a>(arg1)</p></td>
+<td><p>Virtual method to reimplement, return the file path list of all images contained in the dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getMaskPath" title="ikomia.dataprocess.pydataprocess.CDatasetIO.getMaskPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMaskPath</span></code></a>(arg1, arg2)</p></td>
+<td><p>Virtual method to reimplement, return the file path list of segmentation masks contained in the dataset.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Overridden methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.clearData" title="ikomia.dataprocess.pydataprocess.CDatasetIO.clearData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO.clearData" title="ikomia.core.pycore.CProtocolTaskIO.clearData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clearData()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.isAutoInput" title="ikomia.dataprocess.pydataprocess.CDatasetIO.isAutoInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAutoInput</span></code></a>(self)</p></td>
+<td><p>Check whether input data from external source is mandatory.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CDatasetIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO.isDataAvailable" title="ikomia.core.pycore.CProtocolTaskIO.isDataAvailable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">isDataAvailable()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.save" title="ikomia.dataprocess.pydataprocess.CDatasetIO.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(arg1, arg2)</p></td>
+<td><p>Virtual method to reimplement, save dataset structure as JSON.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Inherited methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.copyStaticData" title="ikomia.dataprocess.pydataprocess.CDatasetIO.copyStaticData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copyStaticData</span></code></a>(self, io)</p></td>
+<td><p>Copy the static data from the given input or ouput.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getUnitElementCount" title="ikomia.dataprocess.pydataprocess.CDatasetIO.getUnitElementCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnitElementCount</span></code></a>(self)</p></td>
+<td><p>Get the number of unit element in terms of processing scheme.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataType</span></code></p></td>
+<td><p>I/O data type</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimCount</span></code></p></td>
+<td><p>Number of dimensions</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl>
+<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+</dd>
+<dt>__init__( (object)arg1, (DatasetFormat)arg2) -&gt; None :</dt><dd><p>Construct a CDatasetIO object specifying the source format.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sourceFormat: see <a class="reference internal" href="ikomia.dataprocess.pydataprocess.DatasetFormat.html#ikomia.dataprocess.pydataprocess.DatasetFormat" title="ikomia.dataprocess.pydataprocess.DatasetFormat"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatasetFormat</span></code></a>) for possible values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.clearData">
+<code class="sig-name descname">clearData</code><span class="sig-paren">(</span><em class="sig-param">(CDatasetIO)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.clearData" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO.clearData" title="ikomia.core.pycore.CProtocolTaskIO.clearData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clearData()</span></code></a>.</p>
+<p>clearData( (CDatasetIO)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.copyStaticData">
+<code class="sig-name descname">copyStaticData</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em>, <em class="sig-param">(CProtocolTaskIO)io</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.copyStaticData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the static data from the given input or ouput. Static data are those which are not generated at runtime. Should be overriden for custom input or output.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>io (<a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a>): input or ouput instance from which data is copied.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>copyStaticData( (CProtocolTaskIO)self, (CProtocolTaskIO)io) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.getCategories">
+<code class="sig-name descname">getCategories</code><span class="sig-paren">(</span><em class="sig-param">(CDatasetIO)arg1</em><span class="sig-paren">)</span> &#x2192; MapIntStr :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getCategories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Virtual method to reimplement, return the categories of the dataset.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p><a class="reference internal" href="ikomia.dataprocess.pydataprocess.MapIntStr.html#ikomia.dataprocess.pydataprocess.MapIntStr" title="ikomia.dataprocess.pydataprocess.MapIntStr"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapIntStr</span></code></a>: list of categories</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getCategories( (CDatasetIO)arg1) -&gt; MapIntStr</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.getCategoryCount">
+<code class="sig-name descname">getCategoryCount</code><span class="sig-paren">(</span><em class="sig-param">(CDatasetIO)arg1</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getCategoryCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Virtual method to reimplement, return the number of instance categories (ie classes) in the dataset.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>int: number of categories</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getCategoryCount( (CDatasetIO)arg1) -&gt; int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.getGraphicsAnnotations">
+<code class="sig-name descname">getGraphicsAnnotations</code><span class="sig-paren">(</span><em class="sig-param">(CDatasetIO)arg1</em>, <em class="sig-param">(str)arg2</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getGraphicsAnnotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Virtual method to reimplement, return the list of graphics items corresponding to dataset annotations.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>list of <a class="reference internal" href="ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a> or derived: graphics items</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getGraphicsAnnotations( (CDatasetIO)arg1, (str)arg2) -&gt; object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.getImagePaths">
+<code class="sig-name descname">getImagePaths</code><span class="sig-paren">(</span><em class="sig-param">(CDatasetIO)arg1</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getImagePaths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Virtual method to reimplement, return the file path list of all images contained in the dataset.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>str[]: path list</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getImagePaths( (CDatasetIO)arg1) -&gt; object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.getMaskPath">
+<code class="sig-name descname">getMaskPath</code><span class="sig-paren">(</span><em class="sig-param">(CDatasetIO)arg1</em>, <em class="sig-param">(str)arg2</em><span class="sig-paren">)</span> &#x2192; str :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getMaskPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Virtual method to reimplement, return the file path list of segmentation masks contained in the dataset.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>str[]: path list</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getMaskPath( (CDatasetIO)arg1, (str)arg2) -&gt; str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.getUnitElementCount">
+<code class="sig-name descname">getUnitElementCount</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getUnitElementCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of unit element in terms of processing scheme. This value is used to define the number of progress steps for progress bar component. For an image, the count is 1. For Z-stack volume, the count is the number of Z levels. Should be overriden for custom input or output.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>int: number of unit element to process.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getUnitElementCount( (CProtocolTaskIO)self) -&gt; int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.isAutoInput">
+<code class="sig-name descname">isAutoInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.isAutoInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether input data from external source is mandatory.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True or False.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>isAutoInput( (CProtocolTaskIO)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.isDataAvailable">
+<code class="sig-name descname">isDataAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CDatasetIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO.isDataAvailable" title="ikomia.core.pycore.CProtocolTaskIO.isDataAvailable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">isDataAvailable()</span></code></a>.</p>
+<p>isDataAvailable( (CDatasetIO)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CDatasetIO.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">(CDatasetIO)arg1</em>, <em class="sig-param">(str)arg2</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Virtual method to reimplement, save dataset structure as JSON.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>str: file path</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>save( (CDatasetIO)arg1, (str)arg2) -&gt; None</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" title="Previous document">CWidgetOutput</a>
+        </li>
+        <li>
+          <a href="ikomia.dataprocess.pydataprocess.CPathIO.html" title="Next document">CPathIO</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -5,9 +5,7 @@ Code example for OCVBasics widget implementation
 
 .. code-block:: python
 
-    import PyCore
-    import PyDataProcess
-    import QtConversion
+    from ikomia import utils, core, dataprocess
     import OCVBasics_process as processMod
 
     #PyQt GUI framework
@@ -16,12 +14,12 @@ Code example for OCVBasics widget implementation
 
     # --------------------
     # - Class which implements widget associated with the process
-    # - Inherits PyCore.CProtocolTaskWidget from Ikomia API
+    # - Inherits core.CProtocolTaskWidget from Ikomia API
     # --------------------
-    class OCVBasicsWidget(PyCore.CProtocolTaskWidget):
+    class OCVBasicsWidget(core.CProtocolTaskWidget):
 
         def __init__(self, param, parent):
-            PyCore.CProtocolTaskWidget.__init__(self, parent)
+            core.CProtocolTaskWidget.__init__(self, parent)
 
             if param is None:
                 self.parameters = processMod.OCVBasicsProcessParam()
@@ -69,7 +67,7 @@ Code example for OCVBasics widget implementation
             self.gridLayout.addWidget(self.spin_sigma_y, 2, 1)
 
             # PyQt -> Qt wrapping (C++ handle)
-            layoutPtr = QtConversion.PyQtToQt(self.gridLayout)
+            layoutPtr = utils.PyQtToQt(self.gridLayout)
 
             # Set widget layout
             self.setLayout(layoutPtr)
@@ -88,12 +86,12 @@ Code example for OCVBasics widget implementation
 
     #--------------------
     #- Factory class to build process widget object
-    #- Inherits PyDataProcess.CWidgetFactory from Ikomia API
+    #- Inherits dataprocess.CWidgetFactory from Ikomia API
     #--------------------
-    class OCVBasicsWidgetFactory(PyDataProcess.CWidgetFactory):
+    class OCVBasicsWidgetFactory(dataprocess.CWidgetFactory):
 
         def __init__(self):
-            PyDataProcess.CWidgetFactory.__init__(self)
+            dataprocess.CWidgetFactory.__init__(self)
             # Set the name of the process -> it must be the same as the one declared in the process factory class
             self.name = "OCVBasics"
 

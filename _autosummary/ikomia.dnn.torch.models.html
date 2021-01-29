@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Torchvision models &#8212; Ikomia  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TorchDatasetMapper" href="ikomia.dnn.torch.datasetmapper.html" />
+    <link rel="prev" title="Dataset" href="ikomia.dnn.dataset.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../modules.html">API Modules</a><ul>
+      <li>Previous: <a href="ikomia.dnn.dataset.html" title="previous chapter">Dataset</a></li>
+      <li>Next: <a href="ikomia.dnn.torch.datasetmapper.html" title="next chapter">TorchDatasetMapper</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dnn.dataset.html" title="Previous document">Dataset</a>
+        </li>
+        <li>
+          <a href="ikomia.dnn.torch.datasetmapper.html" title="Next document">TorchDatasetMapper</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-ikomia.dnn.torch.models">
+<span id="torchvision-models"></span><h1>Torchvision models<a class="headerlink" href="#module-ikomia.dnn.torch.models" title="Permalink to this headline">¶</a></h1>
+<p>Model providing helper funtions to create TorchVision Deep Learning models.</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dnn.torch</span> <span class="kn">import</span> <span class="n">models</span>
+</pre></div>
+</div>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.faster_rcnn" title="ikomia.dnn.torch.models.faster_rcnn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">faster_rcnn</span></code></a>([train_mode, use_pretrained, …])</p></td>
+<td><p>Create Torchvision Faster RCNN model for training or inference.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.mask_rcnn" title="ikomia.dnn.torch.models.mask_rcnn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_rcnn</span></code></a>([train_mode, use_pretrained, …])</p></td>
+<td><p>Create Torchvision Mask RCNN model for training or inference.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.mnasnet" title="ikomia.dnn.torch.models.mnasnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mnasnet</span></code></a>([train_mode, use_pretrained, …])</p></td>
+<td><p>Create Torchvision MnasNet model for training or inference.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.resnet" title="ikomia.dnn.torch.models.resnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resnet</span></code></a>([model_name, train_mode, …])</p></td>
+<td><p>Create Torchvision ResNet model for training or inference.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.resnext" title="ikomia.dnn.torch.models.resnext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resnext</span></code></a>([model_name, train_mode, …])</p></td>
+<td><p>Create Torchvision ResNeXt model for training or inference.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="function">
+<dt id="ikomia.dnn.torch.models.faster_rcnn">
+<code class="sig-prename descclassname">ikomia.dnn.torch.models.</code><code class="sig-name descname">faster_rcnn</code><span class="sig-paren">(</span><em class="sig-param">train_mode=False</em>, <em class="sig-param">use_pretrained=True</em>, <em class="sig-param">input_size=800</em>, <em class="sig-param">classes=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.faster_rcnn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Torchvision Faster RCNN model for training or inference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_name</strong> (<em>str</em>) – model name, consult <a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#object-detection-instance-segmentation-and-person-keypoint-detection">Torchvision page</a></p></li>
+<li><p><strong>train_mode</strong> (<em>boolean</em>) – True or False</p></li>
+<li><p><strong>use_pretrained</strong> (<em>boolean</em>) – True to do transfer learning from pre-trained model, False to train from scratch</p></li>
+<li><p><strong>input_size</strong> (<em>int</em>) – input image size</p></li>
+<li><p><strong>classes</strong> (<em>int</em>) – number of classes in the dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>model object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ikomia.dnn.torch.models.mask_rcnn">
+<code class="sig-prename descclassname">ikomia.dnn.torch.models.</code><code class="sig-name descname">mask_rcnn</code><span class="sig-paren">(</span><em class="sig-param">train_mode=False</em>, <em class="sig-param">use_pretrained=True</em>, <em class="sig-param">input_size=800</em>, <em class="sig-param">classes=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.mask_rcnn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Torchvision Mask RCNN model for training or inference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_name</strong> (<em>str</em>) – <p>model name, consult <a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#object-detection-instance-segmentation-and-person-keypoint-detection">Torchvision page</a></p>
+</p></li>
+<li><p><strong>train_mode</strong> (<em>boolean</em>) – True or False</p></li>
+<li><p><strong>use_pretrained</strong> (<em>boolean</em>) – True to do transfer learning from pre-trained model, False to train from scratch</p></li>
+<li><p><strong>input_size</strong> (<em>int</em>) – input image size</p></li>
+<li><p><strong>classes</strong> (<em>int</em>) – number of classes in the dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>model object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ikomia.dnn.torch.models.mnasnet">
+<code class="sig-prename descclassname">ikomia.dnn.torch.models.</code><code class="sig-name descname">mnasnet</code><span class="sig-paren">(</span><em class="sig-param">train_mode=False</em>, <em class="sig-param">use_pretrained=False</em>, <em class="sig-param">feature_extract=False</em>, <em class="sig-param">classes=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.mnasnet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Torchvision MnasNet model for training or inference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_name</strong> (<em>str</em>) – <p>model name, consult <a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#classification">Torchvision page</a></p>
+</p></li>
+<li><p><strong>train_mode</strong> (<em>boolean</em>) – True or False</p></li>
+<li><p><strong>use_pretrained</strong> (<em>boolean</em>) – True to do transfer learning from pre-trained model, False to train from scratch</p></li>
+<li><p><strong>feature_extract</strong> (<em>boolean</em>) – transfer learning only, True to keep pre-trained features (train last layers only), False to train all layers</p></li>
+<li><p><strong>classes</strong> (<em>int</em>) – number of classes in the dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>model object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ikomia.dnn.torch.models.resnet">
+<code class="sig-prename descclassname">ikomia.dnn.torch.models.</code><code class="sig-name descname">resnet</code><span class="sig-paren">(</span><em class="sig-param">model_name='resnet50'</em>, <em class="sig-param">train_mode=False</em>, <em class="sig-param">use_pretrained=False</em>, <em class="sig-param">feature_extract=False</em>, <em class="sig-param">classes=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.resnet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Torchvision ResNet model for training or inference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_name</strong> (<em>str</em>) – <p>model name, consult <a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#classification">Torchvision page</a></p>
+</p></li>
+<li><p><strong>train_mode</strong> (<em>boolean</em>) – True or False</p></li>
+<li><p><strong>use_pretrained</strong> (<em>boolean</em>) – True to do transfer learning from pre-trained model, False to train from scratch</p></li>
+<li><p><strong>feature_extract</strong> (<em>boolean</em>) – transfer learning only, True to keep pre-trained features (train last layers only), False to train all layers</p></li>
+<li><p><strong>classes</strong> (<em>int</em>) – number of classes in the dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>model object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ikomia.dnn.torch.models.resnext">
+<code class="sig-prename descclassname">ikomia.dnn.torch.models.</code><code class="sig-name descname">resnext</code><span class="sig-paren">(</span><em class="sig-param">model_name='resnext50'</em>, <em class="sig-param">train_mode=False</em>, <em class="sig-param">use_pretrained=False</em>, <em class="sig-param">feature_extract=False</em>, <em class="sig-param">classes=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.resnext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Torchvision ResNeXt model for training or inference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_name</strong> (<em>str</em>) – <p>model name, consult <a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#classification">Torchvision page</a></p>
+</p></li>
+<li><p><strong>train_mode</strong> (<em>boolean</em>) – True or False</p></li>
+<li><p><strong>use_pretrained</strong> (<em>boolean</em>) – True to do transfer learning from pre-trained model, False to train from scratch</p></li>
+<li><p><strong>feature_extract</strong> (<em>boolean</em>) – transfer learning only, True to keep pre-trained features (train last layers only), False to train all layers</p></li>
+<li><p><strong>classes</strong> (<em>int</em>) – number of classes in the dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>model object</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dnn.dataset.html" title="Previous document">Dataset</a>
+        </li>
+        <li>
+          <a href="ikomia.dnn.torch.datasetmapper.html" title="Next document">TorchDatasetMapper</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../_sources/_autosummary/ikomia.dnn.torch.models.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

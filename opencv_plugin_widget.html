@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Widget &#8212; Ikomia 0.1.0 documentation</title>
+    <title>Widget &#8212; Ikomia  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Process" href="opencv_plugin_process.html" />
@@ -101,7 +101,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
 
 
 
@@ -132,9 +132,7 @@
   <div class="section" id="widget">
 <h1>Widget<a class="headerlink" href="#widget" title="Permalink to this headline">¶</a></h1>
 <p>Code example for OCVBasics widget implementation</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PyCore</span>
-<span class="kn">import</span> <span class="nn">PyDataProcess</span>
-<span class="kn">import</span> <span class="nn">QtConversion</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">utils</span><span class="p">,</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span>
 <span class="kn">import</span> <span class="nn">OCVBasics_process</span> <span class="k">as</span> <span class="nn">processMod</span>
 
 <span class="c1">#PyQt GUI framework</span>
@@ -143,12 +141,12 @@
 
 <span class="c1"># --------------------</span>
 <span class="c1"># - Class which implements widget associated with the process</span>
-<span class="c1"># - Inherits PyCore.CProtocolTaskWidget from Ikomia API</span>
+<span class="c1"># - Inherits core.CProtocolTaskWidget from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">OCVBasicsWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">OCVBasicsWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
-        <span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">processMod</span><span class="o">.</span><span class="n">OCVBasicsProcessParam</span><span class="p">()</span>
@@ -196,7 +194,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_y</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
         <span class="c1"># PyQt -&gt; Qt wrapping (C++ handle)</span>
-        <span class="n">layoutPtr</span> <span class="o">=</span> <span class="n">QtConversion</span><span class="o">.</span><span class="n">PyQtToQt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="p">)</span>
+        <span class="n">layoutPtr</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">PyQtToQt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="p">)</span>
 
         <span class="c1"># Set widget layout</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layoutPtr</span><span class="p">)</span>
@@ -215,12 +213,12 @@
 
 <span class="c1">#--------------------</span>
 <span class="c1">#- Factory class to build process widget object</span>
-<span class="c1">#- Inherits PyDataProcess.CWidgetFactory from Ikomia API</span>
+<span class="c1">#- Inherits dataprocess.CWidgetFactory from Ikomia API</span>
 <span class="c1">#--------------------</span>
-<span class="k">class</span> <span class="nc">OCVBasicsWidgetFactory</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CWidgetFactory</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">OCVBasicsWidgetFactory</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CWidgetFactory</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CWidgetFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CWidgetFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Set the name of the process -&gt; it must be the same as the one declared in the process factory class</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;OCVBasics&quot;</span>
 

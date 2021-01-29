@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Interactive plugin &#8212; Ikomia 0.1.0 documentation</title>
+    <title>Interactive plugin &#8212; Ikomia  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="API Modules" href="modules.html" />
@@ -96,7 +96,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
 
 
 
@@ -200,34 +200,32 @@ See <a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPlug
 <div class="section" id="process-implementation">
 <span id="id3"></span><h2>Process implementation<a class="headerlink" href="#process-implementation" title="Permalink to this headline">¶</a></h2>
 <p>Import statements in <em>scikit_MorphoSnakes_process.py</em>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PyCore</span>
-<span class="kn">import</span> <span class="nn">PyDataProcess</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span>
 <span class="kn">import</span> <span class="nn">copy</span>
 <span class="c1"># your imports below</span>
 <span class="kn">from</span> <span class="nn">skimage.segmentation</span> <span class="kn">import</span> <span class="p">(</span><span class="n">morphological_geodesic_active_contour</span><span class="p">,</span> <span class="n">inverse_gaussian_gradient</span><span class="p">,</span> <span class="n">morphological_chan_vese</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">img_as_float</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">PyCore</span> <span class="kn">import</span> <span class="n">CImageProcessIO</span>
 <span class="kn">import</span> <span class="nn">cv2</span>
 </pre></div>
 </div>
 <div class="section" id="inputs">
 <span id="id4"></span><h3>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
 <p>Our active contour methods are designed to process 2D images, the corresponding base class from which our
-scikit_MorphoSnakesProcess class inherits is <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>. It comes with built-in inputs :</p>
+scikit_MorphoSnakesProcess class inherits is <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d" title="ikomia.dataprocess.pydataprocess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>. It comes with built-in inputs :</p>
 <ul class="simple">
-<li><p>Source image (<a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CImageProcessIO.html#PyCore.CImageProcessIO" title="PyCore.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a>)</p></li>
-<li><p>Graphics (<a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CGraphicsInput.html#PyCore.CGraphicsInput" title="PyCore.CGraphicsInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a>)</p></li>
+<li><p>Source image (<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageProcessIO.html#ikomia.dataprocess.pydataprocess.CImageProcessIO" title="ikomia.dataprocess.pydataprocess.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a>)</p></li>
+<li><p>Graphics (<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput" title="ikomia.dataprocess.pydataprocess.CGraphicsInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a>)</p></li>
 </ul>
 <p>As we discuss earlier, seeds for active contour methods can be set from graphics (user input) or binary mask directly.
-So we need to add a new image-based input of type <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CImageProcessIO.html#PyCore.CImageProcessIO" title="PyCore.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a> to handle binary mask initialization.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+So we need to add a new image-based input of type <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageProcessIO.html#ikomia.dataprocess.pydataprocess.CImageProcessIO" title="ikomia.dataprocess.pydataprocess.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a> to handle binary mask initialization.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
-        <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="o">...</span>
         <span class="c1"># add input -&gt; initial level set</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">addInput</span><span class="p">(</span><span class="n">CImageProcessIO</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addInput</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcessIO</span><span class="p">())</span>
         <span class="o">...</span>
 </pre></div>
 </div>
@@ -236,21 +234,21 @@ So we need to add a new image-based input of type <a class="reference internal" 
 <span id="id5"></span><h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
 <p>Here are outputs that our plugin should returned:</p>
 <ul class="simple">
-<li><p>Final level set as binary mask representing segmented objects (<a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>): directly consummable by connected tasks in workflow.</p></li>
-<li><p>Image with overlay containing segmented objects displayed on top of the original image (<a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>): for visualization purpose.</p></li>
+<li><p>Final level set as binary mask representing segmented objects (<a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d" title="ikomia.dataprocess.pydataprocess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>): directly consummable by connected tasks in workflow.</p></li>
+<li><p>Image with overlay containing segmented objects displayed on top of the original image (<a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d" title="ikomia.dataprocess.pydataprocess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>): for visualization purpose.</p></li>
 </ul>
-<p><a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>-based class comes also with built-in output:</p>
+<p><a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d" title="ikomia.dataprocess.pydataprocess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>-based class comes also with built-in output:</p>
 <ul class="simple">
-<li><p>Image (<a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CImageProcessIO.html#PyCore.CImageProcessIO" title="PyCore.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a>)</p></li>
+<li><p>Image (<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageProcessIO.html#ikomia.dataprocess.pydataprocess.CImageProcessIO" title="ikomia.dataprocess.pydataprocess.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a>)</p></li>
 </ul>
-<p>So we need to add a new image-based output of type <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CImageProcessIO.html#PyCore.CImageProcessIO" title="PyCore.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+<p>So we need to add a new image-based output of type <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageProcessIO.html#ikomia.dataprocess.pydataprocess.CImageProcessIO" title="ikomia.dataprocess.pydataprocess.CImageProcessIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
-        <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="o">...</span>
         <span class="c1"># add output -&gt; results image</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">addOutput</span><span class="p">(</span><span class="n">CImageProcessIO</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addOutput</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcessIO</span><span class="p">())</span>
         <span class="o">...</span>
 </pre></div>
 </div>
@@ -296,10 +294,10 @@ the scikit-image functions as both structures are numpy arrays.</p>
 </pre></div>
 </div>
 <p>For graphics input, we need to generate a binary mask representing active contour seeds from graphics drawn by users.
-We will use 2 methods of <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a> to achieve that:</p>
+We will use 2 methods of <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d" title="ikomia.dataprocess.pydataprocess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a> to achieve that:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d.createGraphicsMask" title="PyDataProcess.CImageProcess2d.createGraphicsMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">createGraphicsMask()</span></code></a>: create a binary mask from <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CGraphicsInput.html#PyCore.CGraphicsInput" title="PyCore.CGraphicsInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a> and append it to the internal mask list.</p></li>
-<li><p><a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d.getGraphicsMask" title="PyDataProcess.CImageProcess2d.getGraphicsMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getGraphicsMask()</span></code></a>: get a mask from the internal mask list as numpy array.</p></li>
+<li><p><a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d.createGraphicsMask" title="ikomia.dataprocess.pydataprocess.CImageProcess2d.createGraphicsMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">createGraphicsMask()</span></code></a>: create a binary mask from <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput" title="ikomia.dataprocess.pydataprocess.CGraphicsInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a> and append it to the internal mask list.</p></li>
+<li><p><a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d.getGraphicsMask" title="ikomia.dataprocess.pydataprocess.CImageProcess2d.getGraphicsMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getGraphicsMask()</span></code></a>: get a mask from the internal mask list as numpy array.</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="o">...</span>
@@ -333,11 +331,11 @@ take an output mask (binary or grayscale image) and use it as color mask for ano
 Ikomia software will then display the mask in a transparent overlay on top of this image.
 Colors are fully customizable, you can set a single color for binary mask or a complete colormap for grayscale mask.</p>
 <p>In our example, we want to display the final level set on top of the original image, so we need
-to forward the original input to a given output (see <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d.forwardInputImage" title="PyDataProcess.CImageProcess2d.forwardInputImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forwardInputImage()</span></code></a>):</p>
+to forward the original input to a given output (see <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d.forwardInputImage" title="ikomia.dataprocess.pydataprocess.CImageProcess2d.forwardInputImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forwardInputImage()</span></code></a>):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">forwardInputImage</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And we apply the color mask vizualisation in red (see <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d.setOutputColorMap" title="PyDataProcess.CImageProcess2d.setOutputColorMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOutputColorMap()</span></code></a>):</p>
+<p>And we apply the color mask vizualisation in red (see <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d.setOutputColorMap" title="ikomia.dataprocess.pydataprocess.CImageProcess2d.setOutputColorMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOutputColorMap()</span></code></a>):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">setOutputColorMap</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[[</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
 </pre></div>
 </div>
@@ -346,14 +344,14 @@ to forward the original input to a given output (see <a class="reference interna
 <span id="id8"></span><h3>Progress bar<a class="headerlink" href="#progress-bar" title="Permalink to this headline">¶</a></h3>
 <p>Note that functions <em>morphological_geodesic_active_contour()</em> and <em>morphological_chan_vese()</em> from scikit-image
 have one specificity that can be usefull for us. They have an <em>iter_callback</em> parameter called once per iteration
-we can use to refresh the progress bar of Ikomia software. We call <code class="xref py py-meth docutils literal notranslate"><span class="pre">emitProgressSteps()</span></code>
+we can use to refresh the progress bar of Ikomia software. We call <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitStepProgress" title="ikomia.core.pycore.CProtocolTask.emitStepProgress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitStepProgress()</span></code></a>
 in a lambda function given <em>to iter_callback</em> parameter:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">proc_img</span> <span class="o">=</span> <span class="n">morphological_geodesic_active_contour</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">iter_callback</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">callback</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">emitStepProgress</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>We also need to specify the number of iterations (steps) to our progress bar by overriding
-<a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTask.html#PyCore.CProtocolTask.getProgressSteps" title="PyCore.CProtocolTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.getProgressSteps" title="ikomia.core.pycore.CProtocolTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">getProgressSteps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eltCount</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">param</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">()</span>
@@ -391,12 +389,12 @@ in a lambda function given <em>to iter_callback</em> parameter:</p>
 <li><p>iter_callback : function called once per iteration, optional</p></li>
 </ul>
 <p>First, we add member variables in the parameters class, they will be accessible from the process.
-Note the presence of functions <code class="xref py py-meth docutils literal notranslate"><span class="pre">setParam()</span></code> and
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">getParam()</span></code> which are required to save/load values when user wants to save his workflow.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesParam</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="p">):</span>
+Note the presence of functions <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CProtocolTaskParam.html#ikomia.core.pycore.CProtocolTaskParam.setParamMap" title="ikomia.core.pycore.CProtocolTaskParam.setParamMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setParamMap()</span></code></a> and
+<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CProtocolTaskParam.html#ikomia.core.pycore.CProtocolTaskParam.getParamMap" title="ikomia.core.pycore.CProtocolTaskParam.getParamMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getParamMap()</span></code></a> which are required to save/load values when user wants to save his workflow.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesParam</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># parameters</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;mgac&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">mgac_amplification_contour</span> <span class="o">=</span> <span class="s2">&quot;Inverse gaussian gradient&quot;</span>
@@ -425,7 +423,7 @@ Note the presence of functions <code class="xref py py-meth docutils literal not
     <span class="k">def</span> <span class="nf">getParamMap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Send parameters values to Ikomia application</span>
         <span class="c1"># Create the specific dict structure (string container)</span>
-        <span class="n">paramMap</span> <span class="o">=</span> <span class="n">PyCore</span><span class="o">.</span><span class="n">ParamMap</span><span class="p">()</span>
+        <span class="n">paramMap</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">ParamMap</span><span class="p">()</span>
         <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;method&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
         <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_amplification_contour&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mgac_amplification_contour</span><span class="p">)</span>
         <span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;mgac_iterations&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mgac_iterations</span><span class="p">)</span>
@@ -440,7 +438,7 @@ Note the presence of functions <code class="xref py py-meth docutils literal not
 </pre></div>
 </div>
 <p>We now modify the <em>run()</em> method to give parameters to our function:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="o">...</span>
@@ -469,7 +467,7 @@ the constructor receives an instance of the parameters structure to initialize t
 the appropriate parameters. We will use the <strong>QStackedWidget</strong> component.</p>
 <img alt="_images/qstacked_widget.jpg" src="_images/qstacked_widget.jpg" />
 <p>Global widget initialization</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
         <span class="c1"># Create layout : QGridLayout by default</span>
@@ -492,7 +490,7 @@ the appropriate parameters. We will use the <strong>QStackedWidget</strong> comp
         <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">setRowStretch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 
         <span class="c1"># PyQt -&gt; Qt wrapping</span>
-        <span class="n">layoutPtr</span> <span class="o">=</span> <span class="n">QtConversion</span><span class="o">.</span><span class="n">PyQtToQt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="p">)</span>
+        <span class="n">layoutPtr</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">PyQtToQt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="p">)</span>
 
         <span class="c1"># Set widget layout</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layoutPtr</span><span class="p">)</span>
@@ -504,7 +502,7 @@ the appropriate parameters. We will use the <strong>QStackedWidget</strong> comp
 </div>
 <p>Note: <em>self.gridLayout.setRowStretch(n, n)</em> forces items to stay on top of the gridlayout.</p>
 <p>Method selection:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
     <span class="o">...</span>
     <span class="k">def</span> <span class="nf">methodWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">label_method</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Methods :&quot;</span><span class="p">)</span>
@@ -521,21 +519,21 @@ the appropriate parameters. We will use the <strong>QStackedWidget</strong> comp
 </pre></div>
 </div>
 <p>MGAC method parameters (see <a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/scikit_MorphoSnakes_widget.py">source code</a> for details)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">mgacWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="o">...</span>
 </pre></div>
 </div>
 <p>Chan Vese method parameters (see <a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/scikit_MorphoSnakes_widget.py">source code</a> for details)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">chanVeseWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="o">...</span>
 </pre></div>
 </div>
 <p>We use the slot <em>self.OnMethodChange()</em> to change current index of our QStackWidget according to the selected method.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
     <span class="c1">#pySlot</span>
     <span class="k">def</span> <span class="nf">OnMethodChange</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Morphological Geodesic Active Contour&quot;</span><span class="p">:</span>
@@ -549,7 +547,7 @@ the appropriate parameters. We will use the <strong>QStackedWidget</strong> comp
 <a class="reference internal image-reference" href="_images/parameters_MGAC.jpg"><img alt="_images/parameters_MGAC.jpg" src="_images/parameters_MGAC.jpg" style="width: 47%;" /></a>
 <p>Last thing, we have to update process parameters when a user change values through the widget.
 We do that by overriding <em>onApply()</em> method which is called when user clicks the <em>Apply</em> button.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">scikit_MorphoSnakesWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">onApply</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Apply button clicked slot</span>
@@ -587,7 +585,7 @@ We do that by overriding <em>onApply()</em> method which is called when user cli
 <p>Finally, we will add some useful information about our plugin. Ikomia software manages such information and
 display it to the user (parameters widget, Ikomia Apps). Metadata can be added in the constructor of the process
 factory class in <em>scikit_MorphoSnakes_process.py</em>. We have to fill the member object info,
-see <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CProcessInfo.html#PyDataProcess.CProcessInfo" title="PyDataProcess.CProcessInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProcessInfo</span></code></a> for details.</p>
+see <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CProcessInfo.html#ikomia.dataprocess.pydataprocess.CProcessInfo" title="ikomia.dataprocess.pydataprocess.CProcessInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProcessInfo</span></code></a> for details.</p>
 <p><strong>Our plugin is now fully functional and interactive !</strong></p>
 </div>
 <div class="section" id="id13">

@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CProtocolTaskWidget &#8212; Ikomia  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CGraphicsItem" href="ikomia.core.pycore.CGraphicsItem.html" />
+    <link rel="prev" title="ParamMap" href="ikomia.core.pycore.ParamMap.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../ikomia.core.pycore.html">PyCore</a><ul>
+      <li>Previous: <a href="ikomia.core.pycore.ParamMap.html" title="previous chapter">ParamMap</a></li>
+      <li>Next: <a href="ikomia.core.pycore.CGraphicsItem.html" title="next chapter">CGraphicsItem</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.core.pycore.ParamMap.html" title="Previous document">ParamMap</a>
+        </li>
+        <li>
+          <a href="ikomia.core.pycore.CGraphicsItem.html" title="Next document">CGraphicsItem</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="cprotocoltaskwidget">
+<h1>CProtocolTaskWidget<a class="headerlink" href="#cprotocoltaskwidget" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ikomia.core.pycore.CProtocolTaskWidget">
+<em class="property">class </em><code class="sig-prename descclassname">ikomia.core.pycore.</code><code class="sig-name descname">CProtocolTaskWidget</code><a class="headerlink" href="#ikomia.core.pycore.CProtocolTaskWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for all widgets associated with a task. Each process comes with a Qt widget to manage algorithm parameters and user actions. The widget class implementation is mandatory. This class offers some basic tools to build rapidly a functionnal user interface. As it is derived from Qt QWidget, one can easily customize it to fit more complex needs. Use of bindings like PyQt5 or PySide2 are recommended.</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTaskWidget.__init__" title="ikomia.core.pycore.CProtocolTaskWidget.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTaskWidget.emitApply" title="ikomia.core.pycore.CProtocolTaskWidget.emitApply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitApply</span></code></a>(arg1, self)</p></td>
+<td><p>Send apply event to the system.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTaskWidget.emitSendProcessAction" title="ikomia.core.pycore.CProtocolTaskWidget.emitSendProcessAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitSendProcessAction</span></code></a>(self, action)</p></td>
+<td><p>Send event to request specific action of the process task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTaskWidget.emitSetGraphicsCategory" title="ikomia.core.pycore.CProtocolTaskWidget.emitSetGraphicsCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitSetGraphicsCategory</span></code></a>(self, category)</p></td>
+<td><p>Send event to change the current graphic category.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTaskWidget.emitSetGraphicsTool" title="ikomia.core.pycore.CProtocolTaskWidget.emitSetGraphicsTool"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitSetGraphicsTool</span></code></a>(self, tool)</p></td>
+<td><p>Send event to change the current graphic tool.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTaskWidget.init" title="ikomia.core.pycore.CProtocolTaskWidget.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init</span></code></a>(self)</p></td>
+<td><p>Initialization of the widget.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTaskWidget.onApply" title="ikomia.core.pycore.CProtocolTaskWidget.onApply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">onApply</span></code></a>(self)</p></td>
+<td><p>Called when user presses the Apply button.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTaskWidget.setApplyBtnHidden" title="ikomia.core.pycore.CProtocolTaskWidget.setApplyBtnHidden"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setApplyBtnHidden</span></code></a>(self, is_hidden)</p></td>
+<td><p>Make the Apply button of the widget visible or not.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTaskWidget.setLayout" title="ikomia.core.pycore.CProtocolTaskWidget.setLayout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLayout</span></code></a>(self, layout)</p></td>
+<td><p>Set the main layout of the widget.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="method">
+<dt id="ikomia.core.pycore.CProtocolTaskWidget.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ikomia.core.pycore.CProtocolTaskWidget.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+</dd>
+<dt>__init__( (object)arg1, (object)arg2) -&gt; None :</dt><dd><p>Construct CProtocolTaskWidget with parent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CProtocolTaskWidget.emitApply">
+<code class="sig-name descname">emitApply</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskWidget)arg1</em>, <em class="sig-param">(CProtocolTaskParam)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CProtocolTaskWidget.emitApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send apply event to the system. The system then launches the task execution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CProtocolTaskWidget.emitSendProcessAction">
+<code class="sig-name descname">emitSendProcessAction</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskWidget)self</em>, <em class="sig-param">(int)action</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CProtocolTaskWidget.emitSendProcessAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send event to request specific action of the process task. Use this mechanism to manage user interaction with the process task for example.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> (<a class="reference internal" href="ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a>) – action code (can be user defined)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CProtocolTaskWidget.emitSetGraphicsCategory">
+<code class="sig-name descname">emitSetGraphicsCategory</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskWidget)self</em>, <em class="sig-param">(str)category</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CProtocolTaskWidget.emitSetGraphicsCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send event to change the current graphic category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>category</strong> (<em>str</em>) – category name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CProtocolTaskWidget.emitSetGraphicsTool">
+<code class="sig-name descname">emitSetGraphicsTool</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskWidget)self</em>, <em class="sig-param">(GraphicsShape)tool</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CProtocolTaskWidget.emitSetGraphicsTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send event to change the current graphic tool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tool</strong> (<a class="reference internal" href="ikomia.core.pycore.GraphicsShape.html#ikomia.core.pycore.GraphicsShape" title="ikomia.core.pycore.GraphicsShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsShape</span></code></a>) – new current tool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CProtocolTaskWidget.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskWidget)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CProtocolTaskWidget.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialization of the widget. Must be overriden.</p>
+<p>init( (CProtocolTaskWidget)arg1) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CProtocolTaskWidget.onApply">
+<code class="sig-name descname">onApply</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskWidget)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CProtocolTaskWidget.onApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when user presses the Apply button.</p>
+<p>onApply( (CProtocolTaskWidget)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CProtocolTaskWidget.setApplyBtnHidden">
+<code class="sig-name descname">setApplyBtnHidden</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskWidget)self</em>, <em class="sig-param">(bool)is_hidden</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CProtocolTaskWidget.setApplyBtnHidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make the Apply button of the widget visible or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>is_hidden</strong> – True or False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CProtocolTaskWidget.setLayout">
+<code class="sig-name descname">setLayout</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskWidget)self</em>, <em class="sig-param">(int)layout</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CProtocolTaskWidget.setLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the main layout of the widget. Use <code class="xref py py-mod docutils literal notranslate"><span class="pre">IkQtConversion</span></code> module to get C++ handle from Python Qt-based framework.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>layout</strong> – compatible C++ layout handle</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.core.pycore.ParamMap.html" title="Previous document">ParamMap</a>
+        </li>
+        <li>
+          <a href="ikomia.core.pycore.CGraphicsItem.html" title="Next document">CGraphicsItem</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummaryv/ikomia.core.pycore.CProtocolTaskWidget.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

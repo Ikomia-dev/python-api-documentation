@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Process &#8212; Ikomia 0.1.0 documentation</title>
+    <title>Process &#8212; Ikomia  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Widget" href="hello_world_plugin_widget.html" />
@@ -103,7 +103,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
 
 
 
@@ -138,19 +138,18 @@
   <div class="section" id="process">
 <h1>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h1>
 <p>Code example for process implementation</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PyCore</span>
-<span class="kn">import</span> <span class="nn">PyDataProcess</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span>
 <span class="kn">import</span> <span class="nn">copy</span>
 <span class="c1"># Your imports below</span>
 
 <span class="c1"># --------------------</span>
 <span class="c1"># - Class to handle the process parameters</span>
-<span class="c1"># - Inherits PyCore.CProtocolTaskParam from Ikomia API</span>
+<span class="c1"># - Inherits CProtocolTaskParam from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">HelloWorldProcessParam</span><span class="p">(</span><span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">HelloWorldProcessParam</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">PyCore</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Place default value initialization here</span>
         <span class="c1"># Example : self.windowSize = 25</span>
 
@@ -163,22 +162,22 @@
     <span class="k">def</span> <span class="nf">getParamMap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Send parameters values to Ikomia application</span>
         <span class="c1"># Create the specific dict structure (string container)</span>
-        <span class="n">paramMap</span> <span class="o">=</span> <span class="n">PyCore</span><span class="o">.</span><span class="n">ParamMap</span><span class="p">()</span>
+        <span class="n">paramMap</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">ParamMap</span><span class="p">()</span>
         <span class="c1"># Example : paramMap[&quot;windowSize&quot;] = str(self.windowSize)</span>
         <span class="k">return</span> <span class="n">paramMap</span>
 
 
 <span class="c1"># --------------------</span>
 <span class="c1"># - Class which implements the process</span>
-<span class="c1"># - Inherits PyCore.CProtocolTask or derived from Ikomia API</span>
+<span class="c1"># - Inherits CProtocolTask or derived from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">HelloWorldProcess</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">HelloWorldProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
-        <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="c1"># Add input/output of the process here</span>
-        <span class="c1"># Example :  self.addInput(PyCore.CImageProcessIO())</span>
-        <span class="c1">#           self.addOutput(PyCore.CImageProcessIO())</span>
+        <span class="c1"># Example :  self.addInput(core.CImageProcessIO())</span>
+        <span class="c1">#           self.addOutput(core.CImageProcessIO())</span>
 
         <span class="c1">#Create parameters class</span>
         <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -224,12 +223,12 @@
 
 <span class="c1"># --------------------</span>
 <span class="c1"># - Factory class to build process object</span>
-<span class="c1"># - Inherits PyDataProcess.CProcessFactory from Ikomia API</span>
+<span class="c1"># - Inherits CProcessFactory from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">HelloWorldProcessFactory</span><span class="p">(</span><span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">HelloWorldProcessFactory</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">PyDataProcess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Set process information as string here</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;HelloWorld&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;your description&quot;</span>

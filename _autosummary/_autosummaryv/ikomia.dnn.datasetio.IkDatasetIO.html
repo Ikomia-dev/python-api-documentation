@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>IkDatasetIO &#8212; Ikomia  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Dataset" href="../ikomia.dnn.dataset.html" />
+    <link rel="prev" title="DatasetIO" href="../ikomia.dnn.datasetio.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../ikomia.dnn.datasetio.html">DatasetIO</a><ul>
+      <li>Previous: <a href="../ikomia.dnn.datasetio.html" title="previous chapter">DatasetIO</a></li>
+      <li>Next: <a href="../ikomia.dnn.dataset.html" title="next chapter">Dataset</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="../ikomia.dnn.datasetio.html" title="Previous document">DatasetIO</a>
+        </li>
+        <li>
+          <a href="../ikomia.dnn.dataset.html" title="Next document">Dataset</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="ikdatasetio">
+<h1>IkDatasetIO<a class="headerlink" href="#ikdatasetio" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ikomia.dnn.datasetio.IkDatasetIO">
+<em class="property">class </em><code class="sig-prename descclassname">ikomia.dnn.datasetio.</code><code class="sig-name descname">IkDatasetIO</code><span class="sig-paren">(</span><em class="sig-param">format=ikomia.dataprocess.pydataprocess.DatasetFormat.OTHER</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.datasetio.IkDatasetIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define task input or output containing deep learning dataset structure.
+Derived from <code class="xref py py-class docutils literal notranslate"><span class="pre">CDatasetIO</span></code>.</p>
+<p>Instances can be added as input or output of a <code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTask</span></code> or derived object.
+Such input or output is required for deep learning training task.
+Dataset structure is composed of a global dict with 2 main entries
+‘images’ and ‘metadata’.</p>
+<p>It follows the specifications below (mandatory fields may vary depending on the training goal).</p>
+<blockquote>
+<div><ul>
+<li><p>images (list[dict]): image information and corresponding annotations.</p>
+<blockquote>
+<div><ul>
+<li><p>filename (str): full path of the image file.</p></li>
+<li><p>height, width (int): size of the image.</p></li>
+<li><p>image_id (int): unique image identifier.</p></li>
+<li><p>annotations (list[dict]): each dict corresponds to annotations of one instance in this image.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>bbox (list[float]): x, y, width, height of the bounding box.</p></li>
+<li><p>category_id (int): integer representing the category label.</p></li>
+<li><p>segmentation_poly (list[list[float]]): list of polygons, one for each connected component.</p></li>
+<li><p>keypoints (list[float]).</p></li>
+<li><p>iscrowd (boolean): whether the instance is labelled as a crowd region (COCO).</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>segmentation_masks_np (numpy array [N, H, W]).</p></li>
+<li><p>instance_seg_masks_file: full path of the ground truth instance segmentation image file.</p></li>
+<li><p>semantic_seg_masks_file: full path of the ground truth semantic segmentation image file.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>metadata (dict): key-value mapping that contains information that’s shared among the entire dataset.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>category_names (dict(id, name)).</p></li>
+<li><p>category_colors (list[tuple(r,g,b)]).</p></li>
+<li><p>keypoint_names (list[str]).</p></li>
+<li><p>keypoint_connection_rules (list[tuple(str, str, (r,g,b))]): each tuple specifies a pair of connected keypoints and the color to use for the line between them.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.datasetio.IkDatasetIO.__init__" title="ikomia.dnn.datasetio.IkDatasetIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([format])</p></td>
+<td><p>Constructor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.datasetio.IkDatasetIO.clearData" title="ikomia.dnn.datasetio.IkDatasetIO.clearData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code></a>()</p></td>
+<td><p>Clear whole dataset structure</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.datasetio.IkDatasetIO.getAnnotationGraphics" title="ikomia.dnn.datasetio.IkDatasetIO.getAnnotationGraphics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAnnotationGraphics</span></code></a>(img_path)</p></td>
+<td><p>Return a list of Ikomia graphics items corresponding to the annotations of a given image (bounding box, polygons).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.datasetio.IkDatasetIO.getCategories" title="ikomia.dnn.datasetio.IkDatasetIO.getCategories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCategories</span></code></a>()</p></td>
+<td><p>Return the list of categories (ie instance classes) in the dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.datasetio.IkDatasetIO.getCategoryCount" title="ikomia.dnn.datasetio.IkDatasetIO.getCategoryCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCategoryCount</span></code></a>()</p></td>
+<td><p>Return the number of categories (ie instance classes) in the dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGraphicsAnnotations</span></code>(arg1, arg2)</p></td>
+<td><p>Virtual method to reimplement, return the list of graphics items corresponding to dataset annotations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.datasetio.IkDatasetIO.getImagePaths" title="ikomia.dnn.datasetio.IkDatasetIO.getImagePaths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImagePaths</span></code></a>()</p></td>
+<td><p>Return the list of all images path contained in the dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.datasetio.IkDatasetIO.getMaskPath" title="ikomia.dnn.datasetio.IkDatasetIO.getMaskPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMaskPath</span></code></a>(img_path)</p></td>
+<td><p>Return the file path of the segmentation mask for the given image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.datasetio.IkDatasetIO.isDataAvailable" title="ikomia.dnn.datasetio.IkDatasetIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>()</p></td>
+<td><p>Check whether the dataset structure contains data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.datasetio.IkDatasetIO.save" title="ikomia.dnn.datasetio.IkDatasetIO.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(path)</p></td>
+<td><p>Save dataset structure as JSON.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="method">
+<dt id="ikomia.dnn.datasetio.IkDatasetIO.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">format=ikomia.dataprocess.pydataprocess.DatasetFormat.OTHER</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.datasetio.IkDatasetIO.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>format</strong> – dataset source format, see <code class="xref py py-class docutils literal notranslate"><span class="pre">DatasetFormat</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dnn.datasetio.IkDatasetIO.clearData">
+<code class="sig-name descname">clearData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.datasetio.IkDatasetIO.clearData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear whole dataset structure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dnn.datasetio.IkDatasetIO.getAnnotationGraphics">
+<code class="sig-name descname">getAnnotationGraphics</code><span class="sig-paren">(</span><em class="sig-param">img_path</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.datasetio.IkDatasetIO.getAnnotationGraphics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of Ikomia graphics items corresponding
+to the annotations of a given image (bounding box, polygons).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>img_path</strong> (<em>str</em>) – path of the image from which we want annotations</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>graphics items</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code> list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dnn.datasetio.IkDatasetIO.getCategories">
+<code class="sig-name descname">getCategories</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.datasetio.IkDatasetIO.getCategories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of categories (ie instance classes) in the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>categories (dict-like structure)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MapIntStr</span></code> list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dnn.datasetio.IkDatasetIO.getCategoryCount">
+<code class="sig-name descname">getCategoryCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.datasetio.IkDatasetIO.getCategoryCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of categories (ie instance classes) in the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dnn.datasetio.IkDatasetIO.getImagePaths">
+<code class="sig-name descname">getImagePaths</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.datasetio.IkDatasetIO.getImagePaths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of all images path contained in the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>path list</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dnn.datasetio.IkDatasetIO.getMaskPath">
+<code class="sig-name descname">getMaskPath</code><span class="sig-paren">(</span><em class="sig-param">img_path</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.datasetio.IkDatasetIO.getMaskPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the file path of the segmentation mask for the given image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>img_path</strong> (<em>str</em>) – path of the image from which segmentation mask is requested</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>file path of the segmentation mask</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dnn.datasetio.IkDatasetIO.isDataAvailable">
+<code class="sig-name descname">isDataAvailable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.datasetio.IkDatasetIO.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the dataset structure contains data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True or False</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dnn.datasetio.IkDatasetIO.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.datasetio.IkDatasetIO.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save dataset structure as JSON.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – file path where dataset is saved</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="../ikomia.dnn.datasetio.html" title="Previous document">DatasetIO</a>
+        </li>
+        <li>
+          <a href="../ikomia.dnn.dataset.html" title="Next document">Dataset</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dnn.datasetio.IkDatasetIO.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

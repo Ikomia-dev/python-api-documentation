@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CGraphicsEllipse &#8212; Ikomia  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CGraphicsPoint" href="ikomia.core.pycore.CGraphicsPoint.html" />
+    <link rel="prev" title="CGraphicsComplexPolygon" href="ikomia.core.pycore.CGraphicsComplexPolygon.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../ikomia.core.pycore.html">PyCore</a><ul>
+      <li>Previous: <a href="ikomia.core.pycore.CGraphicsComplexPolygon.html" title="previous chapter">CGraphicsComplexPolygon</a></li>
+      <li>Next: <a href="ikomia.core.pycore.CGraphicsPoint.html" title="next chapter">CGraphicsPoint</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.core.pycore.CGraphicsComplexPolygon.html" title="Previous document">CGraphicsComplexPolygon</a>
+        </li>
+        <li>
+          <a href="ikomia.core.pycore.CGraphicsPoint.html" title="Next document">CGraphicsPoint</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="cgraphicsellipse">
+<h1>CGraphicsEllipse<a class="headerlink" href="#cgraphicsellipse" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ikomia.core.pycore.CGraphicsEllipse">
+<em class="property">class </em><code class="sig-prename descclassname">ikomia.core.pycore.</code><code class="sig-name descname">CGraphicsEllipse</code><a class="headerlink" href="#ikomia.core.pycore.CGraphicsEllipse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Graphics item to display ellipse or circle in the overlay layer of an image. Such graphics item is defined by:</p>
+<ul class="simple">
+<li><p>top-left point of the bounding box (x,y)</p></li>
+<li><p>width (float)</p></li>
+<li><p>height (float)</p></li>
+</ul>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CGraphicsEllipse.__init__" title="ikomia.core.pycore.CGraphicsEllipse.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Inherited methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CGraphicsEllipse.getCategory" title="ikomia.core.pycore.CGraphicsEllipse.getCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCategory</span></code></a>(self)</p></td>
+<td><p>Get graphics item category.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CGraphicsEllipse.getId" title="ikomia.core.pycore.CGraphicsEllipse.getId"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getId</span></code></a>(self)</p></td>
+<td><p>Get graphics item unique identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CGraphicsEllipse.getType" title="ikomia.core.pycore.CGraphicsEllipse.getType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getType</span></code></a>(self)</p></td>
+<td><p>Get graphics item type.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertToImage</span></code>(arg1, arg2, arg3, arg4, arg5)</p></td>
+<td><p><strong>Internal use only.</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CGraphicsEllipse.isTextItem" title="ikomia.core.pycore.CGraphicsEllipse.isTextItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isTextItem</span></code></a>(self)</p></td>
+<td><p>Check whether item type is TEXT.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CGraphicsEllipse.setCategory" title="ikomia.core.pycore.CGraphicsEllipse.setCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCategory</span></code></a>(self, category)</p></td>
+<td><p>Set the graphics item category.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">height</span></code></p></td>
+<td><p>Ellipse height</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">width</span></code></p></td>
+<td><p>Ellipse width</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></p></td>
+<td><p>x coordinate of top-left point</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></p></td>
+<td><p>y coordinate of top-left point</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="method">
+<dt id="ikomia.core.pycore.CGraphicsEllipse.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ikomia.core.pycore.CGraphicsEllipse.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl>
+<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+</dd>
+<dt>__init__( (object)arg1, (float)arg2, (float)arg3, (float)arg4, (float)arg5) -&gt; None :</dt><dd><p>Construct an ellipse item with the given dimensions.</p>
+<dl>
+<dt>Args:</dt><dd><p>arg1: self</p>
+<p>arg2 (float): x coordinate of the top-left point</p>
+<p>arg3 (float): y coordinate of the top-left point</p>
+<p>arg4 (float): width</p>
+<p>arg5 (float): height</p>
+</dd>
+</dl>
+</dd>
+<dt>__init__( (object)arg1, (float)arg2, (float)arg3, (float)arg4, (float)arg5, (GraphicsEllipseProperty)arg6) -&gt; None :</dt><dd><p>Construct an ellipse item with the given dimensions.</p>
+<dl>
+<dt>Args:</dt><dd><p>arg1: self</p>
+<p>arg2 (float): x coordinate of the top-left point</p>
+<p>arg3 (float): y coordinate of the top-left point</p>
+<p>arg4 (float): width</p>
+<p>arg5 (float): height</p>
+<p>arg6 (<a class="reference internal" href="ikomia.core.pycore.GraphicsEllipseProperty.html#ikomia.core.pycore.GraphicsEllipseProperty" title="ikomia.core.pycore.GraphicsEllipseProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsEllipseProperty</span></code></a>): information and visual properties.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CGraphicsEllipse.getCategory">
+<code class="sig-name descname">getCategory</code><span class="sig-paren">(</span><em class="sig-param">(CGraphicsItem)self</em><span class="sig-paren">)</span> &#x2192; str :<a class="headerlink" href="#ikomia.core.pycore.CGraphicsEllipse.getCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get graphics item category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>category (label)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CGraphicsEllipse.getId">
+<code class="sig-name descname">getId</code><span class="sig-paren">(</span><em class="sig-param">(CGraphicsItem)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.core.pycore.CGraphicsEllipse.getId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get graphics item unique identifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>identifier</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CGraphicsEllipse.getType">
+<code class="sig-name descname">getType</code><span class="sig-paren">(</span><em class="sig-param">(CGraphicsItem)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.core.pycore.CGraphicsEllipse.getType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get graphics item type. See <a class="reference internal" href="ikomia.core.pycore.GraphicsItem.html#ikomia.core.pycore.GraphicsItem" title="ikomia.core.pycore.GraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsItem</span></code></a> for possible values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>type</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ikomia.core.pycore.GraphicsItem.html#ikomia.core.pycore.GraphicsItem" title="ikomia.core.pycore.GraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsItem</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CGraphicsEllipse.isTextItem">
+<code class="sig-name descname">isTextItem</code><span class="sig-paren">(</span><em class="sig-param">(CGraphicsItem)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.core.pycore.CGraphicsEllipse.isTextItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether item type is TEXT. In case of object detection workflow, text graphics items should not be useful as input for another task. This method enables to filter only shape-based items (rectangle, polygon…) when processing graphics input.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True or False</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>isTextItem( (CGraphicsItem)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.core.pycore.CGraphicsEllipse.setCategory">
+<code class="sig-name descname">setCategory</code><span class="sig-paren">(</span><em class="sig-param">(CGraphicsItem)self</em>, <em class="sig-param">(str)category</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CGraphicsEllipse.setCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the graphics item category. It’s just a generic way to identify the item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>category</strong> (<em>str</em>) – identification label</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.core.pycore.CGraphicsComplexPolygon.html" title="Previous document">CGraphicsComplexPolygon</a>
+        </li>
+        <li>
+          <a href="ikomia.core.pycore.CGraphicsPoint.html" title="Next document">CGraphicsPoint</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummaryv/ikomia.core.pycore.CGraphicsEllipse.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

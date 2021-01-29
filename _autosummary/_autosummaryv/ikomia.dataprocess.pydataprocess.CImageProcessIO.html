@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CImageProcessIO &#8212; Ikomia  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CVideoProcessIO" href="ikomia.dataprocess.pydataprocess.CVideoProcessIO.html" />
+    <link rel="prev" title="CWidgetFactory" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul>
+      <li>Previous: <a href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html" title="previous chapter">CWidgetFactory</a></li>
+      <li>Next: <a href="ikomia.dataprocess.pydataprocess.CVideoProcessIO.html" title="next chapter">CVideoProcessIO</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html" title="Previous document">CWidgetFactory</a>
+        </li>
+        <li>
+          <a href="ikomia.dataprocess.pydataprocess.CVideoProcessIO.html" title="Next document">CVideoProcessIO</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="cimageprocessio">
+<h1>CImageProcessIO<a class="headerlink" href="#cimageprocessio" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO">
+<em class="property">class </em><code class="sig-prename descclassname">ikomia.dataprocess.pydataprocess.</code><code class="sig-name descname">CImageProcessIO</code><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define input or output for a task dedicated to image processing (2D or 3D). This class is designed to handle image as input or output. A CImageProcessIO instance can be added as input or output to a <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask" title="ikomia.core.pycore.CProtocolTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTask</span></code></a> or derived object. It is the base class to define input or output of an image processing task. Several image data type can be defined according to the nature of the algorithm:</p>
+<ul class="simple">
+<li><p>binary image</p></li>
+<li><p>labelled image</p></li>
+<li><p>standard image</p></li>
+</ul>
+<p>The internal image data structure is a numpy array that can be either 2D or 3D.
+Derived from <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a>.</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">dataprocess</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.__init__" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>Default constructor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.getChannelCount" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.getChannelCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getChannelCount</span></code></a>(self)</p></td>
+<td><p>Get the static channel count information.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.getData" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>(self)</p></td>
+<td><p>Get the image data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.getImage" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.getImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImage</span></code></a>(self)</p></td>
+<td><p>Get the 2D image data only.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.getOverlayMask" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.getOverlayMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOverlayMask</span></code></a>(self)</p></td>
+<td><p>Get the overlay mask.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.isOverlayAvailable" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.isOverlayAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isOverlayAvailable</span></code></a>(self)</p></td>
+<td><p>Check whether the input/output have valid overlay mask or not</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.setChannelCount" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.setChannelCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setChannelCount</span></code></a>(self, nb)</p></td>
+<td><p>Set the channel count of the image data.This property holds the required channel count as a static information.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.setCurrentImage" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.setCurrentImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCurrentImage</span></code></a>(self, index)</p></td>
+<td><p>Set the index of the current image (2D plane) from a volume (3D image data structure).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.setImage" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.setImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setImage</span></code></a>(self, image)</p></td>
+<td><p>Set the image</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.setOverlayMask" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.setOverlayMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOverlayMask</span></code></a>(self, mask)</p></td>
+<td><p>Set the associated overlay mask.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Overridden methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.clearData" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.clearData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code></a>(self)</p></td>
+<td><p>Clear image and overlay mask so that they become empty.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.copyStaticData" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.copyStaticData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copyStaticData</span></code></a>(self, io)</p></td>
+<td><p>Set the static information from the given input or ouput.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.getUnitElementCount" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.getUnitElementCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnitElementCount</span></code></a>(self)</p></td>
+<td><p>Get the number of unit elements when the data is processed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
+<td><p>Check whether the input/output have valid image or not.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Inherited methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.isAutoInput" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.isAutoInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAutoInput</span></code></a>(self)</p></td>
+<td><p>Check whether input data from external source is mandatory.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataType</span></code></p></td>
+<td><p>I/O data type</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimCount</span></code></p></td>
+<td><p>Number of dimensions</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor</p>
+<dl>
+<dt>__init__( (object)arg1, (object)arg2) -&gt; None :</dt><dd><p>Construct a CImageProcessIO instance with the given image. By default, the image output type is set to the standard one (IODataType.IMAGE). See <a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a> for details.</p>
+<dl>
+<dt>Args:</dt><dd><p>arg1: self</p>
+<p>arg2 (Numpy array): 2D/3D image</p>
+</dd>
+</dl>
+</dd>
+<dt>__init__( (object)arg1, (IODataType)arg2) -&gt; None :</dt><dd><p>Construct a CImageProcessIO instance with the given data type. The data type must be one of these values:</p>
+<ul class="simple">
+<li><p>IODataType.IMAGE</p></li>
+<li><p>IODataType.IMAGE_BINARY</p></li>
+<li><p>IODataType.IMAGE_LABEL</p></li>
+<li><p>IODataType.VOLUME</p></li>
+<li><p>IODataType.VOLUME_BINARY</p></li>
+<li><p>IODataType.VOLUME_LABEL</p></li>
+</ul>
+<p>Please note that internal image structure is empty</p>
+<dl>
+<dt>Args:</dt><dd><p>arg1: self</p>
+<p>arg2 (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): data type</p>
+</dd>
+</dl>
+</dd>
+<dt>__init__( (object)arg1, (IODataType)arg2, (object)arg3) -&gt; None :</dt><dd><p>Construct a CImageProcessIO instance with the given data type and the given image. The data type must be one of these values:</p>
+<ul class="simple">
+<li><p>IODataType.IMAGE</p></li>
+<li><p>IODataType.IMAGE_BINARY</p></li>
+<li><p>IODataType.IMAGE_LABEL</p></li>
+<li><p>IODataType.VOLUME</p></li>
+<li><p>IODataType.VOLUME_BINARY</p></li>
+<li><p>IODataType.VOLUME_LABEL</p></li>
+</ul>
+<dl>
+<dt>Args:</dt><dd><p>arg1: self</p>
+<p>arg2 (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): data type</p>
+<p>arg3 (Numpy array): 2D/3D image</p>
+</dd>
+</dl>
+</dd>
+<dt>__init__( (object)arg1, (CImageProcessIO)arg2) -&gt; None :</dt><dd><p>Copy constructor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.clearData">
+<code class="sig-name descname">clearData</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.clearData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear image and overlay mask so that they become empty.</p>
+<p>clearData( (CImageProcessIO)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.copyStaticData">
+<code class="sig-name descname">copyStaticData</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em>, <em class="sig-param">(CProtocolTaskIO)io</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.copyStaticData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the static information from the given input or ouput. For this class, the channel count is the only static data.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>io (<a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a>): input or ouput instance from which data is copied.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>copyStaticData( (CImageProcessIO)self, (CProtocolTaskIO)io) -&gt; None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.getChannelCount">
+<code class="sig-name descname">getChannelCount</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.getChannelCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the static channel count information. The method does not get the channel count property from the image data structure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of channel required for the input/output</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.getData">
+<code class="sig-name descname">getData</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.getData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the image data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>either 2D or 3D image buffer</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.getImage">
+<code class="sig-name descname">getImage</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.getImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the 2D image data only. In case of volume, the current image index is used to get the desired 2D plane (see <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.setCurrentImage" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.setCurrentImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setCurrentImage()</span></code></a>).</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>Numpy array: 2D image buffer</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getImage( (CImageProcessIO)self) -&gt; object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.getOverlayMask">
+<code class="sig-name descname">getOverlayMask</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.getOverlayMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the overlay mask. See <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.setOverlayMask" title="ikomia.dataprocess.pydataprocess.CImageProcessIO.setOverlayMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOverlayMask()</span></code></a> for more information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>2D image buffer (8 bits - 1 channel)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.getUnitElementCount">
+<code class="sig-name descname">getUnitElementCount</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.getUnitElementCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of unit elements when the data is processed. The number of unit elements is used to calculate the number of progress steps needed to perform a task. In case of 2D image, we won’t update progress bar every pixel, so the return value should be 1 (1 update per image). In case of 3D image, update progress every 2D plane can make sense for task processing volume on 2D planes independently. So user have to define the number of unit elements through the progress bar update perspective.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>int: number of unit element to process.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>getUnitElementCount( (CImageProcessIO)self) -&gt; int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.isAutoInput">
+<code class="sig-name descname">isAutoInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.isAutoInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether input data from external source is mandatory.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True or False.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>isAutoInput( (CProtocolTaskIO)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.isDataAvailable">
+<code class="sig-name descname">isDataAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the input/output have valid image or not.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True if image is not empty, False otherwise.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>isDataAvailable( (CImageProcessIO)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.isOverlayAvailable">
+<code class="sig-name descname">isOverlayAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.isOverlayAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the input/output have valid overlay mask or not</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if overlay mask is not empty, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.setChannelCount">
+<code class="sig-name descname">setChannelCount</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em>, <em class="sig-param">(int)nb</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.setChannelCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the channel count of the image data.This property holds the required channel count as a static information. Such information can be useful when one designs a workflow and wants to inform about specific image structure towards future connected tasks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nb</strong> (<em>int</em>) – channel count, 1 for monochrome image, 3 for color image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.setCurrentImage">
+<code class="sig-name descname">setCurrentImage</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.setCurrentImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the index of the current image (2D plane) from a volume (3D image data structure).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based index of the 2D plane</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.setImage">
+<code class="sig-name descname">setImage</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em>, <em class="sig-param">(object)image</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.setImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>Numpy array</em>) – image buffer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CImageProcessIO.setOverlayMask">
+<code class="sig-name descname">setOverlayMask</code><span class="sig-paren">(</span><em class="sig-param">(CImageProcessIO)self</em>, <em class="sig-param">(object)mask</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageProcessIO.setOverlayMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the associated overlay mask. Ikomia software is able to display overlay mask on top of image. This method sets this mask, it will be displayed automatically according to a predefined color map. Zero pixels of the mask will be completely transparent, non-zero will be displayed according to the corresponding color in the color map. The color map must be defined in the task implementation. See <a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d.setOutputColorMap" title="ikomia.dataprocess.pydataprocess.CImageProcess2d.setOutputColorMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOutputColorMap()</span></code></a> for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>Numpy array</em>) – image buffer (8 bits - 1 channel)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html" title="Previous document">CWidgetFactory</a>
+        </li>
+        <li>
+          <a href="ikomia.dataprocess.pydataprocess.CVideoProcessIO.html" title="Next document">CVideoProcessIO</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageProcessIO.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

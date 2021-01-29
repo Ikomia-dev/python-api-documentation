@@ -4,17 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>API Modules &#8212; Ikomia 0.1.0 documentation</title>
+    <title>API Modules &#8212; Ikomia  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="PyCore" href="_autosummary/PyCore.html" />
+    <link rel="next" title="PyCore" href="_autosummary/ikomia.core.pycore.html" />
     <link rel="prev" title="Interactive plugin" href="interactive_plugin.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -64,10 +64,16 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/PyCore.html">PyCore</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/PyDataProcess.html">PyDataProcess</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/PyUtils.html">PyUtils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/QtConversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 </ul>
 </li>
 </ul>
@@ -89,7 +95,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="interactive_plugin.html" title="previous chapter">Interactive plugin</a></li>
-      <li>Next: <a href="_autosummary/PyCore.html" title="next chapter">PyCore</a></li>
+      <li>Next: <a href="_autosummary/ikomia.core.pycore.html" title="next chapter">PyCore</a></li>
   </ul></li>
 </ul>
 </div>
@@ -102,7 +108,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
 
 
 
@@ -124,7 +130,7 @@
           <a href="interactive_plugin.html" title="Previous document">Interactive plugin</a>
         </li>
         <li>
-          <a href="_autosummary/PyCore.html" title="Next document">PyCore</a>
+          <a href="_autosummary/ikomia.core.pycore.html" title="Next document">PyCore</a>
           &rarr;
         </li>
     </ul>
@@ -137,23 +143,51 @@
   <div class="section" id="api-modules">
 <h1>API Modules<a class="headerlink" href="#api-modules" title="Permalink to this headline">¶</a></h1>
 <p>List of Ikomia Python modules</p>
+<p class="rubric">Bindings from C++ libraries</p>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/PyCore.html#module-PyCore" title="PyCore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyCore</span></code></a></p></td>
-<td><p>Module offering API core objects such as <strong>task</strong>, <strong>I/O</strong>, <strong>parameters</strong> and <strong>widget</strong>.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.core.pycore.html#module-ikomia.core.pycore" title="ikomia.core.pycore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ikomia.core.pycore</span></code></a></p></td>
+<td><p>Module offering core features to handle <strong>tasks</strong>, <strong>I/O</strong>, <strong>parameters</strong> and <strong>widgets</strong>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/PyDataProcess.html#module-PyDataProcess" title="PyDataProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyDataProcess</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.html#module-ikomia.dataprocess.pydataprocess" title="ikomia.dataprocess.pydataprocess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ikomia.dataprocess.pydataprocess</span></code></a></p></td>
 <td><p>Module offering all features to implement image processing plugins that can be used in the Ikomia workflow.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/PyUtils.html#module-PyUtils" title="PyUtils"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyUtils</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.utils.pyutils.html#module-ikomia.utils.pyutils" title="ikomia.utils.pyutils"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ikomia.utils.pyutils</span></code></a></p></td>
 <td><p>Module offering various helper tools.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/QtConversion.html#module-QtConversion" title="QtConversion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">QtConversion</span></code></a></p></td>
+</tbody>
+</table>
+<p class="rubric">Python API</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dnn.dnntrain.html#module-ikomia.dnn.dnntrain" title="ikomia.dnn.dnntrain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ikomia.dnn.dnntrain</span></code></a></p></td>
+<td><p>Module dedicated to Deep Learning training.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dnn.datasetio.html#module-ikomia.dnn.datasetio" title="ikomia.dnn.datasetio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ikomia.dnn.datasetio</span></code></a></p></td>
+<td><p>Module dedicated to provide default implementation of Ikomia Deep Learning dataset structure.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dnn.dataset.html#module-ikomia.dnn.dataset" title="ikomia.dnn.dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ikomia.dnn.dataset</span></code></a></p></td>
+<td><p>Module providing dataset loaders from different source format.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dnn.torch.models.html#module-ikomia.dnn.torch.models" title="ikomia.dnn.torch.models"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ikomia.dnn.torch.models</span></code></a></p></td>
+<td><p>Model providing helper funtions to create TorchVision Deep Learning models.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dnn.torch.datasetmapper.html#module-ikomia.dnn.torch.datasetmapper" title="ikomia.dnn.torch.datasetmapper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ikomia.dnn.torch.datasetmapper</span></code></a></p></td>
+<td><p>Module providing implementation of a PyTorch dataset mapper for Ikomia dataset structure.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.utils.qtconversion.html#module-ikomia.utils.qtconversion" title="ikomia.utils.qtconversion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ikomia.utils.qtconversion</span></code></a></p></td>
 <td><p>Module dedicated to wrap widget instance from Qt-based Python frameworks to C++ Qt.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.utils.pyqtutils.html#module-ikomia.utils.pyqtutils" title="ikomia.utils.pyqtutils"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ikomia.utils.pyqtutils</span></code></a></p></td>
+<td><p>Module providing helper functions to design your own task widget.</p></td>
 </tr>
 </tbody>
 </table>
@@ -170,7 +204,7 @@
           <a href="interactive_plugin.html" title="Previous document">Interactive plugin</a>
         </li>
         <li>
-          <a href="_autosummary/PyCore.html" title="Next document">PyCore</a>
+          <a href="_autosummary/ikomia.core.pycore.html" title="Next document">PyCore</a>
           &rarr;
         </li>
     </ul>

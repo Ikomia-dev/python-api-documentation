@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome to Ikomia’s documentation &#8212; Ikomia 0.1.0 documentation</title>
+    <title>Welcome to Ikomia’s documentation &#8212; Ikomia  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Python environment" href="python_env.html" />
@@ -94,7 +94,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
 
 
 
@@ -124,6 +124,11 @@
             
   <div class="section" id="welcome-to-ikomia-s-documentation">
 <h1>Welcome to Ikomia’s documentation<a class="headerlink" href="#welcome-to-ikomia-s-documentation" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Current version</dt>
+<dd class="field-odd"><p>0.3.0</p>
+</dd>
+</dl>
 <p>The aim of this API is to offer a simple interface to add user-defined plugin into the Ikomia platform. A plugin is a Python implementation of an algorithm executed on image based data.</p>
 <p>The software gives the possibility to build custom image processing pipelines through the use of a graph-based editor called <strong>workflow</strong>. A workflow is thus composed of several connected tasks that get inputs, process them and give results through outputs. When you create your own task (i.e. plugin), there are some few essential components to deal with:</p>
 <blockquote>
@@ -167,14 +172,35 @@
 </ul>
 </div></blockquote>
 <p>Each of these components is implemented by a specific class. We use inheritance and factory design pattern to build the interface between Ikomia software and plugins. Once implemented, you will be able to handle your plugin like all others internal processes. It means that you will be able to add it to a workflow and visualize your outputs directly.</p>
-<p>The API is composed of three main modules:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><a class="reference internal" href="_autosummary/PyUtils.html#module-PyUtils" title="PyUtils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyUtils</span></code></a>: module offering various helper tools</p></li>
-<li><p><a class="reference internal" href="_autosummary/PyCore.html#module-PyCore" title="PyCore"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyCore</span></code></a>: module offering essential base classes to implement input/ouput, task, parameters and widget.</p></li>
-<li><p><a class="reference internal" href="_autosummary/PyDataProcess.html#module-PyDataProcess" title="PyDataProcess"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyDataProcess</span></code></a>: module offering the main interface structure to plug user-defined task and several class specializations to facilitate common process implementation.</p></li>
+<dl class="simple">
+<dt>The API is divided into modules addressing specific features:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><strong>Utils</strong>: module offering various helper tools organized in different submodules</dt><dd><ul>
+<li><p><a class="reference internal" href="_autosummary/ikomia.utils.pyutils.html#module-ikomia.utils.pyutils" title="ikomia.utils.pyutils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyutils</span></code></a>: helper classes which are bindings from C++ libraries</p></li>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyqtutils</span></code>: helper functions simplifying widgets creation</p></li>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">qtconversion</span></code>: helper functions providing conversion from Python Qt framework (PyQt or PySide2) to C++ Qt</p></li>
 </ul>
-</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Core</strong>: module offering essential base classes to implement input/ouput, task, parameters and widget.</dt><dd><ul>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">pycore</span></code>: bindings from C++ libraries</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>DataProcess</strong>:module offering the main interface structure to plug user-defined task and several class specializations to facilitate common process implementation.</dt><dd><ul>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydataprocess</span></code>: bindings from C++ libraries</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>DNN</strong>: module providing features for Deep Learning tasks. More details <a class="reference internal" href="modules.html"><span class="doc">here</span></a></p></li>
+</ul>
+</dd>
+</dl>
 </div>
 <div class="section" id="getting-started">
 <h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
@@ -196,14 +222,21 @@
 </div>
 <div class="section" id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
-<p>This section provides the auto-generated documentation from the Python code.</p>
+<p>This section provides the auto-generated documentation from the Python code. You will find all the implementation details and
+the comprehensive list of available functions.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/PyCore.html">PyCore</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/PyDataProcess.html">PyDataProcess</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/PyUtils.html">PyUtils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/QtConversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 </ul>
 </li>
 </ul>
@@ -211,6 +244,7 @@
 </div>
 <div class="section" id="examples">
 <h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>Here are source codes associated with the tutorials.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>

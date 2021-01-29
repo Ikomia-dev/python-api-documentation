@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Hello world plugin &#8212; Ikomia 0.1.0 documentation</title>
+    <title>Hello world plugin &#8212; Ikomia  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Simple OpenCV plugin" href="opencv_plugin.html" />
@@ -96,7 +96,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
 
 
 
@@ -145,31 +145,31 @@ Click on the first button to start creating a plugin:</p>
 <li><p><em>Process type</em>: rely on the source data type. This choice determines the base class on which the process class will be derived from:</p>
 <blockquote>
 <div><ul>
-<li><p><em>Generic process</em>: no input/output and no data structure pre-defined. See <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTask.html#PyCore.CProtocolTask" title="PyCore.CProtocolTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyCore.CProtocolTask</span></code></a>.</p></li>
+<li><p><em>Generic process</em>: no input/output and no data structure pre-defined. See <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask" title="ikomia.core.pycore.CProtocolTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTask</span></code></a>.</p></li>
 <li><p><em>Image process</em>: image processing plugin.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>inputs: image + graphics layer</p></li>
 <li><p>ouputs: image</p></li>
 </ul>
-<p>See <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CImageProcess2d.html#PyDataProcess.CImageProcess2d" title="PyDataProcess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CImageProcess2d</span></code></a>.</p>
+<p>See <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d" title="ikomia.dataprocess.pydataprocess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>.</p>
 </div></blockquote>
 </li>
-<li><p><em>Interactive image process</em>: image processing plugin with user interation capability. Same inputs/outputs as image process option. See <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CInteractiveImageProcess2d.html#PyDataProcess.CInteractiveImageProcess2d" title="PyDataProcess.CInteractiveImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CInteractiveImageProcess2d</span></code></a>.</p></li>
+<li><p><em>Interactive image process</em>: image processing plugin with user interation capability. Same inputs/outputs as image process option. See <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CInteractiveImageProcess2d.html#ikomia.dataprocess.pydataprocess.CInteractiveImageProcess2d" title="ikomia.dataprocess.pydataprocess.CInteractiveImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CInteractiveImageProcess2d</span></code></a>.</p></li>
 <li><p><em>Video process</em>: video processing plugin.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>inputs: video + graphics layer</p></li>
 <li><p>ouputs: video</p></li>
 </ul>
-<p>See <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CVideoProcess.html#PyDataProcess.CVideoProcess" title="PyDataProcess.CVideoProcess"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CVideoProcess</span></code></a>.</p>
+<p>See <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcess.html#ikomia.dataprocess.pydataprocess.CVideoProcess" title="ikomia.dataprocess.pydataprocess.CVideoProcess"><code class="xref py py-class docutils literal notranslate"><span class="pre">CVideoProcess</span></code></a>.</p>
 </div></blockquote>
 </li>
-<li><p><em>Optical flow process</em>: video processing plugin dedicated to Optical Flow. Same inputs/outputs as video process option. See <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CVideoProcessOF.html#PyDataProcess.CVideoProcessOF" title="PyDataProcess.CVideoProcessOF"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CVideoProcessOF</span></code></a>.</p></li>
+<li><p><em>Optical flow process</em>: video processing plugin dedicated to Optical Flow. Same inputs/outputs as video process option. See <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcessOF.html#ikomia.dataprocess.pydataprocess.CVideoProcessOF" title="ikomia.dataprocess.pydataprocess.CVideoProcessOF"><code class="xref py py-class docutils literal notranslate"><span class="pre">CVideoProcessOF</span></code></a>.</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p><em>Widget type</em>: empty widget only (for instance). User must create his own widget according to algorithm parameters. Basic knowledge of Qt framework is recommended. See <a class="reference internal" href="_autosummary/_autosummaryv/PyCore.CProtocolTaskWidget.html#PyCore.CProtocolTaskWidget" title="PyCore.CProtocolTaskWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyCore.CProtocolTaskWidget</span></code></a>.</p></li>
+<li><p><em>Widget type</em>: empty widget only (for instance). User must create his own widget according to algorithm parameters. Basic knowledge of Qt framework is recommended. See <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CProtocolTaskWidget.html#ikomia.core.pycore.CProtocolTaskWidget" title="ikomia.core.pycore.CProtocolTaskWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskWidget</span></code></a>.</p></li>
 <li><p><em>GUI framework</em>: Qt based Python framework. PyQt5 recommended.</p></li>
 </ul>
 <p>Click on <strong>Generate</strong> button.</p>
@@ -178,7 +178,7 @@ At this point, the plugin can be added to any workflow but does nothing.</p>
 <p>The minimal structure of a plugin is composed by these files:</p>
 <ul class="simple">
 <li><p><em>__init__.py</em>: Python regular package</p></li>
-<li><p><a class="reference internal" href="hello_world_plugin_interface.html"><span class="doc">HelloWorld.py</span></a>: implementation of plugin interface. See <a class="reference internal" href="_autosummary/_autosummary/PyDataProcess.CPluginProcessInterface.html#PyDataProcess.CPluginProcessInterface" title="PyDataProcess.CPluginProcessInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyDataProcess.CPluginProcessInterface</span></code></a>.</p></li>
+<li><p><a class="reference internal" href="hello_world_plugin_interface.html"><span class="doc">HelloWorld.py</span></a>: implementation of plugin interface. See <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html#ikomia.dataprocess.pydataprocess.CPluginProcessInterface" title="ikomia.dataprocess.pydataprocess.CPluginProcessInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPluginProcessInterface</span></code></a>.</p></li>
 <li><p><a class="reference internal" href="hello_world_plugin_process.html"><span class="doc">HelloWorld_process.py</span></a>: implementation of the algorithm, its parameters, its metadata and the factory to create process instance.</p></li>
 <li><p><a class="reference internal" href="hello_world_plugin_widget.html"><span class="doc">HelloWorld_widget.py</span></a>: implementation of the widget and the factory to create an instance.</p></li>
 </ul>

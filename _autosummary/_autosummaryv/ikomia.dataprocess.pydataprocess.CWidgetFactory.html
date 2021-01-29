@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CWidgetFactory &#8212; Ikomia  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CImageProcessIO" href="ikomia.dataprocess.pydataprocess.CImageProcessIO.html" />
+    <link rel="prev" title="CProcessFactory" href="ikomia.dataprocess.pydataprocess.CProcessFactory.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/app.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Ikomia</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">A shared vision of research</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Ikomia-dev&repo=/&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://ikomia.com">Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://blog.ikomia.com">Blog</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../../modules.html">API Modules</a><ul>
+  <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul>
+      <li>Previous: <a href="ikomia.dataprocess.pydataprocess.CProcessFactory.html" title="previous chapter">CProcessFactory</a></li>
+      <li>Next: <a href="ikomia.dataprocess.pydataprocess.CImageProcessIO.html" title="next chapter">CImageProcessIO</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dataprocess.pydataprocess.CProcessFactory.html" title="Previous document">CProcessFactory</a>
+        </li>
+        <li>
+          <a href="ikomia.dataprocess.pydataprocess.CImageProcessIO.html" title="Next document">CImageProcessIO</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="cwidgetfactory">
+<h1>CWidgetFactory<a class="headerlink" href="#cwidgetfactory" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetFactory">
+<em class="property">class </em><code class="sig-prename descclassname">ikomia.dataprocess.pydataprocess.</code><code class="sig-name descname">CWidgetFactory</code><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract class defining the core structure of the process widget factory. The system extensibility for the process library is based on the factory design pattern. Each process task must implement a widget factory class derived from this class. Then the system is able to instantiate dynamically a process widget object (even user-defined).</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">dataprocess</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetFactory.__init__" title="ikomia.dataprocess.pydataprocess.CWidgetFactory.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetFactory.create" title="ikomia.dataprocess.pydataprocess.CWidgetFactory.create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create</span></code></a>(self, param)</p></td>
+<td><p>Pure virtual method to create new task widget instance with the given task parameters.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetFactory.name" title="ikomia.dataprocess.pydataprocess.CWidgetFactory.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p>Name of the associated task.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetFactory.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetFactory.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetFactory.create">
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">(CWidgetFactory)self</em>, <em class="sig-param">(CProtocolTaskParam)param</em><span class="sig-paren">)</span> &#x2192; CProtocolTaskWidget :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetFactory.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pure virtual method to create new task widget instance with the given task parameters. Must be implemented.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>param: <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskParam.html#ikomia.core.pycore.CProtocolTaskParam" title="ikomia.core.pycore.CProtocolTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskParam</span></code></a> based object</p>
+</dd>
+<dt>Returns:</dt><dd><p><a class="reference internal" href="ikomia.core.pycore.CProtocolTaskWidget.html#ikomia.core.pycore.CProtocolTaskWidget" title="ikomia.core.pycore.CProtocolTaskWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskWidget</span></code></a> based object</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>create( (CWidgetFactory)arg1, (CProtocolTaskParam)arg2) -&gt; None</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ikomia.dataprocess.pydataprocess.CWidgetFactory.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetFactory.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the associated task. This name must be the same of the one set in the task class.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="ikomia.dataprocess.pydataprocess.CProcessFactory.html" title="Previous document">CProcessFactory</a>
+        </li>
+        <li>
+          <a href="ikomia.dataprocess.pydataprocess.CImageProcessIO.html" title="Next document">CImageProcessIO</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ikomia SAS.
+      
+      |
+      <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

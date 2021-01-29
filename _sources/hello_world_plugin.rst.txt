@@ -22,24 +22,24 @@ Set parameters:
 - *Plugin name*: must be **unique** as it is the identifier of the plugin. The given name will appear in the Ikomia process library.
 - *Process type*: rely on the source data type. This choice determines the base class on which the process class will be derived from:
 
-    - *Generic process*: no input/output and no data structure pre-defined. See :py:class:`PyCore.CProtocolTask`.
+    - *Generic process*: no input/output and no data structure pre-defined. See :py:class:`~ikomia.core.pycore.CProtocolTask`.
     - *Image process*: image processing plugin.
     
         - inputs: image + graphics layer
         - ouputs: image
 
-        See :py:class:`PyDataProcess.CImageProcess2d`.
+        See :py:class:`~ikomia.dataprocess.pydataprocess.CImageProcess2d`.
 
-    - *Interactive image process*: image processing plugin with user interation capability. Same inputs/outputs as image process option. See :py:class:`PyDataProcess.CInteractiveImageProcess2d`.
+    - *Interactive image process*: image processing plugin with user interation capability. Same inputs/outputs as image process option. See :py:class:`~ikomia.dataprocess.pydataprocess.CInteractiveImageProcess2d`.
     - *Video process*: video processing plugin.
 
         - inputs: video + graphics layer
         - ouputs: video 
 
-        See :py:class:`PyDataProcess.CVideoProcess`.
+        See :py:class:`~ikomia.dataprocess.pydataprocess.CVideoProcess`.
 
-    - *Optical flow process*: video processing plugin dedicated to Optical Flow. Same inputs/outputs as video process option. See :py:class:`PyDataProcess.CVideoProcessOF`.
-- *Widget type*: empty widget only (for instance). User must create his own widget according to algorithm parameters. Basic knowledge of Qt framework is recommended. See :py:class:`PyCore.CProtocolTaskWidget`.
+    - *Optical flow process*: video processing plugin dedicated to Optical Flow. Same inputs/outputs as video process option. See :py:class:`~ikomia.dataprocess.pydataprocess.CVideoProcessOF`.
+- *Widget type*: empty widget only (for instance). User must create his own widget according to algorithm parameters. Basic knowledge of Qt framework is recommended. See :py:class:`~ikomia.core.pycore.CProtocolTaskWidget`.
 - *GUI framework*: Qt based Python framework. PyQt5 recommended.
 
 Click on **Generate** button.
@@ -50,7 +50,7 @@ At this point, the plugin can be added to any workflow but does nothing.
 The minimal structure of a plugin is composed by these files:
 
 - *__init__.py*: Python regular package
-- :doc:`HelloWorld.py <hello_world_plugin_interface>`: implementation of plugin interface. See :py:class:`PyDataProcess.CPluginProcessInterface`.
+- :doc:`HelloWorld.py <hello_world_plugin_interface>`: implementation of plugin interface. See :py:class:`~ikomia.dataprocess.pydataprocess.CPluginProcessInterface`.
 - :doc:`HelloWorld_process.py <hello_world_plugin_process>`: implementation of the algorithm, its parameters, its metadata and the factory to create process instance.
 - :doc:`HelloWorld_widget.py <hello_world_plugin_widget>`: implementation of the widget and the factory to create an instance.
 
