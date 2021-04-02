@@ -7,14 +7,14 @@
     <title>CPathIO &#8212; Ikomia  documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="NumericOutputType" href="ikomia.dataprocess.pydataprocess.NumericOutputType.html" />
+    <link rel="next" title="CArrayIO" href="ikomia.dataprocess.pydataprocess.CArrayIO.html" />
     <link rel="prev" title="CDatasetIO" href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
@@ -97,7 +97,7 @@
   <li><a href="../../modules.html">API Modules</a><ul>
   <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul>
       <li>Previous: <a href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" title="previous chapter">CDatasetIO</a></li>
-      <li>Next: <a href="ikomia.dataprocess.pydataprocess.NumericOutputType.html" title="next chapter">NumericOutputType</a></li>
+      <li>Next: <a href="ikomia.dataprocess.pydataprocess.CArrayIO.html" title="next chapter">CArrayIO</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -112,7 +112,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -134,7 +134,7 @@
           <a href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" title="Previous document">CDatasetIO</a>
         </li>
         <li>
-          <a href="ikomia.dataprocess.pydataprocess.NumericOutputType.html" title="Next document">NumericOutputType</a>
+          <a href="ikomia.dataprocess.pydataprocess.CArrayIO.html" title="Next document">CArrayIO</a>
           &rarr;
         </li>
     </ul>
@@ -186,7 +186,7 @@
 <td><p>Check whether input data from external source is mandatory.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CPathIO.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CPathIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
-<td><p>Check whether input or output objects contain valid data.</p></td>
+<td><p>Check whether the video contains valid data.</p></td>
 </tr>
 </tbody>
 </table>
@@ -238,6 +238,7 @@
 <dt id="ikomia.dataprocess.pydataprocess.CPathIO.clearData">
 <code class="sig-name descname">clearData</code><span class="sig-paren">(</span><em class="sig-param">(CPathIO)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CPathIO.clearData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clear the data stored in the object. Should be overriden for custom input or output.</p>
+<p>clearData( (CPathIO)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="method">
@@ -287,15 +288,15 @@
 
 <dl class="method">
 <dt id="ikomia.dataprocess.pydataprocess.CPathIO.isDataAvailable">
-<code class="sig-name descname">isDataAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CPathIO.isDataAvailable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check whether input or output objects contain valid data. For inputs, it is the case when the previous process contains valid output data. For outputs, it is the case when the associated task had been computed at least once. Should be overriden for custom input or output.</p>
+<code class="sig-name descname">isDataAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CPathIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CPathIO.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the video contains valid data.</p>
 <blockquote>
 <div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True if data is available, False otherwise.</p>
+<dt>Returns:</dt><dd><p>bool: True if there is some valid data, False otherwise</p>
 </dd>
 </dl>
 </div></blockquote>
-<p>isDataAvailable( (CProtocolTaskIO)self) -&gt; bool</p>
+<p>isDataAvailable( (CPathIO)self) -&gt; bool</p>
 </dd></dl>
 
 <dl class="method">
@@ -319,7 +320,7 @@
           <a href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" title="Previous document">CDatasetIO</a>
         </li>
         <li>
-          <a href="ikomia.dataprocess.pydataprocess.NumericOutputType.html" title="Next document">NumericOutputType</a>
+          <a href="ikomia.dataprocess.pydataprocess.CArrayIO.html" title="Next document">CArrayIO</a>
           &rarr;
         </li>
     </ul>

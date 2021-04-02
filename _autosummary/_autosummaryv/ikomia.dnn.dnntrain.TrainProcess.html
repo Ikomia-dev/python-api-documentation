@@ -7,11 +7,11 @@
     <title>TrainProcess &#8212; Ikomia  documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="DatasetIO" href="../ikomia.dnn.datasetio.html" />
@@ -112,7 +112,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -177,10 +177,10 @@ It includes MLflow framework and handle connections with it:</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_artifacts" title="ikomia.dnn.dnntrain.TrainProcess.log_artifacts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_artifacts</span></code></a>(folder_path)</p></td>
 <td><p>Log artifacts to MLflow server.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_metric" title="ikomia.dnn.dnntrain.TrainProcess.log_metric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_metric</span></code></a>(key, value)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_metric" title="ikomia.dnn.dnntrain.TrainProcess.log_metric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_metric</span></code></a>(key, value[, step])</p></td>
 <td><p>Log metric to MLflow server</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_metrics" title="ikomia.dnn.dnntrain.TrainProcess.log_metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_metrics</span></code></a>(metrics)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_metrics" title="ikomia.dnn.dnntrain.TrainProcess.log_metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_metrics</span></code></a>(metrics[, step])</p></td>
 <td><p>Log metrics to MLflow server</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_param" title="ikomia.dnn.dnntrain.TrainProcess.log_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_param</span></code></a>(key, value)</p></td>
@@ -648,7 +648,7 @@ Artifacts could be any files stored in the same folder (model weights, configura
 
 <dl class="method">
 <dt id="ikomia.dnn.dnntrain.TrainProcess.log_metric">
-<code class="sig-name descname">log_metric</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_metric" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">log_metric</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em>, <em class="sig-param">step=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_metric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log metric to MLflow server</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -662,7 +662,7 @@ Artifacts could be any files stored in the same folder (model weights, configura
 
 <dl class="method">
 <dt id="ikomia.dnn.dnntrain.TrainProcess.log_metrics">
-<code class="sig-name descname">log_metrics</code><span class="sig-paren">(</span><em class="sig-param">metrics</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">log_metrics</code><span class="sig-paren">(</span><em class="sig-param">metrics</em>, <em class="sig-param">step=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log metrics to MLflow server</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

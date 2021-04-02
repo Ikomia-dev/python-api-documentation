@@ -7,11 +7,11 @@
     <title>CProtocolTask &#8212; Ikomia  documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CProtocolTaskParam" href="ikomia.core.pycore.CProtocolTaskParam.html" />
@@ -112,7 +112,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -179,8 +179,8 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTask.emitOutputChanged" title="ikomia.core.pycore.CProtocolTask.emitOutputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitOutputChanged</span></code></a>(self)</p></td>
 <td><p>Send event to notify that some outputs have changed and that display must be updated.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTask.emitStepProgress" title="ikomia.core.pycore.CProtocolTask.emitStepProgress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitStepProgress</span></code></a>(self)</p></td>
-<td><p>Send step event to notify progress bar system.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTask.emitStepProgress" title="ikomia.core.pycore.CProtocolTask.emitStepProgress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitStepProgress</span></code></a>(self, count)</p></td>
+<td><p>Send event to add or remove progress steps to the progress bar.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CProtocolTask.endTaskRun" title="ikomia.core.pycore.CProtocolTask.endTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">endTaskRun</span></code></a>(self)</p></td>
 <td><p>Performs all finalization stuff after running the task.</p></td>
@@ -355,8 +355,18 @@
 
 <dl class="method">
 <dt id="ikomia.core.pycore.CProtocolTask.emitStepProgress">
-<code class="sig-name descname">emitStepProgress</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CProtocolTask.emitStepProgress" title="Permalink to this definition">¶</a></dt>
-<dd><p>Send step event to notify progress bar system.</p>
+<code class="sig-name descname">emitStepProgress</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)count</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.core.pycore.CProtocolTask.emitStepProgress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send event to add or remove progress steps to the progress bar.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>count (int): positive value to add steps, negative value to remove steps.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>emitStepProgress( (CProtocolTask)self) -&gt; None :</dt><dd><p>Send step event to notify progress bar system.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
