@@ -1,4 +1,4 @@
-PyDataProcess
+﻿PyDataProcess
 =============
 
 .. automodule:: ikomia.dataprocess.pydataprocess
@@ -26,7 +26,6 @@ PyDataProcess
       CArrayIO
       NumericOutputType
       PlotType
-      DatasetFormat
       MapIntStr
 
    .. rubric:: Task management
@@ -37,7 +36,8 @@ PyDataProcess
       CInteractiveImageProcess2d
       CVideoProcess
       CVideoProcessOF
-      CVideoProcessTracking      
+      CVideoProcessTracking
+      CDnnTrainProcess
       CProcessInfo
       Language
 
