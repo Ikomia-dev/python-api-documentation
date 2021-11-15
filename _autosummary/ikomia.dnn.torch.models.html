@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/ikomia.css" type="text/css" />
 
   
@@ -30,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -70,7 +72,7 @@
     
     
     <div class="version">
-        0.5.0
+        0.6.0
     </div>
     
     
@@ -101,31 +103,22 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../python_env.html">Python environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dependencies.html">Dependencies management</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../hello_world_plugin.html">Hello world plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../opencv_plugin.html">Simple OpenCV plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interactive_plugin.html">Interactive plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.core.pycore.html">PyCore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyutils.html">PyUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.dataset.html">Dataset</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Torchvision models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.qtconversion.html">QtConversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 </ul>
 </li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
 </ul>
 
         
@@ -187,7 +180,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../modules.html">API Modules</a> &raquo;</li>
+          <li><a href="../modules.html">API Reference</a> &raquo;</li>
         
       <li>Torchvision models</li>
     
@@ -220,6 +213,11 @@
   <div class="section" id="module-ikomia.dnn.torch.models">
 <span id="torchvision-models"></span><h1>Torchvision models<a class="headerlink" href="#module-ikomia.dnn.torch.models" title="Permalink to this headline">¶</a></h1>
 <p>Model providing helper funtions to create TorchVision Deep Learning models.</p>
+<p>TorchVision pages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#classification">Torchvision classication</a></p></li>
+<li><p><a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#object-detection-instance-segmentation-and-person-keypoint-detection">Torchvision object detection and segmentation</a></p></li>
+</ul>
 <p class="rubric">Import</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dnn.torch</span> <span class="kn">import</span> <span class="n">models</span>
 </pre></div>
@@ -249,14 +247,14 @@
 </tbody>
 </table>
 <p class="rubric">Details</p>
-<dl class="function">
-<dt id="ikomia.dnn.torch.models.faster_rcnn">
-<code class="sig-prename descclassname">ikomia.dnn.torch.models.</code><code class="sig-name descname">faster_rcnn</code><span class="sig-paren">(</span><em class="sig-param">train_mode=False</em>, <em class="sig-param">use_pretrained=True</em>, <em class="sig-param">input_size=800</em>, <em class="sig-param">classes=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.faster_rcnn" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="ikomia.dnn.torch.models.faster_rcnn">
+<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">faster_rcnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.faster_rcnn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Torchvision Faster RCNN model for training or inference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_name</strong> (<em>str</em>) – model name, consult <a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#object-detection-instance-segmentation-and-person-keypoint-detection">Torchvision page</a></p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – model name</p></li>
 <li><p><strong>train_mode</strong> (<em>boolean</em>) – True or False</p></li>
 <li><p><strong>use_pretrained</strong> (<em>boolean</em>) – True to do transfer learning from pre-trained model, False to train from scratch</p></li>
 <li><p><strong>input_size</strong> (<em>int</em>) – input image size</p></li>
@@ -269,15 +267,14 @@
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="ikomia.dnn.torch.models.mask_rcnn">
-<code class="sig-prename descclassname">ikomia.dnn.torch.models.</code><code class="sig-name descname">mask_rcnn</code><span class="sig-paren">(</span><em class="sig-param">train_mode=False</em>, <em class="sig-param">use_pretrained=True</em>, <em class="sig-param">input_size=800</em>, <em class="sig-param">classes=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.mask_rcnn" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="ikomia.dnn.torch.models.mask_rcnn">
+<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">mask_rcnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.mask_rcnn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Torchvision Mask RCNN model for training or inference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_name</strong> (<em>str</em>) – <p>model name, consult <a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#object-detection-instance-segmentation-and-person-keypoint-detection">Torchvision page</a></p>
-</p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – model name</p></li>
 <li><p><strong>train_mode</strong> (<em>boolean</em>) – True or False</p></li>
 <li><p><strong>use_pretrained</strong> (<em>boolean</em>) – True to do transfer learning from pre-trained model, False to train from scratch</p></li>
 <li><p><strong>input_size</strong> (<em>int</em>) – input image size</p></li>
@@ -290,15 +287,14 @@
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="ikomia.dnn.torch.models.mnasnet">
-<code class="sig-prename descclassname">ikomia.dnn.torch.models.</code><code class="sig-name descname">mnasnet</code><span class="sig-paren">(</span><em class="sig-param">train_mode=False</em>, <em class="sig-param">use_pretrained=False</em>, <em class="sig-param">feature_extract=False</em>, <em class="sig-param">classes=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.mnasnet" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="ikomia.dnn.torch.models.mnasnet">
+<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">mnasnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_extract</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.mnasnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Torchvision MnasNet model for training or inference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_name</strong> (<em>str</em>) – <p>model name, consult <a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#classification">Torchvision page</a></p>
-</p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – model name</p></li>
 <li><p><strong>train_mode</strong> (<em>boolean</em>) – True or False</p></li>
 <li><p><strong>use_pretrained</strong> (<em>boolean</em>) – True to do transfer learning from pre-trained model, False to train from scratch</p></li>
 <li><p><strong>feature_extract</strong> (<em>boolean</em>) – transfer learning only, True to keep pre-trained features (train last layers only), False to train all layers</p></li>
@@ -311,15 +307,14 @@
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="ikomia.dnn.torch.models.resnet">
-<code class="sig-prename descclassname">ikomia.dnn.torch.models.</code><code class="sig-name descname">resnet</code><span class="sig-paren">(</span><em class="sig-param">model_name='resnet50'</em>, <em class="sig-param">train_mode=False</em>, <em class="sig-param">use_pretrained=False</em>, <em class="sig-param">feature_extract=False</em>, <em class="sig-param">classes=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.resnet" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="ikomia.dnn.torch.models.resnet">
+<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">resnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'resnet50'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_extract</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.resnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Torchvision ResNet model for training or inference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_name</strong> (<em>str</em>) – <p>model name, consult <a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#classification">Torchvision page</a></p>
-</p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – model name</p></li>
 <li><p><strong>train_mode</strong> (<em>boolean</em>) – True or False</p></li>
 <li><p><strong>use_pretrained</strong> (<em>boolean</em>) – True to do transfer learning from pre-trained model, False to train from scratch</p></li>
 <li><p><strong>feature_extract</strong> (<em>boolean</em>) – transfer learning only, True to keep pre-trained features (train last layers only), False to train all layers</p></li>
@@ -332,15 +327,14 @@
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="ikomia.dnn.torch.models.resnext">
-<code class="sig-prename descclassname">ikomia.dnn.torch.models.</code><code class="sig-name descname">resnext</code><span class="sig-paren">(</span><em class="sig-param">model_name='resnext50'</em>, <em class="sig-param">train_mode=False</em>, <em class="sig-param">use_pretrained=False</em>, <em class="sig-param">feature_extract=False</em>, <em class="sig-param">classes=2</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.resnext" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="ikomia.dnn.torch.models.resnext">
+<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">resnext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'resnext50'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_extract</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.resnext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Torchvision ResNeXt model for training or inference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_name</strong> (<em>str</em>) – <p>model name, consult <a class="reference external" href="https://pytorch.org/docs/stable/torchvision/models.html#classification">Torchvision page</a></p>
-</p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – model name</p></li>
 <li><p><strong>train_mode</strong> (<em>boolean</em>) – True or False</p></li>
 <li><p><strong>use_pretrained</strong> (<em>boolean</em>) – True to do transfer learning from pre-trained model, False to train from scratch</p></li>
 <li><p><strong>feature_extract</strong> (<em>boolean</em>) – transfer learning only, True to keep pre-trained features (train last layers only), False to train all layers</p></li>

@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
 
   
@@ -30,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -70,7 +72,7 @@
     
     
     <div class="version">
-        0.5.0
+        0.6.0
     </div>
     
     
@@ -100,28 +102,25 @@
         
         
         
-        <ul>
-<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies management</a></li>
-</ul>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Simple OpenCV plugin</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#interface-implementation">Interface implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#process-implementation">Process implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#process-parameters">Process parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#process-widget">Process widget</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#process-metadata">Process metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#source-code">Source code</a></li>
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="python_env.html">Python environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependencies.html">Dependencies management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html">Naming convention</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Simple OpenCV plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive_plugin.html">Interactive plugin</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="interactive_plugin.html">Interactive plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_plugin.html#going-deeper">Going deeper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_plugin.html#examples">Examples</a></li>
+</ul>
+</li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
 </ul>
 
         
@@ -183,6 +182,8 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
+          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+        
       <li>Simple OpenCV plugin</li>
     
     
@@ -216,12 +217,12 @@
 <p>This section will show how to create a fully functional plugin applying basics OpenCV methods to images. It takes image as input and delivers processed image as output.</p>
 <p>We skip here all steps to create a new empty plugin. Please refer to <a class="reference internal" href="hello_world_plugin.html"><span class="doc">Hello World tutorial</span></a> if you are not familiar with it.</p>
 <dl class="simple">
-<dt>At this point, a plugin called <em>OCVBasics</em> is created with the following structure:</dt><dd><dl class="simple">
+<dt>At this point, a plugin called <em>ocv_basics</em> is created with the following structure:</dt><dd><dl class="simple">
 <dt>…/<em>BasicsOpenCV/</em></dt><dd><ul class="simple">
 <li><p><em>__init__.py</em></p></li>
-<li><p><em>OCVBasics.py</em></p></li>
-<li><p><em>OCVBasics_process.py</em></p></li>
-<li><p><em>OCVBasics_widget.py</em></p></li>
+<li><p><em>ocv_basics.py</em></p></li>
+<li><p><em>ocv_basics_process.py</em></p></li>
+<li><p><em>ocv_basics_widget.py</em></p></li>
 </ul>
 </dd>
 </dl>
@@ -230,22 +231,21 @@
 <div class="section" id="interface-implementation">
 <h2>Interface implementation<a class="headerlink" href="#interface-implementation" title="Permalink to this headline">¶</a></h2>
 <p>No features added from the default implementation.
-See <a class="reference internal" href="opencv_plugin_interface.html"><span class="doc">OCVBasics.py</span></a>.</p>
+See <a class="reference internal" href="opencv_plugin_interface.html"><span class="doc">ocv_basics.py</span></a>.</p>
 </div>
 <div class="section" id="process-implementation">
 <h2>Process implementation<a class="headerlink" href="#process-implementation" title="Permalink to this headline">¶</a></h2>
-<p>The aim of our plugin is to process images, so our task is derived from <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d" title="ikomia.dataprocess.pydataprocess.CImageProcess2d"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a>.
+<p>The aim of our plugin is to process images, so our task is derived from <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a>.
 This base class comes with default inputs (image + graphics) and outputs (image) that fit our needs.</p>
 <p>Our process pipeline will be: <em>Convert to grayscale</em> -&gt; <em>Gaussian blur</em> -&gt; <em>Canny filter</em>.</p>
-<p>The first thing to do in our <em>OCVBasics_process.py</em> is importing OpenCV package (already installed):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span>
+<p>The first thing to do in our <em>ocv_basics_process.py</em> is importing OpenCV package (already installed with Ikomia Studio):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span><span class="p">,</span> <span class="n">cv2</span>
 <span class="kn">import</span> <span class="nn">copy</span>
 <span class="c1"># Your imports below</span>
-<span class="kn">import</span> <span class="nn">cv2</span>
 </pre></div>
 </div>
 <p>In the <em>run</em> method, we now have to retrieve source image from input, add OpenCV calls and set the output:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">C2dImageTask</span><span class="p">):</span>
 
     <span class="c1">#...</span>
 
@@ -286,7 +286,7 @@ This base class comes with default inputs (image + graphics) and outputs (image)
 </div>
 <div class="section" id="process-parameters">
 <h2>Process parameters<a class="headerlink" href="#process-parameters" title="Permalink to this headline">¶</a></h2>
-<p>We will focus now on adding some parameters to our process ((in <em>OCVBasics_process.py</em>).
+<p>We will focus now on adding some parameters to our process ((in <em>ocv_basics_process.py</em>).
 Let’s say we want to control blur strengh of the Gaussian filter, we have to manage at least 3 parameters:</p>
 <ul class="simple">
 <li><p>Kernel size</p></li>
@@ -294,12 +294,12 @@ Let’s say we want to control blur strengh of the Gaussian filter, we have to m
 <li><p>Sigma Y</p></li>
 </ul>
 <p>First, we add member variables in the parameters class, they will be accessible from the process.
-Note the presence of functions <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CProtocolTaskParam.html#ikomia.core.pycore.CProtocolTaskParam.setParamMap" title="ikomia.core.pycore.CProtocolTaskParam.setParamMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setParamMap()</span></code></a> and <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CProtocolTaskParam.html#ikomia.core.pycore.CProtocolTaskParam.getParamMap" title="ikomia.core.pycore.CProtocolTaskParam.getParamMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getParamMap()</span></code></a>
+Note the presence of functions <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam.setParamMap" title="ikomia.core.pycore.CWorkflowTaskParam.setParamMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setParamMap()</span></code></a> and <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam.getParamMap" title="ikomia.core.pycore.CWorkflowTaskParam.getParamMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getParamMap()</span></code></a>
 which are required to save/load values when user wants to save his workflow.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcessParam</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcessParam</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskParam</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Place default value initialization here</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sigma_x</span> <span class="o">=</span> <span class="mf">1.0</span>
@@ -311,7 +311,6 @@ which are required to save/load values when user wants to save his workflow.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;kernel_size_x&quot;</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;kernel_size_y&quot;</span><span class="p">]))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sigma_x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;sigma_x&quot;</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sigma_y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;sigma_y&quot;</span><span class="p">])</span>
-        <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getParam</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Send parameters values to Ikomia application (workflow)</span>
@@ -325,10 +324,10 @@ which are required to save/load values when user wants to save his workflow.</p>
 </pre></div>
 </div>
 <p>We are now able to manage parameters from the process. The constructor receives an instance of the parameters structure that we should copy. This instance has values set from the Ikomia application (default or user-defined).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">C2dImageTask</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
-        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">C2dImageTask</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 
         <span class="c1">#Create parameters class</span>
         <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -338,7 +337,7 @@ which are required to save/load values when user wants to save his workflow.</p>
 </pre></div>
 </div>
 <p>Finally, we modify the <em>run</em> method to pass parameters to GaussianBlur function:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">C2dImageTask</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Core function of your process</span>
@@ -362,13 +361,17 @@ which are required to save/load values when user wants to save his workflow.</p>
 <p>At this point, parameters are only available from source code.
 The role of the plugin widget is to open parameters configuration to the user.
 We will use PyQt framework for this example.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also use PySide2 (another Qt-based framework supported by Qt) for your widget.</p>
+</div>
 <p>We implement the widget part in the file <em>OCVBasics_widget.py</em>.
 The widget layout is created in the constructor.
 Like the process class, the constructor receives an instance of the parameters structure to initialize the widget components.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskWidget</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
-        <span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">processMod</span><span class="o">.</span><span class="n">OCVBasicsProcessParam</span><span class="p">()</span>
@@ -430,9 +433,9 @@ Like the process class, the constructor receives an instance of the parameters s
 <p>Let’s see how our widget looks:</p>
 <img alt="_images/opencv_plugin_widget.jpg" src="_images/opencv_plugin_widget.jpg" />
 <p>Last thing, we have to update process parameters when a user change values through the widget.
-We do that by overriding <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CProtocolTaskWidget.html#ikomia.core.pycore.CProtocolTaskWidget.onApply" title="ikomia.core.pycore.CProtocolTaskWidget.onApply"><code class="xref py py-meth docutils literal notranslate"><span class="pre">onApply()</span></code></a> method.
+We do that by overriding <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskWidget.html#ikomia.core.pycore.CWorkflowTaskWidget.onApply" title="ikomia.core.pycore.CWorkflowTaskWidget.onApply"><code class="xref py py-meth docutils literal notranslate"><span class="pre">onApply()</span></code></a> method.
 It is called when user clicks the <em>Apply</em> button.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskWidget</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskWidget</span><span class="p">):</span>
     <span class="c1"># ...</span>
 
     <span class="k">def</span> <span class="nf">onApply</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -453,11 +456,11 @@ It is called when user clicks the <em>Apply</em> button.</p>
 <p>Finally, we will add some useful information about our plugin.
 Ikomia software manages such information and display it to the user (parameters widget, Ikomia Store).
 Metadata can be added in the constructor of the process factory class in <em>OCVBasics_process.py</em>.
-We have to fill the member object <em>info</em>, see <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CProcessInfo.html#ikomia.dataprocess.pydataprocess.CProcessInfo" title="ikomia.dataprocess.pydataprocess.CProcessInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProcessInfo</span></code></a> for details.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcessFactory</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="p">):</span>
+We have to fill the member object <em>info</em>, see <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html#ikomia.dataprocess.pydataprocess.CTaskInfo" title="ikomia.dataprocess.pydataprocess.CTaskInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">CTaskInfo</span></code></a> for details.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OCVBasicsProcessFactory</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CTaskFactory</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CTaskFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Set process information as string here</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;OCVBasics&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">shortDescription</span> <span class="o">=</span> <span class="s2">&quot;OpenCV Canny&quot;</span>
@@ -481,9 +484,9 @@ We have to fill the member object <em>info</em>, see <a class="reference interna
 </div>
 <div class="section" id="source-code">
 <h2>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="opencv_plugin_interface.html"><span class="doc">OCVBasics.py</span></a></p>
-<p><a class="reference internal" href="opencv_plugin_process.html"><span class="doc">OCVBasics_process.py</span></a></p>
-<p><a class="reference internal" href="opencv_plugin_widget.html"><span class="doc">OCVBasics_widget.py</span></a></p>
+<p><a class="reference internal" href="opencv_plugin_interface.html"><span class="doc">ocv_basics.py</span></a></p>
+<p><a class="reference internal" href="opencv_plugin_process.html"><span class="doc">ocv_basics_process.py</span></a></p>
+<p><a class="reference internal" href="opencv_plugin_widget.html"><span class="doc">ocv_basics_widget.py</span></a></p>
 </div>
 </div>
 

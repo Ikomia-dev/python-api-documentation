@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/ikomia.css" type="text/css" />
 
   
@@ -30,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -70,7 +72,7 @@
     
     
     <div class="version">
-        0.5.0
+        0.6.0
     </div>
     
     
@@ -101,57 +103,51 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../python_env.html">Python environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dependencies.html">Dependencies management</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../hello_world_plugin.html">Hello world plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../opencv_plugin.html">Simple OpenCV plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interactive_plugin.html">Interactive plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.core.pycore.html">PyCore</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">PyDataProcess</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CProcessFactory.html">CProcessFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CImageProcessIO.html">CImageProcessIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoProcessIO.html">CVideoProcessIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CDblFeatureIO.html">CDblFeatureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.MapIntStr.html">MapIntStr</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html">CImageProcess2d</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CInteractiveImageProcess2d.html">CInteractiveImageProcess2d</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcess.html">CVideoProcess</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcessOF.html">CVideoProcessOF</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcessTracking.html">CVideoProcessTracking</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainProcess.html">CDnnTrainProcess</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CProcessInfo.html">CProcessInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.Language.html">Language</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CDnnTrainProcessParam.html">CDnnTrainProcessParam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyutils.html">PyUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.dataset.html">Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.torch.models.html">Torchvision models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.qtconversion.html">QtConversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 </ul>
 </li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
 </ul>
 
         
@@ -213,7 +209,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../modules.html">API Modules</a> &raquo;</li>
+          <li><a href="../modules.html">API Reference</a> &raquo;</li>
         
       <li>PyDataProcess</li>
     
@@ -248,7 +244,7 @@
 <p>Module offering all features to implement image processing plugins that can be used in the Ikomia workflow. The system uses factory design pattern to allow integration of third-party plugins. So when you want to add your own plugin, you have to implement (override) three factory classes derived from the followings:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html#ikomia.dataprocess.pydataprocess.CPluginProcessInterface" title="ikomia.dataprocess.pydataprocess.CPluginProcessInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPluginProcessInterface</span></code></a>: abstract base class exposing the two factories required by the plugin engine (task and widget)</p></li>
-<li><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CProcessFactory.html#ikomia.dataprocess.pydataprocess.CProcessFactory" title="ikomia.dataprocess.pydataprocess.CProcessFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProcessFactory</span></code></a>: abstract base class for process instanciation</p></li>
+<li><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html#ikomia.dataprocess.pydataprocess.CTaskFactory" title="ikomia.dataprocess.pydataprocess.CTaskFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">CTaskFactory</span></code></a>: abstract base class for process instanciation</p></li>
 <li><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html#ikomia.dataprocess.pydataprocess.CWidgetFactory" title="ikomia.dataprocess.pydataprocess.CWidgetFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWidgetFactory</span></code></a>: abstract base class for widget instanciation</p></li>
 </ul>
 <p>This module provides class specialization for several types of usual inputs/outputs.
@@ -264,7 +260,7 @@ You will find details about implementation below.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html#ikomia.dataprocess.pydataprocess.CPluginProcessInterface" title="ikomia.dataprocess.pydataprocess.CPluginProcessInterface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CPluginProcessInterface</span></code></a></p></td>
 <td><p>Abstract class defining core structure of a plugin interface.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CProcessFactory.html#ikomia.dataprocess.pydataprocess.CProcessFactory" title="ikomia.dataprocess.pydataprocess.CProcessFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CProcessFactory</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html#ikomia.dataprocess.pydataprocess.CTaskFactory" title="ikomia.dataprocess.pydataprocess.CTaskFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CTaskFactory</span></code></a></p></td>
 <td><p>Abstract class defining the core structure of the process factory.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html#ikomia.dataprocess.pydataprocess.CWidgetFactory" title="ikomia.dataprocess.pydataprocess.CWidgetFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CWidgetFactory</span></code></a></p></td>
@@ -279,13 +275,13 @@ You will find details about implementation below.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CImageProcessIO.html#ikomia.dataprocess.pydataprocess.CImageProcessIO" title="ikomia.dataprocess.pydataprocess.CImageProcessIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CImageProcessIO</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO" title="ikomia.dataprocess.pydataprocess.CImageIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CImageIO</span></code></a></p></td>
 <td><p>Define input or output for a task dedicated to image processing (2D or 3D).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoProcessIO.html#ikomia.dataprocess.pydataprocess.CVideoProcessIO" title="ikomia.dataprocess.pydataprocess.CVideoProcessIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CVideoProcessIO</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html#ikomia.dataprocess.pydataprocess.CVideoIO" title="ikomia.dataprocess.pydataprocess.CVideoIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CVideoIO</span></code></a></p></td>
 <td><p>Define an input or output for a task dedicated to video management.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CDblFeatureIO.html#ikomia.dataprocess.pydataprocess.CDblFeatureIO" title="ikomia.dataprocess.pydataprocess.CDblFeatureIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CDblFeatureIO</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO" title="ikomia.dataprocess.pydataprocess.CNumericIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CNumericIO</span></code></a></p></td>
 <td><p>Define input or output for a task dedicated to manage numeric values.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput" title="ikomia.dataprocess.pydataprocess.CGraphicsInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a></p></td>
@@ -306,6 +302,12 @@ You will find details about implementation below.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html#ikomia.dataprocess.pydataprocess.CArrayIO" title="ikomia.dataprocess.pydataprocess.CArrayIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CArrayIO</span></code></a></p></td>
 <td><p>Define multi-dimensional array as input or output of a task.</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html#ikomia.dataprocess.pydataprocess.CBlobMeasureIO" title="ikomia.dataprocess.pydataprocess.CBlobMeasureIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CBlobMeasureIO</span></code></a></p></td>
+<td><p>Define input or output for a task dedicated to manage blob measures (ie connected components).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectMeasure.html#ikomia.dataprocess.pydataprocess.CObjectMeasure" title="ikomia.dataprocess.pydataprocess.CObjectMeasure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CObjectMeasure</span></code></a></p></td>
+<td><p>Store values of a given measure computed on a single blob of an image.</p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.NumericOutputType.html#ikomia.dataprocess.pydataprocess.NumericOutputType" title="ikomia.dataprocess.pydataprocess.NumericOutputType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumericOutputType</span></code></a></p></td>
 <td><p>Enum - List of a display types for numeric values</p></td>
 </tr>
@@ -324,41 +326,44 @@ You will find details about implementation below.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html#ikomia.dataprocess.pydataprocess.CImageProcess2d" title="ikomia.dataprocess.pydataprocess.CImageProcess2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CImageProcess2d</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a></p></td>
 <td><p>Implement all basic features used in a task dedicated to 2D image processing.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CInteractiveImageProcess2d.html#ikomia.dataprocess.pydataprocess.CInteractiveImageProcess2d" title="ikomia.dataprocess.pydataprocess.CInteractiveImageProcess2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CInteractiveImageProcess2d</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask" title="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">C2dImageInteractiveTask</span></code></a></p></td>
 <td><p>Add user interactions capability to a 2D image process task.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcess.html#ikomia.dataprocess.pydataprocess.CVideoProcess" title="ikomia.dataprocess.pydataprocess.CVideoProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CVideoProcess</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html#ikomia.dataprocess.pydataprocess.CVideoTask" title="ikomia.dataprocess.pydataprocess.CVideoTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CVideoTask</span></code></a></p></td>
 <td><p>Add video specific features.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcessOF.html#ikomia.dataprocess.pydataprocess.CVideoProcessOF" title="ikomia.dataprocess.pydataprocess.CVideoProcessOF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CVideoProcessOF</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.html#ikomia.dataprocess.pydataprocess.CVideoOFTask" title="ikomia.dataprocess.pydataprocess.CVideoOFTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CVideoOFTask</span></code></a></p></td>
 <td><p>Add optical flow specific features for methods based on OpenCV framework.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcessTracking.html#ikomia.dataprocess.pydataprocess.CVideoProcessTracking" title="ikomia.dataprocess.pydataprocess.CVideoProcessTracking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CVideoProcessTracking</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html#ikomia.dataprocess.pydataprocess.CVideoTrackingTask" title="ikomia.dataprocess.pydataprocess.CVideoTrackingTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CVideoTrackingTask</span></code></a></p></td>
 <td><p>Add specific features for tracking task.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainProcess.html#ikomia.dataprocess.pydataprocess.CDnnTrainProcess" title="ikomia.dataprocess.pydataprocess.CDnnTrainProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CDnnTrainProcess</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html#ikomia.dataprocess.pydataprocess.CDnnTrainTask" title="ikomia.dataprocess.pydataprocess.CDnnTrainTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CDnnTrainTask</span></code></a></p></td>
 <td><p>Internal use only</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CProcessInfo.html#ikomia.dataprocess.pydataprocess.CProcessInfo" title="ikomia.dataprocess.pydataprocess.CProcessInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CProcessInfo</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html#ikomia.dataprocess.pydataprocess.CTaskInfo" title="ikomia.dataprocess.pydataprocess.CTaskInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CTaskInfo</span></code></a></p></td>
 <td><p>Manage metadata associated with a task.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.Language.html#ikomia.dataprocess.pydataprocess.Language" title="ikomia.dataprocess.pydataprocess.Language"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Language</span></code></a></p></td>
-<td><p>Enum - List of supported programming language</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html#ikomia.dataprocess.pydataprocess.CIkomiaRegistry" title="ikomia.dataprocess.pydataprocess.CIkomiaRegistry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CIkomiaRegistry</span></code></a></p></td>
+<td><p>Algorithms registry of the Ikomia platform.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow" title="ikomia.dataprocess.pydataprocess.CWorkflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CWorkflow</span></code></a></p></td>
+<td><p>Workflow management of Computer Vision tasks.</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Parameters management</p>
+<p class="rubric">Widget management</p>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CDnnTrainProcessParam.html#ikomia.dataprocess.pydataprocess.CDnnTrainProcessParam" title="ikomia.dataprocess.pydataprocess.CDnnTrainProcessParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CDnnTrainProcessParam</span></code></a></p></td>
-<td><p>Base class defining common deep learning hyper-parameters.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html#ikomia.dataprocess.pydataprocess.CWidgetFactory" title="ikomia.dataprocess.pydataprocess.CWidgetFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CWidgetFactory</span></code></a></p></td>
+<td><p>Abstract class defining the core structure of the process widget factory.</p></td>
 </tr>
 </tbody>
 </table>

@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
 
   
@@ -30,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -70,7 +72,7 @@
     
     
     <div class="version">
-        0.5.0
+        0.6.0
     </div>
     
     
@@ -100,30 +102,20 @@
         
         
         
-        <ul>
-<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies management</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Simple OpenCV plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive_plugin.html">Interactive plugin</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
-</ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="examples.html">Examples</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="examples.html#hello-world-plugin">Hello World plugin</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="examples.html#simple-opencv-plugin">Simple OpenCV plugin</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="opencv_plugin_interface.html">Plugin interface</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Process</a></li>
-<li class="toctree-l3"><a class="reference internal" href="opencv_plugin_widget.html">Widget</a></li>
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_plugin.html#going-deeper">Going deeper</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#examples">Examples</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="examples.html">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#interactive-plugin">Interactive plugin</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
 </ul>
 
         
@@ -185,6 +177,8 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
+          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+        
           <li><a href="examples.html">Examples</a> &raquo;</li>
         
       <li>Process</li>
@@ -218,10 +212,9 @@
   <div class="section" id="process">
 <h1>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h1>
 <p>Code example for OCVBasics process implementation</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span><span class="p">,</span> <span class="n">cv2</span>
 <span class="kn">import</span> <span class="nn">copy</span>
 <span class="c1"># Your imports below</span>
-<span class="kn">import</span> <span class="nn">cv2</span>
 
 <span class="c1"># --------------------</span>
 <span class="c1"># - Class to handle the process parameters</span>
@@ -242,7 +235,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;kernel_size_x&quot;</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;kernel_size_y&quot;</span><span class="p">]))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sigma_x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;sigma_x&quot;</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sigma_y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">paramMap</span><span class="p">[</span><span class="s2">&quot;sigma_y&quot;</span><span class="p">])</span>
-        <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getParam</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Send parameters values to Ikomia application (workflow)</span>

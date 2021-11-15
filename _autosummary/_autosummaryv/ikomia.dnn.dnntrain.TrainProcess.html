@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
 
   
@@ -30,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -41,7 +43,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="DatasetIO" href="../ikomia.dnn.datasetio.html" />
-    <link rel="prev" title="TrainParam" href="ikomia.dnn.dnntrain.TrainParam.html" />
+    <link rel="prev" title="DnnTrain" href="../ikomia.dnn.dnntrain.html" />
  
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -70,7 +72,7 @@
     
     
     <div class="version">
-        0.5.0
+        0.6.0
     </div>
     
     
@@ -101,21 +103,16 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dnn.dnntrain.TrainParam.html">TrainParam</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">TrainProcess</a></li>
 </ul>
 </li>
@@ -123,13 +120,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 </ul>
 </li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
 </ul>
 
         
@@ -191,7 +183,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../../modules.html">API Modules</a> &raquo;</li>
+          <li><a href="../../modules.html">API Reference</a> &raquo;</li>
         
           <li><a href="../ikomia.dnn.dnntrain.html">DnnTrain</a> &raquo;</li>
         
@@ -214,7 +206,7 @@
         <a href="../ikomia.dnn.datasetio.html" class="btn btn-neutral float-right" title="DatasetIO" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="ikomia.dnn.dnntrain.TrainParam.html" class="btn btn-neutral float-left" title="TrainParam" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ikomia.dnn.dnntrain.html" class="btn btn-neutral float-left" title="DnnTrain" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -225,11 +217,11 @@
             
   <div class="section" id="trainprocess">
 <h1>TrainProcess<a class="headerlink" href="#trainprocess" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="ikomia.dnn.dnntrain.TrainProcess">
-<em class="property">class </em><code class="sig-prename descclassname">ikomia.dnn.dnntrain.</code><code class="sig-name descname">TrainProcess</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">param</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ikomia.dnn.dnntrain.</span></span><span class="sig-name descname"><span class="pre">TrainProcess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for task dedicated to Deep Learning training.
-It includes MLflow framework and handle connections with it:</p>
+It includes MLflow framework and Tensorboard and handle connections with them:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>experiment creation</p></li>
@@ -239,7 +231,8 @@ It includes MLflow framework and handle connections with it:</p>
 <li><p>training dashboard</p></li>
 </ul>
 </div></blockquote>
-<p>It must be use with <a class="reference internal" href="ikomia.dnn.dnntrain.TrainParam.html#ikomia.dnn.dnntrain.TrainParam" title="ikomia.dnn.dnntrain.TrainParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrainParam</span></code></a> or derived for parameters.</p>
+<p>It must be use with <a class="reference internal" href="ikomia.core.task.TaskParam.html#ikomia.core.task.TaskParam" title="ikomia.core.task.TaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskParam</span></code></a> or derived for parameters.
+Derived from <a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html#ikomia.dataprocess.pydataprocess.CDnnTrainTask" title="ikomia.dataprocess.pydataprocess.CDnnTrainTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CDnnTrainTask</span></code></a>.</p>
 <p class="rubric">Methods</p>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -250,17 +243,11 @@ It includes MLflow framework and handle connections with it:</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.__init__" title="ikomia.dnn.dnntrain.TrainProcess.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(name, param)</p></td>
 <td><p>Constructor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_artifact" title="ikomia.dnn.dnntrain.TrainProcess.log_artifact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_artifact</span></code></a>(file_path)</p></td>
-<td><p>Log artifact to MLflow server.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.beginTaskRun" title="ikomia.dnn.dnntrain.TrainProcess.beginTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">beginTaskRun</span></code></a>()</p></td>
+<td><p>Proceed to training job initialization:</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_artifacts" title="ikomia.dnn.dnntrain.TrainProcess.log_artifacts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_artifacts</span></code></a>(folder_path)</p></td>
-<td><p>Log artifacts to MLflow server.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_metric" title="ikomia.dnn.dnntrain.TrainProcess.log_metric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_metric</span></code></a>(key, value[, step])</p></td>
-<td><p>Log metric to MLflow server</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_metrics" title="ikomia.dnn.dnntrain.TrainProcess.log_metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_metrics</span></code></a>(metrics[, step])</p></td>
-<td><p>Log metrics to MLflow server</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.endTaskRun" title="ikomia.dnn.dnntrain.TrainProcess.endTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">endTaskRun</span></code></a>()</p></td>
+<td><p>Finalize MLflow run.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_param" title="ikomia.dnn.dnntrain.TrainProcess.log_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_param</span></code></a>(key, value)</p></td>
 <td><p>Log parameter to MLflow server</p></td>
@@ -268,22 +255,19 @@ It includes MLflow framework and handle connections with it:</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_params" title="ikomia.dnn.dnntrain.TrainProcess.log_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_params</span></code></a>(params)</p></td>
 <td><p>Log parameters to MLflow server</p></td>
 </tr>
-</tbody>
-</table>
-<p class="rubric">Overridden methods</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.beginTaskRun" title="ikomia.dnn.dnntrain.TrainProcess.beginTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">beginTaskRun</span></code></a>()</p></td>
-<td><p>Proceed to training job initialization:</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_metric" title="ikomia.dnn.dnntrain.TrainProcess.log_metric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_metric</span></code></a>(key, value[, step])</p></td>
+<td><p>Log metric to MLflow server</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.endTaskRun" title="ikomia.dnn.dnntrain.TrainProcess.endTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">endTaskRun</span></code></a>()</p></td>
-<td><p>Finalize MLflow run.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_metrics" title="ikomia.dnn.dnntrain.TrainProcess.log_metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_metrics</span></code></a>(metrics[, step])</p></td>
+<td><p>Log metrics to MLflow server</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.stop" title="ikomia.dnn.dnntrain.TrainProcess.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_artifact" title="ikomia.dnn.dnntrain.TrainProcess.log_artifact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_artifact</span></code></a>(file_path)</p></td>
+<td><p>Log artifact to MLflow server.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.log_artifacts" title="ikomia.dnn.dnntrain.TrainProcess.log_artifacts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_artifacts</span></code></a>(folder_path)</p></td>
+<td><p>Log artifacts to MLflow server.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.stop" title="ikomia.dnn.dnntrain.TrainProcess.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>()</p></td>
 <td><p>Request training job to stop.</p></td>
 </tr>
 </tbody>
@@ -301,50 +285,62 @@ It includes MLflow framework and handle connections with it:</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.addOutput" title="ikomia.dnn.dnntrain.TrainProcess.addOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addOutput</span></code></a>(self, output)</p></td>
 <td><p>Add new output to the task.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.emitGraphicsContextChanged" title="ikomia.dnn.dnntrain.TrainProcess.emitGraphicsContextChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitGraphicsContextChanged</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.emitAddSubProgressSteps" title="ikomia.dnn.dnntrain.TrainProcess.emitAddSubProgressSteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitAddSubProgressSteps</span></code></a>(self, count)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps" title="ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitAddSubProgressSteps()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.emitGraphicsContextChanged" title="ikomia.dnn.dnntrain.TrainProcess.emitGraphicsContextChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitGraphicsContextChanged</span></code></a>(self)</p></td>
 <td><p>Send event to notify that graphics context has changed inside the task and display has to be updated.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.emitOutputChanged" title="ikomia.dnn.dnntrain.TrainProcess.emitOutputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitOutputChanged</span></code></a>(self)</p></td>
-<td><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitOutputChanged" title="ikomia.core.pycore.CProtocolTask.emitOutputChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitOutputChanged()</span></code></a>.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.emitOutputChanged" title="ikomia.dnn.dnntrain.TrainProcess.emitOutputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitOutputChanged</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitOutputChanged" title="ikomia.core.pycore.CWorkflowTask.emitOutputChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitOutputChanged()</span></code></a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.emitStepProgress" title="ikomia.dnn.dnntrain.TrainProcess.emitStepProgress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitStepProgress</span></code></a>(self)</p></td>
-<td><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitStepProgress" title="ikomia.core.pycore.CProtocolTask.emitStepProgress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitStepProgress()</span></code></a>.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.emitStepProgress" title="ikomia.dnn.dnntrain.TrainProcess.emitStepProgress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitStepProgress</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitStepProgress" title="ikomia.core.pycore.CWorkflowTask.emitStepProgress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitStepProgress()</span></code></a>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.executeActions" title="ikomia.dnn.dnntrain.TrainProcess.executeActions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">executeActions</span></code></a>(self, action)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.enableMlflow" title="ikomia.dnn.dnntrain.TrainProcess.enableMlflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enableMlflow</span></code></a>(self, enable)</p></td>
+<td><p>Enable or disable automatic launch of MLflow dashboard when training starts.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.enableTensorboard" title="ikomia.dnn.dnntrain.TrainProcess.enableTensorboard"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enableTensorboard</span></code></a>(self, enable)</p></td>
+<td><p>Enable or disable automatic launch of Tensorboard dashboard when training starts.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.executeActions" title="ikomia.dnn.dnntrain.TrainProcess.executeActions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">executeActions</span></code></a>(self, action)</p></td>
 <td><p>Execute actions according to the specific defined behavior.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getElapsedTime" title="ikomia.dnn.dnntrain.TrainProcess.getElapsedTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElapsedTime</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getElapsedTime" title="ikomia.dnn.dnntrain.TrainProcess.getElapsedTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElapsedTime</span></code></a>(self)</p></td>
 <td><p>Get the time of the last execution in milliseconds.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getInput" title="ikomia.dnn.dnntrain.TrainProcess.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>(self, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getInput" title="ikomia.dnn.dnntrain.TrainProcess.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>(self, index)</p></td>
 <td><p>Get input at position index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getInputCount" title="ikomia.dnn.dnntrain.TrainProcess.getInputCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputCount</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getInputCount" title="ikomia.dnn.dnntrain.TrainProcess.getInputCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputCount</span></code></a>(self)</p></td>
 <td><p>Get the number of inputs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getInputDataType" title="ikomia.dnn.dnntrain.TrainProcess.getInputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputDataType</span></code></a>(self, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getInputDataType" title="ikomia.dnn.dnntrain.TrainProcess.getInputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputDataType</span></code></a>(self, index)</p></td>
 <td><p>Get input data type at position index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getInputs" title="ikomia.dnn.dnntrain.TrainProcess.getInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputs</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getInputs" title="ikomia.dnn.dnntrain.TrainProcess.getInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputs</span></code></a>(self)</p></td>
 <td><p>Get the whole list of inputs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getOutput" title="ikomia.dnn.dnntrain.TrainProcess.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>(self, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getOutput" title="ikomia.dnn.dnntrain.TrainProcess.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>(self, index)</p></td>
 <td><p>Get output at position index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputCount" title="ikomia.dnn.dnntrain.TrainProcess.getOutputCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputCount</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputCount" title="ikomia.dnn.dnntrain.TrainProcess.getOutputCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputCount</span></code></a>(self)</p></td>
 <td><p>Get the number of outputs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputDataType" title="ikomia.dnn.dnntrain.TrainProcess.getOutputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputDataType</span></code></a>(self, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputDataType" title="ikomia.dnn.dnntrain.TrainProcess.getOutputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputDataType</span></code></a>(self, index)</p></td>
 <td><p>Get output data type at position index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputs" title="ikomia.dnn.dnntrain.TrainProcess.getOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputs</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputs" title="ikomia.dnn.dnntrain.TrainProcess.getOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputs</span></code></a>(self)</p></td>
 <td><p>Get the whole list of outputs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getParam" title="ikomia.dnn.dnntrain.TrainProcess.getParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParam</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getParam" title="ikomia.dnn.dnntrain.TrainProcess.getParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParam</span></code></a>(self)</p></td>
 <td><p>Get task parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getProgressSteps" title="ikomia.dnn.dnntrain.TrainProcess.getProgressSteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProgressSteps</span></code></a>(self)</p></td>
-<td><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.getProgressSteps" title="ikomia.core.pycore.CProtocolTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getProgressSteps" title="ikomia.dnn.dnntrain.TrainProcess.getProgressSteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProgressSteps</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="ikomia.core.pycore.CWorkflowTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.getTensorboardLogDir" title="ikomia.dnn.dnntrain.TrainProcess.getTensorboardLogDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTensorboardLogDir</span></code></a>(self)</p></td>
+<td><p>Return Ikomia default logging directory for Tensorboard.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.globalInputChanged" title="ikomia.dnn.dnntrain.TrainProcess.globalInputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalInputChanged</span></code></a>(self, is_new_sequence)</p></td>
 <td><p>Notify that the inputs of the workflow have changed.</p></td>
@@ -362,13 +358,13 @@ It includes MLflow framework and handle connections with it:</p>
 <td><p>Remove input at the given position.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.run" title="ikomia.dnn.dnntrain.TrainProcess.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(self)</p></td>
-<td><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.run" title="ikomia.core.pycore.CProtocolTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a>.</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.setActionFlag" title="ikomia.dnn.dnntrain.TrainProcess.setActionFlag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActionFlag</span></code></a>(self, action, is_enable)</p></td>
 <td><p>Enable or disable the given action.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.setActive" title="ikomia.dnn.dnntrain.TrainProcess.setActive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActive</span></code></a>(self, is_active)</p></td>
-<td><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.setActive" title="ikomia.core.pycore.CProtocolTask.setActive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setActive()</span></code></a>.</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.setActive" title="ikomia.core.pycore.CWorkflowTask.setActive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setActive()</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.dnntrain.TrainProcess.setInput" title="ikomia.dnn.dnntrain.TrainProcess.setInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInput</span></code></a>(self, input, index, is_new_sequence)</p></td>
 <td><p>Set input at position index with the given one.</p></td>
@@ -396,6 +392,548 @@ It includes MLflow framework and handle connections with it:</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Details</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor. Initialize MLflow local server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – task name</p></li>
+<li><p><strong>param</strong> (<a class="reference internal" href="ikomia.core.task.TaskParam.html#ikomia.core.task.TaskParam" title="ikomia.core.task.TaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskParam</span></code></a>) – task parameters</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request training job to stop.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.addInput">
+<span class="sig-name descname"><span class="pre">addInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)input</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.addInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new input to the task.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>input: <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>addInput( (CWorkflowTask)self, (CWorkflowTaskIO)input) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.addOutput">
+<span class="sig-name descname"><span class="pre">addOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)output</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.addOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new output to the task.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>output: <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>addOutput( (CWorkflowTask)self, (CWorkflowTaskIO)output) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.beginTaskRun">
+<span class="sig-name descname"><span class="pre">beginTaskRun</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.beginTaskRun" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proceed to training job initialization:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>start new MLflow run</p></li>
+<li><p>log hyper-parameters contained in <code class="xref py py-class docutils literal notranslate"><span class="pre">CDnnTrainProcessParam</span></code></p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.emitAddSubProgressSteps">
+<span class="sig-name descname"><span class="pre">emitAddSubProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CDnnTrainTask)self</span></em>, <em class="sig-param"><span class="pre">(int)count</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.emitAddSubProgressSteps" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps" title="ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitAddSubProgressSteps()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.emitGraphicsContextChanged">
+<span class="sig-name descname"><span class="pre">emitGraphicsContextChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.emitGraphicsContextChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send event to notify that graphics context has changed inside the task and display has to be updated.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.emitOutputChanged">
+<span class="sig-name descname"><span class="pre">emitOutputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CDnnTrainTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.emitOutputChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitOutputChanged" title="ikomia.core.pycore.CWorkflowTask.emitOutputChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitOutputChanged()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.emitStepProgress">
+<span class="sig-name descname"><span class="pre">emitStepProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CDnnTrainTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.emitStepProgress" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitStepProgress" title="ikomia.core.pycore.CWorkflowTask.emitStepProgress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitStepProgress()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.enableMlflow">
+<span class="sig-name descname"><span class="pre">enableMlflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CDnnTrainTask)self</span></em>, <em class="sig-param"><span class="pre">(bool)enable</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.enableMlflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable automatic launch of MLflow dashboard when training starts. Dashboard is opened just once except if a new call to this function is made before a new training job starts.
+Default: enable.</p>
+<p>Args:   enable (boolean): True or False</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.enableTensorboard">
+<span class="sig-name descname"><span class="pre">enableTensorboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CDnnTrainTask)self</span></em>, <em class="sig-param"><span class="pre">(bool)enable</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.enableTensorboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable automatic launch of Tensorboard dashboard when training starts. Dashboard is opened just once except if a new call to this function is made before a new training job starts.
+Default: enable.</p>
+<p>Args:   enable (boolean): True or False</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.endTaskRun">
+<span class="sig-name descname"><span class="pre">endTaskRun</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.endTaskRun" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finalize MLflow run.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.executeActions">
+<span class="sig-name descname"><span class="pre">executeActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)action</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.executeActions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute actions according to the specific defined behavior. In this base class, the method does nothing.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>action: see <a class="reference internal" href="ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a> for possible values</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>executeActions( (CWorkflowTask)self, (int)action) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getElapsedTime">
+<span class="sig-name descname"><span class="pre">getElapsedTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">float</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getElapsedTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the time of the last execution in milliseconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>elapsed time in ms</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getInput">
+<span class="sig-name descname"><span class="pre">getInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get input at position index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – input index</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getInputCount">
+<span class="sig-name descname"><span class="pre">getInputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getInputCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>inputs count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getInputDataType">
+<span class="sig-name descname"><span class="pre">getInputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">IODataType</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getInputDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get input data type at position index. This data type can differ from the original type because it can change at runtime according to the data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>input data type</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getInputs">
+<span class="sig-name descname"><span class="pre">getInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getInputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the whole list of inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getOutput">
+<span class="sig-name descname"><span class="pre">getOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get output at position index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – output index</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getOutputCount">
+<span class="sig-name descname"><span class="pre">getOutputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of outputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>outputs count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getOutputDataType">
+<span class="sig-name descname"><span class="pre">getOutputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">IODataType</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get output data type at position index. This data type can differ from the original type because it can change at runtime according to the data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output data type</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getOutputs">
+<span class="sig-name descname"><span class="pre">getOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the whole list of outputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getParam">
+<span class="sig-name descname"><span class="pre">getParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CWorkflowTaskParam</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get task parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam" title="ikomia.core.pycore.CWorkflowTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskParam</span></code></a> based object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getProgressSteps">
+<span class="sig-name descname"><span class="pre">getProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CDnnTrainTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getProgressSteps" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="ikomia.core.pycore.CWorkflowTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p>
+<p>getProgressSteps( (CDnnTrainTask)self) -&gt; int</p>
+<dl class="simple">
+<dt>getProgressSteps( (CDnnTrainTask)self, (int)unit_elt_count) -&gt; int :</dt><dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="ikomia.core.pycore.CWorkflowTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p>
+</dd>
+</dl>
+<p>getProgressSteps( (CDnnTrainTask)self, (int)unit_elt_count) -&gt; int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.getTensorboardLogDir">
+<span class="sig-name descname"><span class="pre">getTensorboardLogDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CDnnTrainTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getTensorboardLogDir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return Ikomia default logging directory for Tensorboard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>path of Tensorboard log directory</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.globalInputChanged">
+<span class="sig-name descname"><span class="pre">globalInputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(bool)is_new_sequence</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.globalInputChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify that the inputs of the workflow have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>globalInputChanged( (CWorkflowTask)self, (bool)is_new_sequence) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.graphicsChanged">
+<span class="sig-name descname"><span class="pre">graphicsChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.graphicsChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify that graphics layers of input images have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
+<p>graphicsChanged( (CWorkflowTask)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.isGraphicsChangedListening">
+<span class="sig-name descname"><span class="pre">isGraphicsChangedListening</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.isGraphicsChangedListening" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the task is listening to graphics changed event.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Returns:</dt><dd><p>bool: True or False</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>isGraphicsChangedListening( (CWorkflowTask)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.log_param">
+<span class="sig-name descname"><span class="pre">log_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log parameter to MLflow server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – parameter name</p></li>
+<li><p><strong>value</strong> – parameter value (numerical)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.log_params">
+<span class="sig-name descname"><span class="pre">log_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log parameters to MLflow server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.log_metric">
+<span class="sig-name descname"><span class="pre">log_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log metric to MLflow server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – metric name</p></li>
+<li><p><strong>value</strong> – metric value (numerical)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.log_metrics">
+<span class="sig-name descname"><span class="pre">log_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log metrics to MLflow server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>metrics</strong> (<em>dict</em>) – parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.log_artifact">
+<span class="sig-name descname"><span class="pre">log_artifact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_artifact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log artifact to MLflow server.
+Artifact could be any file (model weights, configuration file…)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>str</em>) – source file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.log_artifacts">
+<span class="sig-name descname"><span class="pre">log_artifacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_artifacts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log artifacts to MLflow server.
+Artifacts could be any files stored in the same folder (model weights, configuration file…)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>folder_path</strong> (<em>str</em>) – artifacts folder</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.parametersModified">
+<span class="sig-name descname"><span class="pre">parametersModified</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.parametersModified" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify that the task parameters have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
+<p>parametersModified( (CWorkflowTask)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.removeInput">
+<span class="sig-name descname"><span class="pre">removeInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.removeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove input at the given position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – zero-based input index</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CDnnTrainTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a>.</p>
+<p>run( (CDnnTrainTask)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.setActionFlag">
+<span class="sig-name descname"><span class="pre">setActionFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(ActionFlag)action</span></em>, <em class="sig-param"><span class="pre">(bool)is_enable</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setActionFlag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable the given action. If the action does not exist, it is added to the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> – action to enable or disable, see <a class="reference internal" href="ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a> for possible values</p></li>
+<li><p><strong>is_enable</strong> (<em>bool</em>) – True or False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.setActive">
+<span class="sig-name descname"><span class="pre">setActive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CDnnTrainTask)self</span></em>, <em class="sig-param"><span class="pre">(bool)is_active</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setActive" title="Permalink to this definition">¶</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.setActive" title="ikomia.core.pycore.CWorkflowTask.setActive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setActive()</span></code></a>.</p>
+<p>setActive( (CDnnTrainTask)self, (bool)is_active) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.setInput">
+<span class="sig-name descname"><span class="pre">setInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)input</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em>, <em class="sig-param"><span class="pre">(bool)is_new_sequence</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set input at position index with the given one. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the input at position index.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>input: <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+<p>index (int): zero-based input index</p>
+<p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setInput( (CWorkflowTask)self, (CWorkflowTaskIO)input, (int)index, (bool)is_new_sequence) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.setInputDataType">
+<span class="sig-name descname"><span class="pre">setInputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(IODataType)data_type</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setInputDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the data type for the input at position index. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the data type for the input at position index.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>data_type (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): input data type</p>
+<p>index (int): zero-based input index</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setInputDataType( (CWorkflowTask)self, (IODataType)data_type, (int)index) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.setInputs">
+<span class="sig-name descname"><span class="pre">setInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(object)inputs</span></em>, <em class="sig-param"><span class="pre">(bool)is_new_sequence</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setInputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the whole list of inputs with the given one.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>inputs (list): list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects
+is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setInputs( (CWorkflowTask)self, (object)inputs, (bool)is_new_sequence) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.setOutput">
+<span class="sig-name descname"><span class="pre">setOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)output</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set output at position index with the given one. If the output at position index does not exist, the function creates as many generic outputs to reach the number of index+1 and sets the output at position index.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>output: <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+<p>index (int): zero-based output index</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setOutput( (CWorkflowTask)self, (CWorkflowTaskIO)output, (int)index) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.setOutputDataType">
+<span class="sig-name descname"><span class="pre">setOutputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(IODataType)data_type</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setOutputDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the data type for the output at position index. If the output at position index does not exist, the function creates as many generic outputs to reach the number of index+1 and sets the data type for the output at position index.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>data_type (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): output data type</p>
+<p>index (int): zero-based output index</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setOutputDataType( (CWorkflowTask)self, (IODataType)data_type, (int)index) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.setOutputs">
+<span class="sig-name descname"><span class="pre">setOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(object)outputs</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setOutputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the whole list of outputs with the given one.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>outputs (list): list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>setOutputs( (CWorkflowTask)self, (object)outputs) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.setParam">
+<span class="sig-name descname"><span class="pre">setParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskParam)param</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the task parameters object. Task can have only one parameters object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param</strong> – <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam" title="ikomia.core.pycore.CWorkflowTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskParam</span></code></a> based object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dnn.dnntrain.TrainProcess.updateStaticOutputs">
+<span class="sig-name descname"><span class="pre">updateStaticOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.updateStaticOutputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the static information deduced from inputs. The static data corresponds to all data that can be deduced without the runtime context. This method is called each time inputs changed.</p>
+<p>updateStaticOutputs( (CWorkflowTask)self) -&gt; None</p>
+</dd></dl>
+
 <p class="rubric">Attributes</p>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -411,526 +949,6 @@ It includes MLflow framework and handle connections with it:</p>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Details</p>
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">param</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructor. Initialize MLflow local server.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – task name</p></li>
-<li><p><strong>param</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">CDnnTrainProcessParam</span></code>) – task parameters</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.addInput">
-<code class="sig-name descname">addInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(CProtocolTaskIO)input</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.addInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add new input to the task.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>input: <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>addInput( (CProtocolTask)self, (CProtocolTaskIO)input) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.addOutput">
-<code class="sig-name descname">addOutput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(CProtocolTaskIO)output</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.addOutput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add new output to the task.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>output: <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>addOutput( (CProtocolTask)self, (CProtocolTaskIO)output) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.beginTaskRun">
-<code class="sig-name descname">beginTaskRun</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.beginTaskRun" title="Permalink to this definition">¶</a></dt>
-<dd><p>Proceed to training job initialization:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>start new MLflow run</p></li>
-<li><p>log hyper-parameters contained in <code class="xref py py-class docutils literal notranslate"><span class="pre">CDnnTrainProcessParam</span></code></p></li>
-</ul>
-</div></blockquote>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.emitGraphicsContextChanged">
-<code class="sig-name descname">emitGraphicsContextChanged</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.emitGraphicsContextChanged" title="Permalink to this definition">¶</a></dt>
-<dd><p>Send event to notify that graphics context has changed inside the task and display has to be updated.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.emitOutputChanged">
-<code class="sig-name descname">emitOutputChanged</code><span class="sig-paren">(</span><em class="sig-param">(CDnnTrainProcess)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.emitOutputChanged" title="Permalink to this definition">¶</a></dt>
-<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitOutputChanged" title="ikomia.core.pycore.CProtocolTask.emitOutputChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitOutputChanged()</span></code></a>.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.emitStepProgress">
-<code class="sig-name descname">emitStepProgress</code><span class="sig-paren">(</span><em class="sig-param">(CDnnTrainProcess)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.emitStepProgress" title="Permalink to this definition">¶</a></dt>
-<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.emitStepProgress" title="ikomia.core.pycore.CProtocolTask.emitStepProgress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitStepProgress()</span></code></a>.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.endTaskRun">
-<code class="sig-name descname">endTaskRun</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.endTaskRun" title="Permalink to this definition">¶</a></dt>
-<dd><p>Finalize MLflow run.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.executeActions">
-<code class="sig-name descname">executeActions</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)action</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.executeActions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute actions according to the specific defined behavior. In this base class, the method does nothing.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>action: see <a class="reference internal" href="ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a> for possible values</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>executeActions( (CProtocolTask)self, (int)action) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getElapsedTime">
-<code class="sig-name descname">getElapsedTime</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; float :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getElapsedTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the time of the last execution in milliseconds.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>elapsed time in ms</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getInput">
-<code class="sig-name descname">getInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; CProtocolTaskIO :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get input at position index.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – input index</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getInputCount">
-<code class="sig-name descname">getInputCount</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getInputCount" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the number of inputs.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>inputs count</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getInputDataType">
-<code class="sig-name descname">getInputDataType</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; IODataType :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getInputDataType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get input data type at position index. This data type can differ from the original type because it can change at runtime according to the data source.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>input data type</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getInputs">
-<code class="sig-name descname">getInputs</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getInputs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the whole list of inputs.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>list: list of <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects</p>
-</dd>
-</dl>
-</div></blockquote>
-<dl>
-<dt>getInputs( (CProtocolTask)self, (object)types) -&gt; object :</dt><dd><p>Get the whole list of inputs.</p>
-<dl class="simple">
-<dt>Returns:</dt><dd><p>list: list of <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getOutput">
-<code class="sig-name descname">getOutput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; CProtocolTaskIO :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getOutput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get output at position index.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – output index</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getOutputCount">
-<code class="sig-name descname">getOutputCount</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputCount" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the number of outputs.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>outputs count</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getOutputDataType">
-<code class="sig-name descname">getOutputDataType</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; IODataType :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputDataType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get output data type at position index. This data type can differ from the original type because it can change at runtime according to the data source.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>output data type</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getOutputs">
-<code class="sig-name descname">getOutputs</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; object :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getOutputs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the whole list of outputs.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>list: list of <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects</p>
-</dd>
-</dl>
-</div></blockquote>
-<dl>
-<dt>getOutputs( (CProtocolTask)self, (object)types) -&gt; object :</dt><dd><p>Get the list of outputs of the given data type.</p>
-<dl class="simple">
-<dt>Returns:</dt><dd><p>list: list of <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getParam">
-<code class="sig-name descname">getParam</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; CProtocolTaskParam :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getParam" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get task parameters.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><a class="reference internal" href="ikomia.core.pycore.CProtocolTaskParam.html#ikomia.core.pycore.CProtocolTaskParam" title="ikomia.core.pycore.CProtocolTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskParam</span></code></a> based object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.getProgressSteps">
-<code class="sig-name descname">getProgressSteps</code><span class="sig-paren">(</span><em class="sig-param">(CDnnTrainProcess)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.getProgressSteps" title="Permalink to this definition">¶</a></dt>
-<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.getProgressSteps" title="ikomia.core.pycore.CProtocolTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p>
-<p>getProgressSteps( (CDnnTrainProcess)self) -&gt; int</p>
-<dl class="simple">
-<dt>getProgressSteps( (CDnnTrainProcess)self, (int)unit_elt_count) -&gt; int :</dt><dd><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.getProgressSteps" title="ikomia.core.pycore.CProtocolTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p>
-</dd>
-</dl>
-<p>getProgressSteps( (CDnnTrainProcess)self, (int)unit_elt_count) -&gt; int</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.globalInputChanged">
-<code class="sig-name descname">globalInputChanged</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(bool)is_new_sequence</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.globalInputChanged" title="Permalink to this definition">¶</a></dt>
-<dd><p>Notify that the inputs of the workflow have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>globalInputChanged( (CProtocolTask)self, (bool)is_new_sequence) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.graphicsChanged">
-<code class="sig-name descname">graphicsChanged</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.graphicsChanged" title="Permalink to this definition">¶</a></dt>
-<dd><p>Notify that graphics layers of input images have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
-<p>graphicsChanged( (CProtocolTask)self) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.isGraphicsChangedListening">
-<code class="sig-name descname">isGraphicsChangedListening</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.isGraphicsChangedListening" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check whether the task is listening to graphics changed event.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>isGraphicsChangedListening( (CProtocolTask)self) -&gt; bool</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.log_artifact">
-<code class="sig-name descname">log_artifact</code><span class="sig-paren">(</span><em class="sig-param">file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_artifact" title="Permalink to this definition">¶</a></dt>
-<dd><p>Log artifact to MLflow server.
-Artifact could be any file (model weights, configuration file…)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>file_path</strong> (<em>str</em>) – source file</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.log_artifacts">
-<code class="sig-name descname">log_artifacts</code><span class="sig-paren">(</span><em class="sig-param">folder_path</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_artifacts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Log artifacts to MLflow server.
-Artifacts could be any files stored in the same folder (model weights, configuration file…)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>folder_path</strong> (<em>str</em>) – artifacts folder</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.log_metric">
-<code class="sig-name descname">log_metric</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em>, <em class="sig-param">step=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_metric" title="Permalink to this definition">¶</a></dt>
-<dd><p>Log metric to MLflow server</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> (<em>str</em>) – metric name</p></li>
-<li><p><strong>value</strong> – metric value (numerical)</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.log_metrics">
-<code class="sig-name descname">log_metrics</code><span class="sig-paren">(</span><em class="sig-param">metrics</em>, <em class="sig-param">step=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_metrics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Log metrics to MLflow server</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>metrics</strong> (<em>dict</em>) – parameters</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.log_param">
-<code class="sig-name descname">log_param</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_param" title="Permalink to this definition">¶</a></dt>
-<dd><p>Log parameter to MLflow server</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> (<em>str</em>) – parameter name</p></li>
-<li><p><strong>value</strong> – parameter value (numerical)</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.log_params">
-<code class="sig-name descname">log_params</code><span class="sig-paren">(</span><em class="sig-param">params</em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.log_params" title="Permalink to this definition">¶</a></dt>
-<dd><p>Log parameters to MLflow server</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – parameters</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.parametersModified">
-<code class="sig-name descname">parametersModified</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.parametersModified" title="Permalink to this definition">¶</a></dt>
-<dd><p>Notify that the task parameters have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
-<p>parametersModified( (CProtocolTask)self) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.removeInput">
-<code class="sig-name descname">removeInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.removeInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove input at the given position.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> – zero-based input index</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">(CDnnTrainProcess)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.run" title="Permalink to this definition">¶</a></dt>
-<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.run" title="ikomia.core.pycore.CProtocolTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a>.</p>
-<p>run( (CDnnTrainProcess)self) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.setActionFlag">
-<code class="sig-name descname">setActionFlag</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(ActionFlag)action</em>, <em class="sig-param">(bool)is_enable</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setActionFlag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable or disable the given action. If the action does not exist, it is added to the list.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>action</strong> – action to enable or disable, see <a class="reference internal" href="ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a> for possible values</p></li>
-<li><p><strong>is_enable</strong> (<em>bool</em>) – True or False</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.setActive">
-<code class="sig-name descname">setActive</code><span class="sig-paren">(</span><em class="sig-param">(CDnnTrainProcess)self</em>, <em class="sig-param">(bool)is_active</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setActive" title="Permalink to this definition">¶</a></dt>
-<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CProtocolTask.html#ikomia.core.pycore.CProtocolTask.setActive" title="ikomia.core.pycore.CProtocolTask.setActive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setActive()</span></code></a>.</p>
-<p>setActive( (CDnnTrainProcess)self, (bool)is_active) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.setInput">
-<code class="sig-name descname">setInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(CProtocolTaskIO)input</em>, <em class="sig-param">(int)index</em>, <em class="sig-param">(bool)is_new_sequence</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set input at position index with the given one. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the input at position index.</p>
-<blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>input: <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
-<p>index (int): zero-based input index</p>
-<p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>setInput( (CProtocolTask)self, (CProtocolTaskIO)input, (int)index, (bool)is_new_sequence) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.setInputDataType">
-<code class="sig-name descname">setInputDataType</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(IODataType)data_type</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setInputDataType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the data type for the input at position index. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the data type for the input at position index.</p>
-<blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>data_type (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): input data type</p>
-<p>index (int): zero-based input index</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>setInputDataType( (CProtocolTask)self, (IODataType)data_type, (int)index) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.setInputs">
-<code class="sig-name descname">setInputs</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(object)inputs</em>, <em class="sig-param">(bool)is_new_sequence</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setInputs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the whole list of inputs with the given one.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>inputs (list): list of <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects
-is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>setInputs( (CProtocolTask)self, (object)inputs, (bool)is_new_sequence) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.setOutput">
-<code class="sig-name descname">setOutput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(CProtocolTaskIO)output</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setOutput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set output at position index with the given one. If the output at position index does not exist, the function creates as many generic outputs to reach the number of index+1 and sets the output at position index.</p>
-<blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>output: <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based object</p>
-<p>index (int): zero-based output index</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>setOutput( (CProtocolTask)self, (CProtocolTaskIO)output, (int)index) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.setOutputDataType">
-<code class="sig-name descname">setOutputDataType</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(IODataType)data_type</em>, <em class="sig-param">(int)index</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setOutputDataType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the data type for the output at position index. If the output at position index does not exist, the function creates as many generic outputs to reach the number of index+1 and sets the data type for the output at position index.</p>
-<blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>data_type (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): output data type</p>
-<p>index (int): zero-based output index</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>setOutputDataType( (CProtocolTask)self, (IODataType)data_type, (int)index) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.setOutputs">
-<code class="sig-name descname">setOutputs</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(object)outputs</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setOutputs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the whole list of outputs with the given one.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>outputs (list): list of <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a> based objects</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>setOutputs( (CProtocolTask)self, (object)outputs) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.setParam">
-<code class="sig-name descname">setParam</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em>, <em class="sig-param">(CProtocolTaskParam)param</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.setParam" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the task parameters object. Task can have only one parameters object.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>param: <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskParam.html#ikomia.core.pycore.CProtocolTaskParam" title="ikomia.core.pycore.CProtocolTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskParam</span></code></a> based object</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>setParam( (CProtocolTask)self, (CProtocolTaskParam)param) -&gt; None</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.stop">
-<code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.stop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Request training job to stop.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ikomia.dnn.dnntrain.TrainProcess.updateStaticOutputs">
-<code class="sig-name descname">updateStaticOutputs</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTask)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dnn.dnntrain.TrainProcess.updateStaticOutputs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Updates the static information deduced from inputs. The static data corresponds to all data that can be deduced without the runtime context. This method is called each time inputs changed.</p>
-<p>updateStaticOutputs( (CProtocolTask)self) -&gt; None</p>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -942,7 +960,7 @@ is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame o
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../ikomia.dnn.datasetio.html" class="btn btn-neutral float-right" title="DatasetIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="ikomia.dnn.dnntrain.TrainParam.html" class="btn btn-neutral float-left" title="TrainParam" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ikomia.dnn.dnntrain.html" class="btn btn-neutral float-left" title="DnnTrain" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

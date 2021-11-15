@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
 
   
@@ -30,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -70,7 +72,7 @@
     
     
     <div class="version">
-        0.5.0
+        0.6.0
     </div>
     
     
@@ -101,57 +103,51 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CProcessFactory.html">CProcessFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageProcessIO.html">CImageProcessIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoProcessIO.html">CVideoProcessIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDblFeatureIO.html">CDblFeatureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">CWidgetOutput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.MapIntStr.html">MapIntStr</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CImageProcess2d.html">CImageProcess2d</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CInteractiveImageProcess2d.html">CInteractiveImageProcess2d</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcess.html">CVideoProcess</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcessOF.html">CVideoProcessOF</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoProcessTracking.html">CVideoProcessTracking</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainProcess.html">CDnnTrainProcess</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CProcessInfo.html">CProcessInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.Language.html">Language</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDnnTrainProcessParam.html">CDnnTrainProcessParam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 </ul>
 </li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
 </ul>
 
         
@@ -213,7 +209,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../../modules.html">API Modules</a> &raquo;</li>
+          <li><a href="../../modules.html">API Reference</a> &raquo;</li>
         
           <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a> &raquo;</li>
         
@@ -247,13 +243,13 @@
             
   <div class="section" id="cwidgetoutput">
 <h1>CWidgetOutput<a class="headerlink" href="#cwidgetoutput" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput">
-<em class="property">class </em><code class="sig-prename descclassname">ikomia.dataprocess.pydataprocess.</code><code class="sig-name descname">CWidgetOutput</code><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CWidgetOutput">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CWidgetOutput</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Define a widget output for a task. This class is designed to handle widget as output of a workflow task. A widget must be a derived object from QWidget of the Qt framework (PyQt5 or PySide2).
-Derived from <a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a>.</p>
+Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a>.</p>
 <p class="rubric">Import</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">dataprocess</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">CWidgetOutput</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
@@ -267,7 +263,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CProtocolTas
 <td><p>__init__( (object)arg1) -&gt; None :</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.setWidget" title="ikomia.dataprocess.pydataprocess.CWidgetOutput.setWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setWidget</span></code></a>(self, widget)</p></td>
-<td><p>Set the widget instance: use <code class="xref py py-mod docutils literal notranslate"><span class="pre">IkQtConversion</span></code> module to get C++ handle from Python Qt-based framework.</p></td>
+<td><p>Set the widget instance: use <a class="reference internal" href="../ikomia.utils.qtconversion.html#module-ikomia.utils.qtconversion" title="ikomia.utils.qtconversion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qtconversion</span></code></a> module to get C++ handle from Python Qt-based framework.</p></td>
 </tr>
 </tbody>
 </table>
@@ -320,40 +316,42 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CProtocolTas
 </tbody>
 </table>
 <p class="rubric">Details</p>
-<dl class="method">
-<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.__init__" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CWidgetOutput.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(object)arg1</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
 <dt>__init__( (object)arg1, (IODataType)arg2) -&gt; None :</dt><dd><p>Construct a CWidgetOutput instance with the given data type.By default, the widget data type is IODataType.WIDGET (see <a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>).</p>
 </dd>
+<dt>__init__( (object)arg1, (IODataType)arg2, (str)arg3) -&gt; None :</dt><dd><p>Construct a CWidgetOutput instance with the given data type and name.By default, the widget data type is IODataType.WIDGET (see <a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>).</p>
+</dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.clearData">
-<code class="sig-name descname">clearData</code><span class="sig-paren">(</span><em class="sig-param">(CWidgetOutput)self</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.clearData" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CWidgetOutput.clearData">
+<span class="sig-name descname"><span class="pre">clearData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWidgetOutput)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.clearData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clear the output data: sets the widget handle to null.</p>
 <p>clearData( (CWidgetOutput)self) -&gt; None</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.copyStaticData">
-<code class="sig-name descname">copyStaticData</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em>, <em class="sig-param">(CProtocolTaskIO)io</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.copyStaticData" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CWidgetOutput.copyStaticData">
+<span class="sig-name descname"><span class="pre">copyStaticData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)io</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.copyStaticData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy the static data from the given input or ouput. Static data are those which are not generated at runtime. Should be overriden for custom input or output.</p>
 <blockquote>
 <div><dl class="simple">
-<dt>Args:</dt><dd><p>io (<a class="reference internal" href="ikomia.core.pycore.CProtocolTaskIO.html#ikomia.core.pycore.CProtocolTaskIO" title="ikomia.core.pycore.CProtocolTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CProtocolTaskIO</span></code></a>): input or ouput instance from which data is copied.</p>
+<dt>Args:</dt><dd><p>io (<a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a>): input or ouput instance from which data is copied.</p>
 </dd>
 </dl>
 </div></blockquote>
-<p>copyStaticData( (CProtocolTaskIO)self, (CProtocolTaskIO)io) -&gt; None</p>
+<p>copyStaticData( (CWorkflowTaskIO)self, (CWorkflowTaskIO)io) -&gt; None</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.getUnitElementCount">
-<code class="sig-name descname">getUnitElementCount</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.getUnitElementCount" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CWidgetOutput.getUnitElementCount">
+<span class="sig-name descname"><span class="pre">getUnitElementCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.getUnitElementCount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the number of unit element in terms of processing scheme. This value is used to define the number of progress steps for progress bar component. For an image, the count is 1. For Z-stack volume, the count is the number of Z levels. Should be overriden for custom input or output.</p>
 <blockquote>
 <div><dl class="simple">
@@ -361,12 +359,12 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CProtocolTas
 </dd>
 </dl>
 </div></blockquote>
-<p>getUnitElementCount( (CProtocolTaskIO)self) -&gt; int</p>
+<p>getUnitElementCount( (CWorkflowTaskIO)self) -&gt; int</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.isAutoInput">
-<code class="sig-name descname">isAutoInput</code><span class="sig-paren">(</span><em class="sig-param">(CProtocolTaskIO)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.isAutoInput" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CWidgetOutput.isAutoInput">
+<span class="sig-name descname"><span class="pre">isAutoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.isAutoInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check whether input data from external source is mandatory.</p>
 <blockquote>
 <div><dl class="simple">
@@ -374,12 +372,12 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CProtocolTas
 </dd>
 </dl>
 </div></blockquote>
-<p>isAutoInput( (CProtocolTaskIO)self) -&gt; bool</p>
+<p>isAutoInput( (CWorkflowTaskIO)self) -&gt; bool</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.isDataAvailable">
-<code class="sig-name descname">isDataAvailable</code><span class="sig-paren">(</span><em class="sig-param">(CWidgetOutput)self</em><span class="sig-paren">)</span> &#x2192; bool :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CWidgetOutput.isDataAvailable">
+<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWidgetOutput)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.isDataAvailable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check whether the output contains a valid widget.</p>
 <blockquote>
 <div><dl class="simple">
@@ -390,10 +388,10 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CProtocolTas
 <p>isDataAvailable( (CWidgetOutput)self) -&gt; bool</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="ikomia.dataprocess.pydataprocess.CWidgetOutput.setWidget">
-<code class="sig-name descname">setWidget</code><span class="sig-paren">(</span><em class="sig-param">(CWidgetOutput)self</em>, <em class="sig-param">(int)widget</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.setWidget" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the widget instance: use <code class="xref py py-mod docutils literal notranslate"><span class="pre">IkQtConversion</span></code> module to get C++ handle from Python Qt-based framework.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CWidgetOutput.setWidget">
+<span class="sig-name descname"><span class="pre">setWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWidgetOutput)self</span></em>, <em class="sig-param"><span class="pre">(int)widget</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CWidgetOutput.setWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the widget instance: use <a class="reference internal" href="../ikomia.utils.qtconversion.html#module-ikomia.utils.qtconversion" title="ikomia.utils.qtconversion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">qtconversion</span></code></a> module to get C++ handle from Python Qt-based framework.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>widget</strong> – compatible C++ widget handle</p>

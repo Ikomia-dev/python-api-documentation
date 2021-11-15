@@ -1,14 +1,22 @@
-PyUtils
+﻿PyUtils
 =======
 
 .. automodule:: ikomia.utils.pyutils
-   
-   .. rubric:: Classes
 
-   .. autosummary::
-      :toctree: _autosummary
+    .. rubric:: Functions
+    .. autosummary::
 
-      CException
-      CMemoryInfo
-      CTimer
+        getApiVersion
+        getCompatibilityState
+        getIkomiaFolder
    
+    .. rubric:: Classes
+    .. autosummary::
+        :toctree: _autosummary
+
+        ApiLanguage
+        CException
+        CMemoryInfo
+        CTimer
+        OSType
+        PluginState

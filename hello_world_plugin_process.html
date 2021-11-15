@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
 
   
@@ -30,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -70,7 +72,7 @@
     
     
     <div class="version">
-        0.5.0
+        0.6.0
     </div>
     
     
@@ -100,30 +102,20 @@
         
         
         
-        <ul>
-<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies management</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="hello_world_plugin.html">Hello world plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opencv_plugin.html">Simple OpenCV plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive_plugin.html">Interactive plugin</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">API Modules</a></li>
-</ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="examples.html">Examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="examples.html#hello-world-plugin">Hello World plugin</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="hello_world_plugin_interface.html">Plugin interface</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Process</a></li>
-<li class="toctree-l3"><a class="reference internal" href="hello_world_plugin_widget.html">Widget</a></li>
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_plugin.html#going-deeper">Going deeper</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#examples">Examples</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="examples.html">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#simple-opencv-plugin">Simple OpenCV plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#interactive-plugin">Interactive plugin</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
 </ul>
 
         
@@ -185,6 +177,8 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
+          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+        
           <li><a href="examples.html">Examples</a> &raquo;</li>
         
       <li>Process</li>
@@ -226,10 +220,10 @@
 <span class="c1"># - Class to handle the process parameters</span>
 <span class="c1"># - Inherits CProtocolTaskParam from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">HelloWorldProcessParam</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">HelloWorldProcessParam</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskParam</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Place default value initialization here</span>
         <span class="c1"># Example : self.windowSize = 25</span>
 
@@ -251,10 +245,10 @@
 <span class="c1"># - Class which implements the process</span>
 <span class="c1"># - Inherits CProtocolTask or derived from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">HelloWorldProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">HelloWorldProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">C2dImageTask</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
-        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">C2dImageTask</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="c1"># Add input/output of the process here</span>
         <span class="c1"># Example :  self.addInput(core.CImageProcessIO())</span>
         <span class="c1">#           self.addOutput(core.CImageProcessIO())</span>
@@ -305,10 +299,10 @@
 <span class="c1"># - Factory class to build process object</span>
 <span class="c1"># - Inherits CProcessFactory from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">HelloWorldProcessFactory</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">HelloWorldProcessFactory</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CTaskFactory</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CTaskFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Set process information as string here</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;HelloWorld&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;your description&quot;</span>

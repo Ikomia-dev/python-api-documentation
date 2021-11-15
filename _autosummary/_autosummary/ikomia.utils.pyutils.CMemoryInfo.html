@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
 
   
@@ -30,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -70,7 +72,7 @@
     
     
     <div class="version">
-        0.5.0
+        0.6.0
     </div>
     
     
@@ -101,36 +103,30 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../python_env.html">Python environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies management</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../hello_world_plugin.html">Hello world plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../opencv_plugin.html">Simple OpenCV plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../interactive_plugin.html">Interactive plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Modules</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.ApiLanguage.html">ApiLanguage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.CException.html">CException</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">CMemoryInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.CTimer.html">CTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.OSType.html">OSType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.PluginState.html">PluginState</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 </ul>
 </li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
 </ul>
 
         
@@ -192,7 +188,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../../modules.html">API Modules</a> &raquo;</li>
+          <li><a href="../../modules.html">API Reference</a> &raquo;</li>
         
           <li><a href="../ikomia.utils.pyutils.html">PyUtils</a> &raquo;</li>
         
@@ -226,12 +222,12 @@
             
   <div class="section" id="cmemoryinfo">
 <h1>CMemoryInfo<a class="headerlink" href="#cmemoryinfo" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="ikomia.utils.pyutils.CMemoryInfo">
-<em class="property">class </em><code class="sig-prename descclassname">ikomia.utils.pyutils.</code><code class="sig-name descname">CMemoryInfo</code><a class="headerlink" href="#ikomia.utils.pyutils.CMemoryInfo" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="ikomia.utils.pyutils.CMemoryInfo">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ikomia.utils.pyutils.</span></span><span class="sig-name descname"><span class="pre">CMemoryInfo</span></span><a class="headerlink" href="#ikomia.utils.pyutils.CMemoryInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cross-platform functions to retrieve memory information.</p>
 <p class="rubric">Import</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">utils</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">CMemoryInfo</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
@@ -256,15 +252,15 @@
 </tbody>
 </table>
 <p class="rubric">Details</p>
-<dl class="method">
-<dt id="ikomia.utils.pyutils.CMemoryInfo.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">(object)arg1</em><span class="sig-paren">)</span> &#x2192; None :<a class="headerlink" href="#ikomia.utils.pyutils.CMemoryInfo.__init__" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.utils.pyutils.CMemoryInfo.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(object)arg1</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.utils.pyutils.CMemoryInfo.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default constructor</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="ikomia.utils.pyutils.CMemoryInfo.availableMemory">
-<code class="sig-name descname">availableMemory</code><span class="sig-paren">(</span><em class="sig-param">(CMemoryInfo)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.utils.pyutils.CMemoryInfo.availableMemory" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.utils.pyutils.CMemoryInfo.availableMemory">
+<span class="sig-name descname"><span class="pre">availableMemory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CMemoryInfo)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.utils.pyutils.CMemoryInfo.availableMemory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get current amount of available memory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -276,9 +272,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="ikomia.utils.pyutils.CMemoryInfo.memoryLoad">
-<code class="sig-name descname">memoryLoad</code><span class="sig-paren">(</span><em class="sig-param">(CMemoryInfo)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.utils.pyutils.CMemoryInfo.memoryLoad" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.utils.pyutils.CMemoryInfo.memoryLoad">
+<span class="sig-name descname"><span class="pre">memoryLoad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CMemoryInfo)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.utils.pyutils.CMemoryInfo.memoryLoad" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current memory load.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -290,9 +286,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="ikomia.utils.pyutils.CMemoryInfo.totalMemory">
-<code class="sig-name descname">totalMemory</code><span class="sig-paren">(</span><em class="sig-param">(CMemoryInfo)self</em><span class="sig-paren">)</span> &#x2192; int :<a class="headerlink" href="#ikomia.utils.pyutils.CMemoryInfo.totalMemory" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.utils.pyutils.CMemoryInfo.totalMemory">
+<span class="sig-name descname"><span class="pre">totalMemory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CMemoryInfo)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.utils.pyutils.CMemoryInfo.totalMemory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get total amount of memory installed on the machine.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
