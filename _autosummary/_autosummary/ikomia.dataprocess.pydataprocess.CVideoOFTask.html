@@ -1,45 +1,22 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>CVideoOFTask &mdash; Ikomia  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>CVideoOFTask &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CVideoTrackingTask" href="ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html" />
@@ -49,17 +26,13 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #150E83" >
-          
 
-    <a href="../../index.html" class="icon icon-home"> Ikomia
+    <a href="../../index.html" class="icon icon-home"> Ikomia API
         
 
         
@@ -72,7 +45,7 @@
     
     
     <div class="version">
-        0.6.0
+        0.7.0
     </div>
     
     
@@ -93,8 +66,6 @@
 </div>
     
         </div>
-
-        
     <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
@@ -104,6 +75,7 @@
         
         <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -111,6 +83,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
@@ -118,6 +91,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
@@ -141,6 +115,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
@@ -170,82 +147,36 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Ikomia</a>
-        
+          <a href="../../index.html">Ikomia API</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../modules.html">API Reference</a> &raquo;</li>
-        
           <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a> &raquo;</li>
-        
       <li>CVideoOFTask</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html" class="btn btn-neutral float-right" title="CVideoTrackingTask" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="ikomia.dataprocess.pydataprocess.CVideoTask.html" class="btn btn-neutral float-left" title="CVideoTask" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html" class="btn btn-neutral float-right" title="CVideoTrackingTask" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="cvideooftask">
-<h1>CVideoOFTask<a class="headerlink" href="#cvideooftask" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="cvideooftask">
+<h1>CVideoOFTask<a class="headerlink" href="#cvideooftask" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CVideoOFTask</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CVideoOFTask</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask" title="Permalink to this definition"></a></dt>
 <dd><p>Add optical flow specific features for methods based on OpenCV framework. This class handles the persistent data required to compute classical optical flow algorithms. It also offers a way to display the computed flow as a color map.</p>
 <p>Derived from <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoTask.html#ikomia.dataprocess.pydataprocess.CVideoTask" title="ikomia.dataprocess.pydataprocess.CVideoTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CVideoTask</span></code></a>.</p>
 <p class="rubric">Import</p>
@@ -313,7 +244,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.executeActions" title="ikomia.dataprocess.pydataprocess.CVideoOFTask.executeActions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">executeActions</span></code></a>(self, action)</p></td>
 <td><p>Execute actions according to the specific defined behavior.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.forwardInputImage" title="ikomia.dataprocess.pydataprocess.CVideoOFTask.forwardInputImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">forwardInputImage</span></code></a>(self, input_index, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.forwardInputImage" title="ikomia.dataprocess.pydataprocess.CVideoOFTask.forwardInputImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">forwardInputImage</span></code></a>(self, input_index, ...)</p></td>
 <td><p>Forward input image at position input_index to output at position output_index.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getElapsedTime" title="ikomia.dataprocess.pydataprocess.CVideoOFTask.getElapsedTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElapsedTime</span></code></a>(self)</p></td>
@@ -397,7 +328,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutput" title="ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutput</span></code></a>(self, output, index)</p></td>
 <td><p>Set output at position index with the given one.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputColorMap" title="ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputColorMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputColorMap</span></code></a>(self, index, mask_index, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputColorMap" title="ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputColorMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputColorMap</span></code></a>(self, index, mask_index, ...)</p></td>
 <td><p>Bind a display color map to an image output.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputDataType" title="ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputDataType</span></code></a>(self, data_type, index)</p></td>
@@ -435,7 +366,7 @@
 <p class="rubric">Details</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(object)arg1</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
 <dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
@@ -451,33 +382,33 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.addInput">
-<span class="sig-name descname"><span class="pre">addInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)input</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.addInput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)input</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.addInput" title="Permalink to this definition"></a></dt>
 <dd><p>Add new input to the task.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>input: <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>input (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object): input object</p>
+</div></blockquote>
 </div></blockquote>
 <p>addInput( (CWorkflowTask)self, (CWorkflowTaskIO)input) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.addOutput">
-<span class="sig-name descname"><span class="pre">addOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)output</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.addOutput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)output</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.addOutput" title="Permalink to this definition"></a></dt>
 <dd><p>Add new output to the task.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>output: <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>output (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object): output object</p>
+</div></blockquote>
 </div></blockquote>
 <p>addOutput( (CWorkflowTask)self, (CWorkflowTaskIO)output) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.applyGraphicsMask">
-<span class="sig-name descname"><span class="pre">applyGraphicsMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(C2dImageTask)self</span></em>, <em class="sig-param"><span class="pre">(object)src</span></em>, <em class="sig-param"><span class="pre">(object)dst</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.applyGraphicsMask" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">applyGraphicsMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.applyGraphicsMask" title="Permalink to this definition"></a></dt>
 <dd><p>Apply the mask generated from graphics input to the result image so that only masked areas seems to be processed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -492,7 +423,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.applyGraphicsMaskToBinary">
-<span class="sig-name descname"><span class="pre">applyGraphicsMaskToBinary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(C2dImageTask)self</span></em>, <em class="sig-param"><span class="pre">(object)src</span></em>, <em class="sig-param"><span class="pre">(object)dst</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.applyGraphicsMaskToBinary" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">applyGraphicsMaskToBinary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.applyGraphicsMaskToBinary" title="Permalink to this definition"></a></dt>
 <dd><p>Apply the mask generated from graphics input to the binary source image. Only white areas on both image and mask are kept in the result image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -507,14 +438,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.beginTaskRun">
-<span class="sig-name descname"><span class="pre">beginTaskRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.beginTaskRun" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">beginTaskRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.beginTaskRun" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoTask.html#ikomia.dataprocess.pydataprocess.CVideoTask.beginTaskRun" title="ikomia.dataprocess.pydataprocess.CVideoTask.beginTaskRun"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CVideoTask.beginTaskRun()</span></code></a>.</p>
 <p>beginTaskRun( (CVideoOFTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.createGraphicsMask">
-<span class="sig-name descname"><span class="pre">createGraphicsMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(C2dImageTask)self</span></em>, <em class="sig-param"><span class="pre">(int)width</span></em>, <em class="sig-param"><span class="pre">(int)height</span></em>, <em class="sig-param"><span class="pre">(CGraphicsInput)graphics</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.createGraphicsMask" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">createGraphicsMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CGraphicsInput)graphics</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.createGraphicsMask" title="Permalink to this definition"></a></dt>
 <dd><p>Generate a binary mask image from the given graphics input. The new mask is appended to the internal mask list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -529,7 +460,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.drawOptFlowMap">
-<span class="sig-name descname"><span class="pre">drawOptFlowMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em>, <em class="sig-param"><span class="pre">(object)flow</span></em>, <em class="sig-param"><span class="pre">(object)vectors</span></em>, <em class="sig-param"><span class="pre">(int)step</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.drawOptFlowMap" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">drawOptFlowMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)flow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)vectors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)step</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.drawOptFlowMap" title="Permalink to this definition"></a></dt>
 <dd><p>Add optical flow vectors to optical flow map (image).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -544,51 +475,51 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.emitAddSubProgressSteps">
-<span class="sig-name descname"><span class="pre">emitAddSubProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em>, <em class="sig-param"><span class="pre">(int)count</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.emitAddSubProgressSteps" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">emitAddSubProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)count</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.emitAddSubProgressSteps" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps" title="ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitAddSubProgressSteps()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.emitGraphicsContextChanged">
-<span class="sig-name descname"><span class="pre">emitGraphicsContextChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.emitGraphicsContextChanged" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">emitGraphicsContextChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.emitGraphicsContextChanged" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitGraphicsContextChanged" title="ikomia.core.pycore.CWorkflowTask.emitGraphicsContextChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitGraphicsContextChanged()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.emitOutputChanged">
-<span class="sig-name descname"><span class="pre">emitOutputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.emitOutputChanged" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">emitOutputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.emitOutputChanged" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitOutputChanged" title="ikomia.core.pycore.CWorkflowTask.emitOutputChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitOutputChanged()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.emitStepProgress">
-<span class="sig-name descname"><span class="pre">emitStepProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.emitStepProgress" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">emitStepProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.emitStepProgress" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitStepProgress" title="ikomia.core.pycore.CWorkflowTask.emitStepProgress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitStepProgress()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.endTaskRun">
-<span class="sig-name descname"><span class="pre">endTaskRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.endTaskRun" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">endTaskRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.endTaskRun" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.endTaskRun" title="ikomia.core.pycore.CWorkflowTask.endTaskRun"><code class="xref py py-meth docutils literal notranslate"><span class="pre">endTaskRun()</span></code></a>.</p>
 <p>endTaskRun( (CVideoOFTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.executeActions">
-<span class="sig-name descname"><span class="pre">executeActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)action</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.executeActions" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">executeActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)action</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.executeActions" title="Permalink to this definition"></a></dt>
 <dd><p>Execute actions according to the specific defined behavior. In this base class, the method does nothing.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>action: see <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a> for possible values</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>action (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a>)</p>
+</div></blockquote>
 </div></blockquote>
 <p>executeActions( (CWorkflowTask)self, (int)action) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.flowToDisplay">
-<span class="sig-name descname"><span class="pre">flowToDisplay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em>, <em class="sig-param"><span class="pre">(object)flow</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.flowToDisplay" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">flowToDisplay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)flow</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.flowToDisplay" title="Permalink to this definition"></a></dt>
 <dd><p>Generate a displayable image of the optical flow color map.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -605,7 +536,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.forwardInputImage">
-<span class="sig-name descname"><span class="pre">forwardInputImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(C2dImageTask)self</span></em>, <em class="sig-param"><span class="pre">(int)input_index</span></em>, <em class="sig-param"><span class="pre">(int)output_index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.forwardInputImage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forwardInputImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)input_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)output_index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.forwardInputImage" title="Permalink to this definition"></a></dt>
 <dd><p>Forward input image at position input_index to output at position output_index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -619,7 +550,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getElapsedTime">
-<span class="sig-name descname"><span class="pre">getElapsedTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">float</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getElapsedTime" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getElapsedTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getElapsedTime" title="Permalink to this definition"></a></dt>
 <dd><p>Get the time of the last execution in milliseconds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -633,7 +564,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getGraphicsMask">
-<span class="sig-name descname"><span class="pre">getGraphicsMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(C2dImageTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getGraphicsMask" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getGraphicsMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getGraphicsMask" title="Permalink to this definition"></a></dt>
 <dd><p>Get the binary mask generated from graphics input at position index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -650,21 +581,24 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getInput">
-<span class="sig-name descname"><span class="pre">getInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getInput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getInput" title="Permalink to this definition"></a></dt>
 <dd><p>Get input at position index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – input index</p>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+<dd class="field-even"><p>input object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getInputCount">
-<span class="sig-name descname"><span class="pre">getInputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getInputCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getInputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getInputCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of inputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -678,7 +612,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getInputDataType">
-<span class="sig-name descname"><span class="pre">getInputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">IODataType</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getInputDataType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getInputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">IODataType</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getInputDataType" title="Permalink to this definition"></a></dt>
 <dd><p>Get input data type at position index. This data type can differ from the original type because it can change at runtime according to the data source.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -695,53 +629,50 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getInputs">
-<span class="sig-name descname"><span class="pre">getInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getInputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getInputs" title="Permalink to this definition"></a></dt>
 <dd><p>Get the whole list of inputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
+<dd class="field-odd"><p>input objects</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list</p>
+<dd class="field-even"><p>list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutput">
-<span class="sig-name descname"><span class="pre">getOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutput" title="Permalink to this definition"></a></dt>
 <dd><p>Get output at position index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – output index</p>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based output index</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+<dd class="field-even"><p>output object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutputCount">
-<span class="sig-name descname"><span class="pre">getOutputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutputCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOutputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutputCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of outputs.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>outputs count</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
+<p>Returns:
+¬   int: outputs count</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutputDataType">
-<span class="sig-name descname"><span class="pre">getOutputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">IODataType</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutputDataType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOutputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">IODataType</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutputDataType" title="Permalink to this definition"></a></dt>
 <dd><p>Get output data type at position index. This data type can differ from the original type because it can change at runtime according to the data source.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based output index</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>output data type</p>
@@ -754,71 +685,69 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutputs">
-<span class="sig-name descname"><span class="pre">getOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getOutputs" title="Permalink to this definition"></a></dt>
 <dd><p>Get the whole list of outputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
+<dd class="field-odd"><p>output objects</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list</p>
+<dd class="field-even"><p>list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getParam">
-<span class="sig-name descname"><span class="pre">getParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CWorkflowTaskParam</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getParam" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CWorkflowTaskParam</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getParam" title="Permalink to this definition"></a></dt>
 <dd><p>Get task parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam" title="ikomia.core.pycore.CWorkflowTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskParam</span></code></a> based object</p>
+<dd class="field-odd"><p>parameter object</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam" title="ikomia.core.pycore.CWorkflowTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskParam</span></code></a> based object</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.getProgressSteps">
-<span class="sig-name descname"><span class="pre">getProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getProgressSteps" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.getProgressSteps" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="ikomia.core.pycore.CWorkflowTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p>
 <p>getProgressSteps( (CVideoOFTask)self) -&gt; int</p>
-<dl class="simple">
-<dt>getProgressSteps( (CVideoOFTask)self, (int)unit_elt_count) -&gt; int :</dt><dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="ikomia.core.pycore.CWorkflowTask.getProgressSteps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProgressSteps()</span></code></a>.</p>
-</dd>
-</dl>
-<p>getProgressSteps( (CVideoOFTask)self, (int)unit_elt_count) -&gt; int</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.globalInputChanged">
-<span class="sig-name descname"><span class="pre">globalInputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)arg1</span></em>, <em class="sig-param"><span class="pre">(bool)selfis_new_sequence</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.globalInputChanged" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">globalInputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)selfis_new_sequence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.globalInputChanged" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.globalInputChanged" title="ikomia.core.pycore.CWorkflowTask.globalInputChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">globalInputChanged()</span></code></a>.</p>
 <p>globalInputChanged( (CVideoOFTask)arg1, (bool)selfis_new_sequence) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.graphicsChanged">
-<span class="sig-name descname"><span class="pre">graphicsChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.graphicsChanged" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">graphicsChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.graphicsChanged" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.graphicsChanged" title="ikomia.core.pycore.CWorkflowTask.graphicsChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">graphicsChanged()</span></code></a>.</p>
 <p>graphicsChanged( (CVideoOFTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.isGraphicsChangedListening">
-<span class="sig-name descname"><span class="pre">isGraphicsChangedListening</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.isGraphicsChangedListening" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isGraphicsChangedListening</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.isGraphicsChangedListening" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether the task is listening to graphics changed event.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>bool: True or False</p>
+</div></blockquote>
 </div></blockquote>
 <p>isGraphicsChangedListening( (CWorkflowTask)self) -&gt; bool</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.isMaskAvailable">
-<span class="sig-name descname"><span class="pre">isMaskAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(C2dImageTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.isMaskAvailable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isMaskAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.isMaskAvailable" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether a binary mask from graphics input is available at position index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -835,14 +764,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.notifyVideoEnd">
-<span class="sig-name descname"><span class="pre">notifyVideoEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.notifyVideoEnd" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">notifyVideoEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.notifyVideoEnd" title="Permalink to this definition"></a></dt>
 <dd><p>Notify that the end of the video is reached.</p>
 <p>notifyVideoEnd( (CVideoTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.notifyVideoStart">
-<span class="sig-name descname"><span class="pre">notifyVideoStart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoTask)self</span></em>, <em class="sig-param"><span class="pre">(int)frame_count</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.notifyVideoStart" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">notifyVideoStart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)frame_count</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.notifyVideoStart" title="Permalink to this definition"></a></dt>
 <dd><p>Notify that the video has started.</p>
 <blockquote>
 <div><dl class="simple">
@@ -855,37 +784,37 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.parametersModified">
-<span class="sig-name descname"><span class="pre">parametersModified</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.parametersModified" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">parametersModified</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.parametersModified" title="Permalink to this definition"></a></dt>
 <dd><p>Notify that the task parameters have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
 <p>parametersModified( (CWorkflowTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.removeInput">
-<span class="sig-name descname"><span class="pre">removeInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.removeInput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">removeInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.removeInput" title="Permalink to this definition"></a></dt>
 <dd><p>Remove input at the given position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> – zero-based input index</p>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.run" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.run" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a>.</p>
 <p>run( (CVideoOFTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.setActionFlag">
-<span class="sig-name descname"><span class="pre">setActionFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(ActionFlag)action</span></em>, <em class="sig-param"><span class="pre">(bool)is_enable</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setActionFlag" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setActionFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ActionFlag)action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_enable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setActionFlag" title="Permalink to this definition"></a></dt>
 <dd><p>Enable or disable the given action. If the action does not exist, it is added to the list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>action</strong> – action to enable or disable, see <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a> for possible values</p></li>
+<li><p><strong>action</strong> (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a>) – action to enable or disable</p></li>
 <li><p><strong>is_enable</strong> (<em>bool</em>) – True or False</p></li>
 </ul>
 </dd>
@@ -894,71 +823,71 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.setActive">
-<span class="sig-name descname"><span class="pre">setActive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em>, <em class="sig-param"><span class="pre">(bool)is_active</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setActive" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setActive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_active</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setActive" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.setActive" title="ikomia.core.pycore.CWorkflowTask.setActive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setActive()</span></code></a>.</p>
 <p>setActive( (CVideoOFTask)self, (bool)is_active) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.setInput">
-<span class="sig-name descname"><span class="pre">setInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)input</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em>, <em class="sig-param"><span class="pre">(bool)is_new_sequence</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setInput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_new_sequence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setInput" title="Permalink to this definition"></a></dt>
 <dd><p>Set input at position index with the given one. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the input at position index.</p>
 <blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>input: <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+<div><p>Args:</p>
+<blockquote>
+<div><p>input_tot (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object)</p>
 <p>index (int): zero-based input index</p>
 <p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
-</dd>
-</dl>
+</div></blockquote>
 </div></blockquote>
 <p>setInput( (CWorkflowTask)self, (CWorkflowTaskIO)input, (int)index, (bool)is_new_sequence) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.setInputDataType">
-<span class="sig-name descname"><span class="pre">setInputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(IODataType)data_type</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setInputDataType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(IODataType)data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setInputDataType" title="Permalink to this definition"></a></dt>
 <dd><p>Set the data type for the input at position index. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the data type for the input at position index.</p>
 <blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>data_type (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): input data type</p>
+<div><p>Args:</p>
+<blockquote>
+<div><p>data_type (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): input data type</p>
 <p>index (int): zero-based input index</p>
-</dd>
-</dl>
+</div></blockquote>
 </div></blockquote>
 <p>setInputDataType( (CWorkflowTask)self, (IODataType)data_type, (int)index) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.setInputs">
-<span class="sig-name descname"><span class="pre">setInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(object)inputs</span></em>, <em class="sig-param"><span class="pre">(bool)is_new_sequence</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setInputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_new_sequence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setInputs" title="Permalink to this definition"></a></dt>
 <dd><p>Set the whole list of inputs with the given one.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>inputs (list): list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects
-is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>inputs (list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects)</p>
+<p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
+</div></blockquote>
 </div></blockquote>
 <p>setInputs( (CWorkflowTask)self, (object)inputs, (bool)is_new_sequence) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutput">
-<span class="sig-name descname"><span class="pre">setOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)output</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutput" title="Permalink to this definition"></a></dt>
 <dd><p>Set output at position index with the given one. If the output at position index does not exist, the function creates as many generic outputs to reach the number of index+1 and sets the output at position index.</p>
 <blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>output: <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+<div><p>Args:</p>
+<blockquote>
+<div><p>output (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object)</p>
 <p>index (int): zero-based output index</p>
-</dd>
-</dl>
+</div></blockquote>
 </div></blockquote>
 <p>setOutput( (CWorkflowTask)self, (CWorkflowTaskIO)output, (int)index) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputColorMap">
-<span class="sig-name descname"><span class="pre">setOutputColorMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(C2dImageTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em>, <em class="sig-param"><span class="pre">(int)mask_index</span></em>, <em class="sig-param"><span class="pre">(object)colors</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputColorMap" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOutputColorMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)mask_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)colors</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputColorMap" title="Permalink to this definition"></a></dt>
 <dd><p>Bind a display color map to an image output. The color mask is generated from an output mask generated by the task itself (binary or labelled image).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -973,34 +902,34 @@ is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame o
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputDataType">
-<span class="sig-name descname"><span class="pre">setOutputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(IODataType)data_type</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputDataType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOutputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(IODataType)data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputDataType" title="Permalink to this definition"></a></dt>
 <dd><p>Set the data type for the output at position index. If the output at position index does not exist, the function creates as many generic outputs to reach the number of index+1 and sets the data type for the output at position index.</p>
 <blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>data_type (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): output data type</p>
+<div><p>Args:</p>
+<blockquote>
+<div><p>data_type (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): output data type</p>
 <p>index (int): zero-based output index</p>
-</dd>
-</dl>
+</div></blockquote>
 </div></blockquote>
 <p>setOutputDataType( (CWorkflowTask)self, (IODataType)data_type, (int)index) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputs">
-<span class="sig-name descname"><span class="pre">setOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(object)outputs</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)outputs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setOutputs" title="Permalink to this definition"></a></dt>
 <dd><p>Set the whole list of outputs with the given one.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>outputs (list): list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>outputs (list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects)</p>
+</div></blockquote>
 </div></blockquote>
 <p>setOutputs( (CWorkflowTask)self, (object)outputs) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.setParam">
-<span class="sig-name descname"><span class="pre">setParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskParam)param</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setParam" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskParam)param</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.setParam" title="Permalink to this definition"></a></dt>
 <dd><p>Set the task parameters object. Task can have only one parameters object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1011,68 +940,51 @@ is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame o
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.stop">
-<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.stop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.stop" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.stop" title="ikomia.core.pycore.CWorkflowTask.stop"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stop()</span></code></a>.</p>
 <p>stop( (CVideoOFTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.updateStaticOutputs">
-<span class="sig-name descname"><span class="pre">updateStaticOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoOFTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.updateStaticOutputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">updateStaticOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.updateStaticOutputs" title="Permalink to this definition"></a></dt>
 <dd><p>Determine output data type automatically from input data types. Don’t forget to call this method in overriden methods. See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.updateStaticOutputs" title="ikomia.core.pycore.CWorkflowTask.updateStaticOutputs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">updateStaticOutputs()</span></code></a>.</p>
 <p>updateStaticOutputs( (CVideoOFTask)self) -&gt; None</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html" class="btn btn-neutral float-right" title="CVideoTrackingTask" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ikomia.dataprocess.pydataprocess.CVideoTask.html" class="btn btn-neutral float-left" title="CVideoTask" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html" class="btn btn-neutral float-right" title="CVideoTrackingTask" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Ikomia SAS.
-
-    </p>
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

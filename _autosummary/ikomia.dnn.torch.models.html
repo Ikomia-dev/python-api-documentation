@@ -1,45 +1,22 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Torchvision models &mdash; Ikomia  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/ikomia.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>Torchvision models &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/ikomia.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="TorchDatasetMapper" href="ikomia.dnn.torch.datasetmapper.html" />
@@ -49,17 +26,13 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #150E83" >
-          
 
-    <a href="../index.html" class="icon icon-home"> Ikomia
+    <a href="../index.html" class="icon icon-home"> Ikomia API
         
 
         
@@ -72,7 +45,7 @@
     
     
     <div class="version">
-        0.6.0
+        0.7.0
     </div>
     
     
@@ -93,8 +66,6 @@
 </div>
     
         </div>
-
-        
     <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
@@ -104,6 +75,7 @@
         
         <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../modules.html">API Reference</a><ul class="current">
@@ -111,7 +83,11 @@
 <li class="toctree-l2"><a class="reference internal" href="ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.core.task.html">Task</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ikomia.dnn.dataset.html">Dataset</a></li>
@@ -141,77 +117,32 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Ikomia</a>
-        
+          <a href="../index.html">Ikomia API</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../modules.html">API Reference</a> &raquo;</li>
-        
       <li>Torchvision models</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/_autosummary/ikomia.dnn.torch.models.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="ikomia.dnn.torch.datasetmapper.html" class="btn btn-neutral float-right" title="TorchDatasetMapper" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="ikomia.dnn.dataset.html" class="btn btn-neutral float-left" title="Dataset" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="ikomia.dnn.torch.datasetmapper.html" class="btn btn-neutral float-right" title="TorchDatasetMapper" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="module-ikomia.dnn.torch.models">
-<span id="torchvision-models"></span><h1>Torchvision models<a class="headerlink" href="#module-ikomia.dnn.torch.models" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="module-ikomia.dnn.torch.models">
+<span id="torchvision-models"></span><h1>Torchvision models<a class="headerlink" href="#module-ikomia.dnn.torch.models" title="Permalink to this headline"></a></h1>
 <p>Model providing helper funtions to create TorchVision Deep Learning models.</p>
 <p>TorchVision pages:</p>
 <ul class="simple">
@@ -229,19 +160,19 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.faster_rcnn" title="ikomia.dnn.torch.models.faster_rcnn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">faster_rcnn</span></code></a>([train_mode, use_pretrained, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.faster_rcnn" title="ikomia.dnn.torch.models.faster_rcnn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">faster_rcnn</span></code></a>([train_mode, use_pretrained, ...])</p></td>
 <td><p>Create Torchvision Faster RCNN model for training or inference.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.mask_rcnn" title="ikomia.dnn.torch.models.mask_rcnn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_rcnn</span></code></a>([train_mode, use_pretrained, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.mask_rcnn" title="ikomia.dnn.torch.models.mask_rcnn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_rcnn</span></code></a>([train_mode, use_pretrained, ...])</p></td>
 <td><p>Create Torchvision Mask RCNN model for training or inference.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.mnasnet" title="ikomia.dnn.torch.models.mnasnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mnasnet</span></code></a>([train_mode, use_pretrained, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.mnasnet" title="ikomia.dnn.torch.models.mnasnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mnasnet</span></code></a>([train_mode, use_pretrained, ...])</p></td>
 <td><p>Create Torchvision MnasNet model for training or inference.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.resnet" title="ikomia.dnn.torch.models.resnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resnet</span></code></a>([model_name, train_mode, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.resnet" title="ikomia.dnn.torch.models.resnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resnet</span></code></a>([model_name, train_mode, ...])</p></td>
 <td><p>Create Torchvision ResNet model for training or inference.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.resnext" title="ikomia.dnn.torch.models.resnext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resnext</span></code></a>([model_name, train_mode, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dnn.torch.models.resnext" title="ikomia.dnn.torch.models.resnext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resnext</span></code></a>([model_name, train_mode, ...])</p></td>
 <td><p>Create Torchvision ResNeXt model for training or inference.</p></td>
 </tr>
 </tbody>
@@ -249,7 +180,7 @@
 <p class="rubric">Details</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="ikomia.dnn.torch.models.faster_rcnn">
-<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">faster_rcnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.faster_rcnn" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">faster_rcnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.faster_rcnn" title="Permalink to this definition"></a></dt>
 <dd><p>Create Torchvision Faster RCNN model for training or inference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -269,7 +200,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ikomia.dnn.torch.models.mask_rcnn">
-<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">mask_rcnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.mask_rcnn" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">mask_rcnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.mask_rcnn" title="Permalink to this definition"></a></dt>
 <dd><p>Create Torchvision Mask RCNN model for training or inference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -289,7 +220,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ikomia.dnn.torch.models.mnasnet">
-<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">mnasnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_extract</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.mnasnet" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">mnasnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_extract</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.mnasnet" title="Permalink to this definition"></a></dt>
 <dd><p>Create Torchvision MnasNet model for training or inference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -309,7 +240,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ikomia.dnn.torch.models.resnet">
-<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">resnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'resnet50'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_extract</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.resnet" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">resnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'resnet50'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_extract</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.resnet" title="Permalink to this definition"></a></dt>
 <dd><p>Create Torchvision ResNet model for training or inference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -329,7 +260,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ikomia.dnn.torch.models.resnext">
-<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">resnext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'resnext50'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_extract</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.resnext" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.dnn.torch.models.</span></span><span class="sig-name descname"><span class="pre">resnext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'resnext50'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pretrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_extract</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dnn.torch.models.resnext" title="Permalink to this definition"></a></dt>
 <dd><p>Create Torchvision ResNeXt model for training or inference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -347,54 +278,37 @@
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ikomia.dnn.torch.datasetmapper.html" class="btn btn-neutral float-right" title="TorchDatasetMapper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ikomia.dnn.dataset.html" class="btn btn-neutral float-left" title="Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dnn.torch.datasetmapper.html" class="btn btn-neutral float-right" title="TorchDatasetMapper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Ikomia SAS.
-
-    </p>
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,45 +1,22 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Process &mdash; Ikomia  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>Process &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Widget" href="opencv_plugin_widget.html" />
@@ -49,17 +26,13 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #150E83" >
-          
 
-    <a href="index.html" class="icon icon-home"> Ikomia
+    <a href="index.html" class="icon icon-home"> Ikomia API
         
 
         
@@ -72,7 +45,7 @@
     
     
     <div class="version">
-        0.6.0
+        0.7.0
     </div>
     
     
@@ -93,8 +66,6 @@
 </div>
     
         </div>
-
-        
     <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
@@ -113,6 +84,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -138,79 +110,33 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Ikomia</a>
-        
+          <a href="index.html">Ikomia API</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
-        
           <li><a href="examples.html">Examples</a> &raquo;</li>
-        
       <li>Process</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/opencv_plugin_process.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="opencv_plugin_widget.html" class="btn btn-neutral float-right" title="Widget" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="opencv_plugin_interface.html" class="btn btn-neutral float-left" title="Plugin interface" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="opencv_plugin_widget.html" class="btn btn-neutral float-right" title="Widget" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="process">
-<h1>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="process">
+<h1>Process<a class="headerlink" href="#process" title="Permalink to this headline"></a></h1>
 <p>Code example for OCVBasics process implementation</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span><span class="p">,</span> <span class="n">cv2</span>
 <span class="kn">import</span> <span class="nn">copy</span>
@@ -220,10 +146,10 @@
 <span class="c1"># - Class to handle the process parameters</span>
 <span class="c1"># - Inherits core.CProtocolTaskParam from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">OCVBasicsProcessParam</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">OCVBasicsParam</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskParam</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">core</span><span class="o">.</span><span class="n">CProtocolTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskParam</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Place default value initialization here</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sigma_x</span> <span class="o">=</span> <span class="mf">1.0</span>
@@ -251,21 +177,21 @@
 <span class="c1"># - Class which implements the process</span>
 <span class="c1"># - Inherits core.CProtocolTask or derived from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">OCVBasicsProcess</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">OCVBasics</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">C2dImageTask</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
-        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CImageProcess2d</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">C2dImageTask</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="c1"># Add input/output of the process here</span>
         <span class="c1"># Example :  self.addInput(core.CImageProcessIO())</span>
         <span class="c1">#           self.addOutput(core.CImageProcessIO())</span>
 
         <span class="c1">#Create parameters class</span>
         <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">OCVBasicsProcessParam</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">OCVBasicsParam</span><span class="p">())</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">param</span><span class="p">))</span>
 
-    <span class="k">def</span> <span class="nf">getProgressSteps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eltCount</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getProgressSteps</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Function returning the number of progress steps for this process</span>
         <span class="c1"># This is handled by the main progress bar of Ikomia application</span>
         <span class="k">return</span> <span class="mi">1</span>
@@ -309,12 +235,12 @@
 <span class="c1"># - Factory class to build process object</span>
 <span class="c1"># - Inherits dataprocess.CProcessFactory from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">OCVBasicsProcessFactory</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">OCVBasicsFactory</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Set process information as string here</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;OCVBasics&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ocv_basics&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">shortDescription</span> <span class="o">=</span> <span class="s2">&quot;OpenCV Canny&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Simple OpenCV pipeline that computes Canny filter&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">authors</span> <span class="o">=</span> <span class="s2">&quot;Ikomia team&quot;</span>
@@ -334,57 +260,40 @@
 
     <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="c1"># Create process object</span>
-        <span class="k">return</span> <span class="n">OCVBasicsProcess</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">OCVBasics</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="opencv_plugin_widget.html" class="btn btn-neutral float-right" title="Widget" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="opencv_plugin_interface.html" class="btn btn-neutral float-left" title="Plugin interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="opencv_plugin_widget.html" class="btn btn-neutral float-right" title="Widget" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Ikomia SAS.
-
-    </p>
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

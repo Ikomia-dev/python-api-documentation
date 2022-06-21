@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Working with tasks &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Display tools for debugging" href="display_tools.html" />
+    <link rel="prev" title="Going deeper with workflows" href="going_deeper_workflow.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #150E83" >
+
+    <a href="index.html" class="icon icon-home"> Ikomia API
+        
+
+        
+        
+        <img src="_static/app.png" class="logo" alt="Logo" />
+        
+    </a>
+
+    
+    
+    
+    <div class="version">
+        0.7.0
+    </div>
+    
+    
+
+    <!-- Github button -->
+    <a href="https://github.com/Ikomia-dev/IkomiaApi" class="btn btn-neutral" title="GitHub Ikomia API" target="_blank" rel="noopener noreferrer">
+        <img id="github-logo" src="_static/GitHub-Mark-32px.png" alt="">
+        <span style="vertical-align:middle">GitHub</span>
+    </a>
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+    
+        </div>
+    <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+        
+        
+        
+        
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_api.html">Algorithms for your application</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_api.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_api.html#concepts">Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_api.html#authentication">Authentication</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index_api.html#in-practice">In practice</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="first_steps_workflow.html">First steps with workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="going_deeper_workflow.html">Going deeper with workflows</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Working with tasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display_tools.html">Display tools for debugging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
+</ul>
+
+        
+        
+    </div>
+
+    <!-- Social media icons -->
+    <div class="social-list">
+        <a class="social-item" href="https://fr.linkedin.com/company/ikomia" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-linkedin-square"></i>
+        </a>
+        <a class="social-item" href="https://twitter.com/IkomiaOfficial" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-twitter-square"></i>
+        </a>
+        <a class="social-item" href="https://www.youtube.com/channel/UC0nIasJy6f-b-f0SOEsBlQw" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-youtube-play"></i>
+        </a>
+    </div>
+    
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ikomia API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index_api.html">Algorithms for your application</a> &raquo;</li>
+      <li>Working with tasks</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/working_with_task.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="going_deeper_workflow.html" class="btn btn-neutral float-left" title="Going deeper with workflows" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="display_tools.html" class="btn btn-neutral float-right" title="Display tools for debugging" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="working-with-tasks">
+<h1>Working with tasks<a class="headerlink" href="#working-with-tasks" title="Permalink to this headline"></a></h1>
+<p>The recommended way to apply algorithms with Ikomia API is through the <a class="reference internal" href="_autosummary/ikomia.dataprocess.workflow.html#module-ikomia.dataprocess.workflow" title="ikomia.dataprocess.workflow"><code class="xref py py-mod docutils literal notranslate"><span class="pre">workflow</span></code></a> module.
+However, you have also access to algorithm at task level with the possibility to run it independently.</p>
+<section id="run-task-without-workflow">
+<h2>Run task without workflow<a class="headerlink" href="#run-task-without-workflow" title="Permalink to this headline"></a></h2>
+<p>The example below illustrates the steps to run a single algorithm.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">task</span>
+<span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
+
+<span class="c1"># Instanciate algorithm</span>
+<span class="n">box_filter</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">ocv_box_filter</span><span class="p">)</span>
+
+<span class="c1"># Set input(s)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;path/to/image.png&quot;</span><span class="p">)</span>
+<span class="n">img_input</span> <span class="o">=</span> <span class="n">box_filter</span><span class="o">.</span><span class="n">getInput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">img_input</span><span class="o">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">box_filter</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Consult <a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.create" title="ikomia.core.task.create"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create()</span></code></a>, <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.getInput" title="ikomia.core.pycore.CWorkflowTask.getInput"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getInput()</span></code></a> and
+<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> for details.</p>
+</section>
+<section id="manage-parameters">
+<h2>Manage parameters<a class="headerlink" href="#manage-parameters" title="Permalink to this headline"></a></h2>
+<p>Algorithm behavior can be adjusted by setting task parameters (<a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.set_parameters" title="ikomia.core.task.set_parameters"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_parameters()</span></code></a>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">task</span>
+<span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
+
+<span class="c1"># Instanciate algorithm</span>
+<span class="n">box_filter</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">ocv_box_filter</span><span class="p">)</span>
+
+<span class="c1"># ...</span>
+
+<span class="c1"># Set parameters</span>
+<span class="n">box_filter_params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">ik</span><span class="o">.</span><span class="n">ocv_box_filter_param</span><span class="o">.</span><span class="n">kSizeHeight</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+    <span class="n">ik</span><span class="o">.</span><span class="n">ocv_box_filter_param</span><span class="o">.</span><span class="n">kSizeWidth</span><span class="p">:</span> <span class="mi">11</span>
+<span class="p">}</span>
+<span class="n">task</span><span class="o">.</span><span class="n">set_parameters</span><span class="p">(</span><span class="n">box_filter</span><span class="p">,</span> <span class="n">box_filter_params</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">box_filter</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="manage-inputs-outputs">
+<h2>Manage inputs/outputs<a class="headerlink" href="#manage-inputs-outputs" title="Permalink to this headline"></a></h2>
+<section id="inputs">
+<h3>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h3>
+<p>From a task object instance, you access inputs with <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.getInput" title="ikomia.core.pycore.CWorkflowTask.getInput"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getInput()</span></code></a>.
+Depending on algorithm, inputs can be of various type. Please consult this <a class="reference internal" href="plugin_io.html"><span class="doc">page</span></a> to have more
+information about possible input types.</p>
+</section>
+<section id="outputs">
+<h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h3>
+<p>Like for workflows, the <a class="reference internal" href="_autosummary/ikomia.core.task.html#module-ikomia.core.task" title="ikomia.core.task"><code class="xref py py-mod docutils literal notranslate"><span class="pre">task</span></code></a> module provides useful functions to get common output types:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_image_output" title="ikomia.core.task.get_image_output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_image_output()</span></code></a></p></li>
+<li><p><a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_graphics_output" title="ikomia.core.task.get_graphics_output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_graphics_output()</span></code></a></p></li>
+<li><p><a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_numeric_output" title="ikomia.core.task.get_numeric_output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_numeric_output()</span></code></a></p></li>
+<li><p><a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_data_string_output" title="ikomia.core.task.get_data_string_output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_data_string_output()</span></code></a></p></li>
+<li><p><a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_blob_measure_output" title="ikomia.core.task.get_blob_measure_output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_blob_measure_output()</span></code></a></p></li>
+<li><p><a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_dataset_output" title="ikomia.core.task.get_dataset_output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_dataset_output()</span></code></a></p></li>
+<li><p><a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_array_output" title="ikomia.core.task.get_array_output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_array_output()</span></code></a></p></li>
+<li><p><a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_path_output" title="ikomia.core.task.get_path_output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_path_output()</span></code></a></p></li>
+</ul>
+<p>Here is a example with image output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">task</span>
+<span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
+
+<span class="c1"># Instanciate algorithm</span>
+<span class="n">box_filter</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">ocv_box_filter</span><span class="p">)</span>
+
+<span class="c1"># Set input(s)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;path/to/image.png&quot;</span><span class="p">)</span>
+<span class="n">img_input</span> <span class="o">=</span> <span class="n">box_filter</span><span class="o">.</span><span class="n">getInput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">img_input</span><span class="o">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">box_filter</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># Get output</span>
+<span class="n">img_out</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">get_image_output</span><span class="p">(</span><span class="n">box_filter</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;Box Filter result&quot;</span><span class="p">,</span> <span class="n">img_out</span><span class="o">.</span><span class="n">getImage</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We provide high-level function to handle image and graphics outputs. Thus you can compute the merge image (for visualization) between graphics and image
+outputs (<a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_image_with_graphics" title="ikomia.core.task.get_image_with_graphics"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_image_with_graphics()</span></code></a>).</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="going_deeper_workflow.html" class="btn btn-neutral float-left" title="Going deeper with workflows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="display_tools.html" class="btn btn-neutral float-right" title="Display tools for debugging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

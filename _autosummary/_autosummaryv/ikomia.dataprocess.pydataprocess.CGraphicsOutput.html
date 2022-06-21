@@ -1,45 +1,22 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>CGraphicsOutput &mdash; Ikomia  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>CGraphicsOutput &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CWidgetOutput" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" />
@@ -49,17 +26,13 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #150E83" >
-          
 
-    <a href="../../index.html" class="icon icon-home"> Ikomia
+    <a href="../../index.html" class="icon icon-home"> Ikomia API
         
 
         
@@ -72,7 +45,7 @@
     
     
     <div class="version">
-        0.6.0
+        0.7.0
     </div>
     
     
@@ -93,8 +66,6 @@
 </div>
     
         </div>
-
-        
     <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
@@ -104,6 +75,7 @@
         
         <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -111,6 +83,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
@@ -118,6 +91,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">CGraphicsOutput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
@@ -141,6 +115,9 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
@@ -170,82 +147,36 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Ikomia</a>
-        
+          <a href="../../index.html">Ikomia API</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../modules.html">API Reference</a> &raquo;</li>
-        
           <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a> &raquo;</li>
-        
       <li>CGraphicsOutput</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" class="btn btn-neutral float-right" title="CWidgetOutput" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html" class="btn btn-neutral float-left" title="CGraphicsInput" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" class="btn btn-neutral float-right" title="CWidgetOutput" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="cgraphicsoutput">
-<h1>CGraphicsOutput<a class="headerlink" href="#cgraphicsoutput" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="cgraphicsoutput">
+<h1>CGraphicsOutput<a class="headerlink" href="#cgraphicsoutput" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CGraphicsOutput</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CGraphicsOutput</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput" title="Permalink to this definition"></a></dt>
 <dd><p>Define task output containing graphics items. Consult <a class="reference internal" href="ikomia.core.pycore.GraphicsItem.html#ikomia.core.pycore.GraphicsItem" title="ikomia.core.pycore.GraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsItem</span></code></a> to see the list of possible graphics types. Instance can be added as output of a <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> or derived. This kind of output is used to manage graphics items generated in a task. Ikomia software displays it as an overlay layer on top of images or videos. Graphics items can then be forwarded as input of workflow’s following tasks. Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a>.</p>
 <p class="rubric">Import</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">CGraphicsOutput</span>
@@ -288,13 +219,16 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getItems</span></code>(self)</p></td>
 <td><p>Get list of input graphics items.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.setImageIndex" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput.setImageIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setImageIndex</span></code></a>(self, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.getImageIndex" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput.getImageIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImageIndex</span></code></a>(self)</p></td>
+<td><p>Get the output index on which graphics items should be associated.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.setImageIndex" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput.setImageIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setImageIndex</span></code></a>(self, index)</p></td>
 <td><p>Set the output index on which graphics items will be displayed (in overlay layer).</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setItems</span></code>(self, items)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setItems</span></code>(self, items)</p></td>
 <td><p>Fill input/output with the given graphics item list.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.setNewLayer" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput.setNewLayer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNewLayer</span></code></a>(self, name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.setNewLayer" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput.setNewLayer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNewLayer</span></code></a>(self, name)</p></td>
 <td><p>Initiate a new graphics layer for the output with the given name.</p></td>
 </tr>
 </tbody>
@@ -311,6 +245,12 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
 <td><p>Check whether input or output objects contain valid data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.load" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(self, path)</p></td>
+<td><p>Load graphics output from previsouly exported file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.save" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(self, path)</p></td>
+<td><p>Save graphics output data to file.</p></td>
 </tr>
 </tbody>
 </table>
@@ -353,7 +293,7 @@
 <p class="rubric">Details</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(object)arg1</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
 <dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
@@ -368,7 +308,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.addComplexPolygon">
-<span class="sig-name descname"><span class="pre">addComplexPolygon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CGraphicsOutput)self</span></em>, <em class="sig-param"><span class="pre">(object)outer</span></em>, <em class="sig-param"><span class="pre">(object)inners</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CGraphicsItem</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addComplexPolygon" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addComplexPolygon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)outer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)inners</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CGraphicsItem</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addComplexPolygon" title="Permalink to this definition"></a></dt>
 <dd><p>Add complex polygon item to this output. A complex polygon means a polygon with one or several holes inside. Item properties (color, size…) come from the global preferences of Ikomia software. They can be adjusted interactively from the option button of the graphics toolbar.</p>
 <blockquote>
 <div><dl>
@@ -391,7 +331,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.addEllipse">
-<span class="sig-name descname"><span class="pre">addEllipse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CGraphicsOutput)self</span></em>, <em class="sig-param"><span class="pre">(float)x</span></em>, <em class="sig-param"><span class="pre">(float)y</span></em>, <em class="sig-param"><span class="pre">(float)width</span></em>, <em class="sig-param"><span class="pre">(float)height</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CGraphicsItem</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addEllipse" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addEllipse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)height</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CGraphicsItem</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addEllipse" title="Permalink to this definition"></a></dt>
 <dd><p>Add ellipse or circle item to this output. Item properties (color, size…) come from the global preferences of Ikomia software. They can be adjusted interactively from the option button of the graphics toolbar.</p>
 <blockquote>
 <div><dl>
@@ -418,7 +358,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.addItem">
-<span class="sig-name descname"><span class="pre">addItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CGraphicsOutput)self</span></em>, <em class="sig-param"><span class="pre">(CGraphicsItem)item</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addItem" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)item</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addItem" title="Permalink to this definition"></a></dt>
 <dd><p>Add graphics item to this output. Object class must be derived from <a class="reference internal" href="ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a>. Use this method only if you need to add user-defined graphics items. Consult <a class="reference internal" href="ikomia.core.pycore.GraphicsItem.html#ikomia.core.pycore.GraphicsItem" title="ikomia.core.pycore.GraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsItem</span></code></a> to see the list of built-in graphics items.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -429,7 +369,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.addPoint">
-<span class="sig-name descname"><span class="pre">addPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CGraphicsOutput)self</span></em>, <em class="sig-param"><span class="pre">(CPointF)point</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CGraphicsItem</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addPoint" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CPointF)point</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CGraphicsItem</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addPoint" title="Permalink to this definition"></a></dt>
 <dd><p>Add point item to this output. Item properties (color, size…) come from the global preferences of Ikomia software. They can be adjusted interactively from the option button of the graphics toolbar.</p>
 <blockquote>
 <div><dl class="simple">
@@ -450,7 +390,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.addPolygon">
-<span class="sig-name descname"><span class="pre">addPolygon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CGraphicsOutput)self</span></em>, <em class="sig-param"><span class="pre">(object)points</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CGraphicsItem</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addPolygon" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addPolygon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)points</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CGraphicsItem</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addPolygon" title="Permalink to this definition"></a></dt>
 <dd><p>Add polygon item to this output. The polygon is closed automatically. Item properties (color, size…) come from the global preferences of Ikomia software. They can be adjusted interactively from the option button of the graphics toolbar.</p>
 <blockquote>
 <div><dl class="simple">
@@ -471,7 +411,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.addPolyline">
-<span class="sig-name descname"><span class="pre">addPolyline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CGraphicsOutput)self</span></em>, <em class="sig-param"><span class="pre">(object)points</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CGraphicsItem</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addPolyline" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addPolyline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)points</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CGraphicsItem</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addPolyline" title="Permalink to this definition"></a></dt>
 <dd><p>Add polyline item to this output. Item properties (color, size…) come from the global preferences of Ikomia software. They can be adjusted interactively from the option button of the graphics toolbar.</p>
 <blockquote>
 <div><dl class="simple">
@@ -492,7 +432,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.addRectangle">
-<span class="sig-name descname"><span class="pre">addRectangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CGraphicsOutput)self</span></em>, <em class="sig-param"><span class="pre">(float)x</span></em>, <em class="sig-param"><span class="pre">(float)y</span></em>, <em class="sig-param"><span class="pre">(float)width</span></em>, <em class="sig-param"><span class="pre">(float)height</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CGraphicsItem</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addRectangle" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addRectangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)height</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CGraphicsItem</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addRectangle" title="Permalink to this definition"></a></dt>
 <dd><p>Add rectangle or square item to this output. Item properties (color, size…) come from the global preferences of Ikomia software. They can be adjusted interactively from the option button of the graphics toolbar.</p>
 <blockquote>
 <div><dl>
@@ -519,7 +459,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.addText">
-<span class="sig-name descname"><span class="pre">addText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CGraphicsOutput)self</span></em>, <em class="sig-param"><span class="pre">(str)text</span></em>, <em class="sig-param"><span class="pre">(float)x</span></em>, <em class="sig-param"><span class="pre">(float)y</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CGraphicsItem</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addText" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)y</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CGraphicsItem</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addText" title="Permalink to this definition"></a></dt>
 <dd><p>Add text item to this output. Item properties (color, size…) come from the global preferences of Ikomia software. They can be adjusted interactively from the option button of the graphics toolbar.</p>
 <blockquote>
 <div><dl>
@@ -544,18 +484,18 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.clearData">
-<span class="sig-name descname"><span class="pre">clearData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.clearData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clearData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.clearData" title="Permalink to this definition"></a></dt>
 <dd><p>Clear the data stored in the object. Should be overriden for custom input or output.</p>
 <p>clearData( (CWorkflowTaskIO)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.copyStaticData">
-<span class="sig-name descname"><span class="pre">copyStaticData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)io</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.copyStaticData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">copyStaticData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)io</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.copyStaticData" title="Permalink to this definition"></a></dt>
 <dd><p>Copy the static data from the given input or ouput. Static data are those which are not generated at runtime. Should be overriden for custom input or output.</p>
 <blockquote>
 <div><dl class="simple">
-<dt>Args:</dt><dd><p>io (<a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a>): input or ouput instance from which data is copied.</p>
+<dt>Args:</dt><dd><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a>: input or ouput instance from which data is copied</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -563,12 +503,26 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.getImageIndex">
+<span class="sig-name descname"><span class="pre">getImageIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.getImageIndex" title="Permalink to this definition"></a></dt>
+<dd><p>Get the output index on which graphics items should be associated. Index must refer to an existing output managing image data such as <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO" title="ikomia.dataprocess.pydataprocess.CImageIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageIO</span></code></a> or derived.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>index of image-based output</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.getUnitElementCount">
-<span class="sig-name descname"><span class="pre">getUnitElementCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.getUnitElementCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getUnitElementCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.getUnitElementCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of unit element in terms of processing scheme. This value is used to define the number of progress steps for progress bar component. For an image, the count is 1. For Z-stack volume, the count is the number of Z levels. Should be overriden for custom input or output.</p>
 <blockquote>
 <div><dl class="simple">
-<dt>Returns:</dt><dd><p>int: number of unit element to process.</p>
+<dt>Returns:</dt><dd><p>int: number of unit element to process</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -577,11 +531,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.isAutoInput">
-<span class="sig-name descname"><span class="pre">isAutoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.isAutoInput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isAutoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.isAutoInput" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether input data from external source is mandatory.</p>
 <blockquote>
 <div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False.</p>
+<dt>Returns:</dt><dd><p>bool: True or False</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -590,11 +544,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.isDataAvailable">
-<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.isDataAvailable" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether input or output objects contain valid data. For inputs, it is the case when the previous process contains valid output data. For outputs, it is the case when the associated task had been computed at least once. Should be overriden for custom input or output.</p>
 <blockquote>
 <div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True if data is available, False otherwise.</p>
+<dt>Returns:</dt><dd><p>bool: True if data is available, False otherwise</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -602,8 +556,30 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load graphics output from previsouly exported file. The file must be in JSON format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save graphics output data to file. The file must be in JSON format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.setImageIndex">
-<span class="sig-name descname"><span class="pre">setImageIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CGraphicsOutput)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.setImageIndex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setImageIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.setImageIndex" title="Permalink to this definition"></a></dt>
 <dd><p>Set the output index on which graphics items will be displayed (in overlay layer). Index must refer to an existing output managing image data such as <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO" title="ikomia.dataprocess.pydataprocess.CImageIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageIO</span></code></a> or derived.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -614,7 +590,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CGraphicsOutput.setNewLayer">
-<span class="sig-name descname"><span class="pre">setNewLayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CGraphicsOutput)self</span></em>, <em class="sig-param"><span class="pre">(str)name</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.setNewLayer" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setNewLayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsOutput)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CGraphicsOutput.setNewLayer" title="Permalink to this definition"></a></dt>
 <dd><p>Initiate a new graphics layer for the output with the given name. The method clears all graphics items that was previously generated.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -625,54 +601,37 @@
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" class="btn btn-neutral float-right" title="CWidgetOutput" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html" class="btn btn-neutral float-left" title="CGraphicsInput" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" class="btn btn-neutral float-right" title="CWidgetOutput" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Ikomia SAS.
-
-    </p>
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workflow &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="DisplayIO" href="../ikomia.dataprocess.displayIO.html" />
+    <link rel="prev" title="Workflow" href="../ikomia.dataprocess.workflow.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #150E83" >
+
+    <a href="../../index.html" class="icon icon-home"> Ikomia API
+        
+
+        
+        
+        <img src="../../_static/app.png" class="logo" alt="Logo" />
+        
+    </a>
+
+    
+    
+    
+    <div class="version">
+        0.7.0
+    </div>
+    
+    
+
+    <!-- Github button -->
+    <a href="https://github.com/Ikomia-dev/IkomiaApi" class="btn btn-neutral" title="GitHub Ikomia API" target="_blank" rel="noopener noreferrer">
+        <img id="github-logo" src="_static/GitHub-Mark-32px.png" alt="">
+        <span style="vertical-align:middle">GitHub</span>
+    </a>
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+    
+        </div>
+    <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+        
+        
+        
+        
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+</ul>
+</li>
+</ul>
+
+        
+        
+    </div>
+
+    <!-- Social media icons -->
+    <div class="social-list">
+        <a class="social-item" href="https://fr.linkedin.com/company/ikomia" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-linkedin-square"></i>
+        </a>
+        <a class="social-item" href="https://twitter.com/IkomiaOfficial" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-twitter-square"></i>
+        </a>
+        <a class="social-item" href="https://www.youtube.com/channel/UC0nIasJy6f-b-f0SOEsBlQw" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-youtube-play"></i>
+        </a>
+    </div>
+    
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Ikomia API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../modules.html">API Reference</a> &raquo;</li>
+          <li><a href="../ikomia.dataprocess.workflow.html">Workflow</a> &raquo;</li>
+      <li>Workflow</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../ikomia.dataprocess.workflow.html" class="btn btn-neutral float-left" title="Workflow" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ikomia.dataprocess.displayIO.html" class="btn btn-neutral float-right" title="DisplayIO" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="workflow">
+<h1>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.workflow.</span></span><span class="sig-name descname"><span class="pre">Workflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Untitled'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow" title="Permalink to this definition"></a></dt>
+<dd><p>Workflow management of Computer Vision tasks. Implement features to create, modify and run graph-based pipeline of
+<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> objects or derived. Workflows can be created from scratch
+by using <a class="reference internal" href="ikomia.dataprocess.registry.IkomiaRegistry.html#ikomia.dataprocess.registry.IkomiaRegistry" title="ikomia.dataprocess.registry.IkomiaRegistry"><code class="xref py py-class docutils literal notranslate"><span class="pre">IkomiaRegistry</span></code></a> to instanciate and connect task objects.
+Workflows can also be loaded from JSON file created with the interactive designer of Ikomia Studio.
+Derived from <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow" title="ikomia.dataprocess.pydataprocess.CWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflow</span></code></a>.</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess.workflow</span> <span class="kn">import</span> <span class="n">Workflow</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.__init__" title="ikomia.dataprocess.workflow.Workflow.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([name, registry])</p></td>
+<td><p>Construct Workflow object with the given name and an <a class="reference internal" href="ikomia.dataprocess.registry.IkomiaRegistry.html#ikomia.dataprocess.registry.IkomiaRegistry" title="ikomia.dataprocess.registry.IkomiaRegistry"><code class="xref py py-class docutils literal notranslate"><span class="pre">IkomiaRegistry</span></code></a> object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.add_task" title="ikomia.dataprocess.workflow.Workflow.add_task"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_task</span></code></a>(name[, param])</p></td>
+<td><p>Add task identified by its unique name in the workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.connect_tasks" title="ikomia.dataprocess.workflow.Workflow.connect_tasks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect_tasks</span></code></a>(src, target[, edges])</p></td>
+<td><p>Connect two tasks of the workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.find_task" title="ikomia.dataprocess.workflow.Workflow.find_task"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_task</span></code></a>(name[, index])</p></td>
+<td><p>Get identifiers and instance of tasks with the given name in the workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_array_output" title="ikomia.dataprocess.workflow.Workflow.get_array_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_array_output</span></code></a>([task_id, task_name, index])</p></td>
+<td><p>Get workflow ARRAY output(s) for the given task(s).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_blob_measure_output" title="ikomia.dataprocess.workflow.Workflow.get_blob_measure_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_blob_measure_output</span></code></a>([task_id, ...])</p></td>
+<td><p>Get workflow BLOB MEASURE output(s) for the given task(s).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_dataset_output" title="ikomia.dataprocess.workflow.Workflow.get_dataset_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dataset_output</span></code></a>([task_id, task_name, index])</p></td>
+<td><p>Get workflow DATASET output(s) for the given task(s).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_graphics_output" title="ikomia.dataprocess.workflow.Workflow.get_graphics_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_graphics_output</span></code></a>([task_id, task_name, index])</p></td>
+<td><p>Get workflow GRAPHICS output(s) for the given task(s).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_image" title="ikomia.dataprocess.workflow.Workflow.get_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image</span></code></a>([task_id, task_name, index])</p></td>
+<td><p>Get image (numpy array) from a specific IMAGE output (by index) of the given task (by name or id).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_image_output" title="ikomia.dataprocess.workflow.Workflow.get_image_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image_output</span></code></a>([task_id, task_name, index])</p></td>
+<td><p>Get workflow IMAGE output(s) for the given task(s).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_image_with_graphics" title="ikomia.dataprocess.workflow.Workflow.get_image_with_graphics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image_with_graphics</span></code></a>([task_id, ...])</p></td>
+<td><p>Get image (numpy array) from a specific IMAGE output of the given task with graphics items burnt into it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_numeric_output" title="ikomia.dataprocess.workflow.Workflow.get_numeric_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_numeric_output</span></code></a>([task_id, task_name, index])</p></td>
+<td><p>Get workflow NUMERIC output(s) for the given task(s).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_data_string_output" title="ikomia.dataprocess.workflow.Workflow.get_data_string_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_string_output</span></code></a>([task_id, task_name, ...])</p></td>
+<td><p>Get workflow data string output(s) for the given task(s).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_path_output" title="ikomia.dataprocess.workflow.Workflow.get_path_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_path_output</span></code></a>([task_id, task_name, index])</p></td>
+<td><p>Get workflow PATH output(s) for the given task(s).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_tasks" title="ikomia.dataprocess.workflow.Workflow.get_tasks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_tasks</span></code></a>()</p></td>
+<td><p>Get unique identifier and name for all tasks composing the workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.get_time_metrics" title="ikomia.dataprocess.workflow.Workflow.get_time_metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time_metrics</span></code></a>()</p></td>
+<td><p>Get metrics around workflow execution time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.run" title="ikomia.dataprocess.workflow.Workflow.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>()</p></td>
+<td><p>Start workflow execution on global input.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.run_on" title="ikomia.dataprocess.workflow.Workflow.run_on"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_on</span></code></a>([array, path, url, folder])</p></td>
+<td><p>Convenient function to run the workflow on common inputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_directory_input" title="ikomia.dataprocess.workflow.Workflow.set_directory_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_directory_input</span></code></a>([folder, index])</p></td>
+<td><p>Set folder as global input of the workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_image_input" title="ikomia.dataprocess.workflow.Workflow.set_image_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_image_input</span></code></a>([array, path, url, index, ...])</p></td>
+<td><p>Set image as global input of the workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_video_input" title="ikomia.dataprocess.workflow.Workflow.set_video_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_video_input</span></code></a>([path, url, index, datatype])</p></td>
+<td><p>Set video as global input of the workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_parameters" title="ikomia.dataprocess.workflow.Workflow.set_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_parameters</span></code></a>(params[, task_id, task_name, ...])</p></td>
+<td><p>Set task parameters as a simple key-value dict.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Inherited methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.addInput" title="ikomia.dataprocess.workflow.Workflow.addInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addInput</span></code></a>(self, input)</p></td>
+<td><p>Add global input to the workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.clear" title="ikomia.dataprocess.workflow.Workflow.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>(self)</p></td>
+<td><p>Remove all tasks and connections from the workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.clearInputs" title="ikomia.dataprocess.workflow.Workflow.clearInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearInputs</span></code></a>(self)</p></td>
+<td><p>Remove all inputs of the workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.clearOutputData" title="ikomia.dataprocess.workflow.Workflow.clearOutputData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearOutputData</span></code></a>(self)</p></td>
+<td><p>Clear output data for all the tasks of the workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.deleteEdge" title="ikomia.dataprocess.workflow.Workflow.deleteEdge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deleteEdge</span></code></a>(self, id)</p></td>
+<td><p>Remove the given connection/edge from the workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.deleteTask" title="ikomia.dataprocess.workflow.Workflow.deleteTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deleteTask</span></code></a>(self, id)</p></td>
+<td><p>Remove the given task from the workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.exportGraphviz" title="ikomia.dataprocess.workflow.Workflow.exportGraphviz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exportGraphviz</span></code></a>(self, path)</p></td>
+<td><p>Export the workflow structure as Graphviz <em>.dot</em> file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getChildren" title="ikomia.dataprocess.workflow.Workflow.getChildren"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getChildren</span></code></a>(self, id)</p></td>
+<td><p>Get child task identifiers of the task specified by the given identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getEdgeInfo" title="ikomia.dataprocess.workflow.Workflow.getEdgeInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getEdgeInfo</span></code></a>(self, id)</p></td>
+<td><p>Get connection information (edge) from its unique identifier.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getEdgeSource" title="ikomia.dataprocess.workflow.Workflow.getEdgeSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getEdgeSource</span></code></a>(self, id)</p></td>
+<td><p>Get source/parent task identifier of a given edge.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getEdgeTarget" title="ikomia.dataprocess.workflow.Workflow.getEdgeTarget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getEdgeTarget</span></code></a>(self, id)</p></td>
+<td><p>Get target/child task identifier of a given edge.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getElapsedTimeTo" title="ikomia.dataprocess.workflow.Workflow.getElapsedTimeTo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElapsedTimeTo</span></code></a>(arg1, self)</p></td>
+<td><p>Get the workflow running time in milliseconds from the start to the given task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getFinalTasks" title="ikomia.dataprocess.workflow.Workflow.getFinalTasks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFinalTasks</span></code></a>(self)</p></td>
+<td><p>Get all final or leaf tasks of the workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getInEdges" title="ikomia.dataprocess.workflow.Workflow.getInEdges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInEdges</span></code></a>(self, id)</p></td>
+<td><p>Get input connections (in-edges) of the task specified by the given identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getOutEdges" title="ikomia.dataprocess.workflow.Workflow.getOutEdges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutEdges</span></code></a>(self, id)</p></td>
+<td><p>Get output connections (out-edges) of the task specified by the given identifier.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getParents" title="ikomia.dataprocess.workflow.Workflow.getParents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParents</span></code></a>(self, id)</p></td>
+<td><p>Get parent task identifiers of the task specified by the given identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getRequiredTasks" title="ikomia.dataprocess.workflow.Workflow.getRequiredTasks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRequiredTasks</span></code></a>(self, path)</p></td>
+<td><p>Get task names required to load and execute the given workflow file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getRootID" title="ikomia.dataprocess.workflow.Workflow.getRootID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRootID</span></code></a>(self)</p></td>
+<td><p>Get unique identifier of the root node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getRootTargetTypes" title="ikomia.dataprocess.workflow.Workflow.getRootTargetTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRootTargetTypes</span></code></a>(self)</p></td>
+<td><p>Get all input data types of the tasks connected to the root node.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getTask" title="ikomia.dataprocess.workflow.Workflow.getTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTask</span></code></a>(self, id)</p></td>
+<td><p>Get the task object from the given ID.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getTaskCount" title="ikomia.dataprocess.workflow.Workflow.getTaskCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTaskCount</span></code></a>(self)</p></td>
+<td><p>Get the number of tasks in the workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getTaskIDs" title="ikomia.dataprocess.workflow.Workflow.getTaskIDs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTaskIDs</span></code></a>(self)</p></td>
+<td><p>Get the list of all task identifiers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.getTotalElapsedTime" title="ikomia.dataprocess.workflow.Workflow.getTotalElapsedTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotalElapsedTime</span></code></a>(self)</p></td>
+<td><p>Get the total workflow running time in milliseconds</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.load" title="ikomia.dataprocess.workflow.Workflow.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(self, path)</p></td>
+<td><p>Load a workflow previously saved as JSON file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.removeInput" title="ikomia.dataprocess.workflow.Workflow.removeInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeInput</span></code></a>(self, index)</p></td>
+<td><p>Remove global workflow input at the given <em>index</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.setAutoSave" title="ikomia.dataprocess.workflow.Workflow.setAutoSave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAutoSave</span></code></a>(self, enable)</p></td>
+<td><p>Activate/deactivate auto-save mode.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.setInput" title="ikomia.dataprocess.workflow.Workflow.setInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInput</span></code></a>(self, input, index, new_sequence)</p></td>
+<td><p>Set workflow input at position <em>index</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.setOutputFolder" title="ikomia.dataprocess.workflow.Workflow.setOutputFolder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputFolder</span></code></a>(self, path)</p></td>
+<td><p>Set workflow output folder.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.save" title="ikomia.dataprocess.workflow.Workflow.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(self, path)</p></td>
+<td><p>Save the workflow as a JSON file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.stop" title="ikomia.dataprocess.workflow.Workflow.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
+<td><p>Stop workflow execution.Each <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> object or derived must reimplement the <em>stop()</em> function that will be called by the workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.updateStartTime" title="ikomia.dataprocess.workflow.Workflow.updateStartTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateStartTime</span></code></a>(self)</p></td>
+<td><p>Reset the starting point for the computation of the running time.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Untitled'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Construct Workflow object with the given name and an <a class="reference internal" href="ikomia.dataprocess.registry.IkomiaRegistry.html#ikomia.dataprocess.registry.IkomiaRegistry" title="ikomia.dataprocess.registry.IkomiaRegistry"><code class="xref py py-class docutils literal notranslate"><span class="pre">IkomiaRegistry</span></code></a>
+object. The latter is used to instanciate algorithm from their unique name when added to the workflow. Thus,
+you are able to use any Ikomia algorithms (built-in and Marketplace) in your workflow.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.addInput">
+<span class="sig-name descname"><span class="pre">addInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)input</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.addInput" title="Permalink to this definition"></a></dt>
+<dd><p>Add global input to the workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input</strong> (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object) – input object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.add_task">
+<span class="sig-name descname"><span class="pre">add_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.add_task" title="Permalink to this definition"></a></dt>
+<dd><p>Add task identified by its unique name in the workflow. If the given task is not yet in the registry, it will be
+firstly downloaded and installed from the Marketplace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – algorithm unique name</p></li>
+<li><p><strong>param</strong> (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam" title="ikomia.core.pycore.CWorkflowTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskParam</span></code></a> or derived) – algorithm parameters</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1- unique task identifier 2- task object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pair (tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.clear" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all tasks and connections from the workflow. The workflow is thus empty after that.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.clearInputs">
+<span class="sig-name descname"><span class="pre">clearInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.clearInputs" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all inputs of the workflow.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.clearOutputData">
+<span class="sig-name descname"><span class="pre">clearOutputData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.clearOutputData" title="Permalink to this definition"></a></dt>
+<dd><p>Clear output data for all the tasks of the workflow.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.connect_tasks">
+<span class="sig-name descname"><span class="pre">connect_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.connect_tasks" title="Permalink to this definition"></a></dt>
+<dd><p>Connect two tasks of the workflow. Depending of the inputs/outputs configuration, multiple connections between
+the two tasks can be set. A connection is a pair (ie tuple) composed by the output index of the source task
+and the input index of the target task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>src</strong> (<em>int</em>) – source task identifier</p></li>
+<li><p><strong>target</strong> (<em>int</em>) – target task identifier</p></li>
+<li><p><strong>edges</strong> (<em>list of pair</em>) – connections. If <em>None</em> is passed, auto-connection is enabled so that the system will try to find the best connections automatically with respect to inputs and outputs data types.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.deleteEdge">
+<span class="sig-name descname"><span class="pre">deleteEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.deleteEdge" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the given connection/edge from the workflow. The identifier becomes invalid after this operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – edge identifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.deleteTask">
+<span class="sig-name descname"><span class="pre">deleteTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.deleteTask" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the given task from the workflow. The identifier becomes invalid after this operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – task identifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.exportGraphviz">
+<span class="sig-name descname"><span class="pre">exportGraphviz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.exportGraphviz" title="Permalink to this definition"></a></dt>
+<dd><p>Export the workflow structure as Graphviz <em>.dot</em> file.
+You can then visualize it with the <em>dot</em> command or with Graphviz Python package.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path where the <em>.dot</em> file is saved</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.find_task">
+<span class="sig-name descname"><span class="pre">find_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.find_task" title="Permalink to this definition"></a></dt>
+<dd><p>Get identifiers and instance of tasks with the given name in the workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – algorithm name</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the wanted task. If -1, the function returns all candidates.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1- task identifier 2- task object instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of pairs (tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getChildren">
+<span class="sig-name descname"><span class="pre">getChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getChildren" title="Permalink to this definition"></a></dt>
+<dd><p>Get child task identifiers of the task specified by the given identifier.
+Task connected to the outputs of a given task is designated as child or target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – task identifier on which to get childs</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>child identifiers</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_array_output">
+<span class="sig-name descname"><span class="pre">get_array_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_array_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get workflow ARRAY output(s) for the given task(s). You can either pass a unique task ID or a task name.
+In the latter case, several tasks of the workflow can match the name. The function will then return all
+corresponding outputs in a list. Moreover, a task can have multiple ARRAY outputs so the index (zero-based)
+argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output or list of outputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html#ikomia.dataprocess.pydataprocess.CArrayIO" title="ikomia.dataprocess.pydataprocess.CArrayIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CArrayIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_blob_measure_output">
+<span class="sig-name descname"><span class="pre">get_blob_measure_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_blob_measure_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get workflow BLOB MEASURE output(s) for the given task(s). You can either pass a unique task ID or a task name.
+In the latter case, several tasks of the workflow can match the name. The function will then return all
+corresponding outputs in a list. Moreover, a task can have multiple BLOB MEASURE outputs so the index (zero-based)
+argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output or list of outputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html#ikomia.dataprocess.pydataprocess.CBlobMeasureIO" title="ikomia.dataprocess.pydataprocess.CBlobMeasureIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CBlobMeasureIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_dataset_output">
+<span class="sig-name descname"><span class="pre">get_dataset_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_dataset_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get workflow DATASET output(s) for the given task(s). You can either pass a unique task ID or a task name.
+In the latter case, several tasks of the workflow can match the name. The function will then return all
+corresponding outputs in a list. Moreover, a task can have multiple DATASET outputs so the index (zero-based)
+argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output or list of outputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html#ikomia.dataprocess.pydataprocess.CDatasetIO" title="ikomia.dataprocess.pydataprocess.CDatasetIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CDatasetIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getEdgeInfo">
+<span class="sig-name descname"><span class="pre">getEdgeInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getEdgeInfo" title="Permalink to this definition"></a></dt>
+<dd><p>Get connection information (edge) from its unique identifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – edge identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pair composed by the output index of the source/parent task and the input index of the target/child task</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getEdgeSource">
+<span class="sig-name descname"><span class="pre">getEdgeSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getEdgeSource" title="Permalink to this definition"></a></dt>
+<dd><p>Get source/parent task identifier of a given edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – edge identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>task identifier</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>id (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getEdgeTarget">
+<span class="sig-name descname"><span class="pre">getEdgeTarget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getEdgeTarget" title="Permalink to this definition"></a></dt>
+<dd><p>Get target/child task identifier of a given edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – edge identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>task identifier</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>id (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getElapsedTimeTo">
+<span class="sig-name descname"><span class="pre">getElapsedTimeTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getElapsedTimeTo" title="Permalink to this definition"></a></dt>
+<dd><p>Get the workflow running time in milliseconds from the start to the given task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – task identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>elapsed time</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getFinalTasks">
+<span class="sig-name descname"><span class="pre">getFinalTasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getFinalTasks" title="Permalink to this definition"></a></dt>
+<dd><p>Get all final or leaf tasks of the workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>leaf task identifiers</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_graphics_output">
+<span class="sig-name descname"><span class="pre">get_graphics_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_graphics_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get workflow GRAPHICS output(s) for the given task(s). You can either pass a unique task ID or a task name.
+In the latter case, several tasks of the workflow can match the name. The function will then return all
+corresponding outputs in a list. Moreover, a task can have multiple GRAPHICS outputs so the index (zero-based)
+argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output or list of outputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsOutput</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_image">
+<span class="sig-name descname"><span class="pre">get_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_image" title="Permalink to this definition"></a></dt>
+<dd><p>Get image (numpy array) from a specific IMAGE output (by index) of the given task (by name or id).
+If task_name argument is given, the function returns images from all matching tasks. If index = -1,
+the function returns also images from all IMAGE outputs available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the IMAGE output.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result image(s).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Numpy array or list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_image_output">
+<span class="sig-name descname"><span class="pre">get_image_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_image_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get workflow IMAGE output(s) for the given task(s). You can either pass a unique task ID or a task name.
+In the latter case, several tasks of the workflow can match the name. The function will then return all
+corresponding outputs in a list. Moreover, a task can have multiple IMAGE outputs so the index (zero-based)
+argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output or list of outputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO" title="ikomia.dataprocess.pydataprocess.CImageIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_image_with_graphics">
+<span class="sig-name descname"><span class="pre">get_image_with_graphics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graphics_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_image_with_graphics" title="Permalink to this definition"></a></dt>
+<dd><p>Get image (numpy array) from a specific IMAGE output of the given task with graphics items burnt into it.
+Graphics items came from a specific GRAPHICS output of the same task. If task_name argument is given, the
+function returns images from all matching tasks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>image_index</strong> (<em>int</em>) – zero-based index of the IMAGE output.</p></li>
+<li><p><strong>graphics_index</strong> (<em>int</em>) – zero-based index of the GRAPHICS output.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result image(s).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Numpy array or list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getInEdges">
+<span class="sig-name descname"><span class="pre">getInEdges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getInEdges" title="Permalink to this definition"></a></dt>
+<dd><p>Get input connections (in-edges) of the task specified by the given identifier.
+Edge information can then be retrieved by the function <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.getEdgeInfo" title="ikomia.dataprocess.pydataprocess.CWorkflow.getEdgeInfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getEdgeInfo()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – task identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>edge identifiers</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_numeric_output">
+<span class="sig-name descname"><span class="pre">get_numeric_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_numeric_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get workflow NUMERIC output(s) for the given task(s). You can either pass a unique task ID or a task name.
+In the latter case, several tasks of the workflow can match the name. The function will then return all
+corresponding outputs in a list. Moreover, a task can have multiple NUMERIC outputs so the index (zero-based)
+argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output or list of outputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO" title="ikomia.dataprocess.pydataprocess.CNumericIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CNumericIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_data_string_output">
+<span class="sig-name descname"><span class="pre">get_data_string_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_data_string_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get workflow data string output(s) for the given task(s). You can either pass a unique task ID or a task name.
+In the latter case, several tasks of the workflow can match the name. The function will then return all
+corresponding outputs in a list. Moreover, a task can have multiple string outputs so the index (zero-based)
+argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output or list of outputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html#ikomia.dataprocess.pydataprocess.CDataStringIO" title="ikomia.dataprocess.pydataprocess.CDataStringIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CDataStringIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getOutEdges">
+<span class="sig-name descname"><span class="pre">getOutEdges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getOutEdges" title="Permalink to this definition"></a></dt>
+<dd><p>Get output connections (out-edges) of the task specified by the given identifier.
+Edge information can then be retrieved by the function <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.getEdgeInfo" title="ikomia.dataprocess.pydataprocess.CWorkflow.getEdgeInfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getEdgeInfo()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – task identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>edge identifiers</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getParents">
+<span class="sig-name descname"><span class="pre">getParents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getParents" title="Permalink to this definition"></a></dt>
+<dd><p>Get parent task identifiers of the task specified by the given identifier.
+Task connected to the inputs of a given task is designated as parent or source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – task identifier on which to get parents</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>parent identifiers</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_path_output">
+<span class="sig-name descname"><span class="pre">get_path_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_path_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get workflow PATH output(s) for the given task(s). You can either pass a unique task ID or a task name.
+In the latter case, several tasks of the workflow can match the name. The function will then return all
+corresponding outputs in a list. Moreover, a task can have multiple PATH outputs so the index (zero-based)
+argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output or list of outputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html#ikomia.dataprocess.pydataprocess.CPathIO" title="ikomia.dataprocess.pydataprocess.CPathIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPathIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getRequiredTasks">
+<span class="sig-name descname"><span class="pre">getRequiredTasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getRequiredTasks" title="Permalink to this definition"></a></dt>
+<dd><p>Get task names required to load and execute the given workflow file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path to the workflow file (JSON)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>task names</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getRootID">
+<span class="sig-name descname"><span class="pre">getRootID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getRootID" title="Permalink to this definition"></a></dt>
+<dd><p>Get unique identifier of the root node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>root node ID</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getRootTargetTypes">
+<span class="sig-name descname"><span class="pre">getRootTargetTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getRootTargetTypes" title="Permalink to this definition"></a></dt>
+<dd><p>Get all input data types of the tasks connected to the root node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>data types</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getTask">
+<span class="sig-name descname"><span class="pre">getTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CWorkflowTask</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getTask" title="Permalink to this definition"></a></dt>
+<dd><p>Get the task object from the given ID.
+Unique task identifiers can be retrieved with the functions <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.getTaskIDs" title="ikomia.dataprocess.pydataprocess.CWorkflow.getTaskIDs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getTaskIDs()</span></code></a> or <a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.find_task" title="ikomia.dataprocess.workflow.Workflow.find_task"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> object or derived</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getTaskCount">
+<span class="sig-name descname"><span class="pre">getTaskCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getTaskCount" title="Permalink to this definition"></a></dt>
+<dd><p>Get the number of tasks in the workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>task count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getTaskIDs">
+<span class="sig-name descname"><span class="pre">getTaskIDs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getTaskIDs" title="Permalink to this definition"></a></dt>
+<dd><p>Get the list of all task identifiers.
+You can then retrieve task object from ID with the function <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.getTask" title="ikomia.dataprocess.pydataprocess.CWorkflow.getTask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getTask()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_tasks">
+<span class="sig-name descname"><span class="pre">get_tasks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_tasks" title="Permalink to this definition"></a></dt>
+<dd><p>Get unique identifier and name for all tasks composing the workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of tuple (id (int), name (str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.get_time_metrics">
+<span class="sig-name descname"><span class="pre">get_time_metrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.get_time_metrics" title="Permalink to this definition"></a></dt>
+<dd><p>Get metrics around workflow execution time. This includes the total execution time of the workflow, and for
+each task, the execution time and the execution time from the start.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>metrics</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.getTotalElapsedTime">
+<span class="sig-name descname"><span class="pre">getTotalElapsedTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.getTotalElapsedTime" title="Permalink to this definition"></a></dt>
+<dd><p>Get the total workflow running time in milliseconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>elapsed time</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load a workflow previously saved as JSON file. Common usage is to use Ikomia Studio to create your workflow interactively and without code. With this method, it is very easy and fast to build your pipeline, visualize outputs on test data and save the workflow. But you can also create your workflow from scratch with this API and use the dedicated function <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.save" title="ikomia.dataprocess.pydataprocess.CWorkflow.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path of the JSON file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.removeInput">
+<span class="sig-name descname"><span class="pre">removeInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.removeInput" title="Permalink to this definition"></a></dt>
+<dd><p>Remove global workflow input at the given <em>index</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based index of the input to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.run" title="Permalink to this definition"></a></dt>
+<dd><p>Start workflow execution on global input. Each <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> object or derived
+must reimplement the <em>run()</em> function that will be called in the right order by the workflow. Please note that
+global inputs should be set before calling this function (see
+<a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.setInput" title="ikomia.dataprocess.pydataprocess.CWorkflow.setInput"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setInput()</span></code></a>,
+<a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_image_input" title="ikomia.dataprocess.workflow.Workflow.set_image_input"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_image_input()</span></code></a>,
+<a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_directory_input" title="ikomia.dataprocess.workflow.Workflow.set_directory_input"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_directory_input()</span></code></a>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.run_on">
+<span class="sig-name descname"><span class="pre">run_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.run_on" title="Permalink to this definition"></a></dt>
+<dd><p>Convenient function to run the workflow on common inputs. For more advanced use, please consult
+<a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow" title="ikomia.dataprocess.workflow.Workflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workflow</span></code></a>.
+See also <a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_image_input" title="ikomia.dataprocess.workflow.Workflow.set_image_input"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_image_input()</span></code></a>
+and <a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_directory_input" title="ikomia.dataprocess.workflow.Workflow.set_directory_input"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_directory_input()</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>Numpy array</em>) – image or generic array as numpy array</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – path to image (valid formats are those managed by OpenCV)</p></li>
+<li><p><strong>url</strong> (<em>str</em>) – URL to image file (valid formats are those managed by OpenCV)</p></li>
+<li><p><strong>folder</strong> (<em>str</em>) – image folder</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.setAutoSave">
+<span class="sig-name descname"><span class="pre">setAutoSave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)enable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.setAutoSave" title="Permalink to this definition"></a></dt>
+<dd><p>Activate/deactivate auto-save mode. If activated, outputs of each tasks of the workflow will be saved in the workflow output folder (see <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.setOutputFolder" title="ikomia.dataprocess.pydataprocess.CWorkflow.setOutputFolder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOutputFolder()</span></code></a> to set your custom folder). By default, outputs are saved in <em>user_folder/Ikomia/Workflows</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>enable</strong> (<em>bool</em>) – True or False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.set_directory_input">
+<span class="sig-name descname"><span class="pre">set_directory_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.set_directory_input" title="Permalink to this definition"></a></dt>
+<dd><p>Set folder as global input of the workflow. For image-based workflows, all images inside the directory
+(recursively) will be processed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>folder</strong> (<em>str</em>) – images folder</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based input index, if -1 a new input is added</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.set_image_input">
+<span class="sig-name descname"><span class="pre">set_image_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datatype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ikomia.core.pycore.IODataType.IMAGE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.set_image_input" title="Permalink to this definition"></a></dt>
+<dd><p>Set image as global input of the workflow. Image can be specified by a Numpy array, a path or an URL thanks to
+keyword arguments, you have to choose one of them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> – image input as Numpy array</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – image input as file path (valid formats are those managed by OpenCV)</p></li>
+<li><p><strong>url</strong> (<em>str</em>) – valid URL to image file (valid formats are those managed by OpenCV)</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based input index, if -1 a new input is added</p></li>
+<li><p><strong>datatype</strong> (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>) – image type</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.set_video_input">
+<span class="sig-name descname"><span class="pre">set_video_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datatype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ikomia.core.pycore.IODataType.VIDEO</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.set_video_input" title="Permalink to this definition"></a></dt>
+<dd><p>Set video as global input of the workflow. Video can be specified by a path or an URL thanks to
+keyword arguments, you have to choose one of them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – image input as file path (valid formats are those managed by OpenCV)</p></li>
+<li><p><strong>url</strong> (<em>str</em>) – valid URL to image file (valid formats are those managed by OpenCV)</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based input index, if -1 a new input is added</p></li>
+<li><p><strong>datatype</strong> (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>) – image type</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.setInput">
+<span class="sig-name descname"><span class="pre">setInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)new_sequence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.setInput" title="Permalink to this definition"></a></dt>
+<dd><p>Set workflow input at position <em>index</em>.
+If <em>index</em> is greater than the input count, the function adds the right number of inputs automatically.
+Derived class that handles common data type already exists: <a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO" title="ikomia.dataprocess.pydataprocess.CImageIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageIO</span></code></a>, <a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html#ikomia.dataprocess.pydataprocess.CVideoIO" title="ikomia.dataprocess.pydataprocess.CVideoIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CVideoIO</span></code></a>, <a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO" title="ikomia.dataprocess.pydataprocess.CNumericIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CNumericIO</span></code></a>, <a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput" title="ikomia.dataprocess.pydataprocess.CGraphicsInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a>, <a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html#ikomia.dataprocess.pydataprocess.CDatasetIO" title="ikomia.dataprocess.pydataprocess.CDatasetIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CDatasetIO</span></code></a>, <a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html#ikomia.dataprocess.pydataprocess.CPathIO" title="ikomia.dataprocess.pydataprocess.CPathIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPathIO</span></code></a>, <a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html#ikomia.dataprocess.pydataprocess.CArrayIO" title="ikomia.dataprocess.pydataprocess.CArrayIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CArrayIO</span></code></a>, <a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html#ikomia.dataprocess.pydataprocess.CBlobMeasureIO" title="ikomia.dataprocess.pydataprocess.CBlobMeasureIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CBlobMeasureIO</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> object or derived) – global input of the workflow</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index</p></li>
+<li><p><strong>new_sequence</strong> (<em>bool</em>) – True if it is a new input sequence, False if it is just a new frame of a video or camera stream</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.setOutputFolder">
+<span class="sig-name descname"><span class="pre">setOutputFolder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.setOutputFolder" title="Permalink to this definition"></a></dt>
+<dd><p>Set workflow output folder.
+If auto-save mode is activated (see <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.setAutoSave" title="ikomia.dataprocess.pydataprocess.CWorkflow.setAutoSave"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setAutoSave()</span></code></a>) outputs of each tasks of the workflow will be saved automatically in this folder. Behind the scene, each task implements a <em>save()</em> function that calls sequentially the <em>save()</em> function of all these outputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path to the desired directory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.set_parameters">
+<span class="sig-name descname"><span class="pre">set_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.set_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Set task parameters as a simple key-value dict.
+You can get parameters keys for each by calling:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">task_obj</span><span class="o">.</span><span class="n">getParam</span><span class="p">())</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – key-value pairs of parameters to modify.</p></li>
+<li><p><strong>task_id</strong> (<em>int</em>) – unique identifier of the task. See also <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code>.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – method <code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code> is used to retrieve corresponding task(s).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the wanted task. If -1, the function modifies all candidates parameters.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save the workflow as a JSON file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path where the JSON is saved</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.stop" title="Permalink to this definition"></a></dt>
+<dd><p>Stop workflow execution.Each <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> object or derived must reimplement the <em>stop()</em> function that will be called by the workflow. Depending on the process implementation, stop may not be instantaneous.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.updateStartTime">
+<span class="sig-name descname"><span class="pre">updateStartTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflow)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.updateStartTime" title="Permalink to this definition"></a></dt>
+<dd><p>Reset the starting point for the computation of the running time.
+This feature could be interesting if you want to process a list of images and monitor the time per image.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ikomia.dataprocess.workflow.html" class="btn btn-neutral float-left" title="Workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ikomia.dataprocess.displayIO.html" class="btn btn-neutral float-right" title="DisplayIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

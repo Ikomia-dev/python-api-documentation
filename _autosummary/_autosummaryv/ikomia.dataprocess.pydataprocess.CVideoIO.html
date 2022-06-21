@@ -1,45 +1,22 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>CVideoIO &mdash; Ikomia  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>CVideoIO &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CNumericIO" href="ikomia.dataprocess.pydataprocess.CNumericIO.html" />
@@ -49,17 +26,13 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #150E83" >
-          
 
-    <a href="../../index.html" class="icon icon-home"> Ikomia
+    <a href="../../index.html" class="icon icon-home"> Ikomia API
         
 
         
@@ -72,7 +45,7 @@
     
     
     <div class="version">
-        0.6.0
+        0.7.0
     </div>
     
     
@@ -93,8 +66,6 @@
 </div>
     
         </div>
-
-        
     <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
@@ -104,6 +75,7 @@
         
         <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -111,6 +83,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
@@ -118,6 +91,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">CVideoIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
@@ -141,6 +115,9 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
@@ -170,82 +147,36 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Ikomia</a>
-        
+          <a href="../../index.html">Ikomia API</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../modules.html">API Reference</a> &raquo;</li>
-        
           <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a> &raquo;</li>
-        
       <li>CVideoIO</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="ikomia.dataprocess.pydataprocess.CNumericIO.html" class="btn btn-neutral float-right" title="CNumericIO" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="ikomia.dataprocess.pydataprocess.CImageIO.html" class="btn btn-neutral float-left" title="CImageIO" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="ikomia.dataprocess.pydataprocess.CNumericIO.html" class="btn btn-neutral float-right" title="CNumericIO" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="cvideoio">
-<h1>CVideoIO<a class="headerlink" href="#cvideoio" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="cvideoio">
+<h1>CVideoIO<a class="headerlink" href="#cvideoio" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CVideoIO</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CVideoIO</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO" title="Permalink to this definition"></a></dt>
 <dd><p>Define an input or output for a task dedicated to video management. This class is designed to handle video and instance can be added as input or output to a <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> or derived object. It is the base class to define input or output of a video processing task. Several video output type can be defined according to the nature of the algorithm:</p>
 <ul class="simple">
 <li><p>binary video</p></li>
@@ -295,10 +226,10 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setVideoPos" title="ikomia.dataprocess.pydataprocess.CVideoIO.setVideoPos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVideoPos</span></code></a>(self, position)</p></td>
 <td><p>Set the current frame of the video.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.startVideo" title="ikomia.dataprocess.pydataprocess.CVideoIO.startVideo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startVideo</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.startVideo" title="ikomia.dataprocess.pydataprocess.CVideoIO.startVideo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startVideo</span></code></a>(arg1, self)</p></td>
 <td><p>Start playing the video.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.startVideoWrite" title="ikomia.dataprocess.pydataprocess.CVideoIO.startVideoWrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startVideoWrite</span></code></a>(arg1, arg2, arg3, arg4, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.startVideoWrite" title="ikomia.dataprocess.pydataprocess.CVideoIO.startVideoWrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startVideoWrite</span></code></a>(arg1, arg2, arg3, arg4, ...)</p></td>
 <td><p>Write the video to disk.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.stopVideo" title="ikomia.dataprocess.pydataprocess.CVideoIO.stopVideo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopVideo</span></code></a>(self)</p></td>
@@ -322,13 +253,16 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.clearData" title="ikomia.dataprocess.pydataprocess.CVideoIO.clearData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code></a>(self)</p></td>
 <td><p>Clear the current image at the current frame index.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getImage" title="ikomia.dataprocess.pydataprocess.CVideoIO.getImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImage</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.copyStaticData" title="ikomia.dataprocess.pydataprocess.CVideoIO.copyStaticData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copyStaticData</span></code></a>(arg1, self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.copyStaticData" title="ikomia.core.pycore.CWorkflowTaskIO.copyStaticData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">copyStaticData()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getImage" title="ikomia.dataprocess.pydataprocess.CVideoIO.getImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImage</span></code></a>(self)</p></td>
 <td><p>Get the image at the current frame index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getUnitElementCount" title="ikomia.dataprocess.pydataprocess.CVideoIO.getUnitElementCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnitElementCount</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getUnitElementCount" title="ikomia.dataprocess.pydataprocess.CVideoIO.getUnitElementCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnitElementCount</span></code></a>(self)</p></td>
 <td><p>Get the number of unit elements to process, ie the number of frames for a video.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CVideoIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CVideoIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
 <td><p>Check whether the video contains valid data.</p></td>
 </tr>
 </tbody>
@@ -340,40 +274,37 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.copyStaticData" title="ikomia.dataprocess.pydataprocess.CVideoIO.copyStaticData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copyStaticData</span></code></a>(arg1, self)</p></td>
-<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.copyStaticData" title="ikomia.core.pycore.CWorkflowTaskIO.copyStaticData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">copyStaticData()</span></code></a>.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">drawGraphics</span></code>(self, graphics)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">drawGraphics</span></code>(self, graphics)</p></td>
 <td><p>Draw given graphics items input in the image.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getChannelCount" title="ikomia.dataprocess.pydataprocess.CVideoIO.getChannelCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getChannelCount</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getChannelCount" title="ikomia.dataprocess.pydataprocess.CVideoIO.getChannelCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getChannelCount</span></code></a>(self)</p></td>
 <td><p>Get the static channel count information.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getData" title="ikomia.dataprocess.pydataprocess.CVideoIO.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getData" title="ikomia.dataprocess.pydataprocess.CVideoIO.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>(self)</p></td>
 <td><p>Get the image data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getOverlayMask" title="ikomia.dataprocess.pydataprocess.CVideoIO.getOverlayMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOverlayMask</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getOverlayMask" title="ikomia.dataprocess.pydataprocess.CVideoIO.getOverlayMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOverlayMask</span></code></a>(self)</p></td>
 <td><p>Get the overlay mask.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAutoInput</span></code>(self)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAutoInput</span></code>(self)</p></td>
 <td><p>Check whether input data from external source is mandatory.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.isOverlayAvailable" title="ikomia.dataprocess.pydataprocess.CVideoIO.isOverlayAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isOverlayAvailable</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.isOverlayAvailable" title="ikomia.dataprocess.pydataprocess.CVideoIO.isOverlayAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isOverlayAvailable</span></code></a>(self)</p></td>
 <td><p>Check whether the input/output have valid overlay mask or not</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setChannelCount" title="ikomia.dataprocess.pydataprocess.CVideoIO.setChannelCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setChannelCount</span></code></a>(self, nb)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setChannelCount" title="ikomia.dataprocess.pydataprocess.CVideoIO.setChannelCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setChannelCount</span></code></a>(self, nb)</p></td>
 <td><p>Set the channel count of the image data.This property holds the required channel count as a static information.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setCurrentImage" title="ikomia.dataprocess.pydataprocess.CVideoIO.setCurrentImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCurrentImage</span></code></a>(self, index)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setCurrentImage" title="ikomia.dataprocess.pydataprocess.CVideoIO.setCurrentImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCurrentImage</span></code></a>(self, index)</p></td>
 <td><p>Set the index of the current image (2D plane) from a volume (3D image data structure).</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDisplayable</span></code>(self, displayable)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDisplayable</span></code>(self, displayable)</p></td>
 <td><p>Make the output displayable or not in Ikomia Studio.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setImage" title="ikomia.dataprocess.pydataprocess.CVideoIO.setImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setImage</span></code></a>(self, image)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setImage" title="ikomia.dataprocess.pydataprocess.CVideoIO.setImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setImage</span></code></a>(self, image)</p></td>
 <td><p>Set the image</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setOverlayMask" title="ikomia.dataprocess.pydataprocess.CVideoIO.setOverlayMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOverlayMask</span></code></a>(self, mask)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setOverlayMask" title="ikomia.dataprocess.pydataprocess.CVideoIO.setOverlayMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOverlayMask</span></code></a>(self, mask)</p></td>
 <td><p>Set the associated overlay mask.</p></td>
 </tr>
 </tbody>
@@ -396,7 +327,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 <p class="rubric">Details</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(object)arg1</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
 <dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
@@ -450,6 +381,39 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 </dd>
 </dl>
 </dd>
+<dt>__init__( (object)arg1, (IODataType)arg2, (str)arg3) -&gt; None :</dt><dd><p>Construct a CVideoIO instance with the given data type and identification name. The data type must be one of these values:</p>
+<ul class="simple">
+<li><p>IODataType.IMAGE</p></li>
+<li><p>IODataType.IMAGE_BINARY</p></li>
+<li><p>IODataType.IMAGE_LABEL</p></li>
+<li><p>IODataType.VOLUME</p></li>
+<li><p>IODataType.VOLUME_BINARY</p></li>
+<li><p>IODataType.VOLUME_LABEL</p></li>
+</ul>
+<dl>
+<dt>Args:</dt><dd><p>arg1: self</p>
+<p>arg2 (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): data type</p>
+<p>arg3 (str): input or output name</p>
+</dd>
+</dl>
+</dd>
+<dt>__init__( (object)arg1, (IODataType)arg2, (str)arg3, (str)arg4) -&gt; None :</dt><dd><p>Construct a CImageIO instance with the given data type, identification name and video path . The data type must be one of these values:</p>
+<ul class="simple">
+<li><p>IODataType.IMAGE</p></li>
+<li><p>IODataType.IMAGE_BINARY</p></li>
+<li><p>IODataType.IMAGE_LABEL</p></li>
+<li><p>IODataType.VOLUME</p></li>
+<li><p>IODataType.VOLUME_BINARY</p></li>
+<li><p>IODataType.VOLUME_LABEL</p></li>
+</ul>
+<dl>
+<dt>Args:</dt><dd><p>arg1: self</p>
+<p>arg2 (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): data type</p>
+<p>arg3 (str): input or output name</p>
+<p>arg4 (str): video path</p>
+</dd>
+</dl>
+</dd>
 <dt>__init__( (object)arg1, (CVideoIO)arg2) -&gt; None :</dt><dd><p>Copy constructor</p>
 </dd>
 </dl>
@@ -457,7 +421,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.addVideoImage">
-<span class="sig-name descname"><span class="pre">addVideoImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em>, <em class="sig-param"><span class="pre">(object)image</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.addVideoImage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addVideoImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)image</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.addVideoImage" title="Permalink to this definition"></a></dt>
 <dd><p>Append image frame to the video.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -468,21 +432,21 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.clearData">
-<span class="sig-name descname"><span class="pre">clearData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.clearData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clearData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.clearData" title="Permalink to this definition"></a></dt>
 <dd><p>Clear the current image at the current frame index.</p>
 <p>clearData( (CVideoIO)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.copyStaticData">
-<span class="sig-name descname"><span class="pre">copyStaticData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)arg1</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.copyStaticData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">copyStaticData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.copyStaticData" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.copyStaticData" title="ikomia.core.pycore.CWorkflowTaskIO.copyStaticData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">copyStaticData()</span></code></a>.</p>
 <p>copyStaticData( (CVideoIO)arg1, (CWorkflowTaskIO)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.getChannelCount">
-<span class="sig-name descname"><span class="pre">getChannelCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getChannelCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getChannelCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getChannelCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the static channel count information. The method does not get the channel count property from the image data structure</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -496,7 +460,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.getCurrentPos">
-<span class="sig-name descname"><span class="pre">getCurrentPos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getCurrentPos" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getCurrentPos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getCurrentPos" title="Permalink to this definition"></a></dt>
 <dd><p>Get the current frame index of the video or stream.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -510,7 +474,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.getData">
-<span class="sig-name descname"><span class="pre">getData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getData" title="Permalink to this definition"></a></dt>
 <dd><p>Get the image data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -524,7 +488,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.getImage">
-<span class="sig-name descname"><span class="pre">getImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getImage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getImage" title="Permalink to this definition"></a></dt>
 <dd><p>Get the image at the current frame index.</p>
 <blockquote>
 <div><dl class="simple">
@@ -537,7 +501,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.getOverlayMask">
-<span class="sig-name descname"><span class="pre">getOverlayMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getOverlayMask" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOverlayMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getOverlayMask" title="Permalink to this definition"></a></dt>
 <dd><p>Get the overlay mask. See <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setOverlayMask" title="ikomia.dataprocess.pydataprocess.CVideoIO.setOverlayMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOverlayMask()</span></code></a> for more information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -551,7 +515,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.getSnapshot">
-<span class="sig-name descname"><span class="pre">getSnapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em>, <em class="sig-param"><span class="pre">(int)position</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getSnapshot" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getSnapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)position</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getSnapshot" title="Permalink to this definition"></a></dt>
 <dd><p>Get image of a single frame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -568,7 +532,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.getUnitElementCount">
-<span class="sig-name descname"><span class="pre">getUnitElementCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getUnitElementCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getUnitElementCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getUnitElementCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of unit elements to process, ie the number of frames for a video. Used to determine the number of steps for progress bar.</p>
 <blockquote>
 <div><dl class="simple">
@@ -581,7 +545,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.getVideoFrameCount">
-<span class="sig-name descname"><span class="pre">getVideoFrameCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getVideoFrameCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getVideoFrameCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getVideoFrameCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the total frames number of the video.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -595,7 +559,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.getVideoImages">
-<span class="sig-name descname"><span class="pre">getVideoImages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getVideoImages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getVideoImages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getVideoImages" title="Permalink to this definition"></a></dt>
 <dd><p>Get all image frames extracted from the video.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -609,7 +573,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.getVideoPath">
-<span class="sig-name descname"><span class="pre">getVideoPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getVideoPath" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getVideoPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.getVideoPath" title="Permalink to this definition"></a></dt>
 <dd><p>Get the path to the source video. It can be a file path, a device ID or an url.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -623,7 +587,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.hasVideo">
-<span class="sig-name descname"><span class="pre">hasVideo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.hasVideo" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">hasVideo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.hasVideo" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether the input or output has a video source.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -637,7 +601,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.isDataAvailable">
-<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.isDataAvailable" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether the video contains valid data.</p>
 <blockquote>
 <div><dl class="simple">
@@ -650,7 +614,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.isOverlayAvailable">
-<span class="sig-name descname"><span class="pre">isOverlayAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.isOverlayAvailable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isOverlayAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.isOverlayAvailable" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether the input/output have valid overlay mask or not</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -664,7 +628,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.setChannelCount">
-<span class="sig-name descname"><span class="pre">setChannelCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(int)nb</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setChannelCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setChannelCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)nb</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setChannelCount" title="Permalink to this definition"></a></dt>
 <dd><p>Set the channel count of the image data.This property holds the required channel count as a static information. Such information can be useful when one designs a workflow and wants to inform about specific image structure towards future connected tasks.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -675,7 +639,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.setCurrentImage">
-<span class="sig-name descname"><span class="pre">setCurrentImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setCurrentImage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setCurrentImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setCurrentImage" title="Permalink to this definition"></a></dt>
 <dd><p>Set the index of the current image (2D plane) from a volume (3D image data structure).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -686,7 +650,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.setImage">
-<span class="sig-name descname"><span class="pre">setImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(object)image</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setImage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)image</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setImage" title="Permalink to this definition"></a></dt>
 <dd><p>Set the image</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -697,7 +661,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.setOverlayMask">
-<span class="sig-name descname"><span class="pre">setOverlayMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(object)mask</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setOverlayMask" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOverlayMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)mask</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setOverlayMask" title="Permalink to this definition"></a></dt>
 <dd><p>Set the associated overlay mask. Ikomia software is able to display overlay mask on top of image. This method sets this mask, it will be displayed automatically according to a predefined color map. Zero pixels of the mask will be completely transparent, non-zero will be displayed according to the corresponding color in the color map. The color map must be defined in the task implementation. See <a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask.setOutputColorMap" title="ikomia.dataprocess.pydataprocess.C2dImageTask.setOutputColorMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOutputColorMap()</span></code></a> for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -708,7 +672,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.setVideoPath">
-<span class="sig-name descname"><span class="pre">setVideoPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em>, <em class="sig-param"><span class="pre">(str)path</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setVideoPath" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setVideoPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setVideoPath" title="Permalink to this definition"></a></dt>
 <dd><p>Set the source path of the video.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -719,7 +683,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.setVideoPos">
-<span class="sig-name descname"><span class="pre">setVideoPos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em>, <em class="sig-param"><span class="pre">(int)position</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setVideoPos" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setVideoPos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)position</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.setVideoPos" title="Permalink to this definition"></a></dt>
 <dd><p>Set the current frame of the video.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -730,31 +694,31 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.startVideo">
-<span class="sig-name descname"><span class="pre">startVideo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.startVideo" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">startVideo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.startVideo" title="Permalink to this definition"></a></dt>
 <dd><p>Start playing the video.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.startVideoWrite">
-<span class="sig-name descname"><span class="pre">startVideoWrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)arg1</span></em>, <em class="sig-param"><span class="pre">(int)arg2</span></em>, <em class="sig-param"><span class="pre">(int)arg3</span></em>, <em class="sig-param"><span class="pre">(int)arg4</span></em>, <em class="sig-param"><span class="pre">(int)arg5</span></em>, <em class="sig-param"><span class="pre">(int)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.startVideoWrite" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">startVideoWrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)arg2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)arg3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)arg4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)arg5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)arg6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.startVideoWrite" title="Permalink to this definition"></a></dt>
 <dd><p>Write the video to disk.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.stopVideo">
-<span class="sig-name descname"><span class="pre">stopVideo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.stopVideo" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stopVideo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.stopVideo" title="Permalink to this definition"></a></dt>
 <dd><p>Stop playing the video.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.stopVideoWrite">
-<span class="sig-name descname"><span class="pre">stopVideoWrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.stopVideoWrite" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stopVideoWrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.stopVideoWrite" title="Permalink to this definition"></a></dt>
 <dd><p>Stop writting to disk.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoIO.writeImage">
-<span class="sig-name descname"><span class="pre">writeImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CVideoIO)self</span></em>, <em class="sig-param"><span class="pre">(object)image</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.writeImage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">writeImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)image</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoIO.writeImage" title="Permalink to this definition"></a></dt>
 <dd><p>Append a new image to the list of images to write to disk. The write process is launched using <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoIO.startVideoWrite" title="ikomia.dataprocess.pydataprocess.CVideoIO.startVideoWrite"><code class="xref py py-meth docutils literal notranslate"><span class="pre">startVideoWrite()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -765,54 +729,37 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ikomia.dataprocess.pydataprocess.CNumericIO.html" class="btn btn-neutral float-right" title="CNumericIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ikomia.dataprocess.pydataprocess.CImageIO.html" class="btn btn-neutral float-left" title="CImageIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CNumericIO.html" class="btn btn-neutral float-right" title="CNumericIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Ikomia SAS.
-
-    </p>
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

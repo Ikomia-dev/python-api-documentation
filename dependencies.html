@@ -1,45 +1,22 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Dependencies management &mdash; Ikomia  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>Dependencies management &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Naming convention" href="naming.html" />
@@ -49,17 +26,13 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #150E83" >
-          
 
-    <a href="index.html" class="icon icon-home"> Ikomia
+    <a href="index.html" class="icon icon-home"> Ikomia API
         
 
         
@@ -72,7 +45,7 @@
     
     
     <div class="version">
-        0.6.0
+        0.7.0
     </div>
     
     
@@ -93,8 +66,6 @@
 </div>
     
         </div>
-
-        
     <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
@@ -118,6 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#examples">Examples</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -143,77 +115,32 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Ikomia</a>
-        
+          <a href="index.html">Ikomia API</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
-        
       <li>Dependencies management</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/dependencies.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="naming.html" class="btn btn-neutral float-right" title="Naming convention" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="python_env.html" class="btn btn-neutral float-left" title="Python environment" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="naming.html" class="btn btn-neutral float-right" title="Naming convention" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="dependencies-management">
-<h1>Dependencies management<a class="headerlink" href="#dependencies-management" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="dependencies-management">
+<h1>Dependencies management<a class="headerlink" href="#dependencies-management" title="Permalink to this headline"></a></h1>
 <p>As of any Python project, an Ikomia plugin may have some Python module dependencies.
 The philosophy behind Ikomia is to offer ready to use algorithms to users.
 From the plugin author perspective, it means that the plugin must include directives
@@ -225,17 +152,17 @@ and install dependencies automatically.</p>
 <p class="admonition-title">Note</p>
 <p>Before publishing plugins, authors must include the necessary requirements files.</p>
 </div>
-<div class="section" id="requirements-file-structure">
-<h2>Requirements file structure<a class="headerlink" href="#requirements-file-structure" title="Permalink to this headline">¶</a></h2>
+<section id="requirements-file-structure">
+<h2>Requirements file structure<a class="headerlink" href="#requirements-file-structure" title="Permalink to this headline"></a></h2>
 <p>Ikomia dependency management is fully based on pip. Please consult the pip official documentation
 to know about all features:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pip.pypa.io/en/stable/user_guide/">pip user guide</a></p></li>
 <li><p><a class="reference external" href="https://pip.pypa.io/en/stable/cli/pip_install/#requirements-file-format">requirements file format</a></p></li>
 </ul>
-</div>
-<div class="section" id="multi-steps-installation">
-<h2>Multi-steps installation<a class="headerlink" href="#multi-steps-installation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="multi-steps-installation">
+<h2>Multi-steps installation<a class="headerlink" href="#multi-steps-installation" title="Permalink to this headline"></a></h2>
 <p>In some cases, it could be necessary to split the installation process to force installation of dependencies
 prior to others. As such, Ikomia dependency system handles multiple requirements files
 and apply alphanumeric sort to define installation order. Authors can then insert several requirements file into the
@@ -257,9 +184,9 @@ plugin directory to solve dependencies issues.</p>
 </ul>
 <p>In this configuration, Ikomia software will first install Python packages listed in <em>requirements1.txt</em> and
 then those listed in the file <em>requirements2.txt</em>.</p>
-</div>
-<div class="section" id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline"></a></h2>
 <p>The standard way to manage dependencies in Python and its pip package installer is to provide a valid <em>setup.py</em> script.
 Then, Python package can either be distributed from Wheel or from source. For the moment, Ikomia software can only install
 dependencies available in the official Python Package Index (PyPI) or via a git repository. Support for manual installation
@@ -268,55 +195,38 @@ through direct call to <em>setup.py</em> script (setuptools) inside the plugin i
 <p class="admonition-title">Important</p>
 <p>While implementing your own algorithm, you may need to add dependencies with C extensions. So you should have installed on your own a valid C/C++ compiler for your system.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="naming.html" class="btn btn-neutral float-right" title="Naming convention" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="python_env.html" class="btn btn-neutral float-left" title="Python environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="naming.html" class="btn btn-neutral float-right" title="Naming convention" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Ikomia SAS.
-
-    </p>
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IkomiaRegistry &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Workflow" href="../ikomia.dataprocess.workflow.html" />
+    <link rel="prev" title="Registry" href="../ikomia.dataprocess.registry.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #150E83" >
+
+    <a href="../../index.html" class="icon icon-home"> Ikomia API
+        
+
+        
+        
+        <img src="../../_static/app.png" class="logo" alt="Logo" />
+        
+    </a>
+
+    
+    
+    
+    <div class="version">
+        0.7.0
+    </div>
+    
+    
+
+    <!-- Github button -->
+    <a href="https://github.com/Ikomia-dev/IkomiaApi" class="btn btn-neutral" title="GitHub Ikomia API" target="_blank" rel="noopener noreferrer">
+        <img id="github-logo" src="_static/GitHub-Mark-32px.png" alt="">
+        <span style="vertical-align:middle">GitHub</span>
+    </a>
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+    
+        </div>
+    <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+        
+        
+        
+        
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">IkomiaRegistry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+</ul>
+</li>
+</ul>
+
+        
+        
+    </div>
+
+    <!-- Social media icons -->
+    <div class="social-list">
+        <a class="social-item" href="https://fr.linkedin.com/company/ikomia" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-linkedin-square"></i>
+        </a>
+        <a class="social-item" href="https://twitter.com/IkomiaOfficial" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-twitter-square"></i>
+        </a>
+        <a class="social-item" href="https://www.youtube.com/channel/UC0nIasJy6f-b-f0SOEsBlQw" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-youtube-play"></i>
+        </a>
+    </div>
+    
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Ikomia API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../modules.html">API Reference</a> &raquo;</li>
+          <li><a href="../ikomia.dataprocess.registry.html">Registry</a> &raquo;</li>
+      <li>IkomiaRegistry</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/_autosummary/_autosummary/ikomia.dataprocess.registry.IkomiaRegistry.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../ikomia.dataprocess.registry.html" class="btn btn-neutral float-left" title="Registry" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ikomia.dataprocess.workflow.html" class="btn btn-neutral float-right" title="Workflow" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ikomiaregistry">
+<h1>IkomiaRegistry<a class="headerlink" href="#ikomiaregistry" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.registry.</span></span><span class="sig-name descname"><span class="pre">IkomiaRegistry</span></span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry" title="Permalink to this definition"></a></dt>
+<dd><p>Registry for all Ikomia algorithms (built-in and Marketplace). It stores all algorithms references and allows to
+install, update and instanciate any of these algorithms.
+Derived from <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html#ikomia.dataprocess.pydataprocess.CIkomiaRegistry" title="ikomia.dataprocess.pydataprocess.CIkomiaRegistry"><code class="xref py py-class docutils literal notranslate"><span class="pre">CIkomiaRegistry</span></code></a>.</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess.registry</span> <span class="kn">import</span> <span class="n">IkomiaRegistry</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.__init__" title="ikomia.dataprocess.registry.IkomiaRegistry.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.create_algorithm" title="ikomia.dataprocess.registry.IkomiaRegistry.create_algorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_algorithm</span></code></a>(name[, parameters])</p></td>
+<td><p>Instanciate algorithm from its unique name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.get_online_algorithms" title="ikomia.dataprocess.registry.IkomiaRegistry.get_online_algorithms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_online_algorithms</span></code></a>()</p></td>
+<td><p>Get the list of available algorithms from the Ikomia Marketplace.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.install_algorithm" title="ikomia.dataprocess.registry.IkomiaRegistry.install_algorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_algorithm</span></code></a>(name[, force])</p></td>
+<td><p>Launch algorithm installation from the Marketplace given its unique name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.update_algorithm" title="ikomia.dataprocess.registry.IkomiaRegistry.update_algorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_algorithm</span></code></a>(name)</p></td>
+<td><p>Launch update of the given algorithm.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.update_algorithms" title="ikomia.dataprocess.registry.IkomiaRegistry.update_algorithms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_algorithms</span></code></a>()</p></td>
+<td><p>Launch automatic update of all algorithms in the registry.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Inherited methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.getAlgorithms" title="ikomia.dataprocess.registry.IkomiaRegistry.getAlgorithms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAlgorithms</span></code></a>(self))</p></td>
+<td><p>Get all available algorithms from the Ikomia registry.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.getAlgorithmInfo" title="ikomia.dataprocess.registry.IkomiaRegistry.getAlgorithmInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAlgorithmInfo</span></code></a>(self, name)</p></td>
+<td><p>Get algorithm informations such as description, authors, documentation link...</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.getPluginsDirectory" title="ikomia.dataprocess.registry.IkomiaRegistry.getPluginsDirectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPluginsDirectory</span></code></a>(self)</p></td>
+<td><p>Get the current Ikomia plugins directory.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.registerTask" title="ikomia.dataprocess.registry.IkomiaRegistry.registerTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerTask</span></code></a>(self, factory)</p></td>
+<td><p>Add new algorithm factory to Ikomia registry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.setPluginsDirectory" title="ikomia.dataprocess.registry.IkomiaRegistry.setPluginsDirectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPluginsDirectory</span></code></a>(self, directory)</p></td>
+<td><p>Set directory where Ikomia plugins are stored.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.create_algorithm">
+<span class="sig-name descname"><span class="pre">create_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.create_algorithm" title="Permalink to this definition"></a></dt>
+<dd><p>Instanciate algorithm from its unique name. See <code class="xref py py-meth docutils literal notranslate"><span class="pre">getAlgorithms()</span></code> or
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">get_online_algorithms()</span></code> to get valid names.
+If algorithm is already in the registry, an object instance is directly returned. Otherwise,
+the function tries to install it from the Marketplace and add it to the registry if installation success.
+Finally the object instance is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – unique algorithm name</p></li>
+<li><p><strong>parameters</strong> (<em>CWorkflowTaskParam</em>) – initial parameters values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>algorithm instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> or derived</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.getAlgorithms">
+<span class="sig-name descname"><span class="pre">getAlgorithms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CIkomiaRegistry)self)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.getAlgorithms" title="Permalink to this definition"></a></dt>
+<dd><p>Get all available algorithms from the Ikomia registry.
+Before using an algorithm, you must instanciate it from its name using <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html#ikomia.dataprocess.pydataprocess.CIkomiaRegistry.createInstance" title="ikomia.dataprocess.pydataprocess.CIkomiaRegistry.createInstance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">createInstance()</span></code></a>.You can only instanciate algorithms whose name is in the returned list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of algorithm names</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.getAlgorithmInfo">
+<span class="sig-name descname"><span class="pre">getAlgorithmInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CIkomiaRegistry)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CTaskInfo</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.getAlgorithmInfo" title="Permalink to this definition"></a></dt>
+<dd><p>Get algorithm informations such as description, authors, documentation link…</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – algorithm name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>algorithm information</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskInfo.html#ikomia.dataprocess.pydataprocess.CTaskInfo" title="ikomia.dataprocess.pydataprocess.CTaskInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">CTaskInfo</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.get_online_algorithms">
+<span class="sig-name descname"><span class="pre">get_online_algorithms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.get_online_algorithms" title="Permalink to this definition"></a></dt>
+<dd><p>Get the list of available algorithms from the Ikomia Marketplace.
+Each algorithm is identified by a unique name.
+Each algorithm can then be instanciated from this name with the function
+<a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.create_algorithm" title="ikomia.dataprocess.registry.IkomiaRegistry.create_algorithm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_algorithm()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of algorithms information</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.getPluginsDirectory">
+<span class="sig-name descname"><span class="pre">getPluginsDirectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CIkomiaRegistry)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.getPluginsDirectory" title="Permalink to this definition"></a></dt>
+<dd><p>Get the current Ikomia plugins directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>full path to Ikomia plugins directory</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.registerTask">
+<span class="sig-name descname"><span class="pre">registerTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CIkomiaRegistry)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CTaskFactory)factory</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.registerTask" title="Permalink to this definition"></a></dt>
+<dd><p>Add new algorithm factory to Ikomia registry.
+Once registered, you are able to instanciate algorithm object and use it inside a workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>factory</strong> (<a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html#ikomia.dataprocess.pydataprocess.CTaskFactory" title="ikomia.dataprocess.pydataprocess.CTaskFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">CTaskFactory</span></code></a> based object) – task factory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.install_algorithm">
+<span class="sig-name descname"><span class="pre">install_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.install_algorithm" title="Permalink to this definition"></a></dt>
+<dd><p>Launch algorithm installation from the Marketplace given its unique name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – algorithm unique name</p></li>
+<li><p><strong>force</strong> (<em>bool</em>) – force package installation even if the algorithm is already installed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.setPluginsDirectory">
+<span class="sig-name descname"><span class="pre">setPluginsDirectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CIkomiaRegistry)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)directory</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.setPluginsDirectory" title="Permalink to this definition"></a></dt>
+<dd><p>Set directory where Ikomia plugins are stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>directory</strong> (<em>str</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.update_algorithm">
+<span class="sig-name descname"><span class="pre">update_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.update_algorithm" title="Permalink to this definition"></a></dt>
+<dd><p>Launch update of the given algorithm. It only concerns algorithms of the Marketplace.
+The function checks version compatibility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – algorithm unique name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.update_algorithms">
+<span class="sig-name descname"><span class="pre">update_algorithms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.update_algorithms" title="Permalink to this definition"></a></dt>
+<dd><p>Launch automatic update of all algorithms in the registry. It only concerns algorithms of the Marketplace.
+The function checks version compatibility.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ikomia.dataprocess.registry.html" class="btn btn-neutral float-left" title="Registry" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ikomia.dataprocess.workflow.html" class="btn btn-neutral float-right" title="Workflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,45 +1,22 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>CWorkflowTask &mdash; Ikomia  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>CWorkflowTask &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CWorkflowTaskWidget" href="ikomia.core.pycore.CWorkflowTaskWidget.html" />
@@ -49,17 +26,13 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #150E83" >
-          
 
-    <a href="../../index.html" class="icon icon-home"> Ikomia
+    <a href="../../index.html" class="icon icon-home"> Ikomia API
         
 
         
@@ -72,7 +45,7 @@
     
     
     <div class="version">
-        0.6.0
+        0.7.0
     </div>
     
     
@@ -93,8 +66,6 @@
 </div>
     
         </div>
-
-        
     <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
@@ -104,6 +75,7 @@
         
         <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -142,7 +114,11 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsConversion.html">CGraphicsConversion</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
@@ -172,82 +148,36 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Ikomia</a>
-        
+          <a href="../../index.html">Ikomia API</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../modules.html">API Reference</a> &raquo;</li>
-        
           <li><a href="../ikomia.core.pycore.html">PyCore</a> &raquo;</li>
-        
       <li>CWorkflowTask</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="ikomia.core.pycore.CWorkflowTaskWidget.html" class="btn btn-neutral float-right" title="CWorkflowTaskWidget" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="ikomia.core.pycore.TaskType.html" class="btn btn-neutral float-left" title="TaskType" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="ikomia.core.pycore.CWorkflowTaskWidget.html" class="btn btn-neutral float-right" title="CWorkflowTaskWidget" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="cworkflowtask">
-<h1>CWorkflowTask<a class="headerlink" href="#cworkflowtask" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="cworkflowtask">
+<h1>CWorkflowTask<a class="headerlink" href="#cworkflowtask" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CWorkflowTask</span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CWorkflowTask</span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask" title="Permalink to this definition"></a></dt>
 <dd><p>Base class for all tasks that aim to be executed in a workflow. It provides all basic mechanisms to handle inputs and outputs, task parameters and progress feedbacks. It also provides an interface through overridable methods to set a formal scope to design custom task. This interface allows the implementation of various image-based process. One can also use the derived classes of the API which cover basic needs for 2D image, volume (see <a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a>), or video (see <a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html#ikomia.dataprocess.pydataprocess.CVideoTask" title="ikomia.dataprocess.pydataprocess.CVideoTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CVideoTask</span></code></a>).</p>
 <p class="rubric">Import</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">CWorkflowTask</span>
@@ -320,32 +250,38 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getParam" title="ikomia.core.pycore.CWorkflowTask.getParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParam</span></code></a>(self)</p></td>
 <td><p>Get task parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="ikomia.core.pycore.CWorkflowTask.getProgressSteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProgressSteps</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getParamValues" title="ikomia.core.pycore.CWorkflowTask.getParamValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParamValues</span></code></a>(self)</p></td>
+<td><p>Get values of task parameters.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="ikomia.core.pycore.CWorkflowTask.getProgressSteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProgressSteps</span></code></a>(self)</p></td>
 <td><p>Get the number of progress steps when the system runs the task.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.globalInputChanged" title="ikomia.core.pycore.CWorkflowTask.globalInputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalInputChanged</span></code></a>(self, is_new_sequence)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.globalInputChanged" title="ikomia.core.pycore.CWorkflowTask.globalInputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalInputChanged</span></code></a>(self, is_new_sequence)</p></td>
 <td><p>Notify that the inputs of the workflow have changed.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.graphicsChanged" title="ikomia.core.pycore.CWorkflowTask.graphicsChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">graphicsChanged</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.graphicsChanged" title="ikomia.core.pycore.CWorkflowTask.graphicsChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">graphicsChanged</span></code></a>(self)</p></td>
 <td><p>Notify that graphics layers of input images have changed.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening" title="ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isGraphicsChangedListening</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening" title="ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isGraphicsChangedListening</span></code></a>(self)</p></td>
 <td><p>Check whether the task is listening to graphics changed event.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.parametersModified" title="ikomia.core.pycore.CWorkflowTask.parametersModified"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parametersModified</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.parametersModified" title="ikomia.core.pycore.CWorkflowTask.parametersModified"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parametersModified</span></code></a>(self)</p></td>
 <td><p>Notify that the task parameters have changed.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.removeInput" title="ikomia.core.pycore.CWorkflowTask.removeInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeInput</span></code></a>(self, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.removeInput" title="ikomia.core.pycore.CWorkflowTask.removeInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeInput</span></code></a>(self, index)</p></td>
 <td><p>Remove input at the given position.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(self)</p></td>
 <td><p>Run the task.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setActionFlag" title="ikomia.core.pycore.CWorkflowTask.setActionFlag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActionFlag</span></code></a>(self, action, is_enable)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setActionFlag" title="ikomia.core.pycore.CWorkflowTask.setActionFlag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActionFlag</span></code></a>(self, action, is_enable)</p></td>
 <td><p>Enable or disable the given action.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setActive" title="ikomia.core.pycore.CWorkflowTask.setActive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActive</span></code></a>(self, is_active)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setActive" title="ikomia.core.pycore.CWorkflowTask.setActive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActive</span></code></a>(self, is_active)</p></td>
 <td><p>Set the active state of the task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setAutoSave" title="ikomia.core.pycore.CWorkflowTask.setAutoSave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAutoSave</span></code></a>(self, enable)</p></td>
+<td><p>Enable/disable auto-save mode.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setInput" title="ikomia.core.pycore.CWorkflowTask.setInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInput</span></code></a>(self, input, index, is_new_sequence)</p></td>
 <td><p>Set input at position index with the given one.</p></td>
@@ -365,14 +301,26 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutputs" title="ikomia.core.pycore.CWorkflowTask.setOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputs</span></code></a>(self, outputs)</p></td>
 <td><p>Set the whole list of outputs with the given one.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setParam" title="ikomia.core.pycore.CWorkflowTask.setParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParam</span></code></a>(self, param)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutputFolder" title="ikomia.core.pycore.CWorkflowTask.setOutputFolder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputFolder</span></code></a>(self, folder)</p></td>
+<td><p>Set the output folder of the task when auto-save mode is enabled (see <a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setAutoSave" title="ikomia.core.pycore.CWorkflowTask.setAutoSave"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setAutoSave()</span></code></a>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setParam" title="ikomia.core.pycore.CWorkflowTask.setParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParam</span></code></a>(self, param)</p></td>
 <td><p>Set the task parameters object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setParamValues" title="ikomia.core.pycore.CWorkflowTask.setParamValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParamValues</span></code></a>(self, values)</p></td>
+<td><p>Set values of task parameters.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.stop" title="ikomia.core.pycore.CWorkflowTask.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
 <td><p>Notify that the task is requested to stop.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.updateStaticOutputs" title="ikomia.core.pycore.CWorkflowTask.updateStaticOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateStaticOutputs</span></code></a>(self)</p></td>
 <td><p>Updates the static information deduced from inputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.workflowStarted" title="ikomia.core.pycore.CWorkflowTask.workflowStarted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflowStarted</span></code></a>(self)</p></td>
+<td><p>Notify that the workflow executing the task is started.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.workflowFinished" title="ikomia.core.pycore.CWorkflowTask.workflowFinished"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflowFinished</span></code></a>(self)</p></td>
+<td><p>Notify that the workflow executing the task is started.</p></td>
 </tr>
 </tbody>
 </table>
@@ -394,16 +342,15 @@
 <p class="rubric">Details</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(object)arg1</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
 <dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
 <dt>__init__( (object)arg1, (str)arg2) -&gt; None :</dt><dd><p>Construct CWorkflowTask object with the given task name.</p>
-<dl>
-<dt>Args:</dt><dd><p>arg1: self</p>
-<p>arg2 (str): task name, must be unique</p>
-</dd>
-</dl>
+<p>Args:</p>
+<blockquote>
+<div><p>name (str): task name, must be unique</p>
+</div></blockquote>
 </dd>
 <dt>__init__( (object)arg1, (CWorkflowTask)arg2) -&gt; None :</dt><dd><p>Copy constructor</p>
 </dd>
@@ -412,89 +359,89 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.addInput">
-<span class="sig-name descname"><span class="pre">addInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)input</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.addInput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)input</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.addInput" title="Permalink to this definition"></a></dt>
 <dd><p>Add new input to the task.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>input: <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>input (<a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object): input object</p>
+</div></blockquote>
 </div></blockquote>
 <p>addInput( (CWorkflowTask)self, (CWorkflowTaskIO)input) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.addOutput">
-<span class="sig-name descname"><span class="pre">addOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)output</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.addOutput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)output</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.addOutput" title="Permalink to this definition"></a></dt>
 <dd><p>Add new output to the task.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>output: <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>output (<a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object): output object</p>
+</div></blockquote>
 </div></blockquote>
 <p>addOutput( (CWorkflowTask)self, (CWorkflowTaskIO)output) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.beginTaskRun">
-<span class="sig-name descname"><span class="pre">beginTaskRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.beginTaskRun" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">beginTaskRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.beginTaskRun" title="Permalink to this definition"></a></dt>
 <dd><p>Perform all initialization stuff before running the task. This method can be overriden to put custom initialization steps. In this case, don’t forget to call the base class method. This method must be the first call of the <a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> method.</p>
 <p>beginTaskRun( (CWorkflowTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps">
-<span class="sig-name descname"><span class="pre">emitAddSubProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)count</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">emitAddSubProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)count</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps" title="Permalink to this definition"></a></dt>
 <dd><p>Send event to add or remove progress steps to the progress bar.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>count</strong> (<em>int</em>) – positive value to add steps, negative value to remove steps.</p>
+<dd class="field-odd"><p><strong>count</strong> (<em>int</em>) – positive value to add steps, negative value to remove steps</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.emitGraphicsContextChanged">
-<span class="sig-name descname"><span class="pre">emitGraphicsContextChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.emitGraphicsContextChanged" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">emitGraphicsContextChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.emitGraphicsContextChanged" title="Permalink to this definition"></a></dt>
 <dd><p>Send event to notify that graphics context has changed inside the task and display has to be updated.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.emitOutputChanged">
-<span class="sig-name descname"><span class="pre">emitOutputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.emitOutputChanged" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">emitOutputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.emitOutputChanged" title="Permalink to this definition"></a></dt>
 <dd><p>Send event to notify that some outputs have changed and that display must be updated.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.emitStepProgress">
-<span class="sig-name descname"><span class="pre">emitStepProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.emitStepProgress" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">emitStepProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.emitStepProgress" title="Permalink to this definition"></a></dt>
 <dd><p>Send step event to notify progress bar system.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.endTaskRun">
-<span class="sig-name descname"><span class="pre">endTaskRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.endTaskRun" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">endTaskRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.endTaskRun" title="Permalink to this definition"></a></dt>
 <dd><p>Performs all finalization stuff after running the task. This method can be overriden to put custom finalization steps. In this case, don’t forget to call the base class method. This method must be the last call of the <a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> method.</p>
 <p>endTaskRun( (CWorkflowTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.executeActions">
-<span class="sig-name descname"><span class="pre">executeActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)action</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.executeActions" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">executeActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)action</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.executeActions" title="Permalink to this definition"></a></dt>
 <dd><p>Execute actions according to the specific defined behavior. In this base class, the method does nothing.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>action: see <a class="reference internal" href="ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a> for possible values</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>action (<a class="reference internal" href="ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a>)</p>
+</div></blockquote>
 </div></blockquote>
 <p>executeActions( (CWorkflowTask)self, (int)action) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getElapsedTime">
-<span class="sig-name descname"><span class="pre">getElapsedTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">float</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getElapsedTime" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getElapsedTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getElapsedTime" title="Permalink to this definition"></a></dt>
 <dd><p>Get the time of the last execution in milliseconds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -508,21 +455,24 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getInput">
-<span class="sig-name descname"><span class="pre">getInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getInput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getInput" title="Permalink to this definition"></a></dt>
 <dd><p>Get input at position index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – input index</p>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+<dd class="field-even"><p>input object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getInputCount">
-<span class="sig-name descname"><span class="pre">getInputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getInputCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getInputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getInputCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of inputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -536,7 +486,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getInputDataType">
-<span class="sig-name descname"><span class="pre">getInputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">IODataType</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getInputDataType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getInputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">IODataType</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getInputDataType" title="Permalink to this definition"></a></dt>
 <dd><p>Get input data type at position index. This data type can differ from the original type because it can change at runtime according to the data source.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -553,53 +503,50 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getInputs">
-<span class="sig-name descname"><span class="pre">getInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getInputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getInputs" title="Permalink to this definition"></a></dt>
 <dd><p>Get the whole list of inputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
+<dd class="field-odd"><p>input objects</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list</p>
+<dd class="field-even"><p>list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getOutput">
-<span class="sig-name descname"><span class="pre">getOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getOutput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getOutput" title="Permalink to this definition"></a></dt>
 <dd><p>Get output at position index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – output index</p>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based output index</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+<dd class="field-even"><p>output object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getOutputCount">
-<span class="sig-name descname"><span class="pre">getOutputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getOutputCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOutputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getOutputCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of outputs.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>outputs count</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
+<p>Returns:
+¬   int: outputs count</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getOutputDataType">
-<span class="sig-name descname"><span class="pre">getOutputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">IODataType</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getOutputDataType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOutputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">IODataType</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getOutputDataType" title="Permalink to this definition"></a></dt>
 <dd><p>Get output data type at position index. This data type can differ from the original type because it can change at runtime according to the data source.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based output index</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>output data type</p>
@@ -612,119 +559,125 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getOutputs">
-<span class="sig-name descname"><span class="pre">getOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getOutputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getOutputs" title="Permalink to this definition"></a></dt>
 <dd><p>Get the whole list of outputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
+<dd class="field-odd"><p>output objects</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list</p>
+<dd class="field-even"><p>list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getParam">
-<span class="sig-name descname"><span class="pre">getParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">CWorkflowTaskParam</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getParam" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CWorkflowTaskParam</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getParam" title="Permalink to this definition"></a></dt>
 <dd><p>Get task parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam" title="ikomia.core.pycore.CWorkflowTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskParam</span></code></a> based object</p>
+<dd class="field-odd"><p>parameter object</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam" title="ikomia.core.pycore.CWorkflowTaskParam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskParam</span></code></a> based object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getParamValues">
+<span class="sig-name descname"><span class="pre">getParamValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ParamMap</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getParamValues" title="Permalink to this definition"></a></dt>
+<dd><p>Get values of task parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dict-like structure of string pairs (parameter name, value)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ikomia.core.pycore.ParamMap.html#ikomia.core.pycore.ParamMap" title="ikomia.core.pycore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.getProgressSteps">
-<span class="sig-name descname"><span class="pre">getProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of progress steps when the system runs the task.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>int: steps count</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>int: steps count</p>
+</div></blockquote>
 </div></blockquote>
 <p>getProgressSteps( (CWorkflowTask)self) -&gt; int</p>
-<dl>
-<dt>getProgressSteps( (CWorkflowTask)self, (int)unit_elt_count) -&gt; int :</dt><dd><p>Get the number of progress steps when the systems runs the task. It takes into account the number of unit element to process.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>unit_elt_count (int): unit elements count. See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> for more details.</p>
-</dd>
-<dt>Returns:</dt><dd><p>int: steps count</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>getProgressSteps( (CWorkflowTask)self, (int)unit_elt_count) -&gt; int</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.globalInputChanged">
-<span class="sig-name descname"><span class="pre">globalInputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(bool)is_new_sequence</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.globalInputChanged" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">globalInputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_new_sequence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.globalInputChanged" title="Permalink to this definition"></a></dt>
 <dd><p>Notify that the inputs of the workflow have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>is_new_sequence (bool): True if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
+</div></blockquote>
 </div></blockquote>
 <p>globalInputChanged( (CWorkflowTask)self, (bool)is_new_sequence) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.graphicsChanged">
-<span class="sig-name descname"><span class="pre">graphicsChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.graphicsChanged" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">graphicsChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.graphicsChanged" title="Permalink to this definition"></a></dt>
 <dd><p>Notify that graphics layers of input images have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
 <p>graphicsChanged( (CWorkflowTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening">
-<span class="sig-name descname"><span class="pre">isGraphicsChangedListening</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isGraphicsChangedListening</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether the task is listening to graphics changed event.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>bool: True or False</p>
+</div></blockquote>
 </div></blockquote>
 <p>isGraphicsChangedListening( (CWorkflowTask)self) -&gt; bool</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.parametersModified">
-<span class="sig-name descname"><span class="pre">parametersModified</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.parametersModified" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">parametersModified</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.parametersModified" title="Permalink to this definition"></a></dt>
 <dd><p>Notify that the task parameters have changed. This method can be overriden to implement custom actions when this event happens. The method does nothing in this base class.</p>
 <p>parametersModified( (CWorkflowTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.removeInput">
-<span class="sig-name descname"><span class="pre">removeInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.removeInput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">removeInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.removeInput" title="Permalink to this definition"></a></dt>
 <dd><p>Remove input at the given position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> – zero-based input index</p>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – zero-based input index</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.run" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.run" title="Permalink to this definition"></a></dt>
 <dd><p>Run the task. It’s where the main process of the task has to be implemented. In this base class, the method just forwards the inputs to outputs. It has to be overriden in derived class.</p>
 <p>run( (CWorkflowTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setActionFlag">
-<span class="sig-name descname"><span class="pre">setActionFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(ActionFlag)action</span></em>, <em class="sig-param"><span class="pre">(bool)is_enable</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setActionFlag" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setActionFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ActionFlag)action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_enable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setActionFlag" title="Permalink to this definition"></a></dt>
 <dd><p>Enable or disable the given action. If the action does not exist, it is added to the list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>action</strong> – action to enable or disable, see <a class="reference internal" href="ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a> for possible values</p></li>
+<li><p><strong>action</strong> (<a class="reference internal" href="ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a>) – action to enable or disable</p></li>
 <li><p><strong>is_enable</strong> (<em>bool</em>) – True or False</p></li>
 </ul>
 </dd>
@@ -733,104 +686,126 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setActive">
-<span class="sig-name descname"><span class="pre">setActive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(bool)is_active</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setActive" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setActive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_active</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setActive" title="Permalink to this definition"></a></dt>
 <dd><p>Set the active state of the task. The active task is the one selected in the workflow, thus, user has access to parameters and can visualize results associated with the task.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>is_active: True or False</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>is_active (bool): True or False</p>
+</div></blockquote>
 </div></blockquote>
 <p>setActive( (CWorkflowTask)self, (bool)is_active) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setInput">
-<span class="sig-name descname"><span class="pre">setInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)input</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em>, <em class="sig-param"><span class="pre">(bool)is_new_sequence</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set input at position index with the given one. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the input at position index.</p>
-<blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>input: <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
-<p>index (int): zero-based input index</p>
-<p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setAutoSave">
+<span class="sig-name descname"><span class="pre">setAutoSave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)enable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setAutoSave" title="Permalink to this definition"></a></dt>
+<dd><p>Enable/disable auto-save mode. When this mode is enabled, task outputs are automatically save to disk when the run() function is executed. Save formats are already defined for all builtin I/O objects. For custom I/O object, one must implement:py:meth:<cite>~ikomia.core.pycore.CWorkflowTaskIO.load</cite> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code> methods. Output folder can be set with <a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutputFolder" title="ikomia.core.pycore.CWorkflowTask.setOutputFolder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOutputFolder()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>enable</strong> (<em>bool</em>) – True to enable, False to disable</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setInput">
+<span class="sig-name descname"><span class="pre">setInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_new_sequence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setInput" title="Permalink to this definition"></a></dt>
+<dd><p>Set input at position index with the given one. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the input at position index.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>input_tot (<a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object)</p>
+<p>index (int): zero-based input index</p>
+<p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
+</div></blockquote>
 </div></blockquote>
 <p>setInput( (CWorkflowTask)self, (CWorkflowTaskIO)input, (int)index, (bool)is_new_sequence) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setInputDataType">
-<span class="sig-name descname"><span class="pre">setInputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(IODataType)data_type</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setInputDataType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(IODataType)data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setInputDataType" title="Permalink to this definition"></a></dt>
 <dd><p>Set the data type for the input at position index. If the input at position index does not exist, the function creates as many generic inputs to reach the number of index+1 and sets the data type for the input at position index.</p>
 <blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>data_type (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): input data type</p>
+<div><p>Args:</p>
+<blockquote>
+<div><p>data_type (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): input data type</p>
 <p>index (int): zero-based input index</p>
-</dd>
-</dl>
+</div></blockquote>
 </div></blockquote>
 <p>setInputDataType( (CWorkflowTask)self, (IODataType)data_type, (int)index) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setInputs">
-<span class="sig-name descname"><span class="pre">setInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(object)inputs</span></em>, <em class="sig-param"><span class="pre">(bool)is_new_sequence</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setInputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_new_sequence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setInputs" title="Permalink to this definition"></a></dt>
 <dd><p>Set the whole list of inputs with the given one.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>inputs (list): list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects
-is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>inputs (list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects)</p>
+<p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence)</p>
+</div></blockquote>
 </div></blockquote>
 <p>setInputs( (CWorkflowTask)self, (object)inputs, (bool)is_new_sequence) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setOutput">
-<span class="sig-name descname"><span class="pre">setOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)output</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setOutput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setOutput" title="Permalink to this definition"></a></dt>
 <dd><p>Set output at position index with the given one. If the output at position index does not exist, the function creates as many generic outputs to reach the number of index+1 and sets the output at position index.</p>
 <blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>output: <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+<div><p>Args:</p>
+<blockquote>
+<div><p>output (<a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object)</p>
 <p>index (int): zero-based output index</p>
-</dd>
-</dl>
+</div></blockquote>
 </div></blockquote>
 <p>setOutput( (CWorkflowTask)self, (CWorkflowTaskIO)output, (int)index) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setOutputDataType">
-<span class="sig-name descname"><span class="pre">setOutputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(IODataType)data_type</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setOutputDataType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOutputDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(IODataType)data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setOutputDataType" title="Permalink to this definition"></a></dt>
 <dd><p>Set the data type for the output at position index. If the output at position index does not exist, the function creates as many generic outputs to reach the number of index+1 and sets the data type for the output at position index.</p>
 <blockquote>
-<div><dl>
-<dt>Args:</dt><dd><p>data_type (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): output data type</p>
+<div><p>Args:</p>
+<blockquote>
+<div><p>data_type (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): output data type</p>
 <p>index (int): zero-based output index</p>
-</dd>
-</dl>
+</div></blockquote>
 </div></blockquote>
 <p>setOutputDataType( (CWorkflowTask)self, (IODataType)data_type, (int)index) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setOutputs">
-<span class="sig-name descname"><span class="pre">setOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(object)outputs</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setOutputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)outputs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setOutputs" title="Permalink to this definition"></a></dt>
 <dd><p>Set the whole list of outputs with the given one.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>outputs (list): list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>outputs (list of <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based objects)</p>
+</div></blockquote>
 </div></blockquote>
 <p>setOutputs( (CWorkflowTask)self, (object)outputs) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setOutputFolder">
+<span class="sig-name descname"><span class="pre">setOutputFolder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)folder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setOutputFolder" title="Permalink to this definition"></a></dt>
+<dd><p>Set the output folder of the task when auto-save mode is enabled (see <a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setAutoSave" title="ikomia.core.pycore.CWorkflowTask.setAutoSave"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setAutoSave()</span></code></a>). Default is the current user home folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>str</strong> – path to folder</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setParam">
-<span class="sig-name descname"><span class="pre">setParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskParam)param</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setParam" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskParam)param</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setParam" title="Permalink to this definition"></a></dt>
 <dd><p>Set the task parameters object. Task can have only one parameters object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -840,69 +815,77 @@ is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame o
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.setParamValues">
+<span class="sig-name descname"><span class="pre">setParamValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ParamMap)values</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.setParamValues" title="Permalink to this definition"></a></dt>
+<dd><p>Set values of task parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>values</strong> (<a class="reference internal" href="ikomia.core.pycore.ParamMap.html#ikomia.core.pycore.ParamMap" title="ikomia.core.pycore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a>) – dict-like structure of string pairs (parameter name, value)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.stop">
-<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.stop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.stop" title="Permalink to this definition"></a></dt>
 <dd><p>Notify that the task is requested to stop. It is higly recommended to manage this stop event and override the method for time-consuming task. Base class implementation must be called before any other instructions.</p>
 <p>stop( (CWorkflowTask)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.updateStaticOutputs">
-<span class="sig-name descname"><span class="pre">updateStaticOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTask)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.updateStaticOutputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">updateStaticOutputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.updateStaticOutputs" title="Permalink to this definition"></a></dt>
 <dd><p>Updates the static information deduced from inputs. The static data corresponds to all data that can be deduced without the runtime context. This method is called each time inputs changed.</p>
 <p>updateStaticOutputs( (CWorkflowTask)self) -&gt; None</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.workflowStarted">
+<span class="sig-name descname"><span class="pre">workflowStarted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.workflowStarted" title="Permalink to this definition"></a></dt>
+<dd><p>Notify that the workflow executing the task is started. The function is called before the run() function of each task.The function can be overriden in child classes to manage custom actions.</p>
+<p>workflowStarted( (CWorkflowTask)self) -&gt; None</p>
 </dd></dl>
 
-</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.workflowFinished">
+<span class="sig-name descname"><span class="pre">workflowFinished</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.workflowFinished" title="Permalink to this definition"></a></dt>
+<dd><p>Notify that the workflow executing the task is started. The function is called before the run() function of each task.The function can be overriden in child classes to manage custom actions.</p>
+<p>workflowFinished( (CWorkflowTask)self) -&gt; None</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ikomia.core.pycore.CWorkflowTaskWidget.html" class="btn btn-neutral float-right" title="CWorkflowTaskWidget" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ikomia.core.pycore.TaskType.html" class="btn btn-neutral float-left" title="TaskType" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.core.pycore.CWorkflowTaskWidget.html" class="btn btn-neutral float-right" title="CWorkflowTaskWidget" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Ikomia SAS.
-
-    </p>
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

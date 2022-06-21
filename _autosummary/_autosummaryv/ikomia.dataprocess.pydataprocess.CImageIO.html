@@ -1,45 +1,22 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>CImageIO &mdash; Ikomia  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>CImageIO &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CVideoIO" href="ikomia.dataprocess.pydataprocess.CVideoIO.html" />
@@ -49,17 +26,13 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #150E83" >
-          
 
-    <a href="../../index.html" class="icon icon-home"> Ikomia
+    <a href="../../index.html" class="icon icon-home"> Ikomia API
         
 
         
@@ -72,7 +45,7 @@
     
     
     <div class="version">
-        0.6.0
+        0.7.0
     </div>
     
     
@@ -93,8 +66,6 @@
 </div>
     
         </div>
-
-        
     <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
@@ -104,6 +75,7 @@
         
         <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -111,6 +83,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
@@ -118,6 +91,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">CImageIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
@@ -141,6 +115,9 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
@@ -170,82 +147,36 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Ikomia</a>
-        
+          <a href="../../index.html">Ikomia API</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../modules.html">API Reference</a> &raquo;</li>
-        
           <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a> &raquo;</li>
-        
       <li>CImageIO</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="ikomia.dataprocess.pydataprocess.CVideoIO.html" class="btn btn-neutral float-right" title="CVideoIO" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html" class="btn btn-neutral float-left" title="CWidgetFactory" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="ikomia.dataprocess.pydataprocess.CVideoIO.html" class="btn btn-neutral float-right" title="CVideoIO" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="cimageio">
-<h1>CImageIO<a class="headerlink" href="#cimageio" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="cimageio">
+<h1>CImageIO<a class="headerlink" href="#cimageio" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CImageIO</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CImageIO</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO" title="Permalink to this definition"></a></dt>
 <dd><p>Define input or output for a task dedicated to image processing (2D or 3D). This class is designed to handle image as input or output. A CImageIO instance can be added as input or output to a <a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> or derived object. It is the base class to define input or output of an image processing task. Several image data type can be defined according to the nature of the algorithm:</p>
 <ul class="simple">
 <li><p>binary image</p></li>
@@ -322,6 +253,12 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageIO.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CImageIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
 <td><p>Check whether the input/output have valid image or not.</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageIO.load" title="ikomia.dataprocess.pydataprocess.CImageIO.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(self, path)</p></td>
+<td><p>Load image IO data from image file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageIO.save" title="ikomia.dataprocess.pydataprocess.CImageIO.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(self, path)</p></td>
+<td><p>Save image IO data to file.</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Inherited methods</p>
@@ -357,7 +294,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 <p class="rubric">Details</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(object)arg1</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
 <dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
@@ -411,7 +348,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 </dd>
 </dl>
 </dd>
-<dt>__init__( (object)arg1, (IODataType)arg2, (str)arg3) -&gt; None :</dt><dd><p>Construct a CImageIO instance with the given data type, name and the image loaded from the given path. The data type must be one of these values:</p>
+<dt>__init__( (object)arg1, (IODataType)arg2, (str)arg3) -&gt; None :</dt><dd><p>Construct a CImageIO instance with the given data type and identification name. The data type must be one of these values:</p>
 <ul class="simple">
 <li><p>IODataType.IMAGE</p></li>
 <li><p>IODataType.IMAGE_BINARY</p></li>
@@ -427,7 +364,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 </dd>
 </dl>
 </dd>
-<dt>__init__( (object)arg1, (IODataType)arg2, (str)arg3, (str)arg4) -&gt; None :</dt><dd><p>Construct a CImageIO instance with the given data type, name and the image loaded from the given path. The data type must be one of these values:</p>
+<dt>__init__( (object)arg1, (IODataType)arg2, (str)arg3, (str)arg4) -&gt; None :</dt><dd><p>Construct a CImageIO instance with the given data type, identification name and the image loaded from the given path. The data type must be one of these values:</p>
 <ul class="simple">
 <li><p>IODataType.IMAGE</p></li>
 <li><p>IODataType.IMAGE_BINARY</p></li>
@@ -451,14 +388,14 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.clearData">
-<span class="sig-name descname"><span class="pre">clearData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.clearData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clearData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.clearData" title="Permalink to this definition"></a></dt>
 <dd><p>Clear image and overlay mask so that they become empty.</p>
 <p>clearData( (CImageIO)self) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.copyStaticData">
-<span class="sig-name descname"><span class="pre">copyStaticData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(CWorkflowTaskIO)io</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.copyStaticData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">copyStaticData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)io</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.copyStaticData" title="Permalink to this definition"></a></dt>
 <dd><p>Set the static information from the given input or ouput. For this class, the channel count is the only static data.</p>
 <blockquote>
 <div><dl class="simple">
@@ -471,7 +408,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.drawGraphics">
-<span class="sig-name descname"><span class="pre">drawGraphics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(CGraphicsInput)graphics</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.drawGraphics" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">drawGraphics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CGraphicsInput)graphics</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.drawGraphics" title="Permalink to this definition"></a></dt>
 <dd><p>Draw given graphics items input in the image. Warning, this function overwrite the original output image.</p>
 <blockquote>
 <div><dl class="simple">
@@ -491,7 +428,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.getChannelCount">
-<span class="sig-name descname"><span class="pre">getChannelCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getChannelCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getChannelCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getChannelCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the static channel count information. The method does not get the channel count property from the image data structure</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -505,7 +442,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.getData">
-<span class="sig-name descname"><span class="pre">getData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getData" title="Permalink to this definition"></a></dt>
 <dd><p>Get the image data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -519,7 +456,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.getImage">
-<span class="sig-name descname"><span class="pre">getImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getImage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getImage" title="Permalink to this definition"></a></dt>
 <dd><p>Get the 2D image data only. In case of volume, the current image index is used to get the desired 2D plane (see <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageIO.setCurrentImage" title="ikomia.dataprocess.pydataprocess.CImageIO.setCurrentImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setCurrentImage()</span></code></a>).</p>
 <blockquote>
 <div><dl class="simple">
@@ -532,7 +469,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.getImageWithGraphics">
-<span class="sig-name descname"><span class="pre">getImageWithGraphics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(CGraphicsInput)graphics</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getImageWithGraphics" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getImageWithGraphics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CGraphicsInput)graphics</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getImageWithGraphics" title="Permalink to this definition"></a></dt>
 <dd><p>Get a copy of the internal image with graphics items from the given graphics input.</p>
 <blockquote>
 <div><dl class="simple">
@@ -556,7 +493,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.getOverlayMask">
-<span class="sig-name descname"><span class="pre">getOverlayMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getOverlayMask" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOverlayMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getOverlayMask" title="Permalink to this definition"></a></dt>
 <dd><p>Get the overlay mask. See <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CImageIO.setOverlayMask" title="ikomia.dataprocess.pydataprocess.CImageIO.setOverlayMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOverlayMask()</span></code></a> for more information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -570,7 +507,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.getUnitElementCount">
-<span class="sig-name descname"><span class="pre">getUnitElementCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getUnitElementCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getUnitElementCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.getUnitElementCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of unit elements when the data is processed. The number of unit elements is used to calculate the number of progress steps needed to perform a task. In case of 2D image, we won’t update progress bar every pixel, so the return value should be 1 (1 update per image). In case of 3D image, update progress every 2D plane can make sense for task processing volume on 2D planes independently. So user have to define the number of unit elements through the progress bar update perspective.</p>
 <blockquote>
 <div><dl class="simple">
@@ -583,11 +520,11 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.isAutoInput">
-<span class="sig-name descname"><span class="pre">isAutoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.isAutoInput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isAutoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.isAutoInput" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether input data from external source is mandatory.</p>
 <blockquote>
 <div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False.</p>
+<dt>Returns:</dt><dd><p>bool: True or False</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -596,7 +533,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.isDataAvailable">
-<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.isDataAvailable" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether the input/output have valid image or not.</p>
 <blockquote>
 <div><dl class="simple">
@@ -609,7 +546,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.isOverlayAvailable">
-<span class="sig-name descname"><span class="pre">isOverlayAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.isOverlayAvailable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isOverlayAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.isOverlayAvailable" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether the input/output have valid overlay mask or not</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -622,8 +559,30 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load image IO data from image file. As we use OpenCV as our image reader backend, the file must be a valid OpenCV format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save image IO data to file. As we use OpenCV as our image writer backend, the file must be a valid OpenCV format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.setChannelCount">
-<span class="sig-name descname"><span class="pre">setChannelCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(int)nb</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.setChannelCount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setChannelCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)nb</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.setChannelCount" title="Permalink to this definition"></a></dt>
 <dd><p>Set the channel count of the image data.This property holds the required channel count as a static information. Such information can be useful when one designs a workflow and wants to inform about specific image structure towards future connected tasks.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -634,7 +593,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.setCurrentImage">
-<span class="sig-name descname"><span class="pre">setCurrentImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.setCurrentImage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setCurrentImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.setCurrentImage" title="Permalink to this definition"></a></dt>
 <dd><p>Set the index of the current image (2D plane) from a volume (3D image data structure).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -645,17 +604,18 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.setDisplayable">
-<span class="sig-name descname"><span class="pre">setDisplayable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em>, <em class="sig-param"><span class="pre">(bool)displayable</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.setDisplayable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setDisplayable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)displayable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.setDisplayable" title="Permalink to this definition"></a></dt>
 <dd><p>Make the output displayable or not in Ikomia Studio. The output still appear in the workflow editor and can be connected to compatible input.</p>
-<dl class="simple">
-<dt>Args</dt><dd><p>displayable (boolean): True or False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bool</strong> – True or False</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.setImage">
-<span class="sig-name descname"><span class="pre">setImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(object)image</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.setImage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)image</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.setImage" title="Permalink to this definition"></a></dt>
 <dd><p>Set the image</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -666,7 +626,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CImageIO.setOverlayMask">
-<span class="sig-name descname"><span class="pre">setOverlayMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CImageIO)self</span></em>, <em class="sig-param"><span class="pre">(object)mask</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.setOverlayMask" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOverlayMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CImageIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)mask</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CImageIO.setOverlayMask" title="Permalink to this definition"></a></dt>
 <dd><p>Set the associated overlay mask. Ikomia software is able to display overlay mask on top of image. This method sets this mask, it will be displayed automatically according to a predefined color map. Zero pixels of the mask will be completely transparent, non-zero will be displayed according to the corresponding color in the color map. The color map must be defined in the task implementation. See <a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask.setOutputColorMap" title="ikomia.dataprocess.pydataprocess.C2dImageTask.setOutputColorMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setOutputColorMap()</span></code></a> for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -677,54 +637,37 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ikomia.dataprocess.pydataprocess.CVideoIO.html" class="btn btn-neutral float-right" title="CVideoIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html" class="btn btn-neutral float-left" title="CWidgetFactory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CVideoIO.html" class="btn btn-neutral float-right" title="CVideoIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Ikomia SAS.
-
-    </p>
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

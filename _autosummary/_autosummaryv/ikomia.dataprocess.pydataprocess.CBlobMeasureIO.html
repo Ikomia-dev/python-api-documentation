@@ -1,45 +1,22 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>CBlobMeasureIO &mdash; Ikomia  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>CBlobMeasureIO &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CObjectMeasure" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html" />
@@ -49,17 +26,13 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #150E83" >
-          
 
-    <a href="../../index.html" class="icon icon-home"> Ikomia
+    <a href="../../index.html" class="icon icon-home"> Ikomia API
         
 
         
@@ -72,7 +45,7 @@
     
     
     <div class="version">
-        0.6.0
+        0.7.0
     </div>
     
     
@@ -93,8 +66,6 @@
 </div>
     
         </div>
-
-        
     <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
@@ -104,6 +75,7 @@
         
         <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -111,6 +83,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
@@ -118,6 +91,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
@@ -141,6 +115,9 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
@@ -170,82 +147,36 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Ikomia</a>
-        
+          <a href="../../index.html">Ikomia API</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../modules.html">API Reference</a> &raquo;</li>
-        
           <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a> &raquo;</li>
-        
       <li>CBlobMeasureIO</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html" class="btn btn-neutral float-right" title="CObjectMeasure" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="ikomia.dataprocess.pydataprocess.CArrayIO.html" class="btn btn-neutral float-left" title="CArrayIO" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html" class="btn btn-neutral float-right" title="CObjectMeasure" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="cblobmeasureio">
-<h1>CBlobMeasureIO<a class="headerlink" href="#cblobmeasureio" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="cblobmeasureio">
+<h1>CBlobMeasureIO<a class="headerlink" href="#cblobmeasureio" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CBlobMeasureIO">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CBlobMeasureIO</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CBlobMeasureIO</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO" title="Permalink to this definition"></a></dt>
 <dd><p>Define input or output for a task dedicated to manage blob measures (ie connected components). It is possible to compute and store several measures for a single blob. A CBlobMeasureIO instance stores a list of measures for each blob of an image, so you have a list of <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html#ikomia.dataprocess.pydataprocess.CObjectMeasure" title="ikomia.dataprocess.pydataprocess.CObjectMeasure"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectMeasure</span></code></a> list. Please note that it is possible to map each blob with its associated graphics item stored in a <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsOutput</span></code></a> instance. You just need to pass the graphics item identifier to the object measure
 . Blob measures can also be handled by <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO" title="ikomia.dataprocess.pydataprocess.CNumericIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CNumericIO</span></code></a>. Although CNumericIO is more generic, it can’t map measure values with graphics item, which can be useful to give visual information from object measures to users.
 Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a></p>
@@ -325,7 +256,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 <p class="rubric">Details</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(object)arg1</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
 <dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
@@ -342,7 +273,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.addObjectMeasure">
-<span class="sig-name descname"><span class="pre">addObjectMeasure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CBlobMeasureIO)self</span></em>, <em class="sig-param"><span class="pre">(CObjectMeasure)measure</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.addObjectMeasure" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addObjectMeasure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CBlobMeasureIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CObjectMeasure)measure</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.addObjectMeasure" title="Permalink to this definition"></a></dt>
 <dd><p>Add a new blob measure. Use this method if only one measure is computed for a blob.
 :param measure:
 :type measure: <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html#ikomia.dataprocess.pydataprocess.CObjectMeasure" title="ikomia.dataprocess.pydataprocess.CObjectMeasure"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectMeasure</span></code></a></p>
@@ -350,22 +281,22 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.addObjectMeasures">
-<span class="sig-name descname"><span class="pre">addObjectMeasures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CBlobMeasureIO)self</span></em>, <em class="sig-param"><span class="pre">(object)measures</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.addObjectMeasures" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addObjectMeasures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CBlobMeasureIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)measures</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.addObjectMeasures" title="Permalink to this definition"></a></dt>
 <dd><p>Add a new list of measures for a blob.
-Args:
-measures (list of <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html#ikomia.dataprocess.pydataprocess.CObjectMeasure" title="ikomia.dataprocess.pydataprocess.CObjectMeasure"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectMeasure</span></code></a>)</p>
+:param measures:
+:type measures: list of <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html#ikomia.dataprocess.pydataprocess.CObjectMeasure" title="ikomia.dataprocess.pydataprocess.CObjectMeasure"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectMeasure</span></code></a></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.getMeasures">
-<span class="sig-name descname"><span class="pre">getMeasures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CBlobMeasureIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.getMeasures" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getMeasures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CBlobMeasureIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.getMeasures" title="Permalink to this definition"></a></dt>
 <dd><p>Get measures for all blobs.
 :returns: measures (list of <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html#ikomia.dataprocess.pydataprocess.CObjectMeasure" title="ikomia.dataprocess.pydataprocess.CObjectMeasure"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectMeasure</span></code></a> list)</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.setObjectMeasure">
-<span class="sig-name descname"><span class="pre">setObjectMeasure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CBlobMeasureIO)self</span></em>, <em class="sig-param"><span class="pre">(int)index</span></em>, <em class="sig-param"><span class="pre">(CObjectMeasure)measure</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.setObjectMeasure" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setObjectMeasure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CBlobMeasureIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CObjectMeasure)measure</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.setObjectMeasure" title="Permalink to this definition"></a></dt>
 <dd><p>Set measure for the blob specified by the given index.
 :param index: zeo-based index in the blob list
 :type index: int
@@ -375,23 +306,23 @@ measures (list of <a class="reference internal" href="ikomia.dataprocess.pydatap
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.clearData">
-<span class="sig-name descname"><span class="pre">clearData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CBlobMeasureIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.clearData" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clearData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CBlobMeasureIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.clearData" title="Permalink to this definition"></a></dt>
 <dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.clearData" title="ikomia.core.pycore.CWorkflowTaskIO.clearData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clearData()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.isDataAvailable">
-<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CBlobMeasureIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.isDataAvailable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CBlobMeasureIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.isDataAvailable" title="Permalink to this definition"></a></dt>
 <dd><p>Return True if there is at least one measure for one blob, False otherwise.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.isAutoInput">
-<span class="sig-name descname"><span class="pre">isAutoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.isAutoInput" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isAutoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.isAutoInput" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether input data from external source is mandatory.</p>
 <blockquote>
 <div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False.</p>
+<dt>Returns:</dt><dd><p>bool: True or False</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -400,64 +331,48 @@ measures (list of <a class="reference internal" href="ikomia.dataprocess.pydatap
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.setDisplayable">
-<span class="sig-name descname"><span class="pre">setDisplayable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">(CWorkflowTaskIO)self</span></em>, <em class="sig-param"><span class="pre">(bool)displayable</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span> <span class="pre">:</span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.setDisplayable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setDisplayable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)displayable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.setDisplayable" title="Permalink to this definition"></a></dt>
 <dd><p>Make the output displayable or not in Ikomia Studio. The output still appear in the workflow editor and can be connected to compatible input.</p>
-<dl class="simple">
-<dt>Args</dt><dd><p>displayable (boolean): True or False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bool</strong> – True or False</p>
 </dd>
 </dl>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html" class="btn btn-neutral float-right" title="CObjectMeasure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ikomia.dataprocess.pydataprocess.CArrayIO.html" class="btn btn-neutral float-left" title="CArrayIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html" class="btn btn-neutral float-right" title="CObjectMeasure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Ikomia SAS.
-
-    </p>
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

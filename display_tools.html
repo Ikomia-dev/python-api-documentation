@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Display tools for debugging &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="modules.html" />
+    <link rel="prev" title="Working with tasks" href="working_with_task.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #150E83" >
+
+    <a href="index.html" class="icon icon-home"> Ikomia API
+        
+
+        
+        
+        <img src="_static/app.png" class="logo" alt="Logo" />
+        
+    </a>
+
+    
+    
+    
+    <div class="version">
+        0.7.0
+    </div>
+    
+    
+
+    <!-- Github button -->
+    <a href="https://github.com/Ikomia-dev/IkomiaApi" class="btn btn-neutral" title="GitHub Ikomia API" target="_blank" rel="noopener noreferrer">
+        <img id="github-logo" src="_static/GitHub-Mark-32px.png" alt="">
+        <span style="vertical-align:middle">GitHub</span>
+    </a>
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+    
+        </div>
+    <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+        
+        
+        
+        
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_api.html">Algorithms for your application</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_api.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_api.html#concepts">Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_api.html#authentication">Authentication</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index_api.html#in-practice">In practice</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="first_steps_workflow.html">First steps with workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="going_deeper_workflow.html">Going deeper with workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="working_with_task.html">Working with tasks</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Display tools for debugging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
+</ul>
+
+        
+        
+    </div>
+
+    <!-- Social media icons -->
+    <div class="social-list">
+        <a class="social-item" href="https://fr.linkedin.com/company/ikomia" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-linkedin-square"></i>
+        </a>
+        <a class="social-item" href="https://twitter.com/IkomiaOfficial" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-twitter-square"></i>
+        </a>
+        <a class="social-item" href="https://www.youtube.com/channel/UC0nIasJy6f-b-f0SOEsBlQw" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-youtube-play"></i>
+        </a>
+    </div>
+    
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ikomia API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index_api.html">Algorithms for your application</a> &raquo;</li>
+      <li>Display tools for debugging</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/display_tools.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="working_with_task.html" class="btn btn-neutral float-left" title="Working with tasks" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="display-tools-for-debugging">
+<h1>Display tools for debugging<a class="headerlink" href="#display-tools-for-debugging" title="Permalink to this headline"></a></h1>
+<p>The <a class="reference internal" href="_autosummary/ikomia.dataprocess.displayIO.html#module-ikomia.dataprocess.displayIO" title="ikomia.dataprocess.displayIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">displayIO</span></code></a> module aims to give display output based on Matplolib for every Ikomia input/output types.
+We provide these features for debugging purpose essentially.</p>
+<p>So it’s very simple, you just have to call a single function: <a class="reference internal" href="_autosummary/ikomia.dataprocess.displayIO.html#ikomia.dataprocess.displayIO.display" title="ikomia.dataprocess.displayIO.display"><code class="xref py py-meth docutils literal notranslate"><span class="pre">display()</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">workflow</span><span class="p">,</span> <span class="n">displayIO</span>
+
+<span class="n">wf</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;ObjectDetection&quot;</span><span class="p">)</span>
+<span class="n">yolov4_id</span><span class="p">,</span> <span class="n">yolov4_obj</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="s2">&quot;infer_yolo_v4&quot;</span><span class="p">)</span>
+<span class="n">wf</span><span class="o">.</span><span class="n">connect_tasks</span><span class="p">(</span><span class="n">wf</span><span class="o">.</span><span class="n">getRootID</span><span class="p">(),</span> <span class="n">yolov4_id</span><span class="p">)</span>
+
+<span class="n">wf</span><span class="o">.</span><span class="n">run_on</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&quot;path/to/image.png&quot;</span><span class="p">)</span>
+
+<span class="c1"># Display image output</span>
+<span class="n">img_output</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">get_image_output</span><span class="p">(</span><span class="n">yolov4_id</span><span class="p">)</span>
+<span class="n">displayIO</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">img_output</span><span class="p">)</span>
+
+<span class="c1"># Display graphics output</span>
+<span class="n">graphics_output</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">get_graphics_output</span><span class="p">(</span><span class="n">yolov4_id</span><span class="p">)</span>
+<span class="n">displayIO</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">graphics_output</span><span class="p">)</span>
+
+<span class="c1"># Display blob measures output</span>
+<span class="n">box_output</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">get_blob_measure_output</span><span class="p">(</span><span class="n">yolov4_id</span><span class="p">)</span>
+<span class="n">displayIO</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">box_output</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also apply the <a class="reference internal" href="_autosummary/ikomia.dataprocess.displayIO.html#ikomia.dataprocess.displayIO.display" title="ikomia.dataprocess.displayIO.display"><code class="xref py py-meth docutils literal notranslate"><span class="pre">display()</span></code></a> on:</p>
+<ul class="simple">
+<li><p><strong>task</strong> object instance: this will show a figure with inputs and outputs of the given task.</p></li>
+<li><p><strong>workflow</strong> object instance: this will show a GraphViz representation of the workflow.</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Matplotlib is used to generate almost all figures, so you have to make sure you have a valid GUI backend to display
+the figures. This will, for example, not work on Linux machine or docker image where no X server is installed.</p>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="working_with_task.html" class="btn btn-neutral float-left" title="Working with tasks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
