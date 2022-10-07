@@ -15,12 +15,13 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Going deeper with workflows" href="going_deeper_workflow.html" />
-    <link rel="prev" title="Algorithms for your application" href="index_api.html" />
+    <link rel="prev" title="Implement Computer Vision workflows for your application" href="index_api.html" />
  
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index_api.html">Algorithms for your application</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_api.html#registration-free">Registration (free)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_api.html#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_api.html#concepts">Concepts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_api.html#authentication">Authentication</a></li>
@@ -88,6 +89,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -123,13 +125,13 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_api.html">Algorithms for your application</a> &raquo;</li>
+          <li><a href="index_api.html">Implement Computer Vision workflows for your application</a> &raquo;</li>
       <li>First steps with workflows</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/first_steps_workflow.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="index_api.html" class="btn btn-neutral float-left" title="Algorithms for your application" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index_api.html" class="btn btn-neutral float-left" title="Implement Computer Vision workflows for your application" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="going_deeper_workflow.html" class="btn btn-neutral float-right" title="Going deeper with workflows" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
@@ -138,7 +140,7 @@
            <div itemprop="articleBody">
              
   <section id="first-steps-with-workflows">
-<h1>First steps with workflows<a class="headerlink" href="#first-steps-with-workflows" title="Permalink to this headline"></a></h1>
+<h1>First steps with workflows<a class="headerlink" href="#first-steps-with-workflows" title="Permalink to this heading"></a></h1>
 <p>Workflows are acyclic directed graph composed by nodes (algorithms) and connections from node outputs to adjacent node inputs. Output and inputs must have compatible data types to be connected, otherwise connection
 will fail and raise exception. The API provides all features needed to handle such graph:</p>
 <ul class="simple">
@@ -151,9 +153,9 @@ will fail and raise exception. The API provides all features needed to handle su
 <li><p>load workflows from file</p></li>
 </ul>
 <section id="get-the-list-of-available-algorithms">
-<h2>Get the list of available algorithms<a class="headerlink" href="#get-the-list-of-available-algorithms" title="Permalink to this headline"></a></h2>
+<h2>Get the list of available algorithms<a class="headerlink" href="#get-the-list-of-available-algorithms" title="Permalink to this heading"></a></h2>
 <p>In Ikomia, algorithms are identified by their names. So one of the most important thing when using this API is to know the list of possible algorithms.
-We can differentiate 2 kinds of algorithms: those available on the host system (built-in + installed plugins) and those available on the Marketplace.
+We can differentiate 2 kinds of algorithms: those available on the host system (built-in + installed plugins) and those available on Ikomia HUB.
 As introduced in the previous section, algorithms management is done by the global Ikomia registry.</p>
 <p>Get names of built-in and installed algorithms:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ikomia</span>
@@ -161,7 +163,7 @@ As introduced in the previous section, algorithms management is done by the glob
 <span class="n">names</span> <span class="o">=</span> <span class="n">ikomia</span><span class="o">.</span><span class="n">ik_registry</span><span class="o">.</span><span class="n">getAlgorithms</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Get information (name, authors, description…) of Marketplace algorithms:</p>
+<p>Get information (name, authors, description…) of Ikomia HUB algorithms:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ikomia</span>
 
 <span class="n">algos</span> <span class="o">=</span> <span class="n">ikomia</span><span class="o">.</span><span class="n">ik_registry</span><span class="o">.</span><span class="n">get_online_algorithms</span><span class="p">()</span>
@@ -181,7 +183,7 @@ As introduced in the previous section, algorithms management is done by the glob
 </div>
 </section>
 <section id="create-workflow-from-scratch">
-<h2>Create workflow from scratch<a class="headerlink" href="#create-workflow-from-scratch" title="Permalink to this headline"></a></h2>
+<h2>Create workflow from scratch<a class="headerlink" href="#create-workflow-from-scratch" title="Permalink to this heading"></a></h2>
 <p>The sample below show how to instanciate algorithms and connect them in a runnable workflow.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
 <span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">workflow</span>
@@ -211,7 +213,7 @@ As introduced in the previous section, algorithms management is done by the glob
 <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.run" title="ikomia.dataprocess.workflow.Workflow.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> for details.</p>
 </section>
 <section id="save-workflow-to-json">
-<h2>Save workflow to JSON<a class="headerlink" href="#save-workflow-to-json" title="Permalink to this headline"></a></h2>
+<h2>Save workflow to JSON<a class="headerlink" href="#save-workflow-to-json" title="Permalink to this heading"></a></h2>
 <p>Workflows can be exported in human-readable format (JSON).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">workflow</span>
 
@@ -223,7 +225,7 @@ As introduced in the previous section, algorithms management is done by the glob
 <p>See <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.save" title="ikomia.dataprocess.workflow.Workflow.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a> for details.</p>
 </section>
 <section id="load-workflow-from-json">
-<h2>Load workflow from JSON<a class="headerlink" href="#load-workflow-from-json" title="Permalink to this headline"></a></h2>
+<h2>Load workflow from JSON<a class="headerlink" href="#load-workflow-from-json" title="Permalink to this heading"></a></h2>
 <p>Workflows can be loaded from JSON file. A classic use case is to build your workflow with Ikomia Studio (no code) and export it as JSON.
 Then you can simply execute this workflow everywhere with the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">workflow</span>
@@ -240,7 +242,7 @@ Then you can simply execute this workflow everywhere with the following code:</p
 <p>See <a class="reference internal" href="_autosummary/ikomia.dataprocess.workflow.html#ikomia.dataprocess.workflow.load" title="ikomia.dataprocess.workflow.load"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load()</span></code></a> for details.</p>
 </section>
 <section id="run-workflow-on-common-inputs">
-<h2>Run workflow on common inputs<a class="headerlink" href="#run-workflow-on-common-inputs" title="Permalink to this headline"></a></h2>
+<h2>Run workflow on common inputs<a class="headerlink" href="#run-workflow-on-common-inputs" title="Permalink to this heading"></a></h2>
 <p>Ikomia API provides features to run workflow on classic image-based inputs.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">workflow</span>
@@ -267,7 +269,7 @@ Then you can simply execute this workflow everywhere with the following code:</p
 <p>See <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.run_on" title="ikomia.dataprocess.workflow.Workflow.run_on"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run_on()</span></code></a> for details.</p>
 </section>
 <section id="set-parameters-of-workflow-algorithms">
-<h2>Set parameters of workflow algorithms<a class="headerlink" href="#set-parameters-of-workflow-algorithms" title="Permalink to this headline"></a></h2>
+<h2>Set parameters of workflow algorithms<a class="headerlink" href="#set-parameters-of-workflow-algorithms" title="Permalink to this heading"></a></h2>
 <p>Each algorithm comes with its own set of parameters. From a workflow object instance, you have access to each algorithm with <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.find_task" title="ikomia.dataprocess.workflow.Workflow.find_task"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code></a>.
 It returns the task object instance and id from which you can then set parameters.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
@@ -310,7 +312,7 @@ both <a class="reference internal" href="_autosummary/_autosummary/ikomia.datapr
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index_api.html" class="btn btn-neutral float-left" title="Algorithms for your application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index_api.html" class="btn btn-neutral float-left" title="Implement Computer Vision workflows for your application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="going_deeper_workflow.html" class="btn btn-neutral float-right" title="Going deeper with workflows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

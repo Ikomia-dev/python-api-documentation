@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -151,7 +152,7 @@
            <div itemprop="articleBody">
              
   <section id="cexception">
-<h1>CException<a class="headerlink" href="#cexception" title="Permalink to this headline"></a></h1>
+<h1>CException<a class="headerlink" href="#cexception" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.utils.pyutils.CException">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.utils.pyutils.</span></span><span class="sig-name descname"><span class="pre">CException</span></span><a class="headerlink" href="#ikomia.utils.pyutils.CException" title="Permalink to this definition"></a></dt>
@@ -161,7 +162,7 @@
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -181,12 +182,15 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.utils.pyutils.CException.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Default constructor</p>
 <dl>
-<dt>__init__( (object)arg1, (int)arg2, (str)arg3, (str)arg4, (str)arg5, (int)arg6) -&gt; None :</dt><dd><p>Constructor with parameters</p>
-<p>arg1 (int): Exception code</p>
-<p>arg2 (str): Exception message</p>
-<p>arg3 (str): Function from where exception is thrown</p>
-<p>arg4 (str): File from where exception is thrown</p>
-<p>arg5 (int): Line in source file from where exception is thrown</p>
+<dt>__init__( (object)arg1, (int)code, (str)error, (str)func, (str)file, (int)line) -&gt; None :</dt><dd><p>Constructor with parameters</p>
+<p>Args:</p>
+<blockquote>
+<div><p>code (int): exception code</p>
+<p>error (str): exception message</p>
+<p>func (str): function from where exception is thrown</p>
+<p>file (str): file from where exception is thrown</p>
+<p>line (int): Line in source file from where exception is thrown</p>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>

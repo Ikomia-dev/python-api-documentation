@@ -15,11 +15,12 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="CVideoTask" href="ikomia.dataprocess.pydataprocess.CVideoTask.html" />
+    <link rel="next" title="CDnnTrainTask" href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html" />
     <link rel="prev" title="C2dImageTask" href="ikomia.dataprocess.pydataprocess.C2dImageTask.html" />
  
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -88,29 +89,34 @@
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html">CInstanceSegIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html">CObjectDetectionIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html">CSemanticSegIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html">CInstanceSegmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetection.html">CObjectDetection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.MapIntStr.html">MapIntStr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
@@ -165,7 +171,7 @@
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="ikomia.dataprocess.pydataprocess.C2dImageTask.html" class="btn btn-neutral float-left" title="C2dImageTask" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ikomia.dataprocess.pydataprocess.CVideoTask.html" class="btn btn-neutral float-right" title="CVideoTask" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html" class="btn btn-neutral float-right" title="CDnnTrainTask" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -173,7 +179,7 @@
            <div itemprop="articleBody">
              
   <section id="c2dimageinteractivetask">
-<h1>C2dImageInteractiveTask<a class="headerlink" href="#c2dimageinteractivetask" title="Permalink to this headline"></a></h1>
+<h1>C2dImageInteractiveTask<a class="headerlink" href="#c2dimageinteractivetask" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">C2dImageInteractiveTask</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask" title="Permalink to this definition"></a></dt>
@@ -184,14 +190,14 @@
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.__init__" title="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
-<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.clearInteractionLayer" title="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.clearInteractionLayer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearInteractionLayer</span></code></a>(self)</p></td>
 <td><p>Clear all graphics items in the interaction layer.</p></td>
@@ -220,7 +226,7 @@
 </tbody>
 </table>
 <p class="rubric">Overridden methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -241,7 +247,7 @@
 </tbody>
 </table>
 <p class="rubric">Inherited methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -263,7 +269,7 @@
 <td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.beginTaskRun" title="ikomia.core.pycore.CWorkflowTask.beginTaskRun"><code class="xref py py-meth docutils literal notranslate"><span class="pre">beginTaskRun()</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.createGraphicsMask" title="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.createGraphicsMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createGraphicsMask</span></code></a>(self, width, height, graphics)</p></td>
-<td><p>Generate a binary mask image from the given graphics input.</p></td>
+<td><p>Generate a binary mask image from the given graphics input object.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.endTaskRun" title="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.endTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">endTaskRun</span></code></a>(self)</p></td>
 <td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.endTaskRun" title="ikomia.core.pycore.CWorkflowTask.endTaskRun"><code class="xref py py-meth docutils literal notranslate"><span class="pre">endTaskRun()</span></code></a>.</p></td>
@@ -361,7 +367,7 @@
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -380,14 +386,13 @@
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
-<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
-<dt>__init__( (object)arg1, (str)arg2) -&gt; None :</dt><dd><p>Construct C2dImageTask task with the given name. Same inputs and outputs as <a class="reference internal" href="ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a>.</p>
-<dl>
-<dt>Args:</dt><dd><p>arg1 (self)</p>
-<p>arg2 (str): task name, must be unique</p>
-</dd>
-</dl>
+<dt>__init__( (object)self, (str)name) -&gt; None :</dt><dd><p>Construct C2dImageTask task with the given name. Same inputs and outputs as <a class="reference internal" href="ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a>.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>name (str): task name, must be unique</p>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -420,7 +425,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.applyGraphicsMask">
-<span class="sig-name descname"><span class="pre">applyGraphicsMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.applyGraphicsMask" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">applyGraphicsMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.applyGraphicsMask" title="Permalink to this definition"></a></dt>
 <dd><p>Apply the mask generated from graphics input to the result image so that only masked areas seems to be processed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -435,7 +440,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.applyGraphicsMaskToBinary">
-<span class="sig-name descname"><span class="pre">applyGraphicsMaskToBinary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.applyGraphicsMaskToBinary" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">applyGraphicsMaskToBinary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.applyGraphicsMaskToBinary" title="Permalink to this definition"></a></dt>
 <dd><p>Apply the mask generated from graphics input to the binary source image. Only white areas on both image and mask are kept in the result image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -470,7 +475,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.createGraphicsMask">
 <span class="sig-name descname"><span class="pre">createGraphicsMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CGraphicsInput)graphics</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.createGraphicsMask" title="Permalink to this definition"></a></dt>
-<dd><p>Generate a binary mask image from the given graphics input. The new mask is appended to the internal mask list.</p>
+<dd><p>Generate a binary mask image from the given graphics input object. The new mask is appended to the internal mask list. Use <a class="reference internal" href="ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask.getGraphicsMask" title="ikomia.dataprocess.pydataprocess.C2dImageTask.getGraphicsMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getGraphicsMask()</span></code></a> to retrieve the mask.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -693,8 +698,14 @@
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.getOutputCount">
 <span class="sig-name descname"><span class="pre">getOutputCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.getOutputCount" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of outputs.</p>
-<p>Returns:
-¬   int: outputs count</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>outputs count</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -754,10 +765,10 @@
 <span class="sig-name descname"><span class="pre">globalInputChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageInteractiveTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_new_sequence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.globalInputChanged" title="Permalink to this definition"></a></dt>
 <dd><p>Notify that the workflow input has changed. The graphics interaction layer is updated. Don’t forger to call this method if you override it in a derived class.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence).</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>is_new_sequence (bool): indicate if new input is a new sequence (ex: new frame of the same video is not a new sequence).</p>
+</div></blockquote>
 </div></blockquote>
 <p>globalInputChanged( (C2dImageInteractiveTask)self, (bool)is_new_sequence) -&gt; None</p>
 </dd></dl>
@@ -843,10 +854,10 @@
 <span class="sig-name descname"><span class="pre">setActive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(C2dImageInteractiveTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(bool)is_active</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.setActive" title="Permalink to this definition"></a></dt>
 <dd><p>Make the task and its graphics interaction layer active or inactive.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>is_active (bool): True or False</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>is_active (bool): True or False</p>
+</div></blockquote>
 </div></blockquote>
 <p>setActive( (C2dImageInteractiveTask)self, (bool)is_active) -&gt; None</p>
 </dd></dl>
@@ -984,7 +995,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ikomia.dataprocess.pydataprocess.C2dImageTask.html" class="btn btn-neutral float-left" title="C2dImageTask" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ikomia.dataprocess.pydataprocess.CVideoTask.html" class="btn btn-neutral float-right" title="CVideoTask" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html" class="btn btn-neutral float-right" title="CDnnTrainTask" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

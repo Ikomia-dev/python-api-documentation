@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Ikomia’s documentation &mdash; Ikomia API  documentation</title>
+  <title>Welcome to Ikomia API documentation &mdash; Ikomia API  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
@@ -15,11 +15,12 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Integrate your algorithm in Ikomia" href="index_plugin.html" />
+    <link rel="next" title="Implement Computer Vision workflows for your application" href="index_api.html" />
  
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -44,7 +45,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -73,8 +74,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -110,31 +111,31 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>Welcome to Ikomia’s documentation</li>
+      <li>Welcome to Ikomia API documentation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="index_plugin.html" class="btn btn-neutral float-right" title="Integrate your algorithm in Ikomia" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index_api.html" class="btn btn-neutral float-right" title="Implement Computer Vision workflows for your application" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="welcome-to-ikomia-s-documentation">
-<h1>Welcome to Ikomia’s documentation<a class="headerlink" href="#welcome-to-ikomia-s-documentation" title="Permalink to this headline"></a></h1>
+  <section id="welcome-to-ikomia-api-documentation">
+<h1>Welcome to Ikomia API documentation<a class="headerlink" href="#welcome-to-ikomia-api-documentation" title="Permalink to this heading"></a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Current version</dt>
-<dd class="field-odd"><p>0.7.0</p>
+<dd class="field-odd"><p>0.8.0</p>
 </dd>
 </dl>
 <p>The Ikomia platform is made up of three components:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>Ikomia Marketplace</strong>: centralized place where you can find plug’n’play algorithms of Computer Vision</p></li>
-<li><p><strong>Ikomia Studio</strong>: free desktop software (Linux and Windows) for easy algorithm evaluation and fast prototyping</p></li>
-<li><p><strong>Ikomia API</strong>: Python API to leverage state of the art algorithms for your own computer vision application and/or create plugins for Ikomia Studio and the Marketplace</p></li>
+<li><p><strong>Ikomia HUB</strong>: HUB is the central sharing place for Plug’n’Play algorithms in Computer Vision and Deep Learning. We regularly push the best state of the art algorithms in classification, object detection, segmentation or pose estimation (among others). With Ikomia HUB, all algorithms are Open Source and ready to use in few clicks and you can easily edit the code if you want.</p></li>
+<li><p><strong>Ikomia Studio</strong>: Studio is an Open Source no-code application (Linux and Windows) that allows you to test, chain and train any Computer Vision algorithms with a drag and drop system. You can load all images and video formats, and select the best state of the art algorithms from Ikomia HUB.</p></li>
+<li><p><strong>Ikomia API</strong>: Python API to leverage state of the art algorithms for your own computer vision application and/or create plugins for Ikomia Studio and Ikomia HUB.</p></li>
 </ul>
 </div></blockquote>
 <div class="admonition note">
@@ -146,31 +147,31 @@
 <p>Ikomia Studio and Ikomia API are Open-Source projects, distributed under AGPLv3 and Apache 2.0 respectively.</p>
 </div>
 <section id="choose-your-api-usage">
-<h2>Choose your API usage<a class="headerlink" href="#choose-your-api-usage" title="Permalink to this headline"></a></h2>
+<h2>Choose your API usage<a class="headerlink" href="#choose-your-api-usage" title="Permalink to this heading"></a></h2>
 <p>As an Ikomia user, you will be led to use this API for two reasons:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>Create plugins for Ikomia platform</strong>: with a little wrap around your Python code, you are able to give access to your algorithm from a user friendly software (Ikomia Studio) and a flexible workflow API. Moreover, from Ikomia Studio you can publish your work to the Marketplace in one click and share it with the community.</p></li>
-<li><p><strong>Use Ikomia algorithms and workflows in your custom applications</strong>: leverage built-in algorithms and those from the Marketplace directly in your application. Run single algorithm or workflows with few lines of code.</p></li>
+<li><p><strong>Create workflows and use Ikomia algorithms in your custom application</strong>: leverage built-in algorithms and those from Ikomia HUB directly in your application. Run single algorithm or workflows with few lines of code.</p></li>
+<li><p><strong>Create plugins for Ikomia platform</strong>: with a little wrap around your Python code, you are able to give access to your algorithm from a user friendly software (Ikomia Studio) and a flexible workflow API. Moreover, from Ikomia Studio you can publish your work to Ikomia HUB in one click and share it with the community.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>Ready to start?</strong></p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 </div>
 </section>
 <section id="useful-links">
-<h2>Useful links<a class="headerlink" href="#useful-links" title="Permalink to this headline"></a></h2>
+<h2>Useful links<a class="headerlink" href="#useful-links" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://github.com/Ikomia-dev/">Ikomia GitHub repository</a></p>
-<p><a class="reference external" href="https://ikomia.com/en/marketplace-en/">Ikomia Marketplace</a></p>
+<p><a class="reference external" href="https://github.com/Ikomia-hub/">Ikomia HUB algorithms GitHub repository</a></p>
 <p><a class="reference external" href="https://blog.ikomia.com/">Ikomia blog</a></p>
 <p><a class="reference external" href="https://ikomia.com/en/">Ikomia web site</a></p>
 </section>
 <section id="api-reference">
-<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline"></a></h2>
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading"></a></h2>
 <p>This section provides the auto-generated documentation from the Python code. You will find all the implementation details and
 the comprehensive list of available functions.</p>
 <div class="toctree-wrapper compound">
@@ -196,7 +197,7 @@ the comprehensive list of available functions.</p>
 </div>
 </section>
 <section id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h2>
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
@@ -209,7 +210,7 @@ the comprehensive list of available functions.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index_plugin.html" class="btn btn-neutral float-right" title="Integrate your algorithm in Ikomia" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index_api.html" class="btn btn-neutral float-right" title="Implement Computer Vision workflows for your application" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

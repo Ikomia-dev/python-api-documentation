@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSemanticSegIO &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CVideoIO" href="ikomia.dataprocess.pydataprocess.CVideoIO.html" />
+    <link rel="prev" title="CPathIO" href="ikomia.dataprocess.pydataprocess.CPathIO.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #150E83" >
+
+    <a href="../../index.html" class="icon icon-home"> Ikomia API
+        
+
+        
+        
+        <img src="../../_static/app.png" class="logo" alt="Logo" />
+        
+    </a>
+
+    
+    
+    
+    <div class="version">
+        0.8.0
+    </div>
+    
+    
+
+    <!-- Github button -->
+    <a href="https://github.com/Ikomia-dev/IkomiaApi" class="btn btn-neutral" title="GitHub Ikomia API" target="_blank" rel="noopener noreferrer">
+        <img id="github-logo" src="_static/GitHub-Mark-32px.png" alt="">
+        <span style="vertical-align:middle">GitHub</span>
+    </a>
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+    
+        </div>
+    <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+        
+        
+        
+        
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegIO.html">CInstanceSegIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html">CObjectDetectionIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CSemanticSegIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html">CInstanceSegmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetection.html">CObjectDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.MapIntStr.html">MapIntStr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+</ul>
+</li>
+</ul>
+
+        
+        
+    </div>
+
+    <!-- Social media icons -->
+    <div class="social-list">
+        <a class="social-item" href="https://fr.linkedin.com/company/ikomia" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-linkedin-square"></i>
+        </a>
+        <a class="social-item" href="https://twitter.com/IkomiaOfficial" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-twitter-square"></i>
+        </a>
+        <a class="social-item" href="https://www.youtube.com/channel/UC0nIasJy6f-b-f0SOEsBlQw" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-youtube-play"></i>
+        </a>
+    </div>
+    
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Ikomia API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../modules.html">API Reference</a> &raquo;</li>
+          <li><a href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a> &raquo;</li>
+      <li>CSemanticSegIO</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="ikomia.dataprocess.pydataprocess.CPathIO.html" class="btn btn-neutral float-left" title="CPathIO" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CVideoIO.html" class="btn btn-neutral float-right" title="CVideoIO" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="csemanticsegio">
+<h1>CSemanticSegIO<a class="headerlink" href="#csemanticsegio" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CSemanticSegIO</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO" title="Permalink to this definition"></a></dt>
+<dd><p>Define input or output managing common information extracted by semantic segmentation task. Such task are able to automatically set a class for each pixel of an image. Thus, this input/output stores labelled image, class names and class colors. Among others, algorithms like DeepLabV3+, UNet or TransUNet are semantic segmentation tasks.</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">CSemanticSegIO</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.__init__" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.getMask" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.getMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMask</span></code></a>(self)</p></td>
+<td><p>Get labelled image (ie graylevel) where each pixel has a specific value corresponding to its class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.getClassNames" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.getClassNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getClassNames</span></code></a>(self)</p></td>
+<td><p>Get class names list associated with the semantic mask.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.getColors" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.getColors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getColors</span></code></a>(self)</p></td>
+<td><p>Get colors associated with class names.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.setMask" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.setMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setMask</span></code></a>(self, mask)</p></td>
+<td><p>Set the mask of the semantic segmentation output.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.setClassNames" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.setClassNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setClassNames</span></code></a>(self, names, colors)</p></td>
+<td><p>Set class names and colors associated with segmentation mask</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Overridden methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code>(self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.clearData" title="ikomia.core.pycore.CWorkflowTaskIO.clearData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clearData()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable" title="ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">isDataAvailable()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.load" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(self, path)</p></td>
+<td><p>Load instance segmentation input/output for JSON file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.save" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(self, path)</p></td>
+<td><p>Save instance segmentation input/output to JSON file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.toJson" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.toJson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toJson</span></code></a>(self)</p></td>
+<td><p>Return input/output data in JSON formatted string (compact mode and image encoded as JPEG).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.fromJson" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO.fromJson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromJson</span></code></a>(self, jsonStr)</p></td>
+<td><p>Set input/output data from JSON formatted string.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Inherited methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copyStaticData</span></code>(self, io)</p></td>
+<td><p>Copy the static data from the given input or ouput.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnitElementCount</span></code>(self)</p></td>
+<td><p>Get the number of unit element in terms of processing scheme.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAutoInput</span></code>(self)</p></td>
+<td><p>Check whether input data from external source is mandatory.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDisplayable</span></code>(self, displayable)</p></td>
+<td><p>Make the output displayable or not in Ikomia Studio.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataType</span></code></p></td>
+<td><p>I/O data type</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></p></td>
+<td><p>Custom description to explain input/output type and use</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimCount</span></code></p></td>
+<td><p>Number of dimensions</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
+</dd>
+<dt>__init__( (object)arg1, (CSemanticSegIO)arg2) -&gt; None :</dt><dd><p>Copy constructor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.getMask">
+<span class="sig-name descname"><span class="pre">getMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CSemanticSegIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.getMask" title="Permalink to this definition"></a></dt>
+<dd><p>Get labelled image (ie graylevel) where each pixel has a specific value corresponding to its class. You can find the correspondence between pixel value and class name with <code class="xref py py-meth docutils literal notranslate"><span class="pre">ikomia.dataprocess.pydataprocess.CSemanticIO.getClassNames()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>grayscale mask</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.getClassNames">
+<span class="sig-name descname"><span class="pre">getClassNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CSemanticSegIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.getClassNames" title="Permalink to this definition"></a></dt>
+<dd><p>Get class names list associated with the semantic mask. Class index in the list corresponds to the pixel value in the mask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>class names</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.getColors">
+<span class="sig-name descname"><span class="pre">getColors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CSemanticSegIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.getColors" title="Permalink to this definition"></a></dt>
+<dd><p>Get colors associated with class names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>colors as [r, g, b] list</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of int list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.setMask">
+<span class="sig-name descname"><span class="pre">setMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CSemanticSegIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)mask</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.setMask" title="Permalink to this definition"></a></dt>
+<dd><p>Set the mask of the semantic segmentation output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mask</strong> (<em>numpy array</em>) – segmentation mask</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.setClassNames">
+<span class="sig-name descname"><span class="pre">setClassNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CSemanticSegIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)colors</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.setClassNames" title="Permalink to this definition"></a></dt>
+<dd><p>Set class names and colors associated with segmentation mask</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>names</strong> (<em>list of str</em>) – class names, index in the list must match the pixel value in the mask</p></li>
+<li><p><strong>colors</strong> (<em>list of list of int</em>) – colors as [r, g, b] list</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.isDataAvailable">
+<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CSemanticSegIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.isDataAvailable" title="Permalink to this definition"></a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable" title="ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">isDataAvailable()</span></code></a>.</p>
+<p>isDataAvailable( (CSemanticSegIO)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CSemanticSegIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load instance segmentation input/output for JSON file.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>path (str): path to JSON file</p>
+</div></blockquote>
+</div></blockquote>
+<p>load( (CSemanticSegIO)self, (str)path) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CSemanticSegIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save instance segmentation input/output to JSON file.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>path (str): path to JSON file</p>
+</div></blockquote>
+</div></blockquote>
+<p>save( (CSemanticSegIO)self, (str)path) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.toJson">
+<span class="sig-name descname"><span class="pre">toJson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CSemanticSegIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.toJson" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>Return input/output data in JSON formatted string (compact mode and image encoded as JPEG).</dt><dd><p>Returns:</p>
+<blockquote>
+<div><p>string: JSON formatted string</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>toJson( (CSemanticSegIO)self) -&gt; str</p>
+<dl>
+<dt>toJson( (CSemanticSegIO)self, (object)options) -&gt; str :</dt><dd><p>Return input/output data in JSON formatted string. JSON format options can be set, possible values are:</p>
+<ul class="simple">
+<li><p>[‘json_format’, ‘compact’] (<strong>default</strong>)</p></li>
+<li><p>[‘json_format’, ‘indented’]</p></li>
+<li><p>[‘image_format’, ‘jpg’](for the mask - <strong>default</strong>)</p></li>
+<li><p>[‘image_format’, ‘png’]</p></li>
+</ul>
+<p>Args:</p>
+<blockquote>
+<div><p>list of str: format-specific options encoded as pairs [option_name, option_value]</p>
+</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>string: JSON formatted string</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>toJson( (CSemanticSegIO)self, (object)options) -&gt; str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CSemanticSegIO.fromJson">
+<span class="sig-name descname"><span class="pre">fromJson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CSemanticSegIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)jsonStr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CSemanticSegIO.fromJson" title="Permalink to this definition"></a></dt>
+<dd><p>Set input/output data from JSON formatted string.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>str: data as JSON formatted string</p>
+</div></blockquote>
+</div></blockquote>
+<p>fromJson( (CSemanticSegIO)self, (str)jsonStr) -&gt; None</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ikomia.dataprocess.pydataprocess.CPathIO.html" class="btn btn-neutral float-left" title="CPathIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CVideoIO.html" class="btn btn-neutral float-right" title="CVideoIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

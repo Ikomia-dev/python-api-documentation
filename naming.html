@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,7 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="python_env.html">Python environment</a></li>
@@ -89,7 +91,6 @@
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -125,7 +126,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+          <li><a href="index_plugin.html">Create your algorithm for Ikomia platform</a> &raquo;</li>
       <li>Naming convention</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/naming.rst.txt" rel="nofollow"> View page source</a>
@@ -140,9 +141,9 @@
            <div itemprop="articleBody">
              
   <section id="naming-convention">
-<h1>Naming convention<a class="headerlink" href="#naming-convention" title="Permalink to this headline"></a></h1>
+<h1>Naming convention<a class="headerlink" href="#naming-convention" title="Permalink to this heading"></a></h1>
 <p>Ikomia plugins must follow a quiet strict naming convention to be loaded correctly.</p>
-<p>The Ikomia plugin loader use this convention to detect automatically required entry points. The rules are also introduced for reasons of homogeneity and clarity in the Marketplace.</p>
+<p>The Ikomia plugin loader use this convention to detect automatically required entry points. The rules are also introduced for reasons of homogeneity and clarity in Ikomia HUB.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>main entry point in a file named my_plugin.py</p></li>

@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -174,7 +175,7 @@
            <div itemprop="articleBody">
              
   <section id="cgraphicsconversion">
-<h1>CGraphicsConversion<a class="headerlink" href="#cgraphicsconversion" title="Permalink to this headline"></a></h1>
+<h1>CGraphicsConversion<a class="headerlink" href="#cgraphicsconversion" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CGraphicsConversion">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CGraphicsConversion</span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsConversion" title="Permalink to this definition"></a></dt>
@@ -184,14 +185,14 @@
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CGraphicsConversion.__init__" title="ikomia.core.pycore.CGraphicsConversion.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
-<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CGraphicsConversion.graphicsToBinaryMask" title="ikomia.core.pycore.CGraphicsConversion.graphicsToBinaryMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">graphicsToBinaryMask</span></code></a>(self, graphics)</p></td>
 <td><p>Convert from a list of given graphics to a binary mask.</p></td>
@@ -203,15 +204,14 @@
 <dt class="sig sig-object py" id="ikomia.core.pycore.CGraphicsConversion.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsConversion.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
-<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
-<dt>__init__( (object)arg1, (int)arg2, (int)arg3) -&gt; None :</dt><dd><p>Construct a graphics conversion object handling images of given dimensions.</p>
-<dl>
-<dt>Args:</dt><dd><p>arg1: self</p>
-<p>arg2 (int): image width</p>
-<p>arg3 (int): image height</p>
-</dd>
-</dl>
+<dt>__init__( (object)self, (int)width, (int)height) -&gt; None :</dt><dd><p>Construct a graphics conversion object handling images of given dimensions.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>width (int): image width</p>
+<p>height (int): image height</p>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -222,7 +222,7 @@
 <dd><p>Convert from a list of given graphics to a binary mask.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>graphics</strong> – list of <a class="reference internal" href="ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a>.</p>
+<dd class="field-odd"><p><strong>graphics</strong> (list of <a class="reference internal" href="ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a>) – </p>
 </dd>
 </dl>
 </dd></dl>

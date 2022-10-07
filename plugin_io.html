@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,7 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#going-deeper">Going deeper</a><ul class="current">
@@ -86,7 +88,6 @@
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -122,7 +123,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+          <li><a href="index_plugin.html">Create your algorithm for Ikomia platform</a> &raquo;</li>
       <li>Input/Output management</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/plugin_io.rst.txt" rel="nofollow"> View page source</a>
@@ -137,10 +138,23 @@
            <div itemprop="articleBody">
              
   <section id="input-output-management">
-<h1>Input/Output management<a class="headerlink" href="#input-output-management" title="Permalink to this headline"></a></h1>
+<h1>Input/Output management<a class="headerlink" href="#input-output-management" title="Permalink to this heading"></a></h1>
 <p>Every algorithm in Ikomia platform comes with a list of inputs and outputs. Depending of the algorithm,
 you will have to deal with several types. This API provides a comprehensive list of I/O types to
 address common needs in Computer Vision.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#image"><span class="std std-ref">Image</span></a></p></li>
+<li><p><a class="reference internal" href="#graphics"><span class="std std-ref">Graphics</span></a></p></li>
+<li><p><a class="reference internal" href="#numeric-values"><span class="std std-ref">Numeric values</span></a></p></li>
+<li><p><a class="reference internal" href="#string-values"><span class="std std-ref">String values</span></a></p></li>
+<li><p><a class="reference internal" href="#blob-measures"><span class="std std-ref">Blob measures</span></a></p></li>
+<li><p><a class="reference internal" href="#multi-dimensional-array"><span class="std std-ref">Multi-dimensional array</span></a></p></li>
+<li><p><a class="reference internal" href="#deep-learning-dataset"><span class="std std-ref">Deep learning dataset</span></a></p></li>
+<li><p><a class="reference internal" href="#filesystem-path"><span class="std std-ref">Filesystem path</span></a></p></li>
+<li><p><a class="reference internal" href="#object-detection-i-o"><span class="std std-ref">Object detection</span></a></p></li>
+<li><p><a class="reference internal" href="#instance-segmentation-i-o"><span class="std std-ref">Instance segmentation</span></a></p></li>
+<li><p><a class="reference internal" href="#semantic-segmentation-i-o"><span class="std std-ref">Semantic segmentation</span></a></p></li>
+</ul>
 <p>Ideally, inputs and outputs should be defined in the constructor of the task.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -149,7 +163,7 @@ address common needs in Computer Vision.</p>
 <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.removeInput" title="ikomia.core.pycore.CWorkflowTask.removeInput"><code class="xref py py-meth docutils literal notranslate"><span class="pre">removeInput()</span></code></a> from your task class.</p>
 </div>
 <section id="image">
-<h2>Image<a class="headerlink" href="#image" title="Permalink to this headline"></a></h2>
+<h2>Image<a class="headerlink" href="#image" title="Permalink to this heading"></a></h2>
 <p><a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO" title="ikomia.dataprocess.pydataprocess.CImageIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CImageIO</span></code></a>: input or output containing image data stored as Numpy array with dimensions [HWC].
 When the number of channels is 3, the color format should be RGB.</p>
 <p>Basic usage:</p>
@@ -172,7 +186,7 @@ When the number of channels is 3, the color format should be RGB.</p>
 <p>Please consult <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO" title="ikomia.dataprocess.pydataprocess.CImageIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CImageIO</span></code></a> for details.</p>
 </section>
 <section id="graphics">
-<h2>Graphics<a class="headerlink" href="#graphics" title="Permalink to this headline"></a></h2>
+<h2>Graphics<a class="headerlink" href="#graphics" title="Permalink to this heading"></a></h2>
 <p>In Ikomia platform, graphics represent all vectorial items (line, polygon, text…) that
 bring additionnal information to images. They can be stored as input (<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput" title="ikomia.dataprocess.pydataprocess.CGraphicsInput"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a>)
 or output (<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CGraphicsOutput</span></code></a>). Different types of graphics
@@ -223,7 +237,7 @@ are provided, each one being implemented in a dedicated class:</p>
 </div>
 </section>
 <section id="numeric-values">
-<h2>Numeric values<a class="headerlink" href="#numeric-values" title="Permalink to this headline"></a></h2>
+<h2>Numeric values<a class="headerlink" href="#numeric-values" title="Permalink to this heading"></a></h2>
 <p><a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO" title="ikomia.dataprocess.pydataprocess.CNumericIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CNumericIO</span></code></a>: input or output dedicated to handle numeric values as float.
 Data structure is organized to be visualize in a column/row table. You can also add labels describing
 those values: <em>header labels</em> for columns and <em>labels</em> for rows.</p>
@@ -270,7 +284,7 @@ Possible values are listed in <a class="reference internal" href="_autosummary/_
 </div>
 </section>
 <section id="string-values">
-<h2>String values<a class="headerlink" href="#string-values" title="Permalink to this headline"></a></h2>
+<h2>String values<a class="headerlink" href="#string-values" title="Permalink to this heading"></a></h2>
 <p><a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html#ikomia.dataprocess.pydataprocess.CDataStringIO" title="ikomia.dataprocess.pydataprocess.CDataStringIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CDataStringIO</span></code></a>: input or output dedicated to output string values.
 Data structure is organized to be visualize in a column/row table. You can also add labels describing
 those values: header labels for columns and labels for rows.</p>
@@ -294,7 +308,7 @@ those values: header labels for columns and labels for rows.</p>
 </div>
 </section>
 <section id="blob-measures">
-<h2>Blob measures<a class="headerlink" href="#blob-measures" title="Permalink to this headline"></a></h2>
+<h2>Blob measures<a class="headerlink" href="#blob-measures" title="Permalink to this heading"></a></h2>
 <p><a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html#ikomia.dataprocess.pydataprocess.CBlobMeasureIO" title="ikomia.dataprocess.pydataprocess.CBlobMeasureIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CBlobMeasureIO</span></code></a>: input or output dedicated to handle measures computed on BLOBs (Binary Large Objects).
 BLOBs are regions or connected components extracted from image based on specific properties (color, brightness, edges…). A CBlobMeasureIO instance
 stores a list of <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectMeasure.html#ikomia.dataprocess.pydataprocess.CObjectMeasure" title="ikomia.dataprocess.pydataprocess.CObjectMeasure"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CObjectMeasure</span></code></a> (one for each BLOB). Here is the list of available measures:</p>
@@ -339,17 +353,17 @@ graphics id in <a class="reference internal" href="_autosummary/_autosummaryv/ik
 </div>
 </section>
 <section id="multi-dimensional-array">
-<h2>Multi-dimensional array<a class="headerlink" href="#multi-dimensional-array" title="Permalink to this headline"></a></h2>
+<h2>Multi-dimensional array<a class="headerlink" href="#multi-dimensional-array" title="Permalink to this heading"></a></h2>
 <p><a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html#ikomia.dataprocess.pydataprocess.CArrayIO" title="ikomia.dataprocess.pydataprocess.CArrayIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CArrayIO</span></code></a>: input or output dedicated to handle multi-dimensional array.
 <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html#ikomia.dataprocess.pydataprocess.CArrayIO" title="ikomia.dataprocess.pydataprocess.CArrayIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CArrayIO</span></code></a> instance just stores a Numpy array that will be not considered as image.
 Thus, such I/O are not visualized in Ikomia Studio.</p>
 </section>
 <section id="deep-learning-dataset">
-<h2>Deep learning dataset<a class="headerlink" href="#deep-learning-dataset" title="Permalink to this headline"></a></h2>
+<h2>Deep learning dataset<a class="headerlink" href="#deep-learning-dataset" title="Permalink to this heading"></a></h2>
 <p><a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dnn.datasetio.IkDatasetIO.html#ikomia.dnn.datasetio.IkDatasetIO" title="ikomia.dnn.datasetio.IkDatasetIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">IkDatasetIO</span></code></a>: input or output dedicated to handle deep learning image dataset. The Ikomia platform aims
 to simplify the use of state of the art algorithms, especially training algorithms. The idea behind <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dnn.datasetio.IkDatasetIO.html#ikomia.dnn.datasetio.IkDatasetIO" title="ikomia.dnn.datasetio.IkDatasetIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">IkDatasetIO</span></code></a>
-is to define a common structure so that every datasets converted to Ikomia format can then be used by any training algorithms of Ikomia
-Marketplace. Ikomia dataset structure is inspired by PyTorch and Detectron2. It is composed of a global dict with 2 main entries
+is to define a common structure so that every datasets converted to Ikomia format can then be used by any training algorithms from Ikomia
+HUB. Ikomia dataset structure is inspired by PyTorch and Detectron2. It is composed of a global dict with 2 main entries
 ‘images’ and ‘metadata’.</p>
 <p>This API provides built-in function to manage standard dataset format:</p>
 <ul class="simple">
@@ -378,11 +392,11 @@ Marketplace. Ikomia dataset structure is inspired by PyTorch and Detectron2. It 
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You will find other dataset loaders in the Ikomia Marketplace. You can also consult our GitHub repository to find implementation details (dataset_wgisd for example).</p>
+<p>You will find other dataset loaders in Ikomia HUB. You can also consult our GitHub repository to find implementation details (dataset_wgisd for example).</p>
 </div>
 </section>
 <section id="filesystem-path">
-<h2>Filesystem path<a class="headerlink" href="#filesystem-path" title="Permalink to this headline"></a></h2>
+<h2>Filesystem path<a class="headerlink" href="#filesystem-path" title="Permalink to this heading"></a></h2>
 <p><a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html#ikomia.dataprocess.pydataprocess.CPathIO" title="ikomia.dataprocess.pydataprocess.CPathIO"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CPathIO</span></code></a>: input or output dedicated to handle folder or file path.</p>
 <p>Basic usage:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -406,6 +420,191 @@ Marketplace. Ikomia dataset structure is inspired by PyTorch and Detectron2. It 
         <span class="n">path_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="n">path_output</span><span class="o">.</span><span class="n">setPath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path_in</span><span class="p">))</span>
 </pre></div>
+</div>
+</section>
+<section id="object-detection-i-o">
+<h2>Object detection I/O<a class="headerlink" href="#object-detection-i-o" title="Permalink to this heading"></a></h2>
+<p>Object detection is a common task in Computer Vision that aims to provide bounding box and class for each detected
+object. We provide the class <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO" title="ikomia.dataprocess.pydataprocess.CObjectDetectionIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectDetectionIO</span></code></a> to ease the management
+of object detection results. Such input/output stores essential information in a list of
+<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetection.html#ikomia.dataprocess.pydataprocess.CObjectDetection" title="ikomia.dataprocess.pydataprocess.CObjectDetection"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectDetection</span></code></a>:</p>
+<ul class="simple">
+<li><p>unique identifier</p></li>
+<li><p>class label</p></li>
+<li><p>confidence</p></li>
+<li><p>box coordinates stored as list of 4 float numbers: [x-coordinate, y-coordinate, width, height]</p></li>
+<li><p>display color</p></li>
+</ul>
+<p>It also provides methods to fill and retrieve results (see
+<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO" title="ikomia.dataprocess.pydataprocess.CObjectDetectionIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectDetectionIO</span></code></a> for details).</p>
+<p>Usage as output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">C2dImageTask</span><span class="p">,</span> <span class="n">CObjectDetectionIO</span>
+
+<span class="k">class</span> <span class="nc">MyDetectorPlugin</span><span class="p">(</span><span class="n">C2dImageTask</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+        <span class="n">C2dImageTask</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="c1"># Add object detection output</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addOutput</span><span class="p">(</span><span class="n">CObjectDetectionIO</span><span class="p">())</span>
+        <span class="c1"># Load class names</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_names</span><span class="p">()</span>          <span class="c1">#to implement</span>
+        <span class="c1"># Generate class colors</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_colors</span><span class="p">()</span>    <span class="c1">#to implement</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Image input :</span>
+        <span class="n">img_input</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getInput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">src_image</span> <span class="o">=</span> <span class="n">img_input</span><span class="o">.</span><span class="n">getImage</span><span class="p">()</span>
+        <span class="c1"># Forward input image</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">forwardInputImage</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># Object detection output</span>
+        <span class="n">obj_detect_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">obj_detect_out</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="s2">&quot;MyDetector&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># Model prediction (to replace with your model inference)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">src_image</span><span class="p">)</span>
+
+        <span class="c1"># Process detections</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="o">*</span><span class="n">xyxy</span><span class="p">,</span> <span class="n">conf</span><span class="p">,</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+            <span class="c1"># Box</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">xyxy</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">xyxy</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">h</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">xyxy</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">xyxy</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">obj_detect_out</span><span class="o">.</span><span class="n">addObject</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="bp">cls</span><span class="p">)],</span> <span class="n">conf</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+                                     <span class="nb">float</span><span class="p">(</span><span class="n">xyxy</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">xyxy</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span>
+                                     <span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="bp">cls</span><span class="p">)])</span>
+        <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Ikomia Studio, <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO" title="ikomia.dataprocess.pydataprocess.CObjectDetectionIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectDetectionIO</span></code></a> output is displayed as graphics
+layer on top of reference image (box + label + confidence) and as results table.</p>
+</div>
+</section>
+<section id="instance-segmentation-i-o">
+<h2>Instance segmentation I/O<a class="headerlink" href="#instance-segmentation-i-o" title="Permalink to this heading"></a></h2>
+<p>Instance segmentation is a common task in Computer Vision that aims to provide bounding box, class and mask for each
+detected object (ie instance). We provide the class <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO" title="ikomia.dataprocess.pydataprocess.CInstanceSegIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CInstanceSegIO</span></code></a>
+to ease the management of instance segmentation results. Such input/output stores essential information in a list of
+<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html#ikomia.dataprocess.pydataprocess.CInstanceSegmentation" title="ikomia.dataprocess.pydataprocess.CInstanceSegmentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">CInstanceSegmentation</span></code></a>:</p>
+<ul class="simple">
+<li><p>unique identifier</p></li>
+<li><p>instance type (THING or STUFF)</p></li>
+<li><p>class index</p></li>
+<li><p>class label</p></li>
+<li><p>confidence</p></li>
+<li><p>box coordinates stored as list of 4 float numbers: [x-coordinate, y-coordinate, width, height]</p></li>
+<li><p>binary mask</p></li>
+<li><p>display color</p></li>
+</ul>
+<p>It also provides methods to fill and retrieve results (see
+<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO" title="ikomia.dataprocess.pydataprocess.CInstanceSegIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CInstanceSegIO</span></code></a> for details). This input/output type is also suitable
+for <strong>panoptic segmentation</strong>.</p>
+<p>Usage as output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">C2dImageTask</span><span class="p">,</span> <span class="n">CInstanceSegIO</span>
+
+<span class="k">class</span> <span class="nc">MySegmentorPlugin</span><span class="p">(</span><span class="n">C2dImageTask</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+        <span class="n">C2dImageTask</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="c1"># Add object detection output</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addOutput</span><span class="p">(</span><span class="n">CInstanceSegIO</span><span class="p">())</span>
+        <span class="c1"># Load class names</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_names</span><span class="p">()</span>          <span class="c1">#to implement</span>
+        <span class="c1"># Generate class colors</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_colors</span><span class="p">()</span>    <span class="c1">#to implement</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Image input :</span>
+        <span class="n">img_input</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getInput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">src_image</span> <span class="o">=</span> <span class="n">img_input</span><span class="o">.</span><span class="n">getImage</span><span class="p">()</span>
+        <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">src_image</span><span class="o">.</span><span class="n">shape</span>
+        <span class="c1"># Forward input image</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">forwardInputImage</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># Object detection output</span>
+        <span class="n">instance_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">instance_out</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="s2">&quot;MySegmentor&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+        <span class="c1"># Model prediction (to replace with your model inference)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">src_image</span><span class="p">)</span>
+
+        <span class="c1"># Process detections</span>
+        <span class="n">instances</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">[</span><span class="s2">&quot;instances&quot;</span><span class="p">]</span>
+        <span class="n">scores</span> <span class="o">=</span> <span class="n">instances</span><span class="o">.</span><span class="n">scores</span>
+        <span class="n">boxes</span> <span class="o">=</span> <span class="n">instances</span><span class="o">.</span><span class="n">pred_boxes</span>
+        <span class="n">classes</span> <span class="o">=</span> <span class="n">instances</span><span class="o">.</span><span class="n">pred_classes</span>
+        <span class="n">masks</span> <span class="o">=</span> <span class="n">instances</span><span class="o">.</span><span class="n">pred_masks</span>
+
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">box</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">mask</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">boxes</span><span class="p">,</span> <span class="n">scores</span><span class="p">,</span> <span class="n">classes</span><span class="p">,</span> <span class="n">masks</span><span class="p">):</span>
+            <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+            <span class="bp">cls</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span>
+            <span class="n">h</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">)</span>
+            <span class="n">instance_out</span><span class="o">.</span><span class="n">addInstance</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">cls</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="bp">cls</span><span class="p">],</span> <span class="nb">float</span><span class="p">(</span><span class="n">score</span><span class="p">),</span>
+                                     <span class="nb">float</span><span class="p">(</span><span class="n">x1</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">y1</span><span class="p">),</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span>
+                                     <span class="n">mask</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;uint8&quot;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="p">[</span><span class="bp">cls</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Ikomia Studio, <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO" title="ikomia.dataprocess.pydataprocess.CInstanceSegIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CInstanceSegIO</span></code></a> output is displayed as graphics
+layer on top of reference image (box + label + confidence), color mask overlay on reference image, merge mask of
+all instances and results table.</p>
+</div>
+</section>
+<section id="semantic-segmentation-i-o">
+<h2>Semantic segmentation I/O<a class="headerlink" href="#semantic-segmentation-i-o" title="Permalink to this heading"></a></h2>
+<p>Semantic segmentation is a common task in Computer Vision that aims to provide mask where a class label value is set
+for all pixels. We provide the class <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CSemanticSegIO</span></code></a>
+to ease the management of semantic segmentation results. Such input/output stores essential information as described
+below:</p>
+<ul class="simple">
+<li><p>Mask</p></li>
+<li><p>List of class names: index of a given class in this list corresponds to the pixel value in the mask</p></li>
+<li><p>List of colors (one for each class)</p></li>
+</ul>
+<p>It also provides methods to fill and retrieve results (see
+<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CSemanticSegIO</span></code></a> for details).</p>
+<p>Usage as output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">C2dImageTask</span><span class="p">,</span> <span class="n">CSemanticSegIO</span>
+
+<span class="k">class</span> <span class="nc">MySegmentorPlugin</span><span class="p">(</span><span class="n">C2dImageTask</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+        <span class="n">C2dImageTask</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="c1"># Add object detection output</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addOutput</span><span class="p">(</span><span class="n">CSemanticSegIO</span><span class="p">())</span>
+        <span class="c1"># Load class names</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_names</span><span class="p">()</span>          <span class="c1">#to implement</span>
+        <span class="c1"># Generate class colors</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_colors</span><span class="p">()</span>    <span class="c1">#to implement</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Image input :</span>
+        <span class="n">img_input</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getInput</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">src_image</span> <span class="o">=</span> <span class="n">img_input</span><span class="o">.</span><span class="n">getImage</span><span class="p">()</span>
+        <span class="c1"># Forward input image</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">forwardInputImage</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># Object detection output</span>
+        <span class="n">semantic_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getOutput</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># Model prediction (to replace with your model inference)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">src_image</span><span class="p">)</span>
+
+        <span class="c1"># Process detections</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">[</span><span class="s2">&quot;sem_seg&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+
+        <span class="n">semantic_output</span><span class="o">.</span><span class="n">setMask</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+        <span class="n">semantic_output</span><span class="o">.</span><span class="n">setClassNames</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">names</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="p">)</span>
+
+        <span class="c1"># Color mask overlay</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setOutputColorMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Ikomia Studio, <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CSemanticSegIO</span></code></a> output is displayed as a graylevel
+mask, a color mask overlay on reference image and a legend image with the color/class mapping.</p>
 </div>
 </section>
 </section>

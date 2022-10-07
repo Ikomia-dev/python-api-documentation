@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -174,7 +175,7 @@
            <div itemprop="articleBody">
              
   <section id="cgraphicspolyline">
-<h1>CGraphicsPolyline<a class="headerlink" href="#cgraphicspolyline" title="Permalink to this headline"></a></h1>
+<h1>CGraphicsPolyline<a class="headerlink" href="#cgraphicspolyline" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CGraphicsPolyline">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CGraphicsPolyline</span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsPolyline" title="Permalink to this definition"></a></dt>
@@ -185,19 +186,19 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CGraphicsIte
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CGraphicsPolyline.__init__" title="ikomia.core.pycore.CGraphicsPolyline.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
-<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Inherited methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -224,7 +225,7 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CGraphicsIte
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -233,6 +234,9 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CGraphicsIte
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></p></td>
 <td><p>List of polyline vertices (<a class="reference internal" href="ikomia.core.pycore.CPointF.html#ikomia.core.pycore.CPointF" title="ikomia.core.pycore.CPointF"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPointF</span></code></a>)</p></td>
 </tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">property</span></code></p></td>
+<td><p>Visual properties <a class="reference internal" href="ikomia.core.pycore.GraphicsPolylineProperty.html#ikomia.core.pycore.GraphicsPolylineProperty" title="ikomia.core.pycore.GraphicsPolylineProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsPolylineProperty</span></code></a></p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Details</p>
@@ -240,22 +244,20 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CGraphicsIte
 <dt class="sig sig-object py" id="ikomia.core.pycore.CGraphicsPolyline.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsPolyline.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
-<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
-<dt>__init__( (object)arg1, (object)arg2) -&gt; None :</dt><dd><p>Construct a polyline graphics with the given vertices.</p>
-<dl>
-<dt>Args:</dt><dd><p>arg1: self</p>
-<p>arg2 (list): list of <a class="reference internal" href="ikomia.core.pycore.CPointF.html#ikomia.core.pycore.CPointF" title="ikomia.core.pycore.CPointF"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPointF</span></code></a> corresponding to vertices</p>
+<dt>__init__( (object)self, (object)points) -&gt; None :</dt><dd><p>Construct a polyline graphics with the given vertices.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>points (list of <a class="reference internal" href="ikomia.core.pycore.CPointF.html#ikomia.core.pycore.CPointF" title="ikomia.core.pycore.CPointF"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPointF</span></code></a>): polyline vertices</p>
+</div></blockquote>
 </dd>
-</dl>
-</dd>
-<dt>__init__( (object)arg1, (object)arg2, (GraphicsPolylineProperty)arg3) -&gt; None :</dt><dd><p>Construct a polyline graphics with the given vertices.</p>
-<dl>
-<dt>Args:</dt><dd><p>arg1: self</p>
-<p>arg2 (list): list of <a class="reference internal" href="ikomia.core.pycore.CPointF.html#ikomia.core.pycore.CPointF" title="ikomia.core.pycore.CPointF"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPointF</span></code></a> corresponding to vertices</p>
-<p>arg3 (<a class="reference internal" href="ikomia.core.pycore.GraphicsPolylineProperty.html#ikomia.core.pycore.GraphicsPolylineProperty" title="ikomia.core.pycore.GraphicsPolylineProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsPolylineProperty</span></code></a>): information and visual properties.</p>
-</dd>
-</dl>
+<dt>__init__( (object)self, (object)points, (GraphicsPolylineProperty)property) -&gt; None :</dt><dd><p>Construct a polyline graphics with the given vertices.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>points (list of <a class="reference internal" href="ikomia.core.pycore.CPointF.html#ikomia.core.pycore.CPointF" title="ikomia.core.pycore.CPointF"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPointF</span></code></a>): polyline vertices</p>
+<p>property (<a class="reference internal" href="ikomia.core.pycore.GraphicsPolylineProperty.html#ikomia.core.pycore.GraphicsPolylineProperty" title="ikomia.core.pycore.GraphicsPolylineProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsPolylineProperty</span></code></a>): information and visual properties.</p>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -265,10 +267,10 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CGraphicsIte
 <span class="sig-name descname"><span class="pre">getBoundingRect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsPolyline.getBoundingRect" title="Permalink to this definition"></a></dt>
 <dd><p>Get graphics item bounding rectangle.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>list of float: rectangle coordinate (left, top, width, height)</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>list of float: rectangle coordinate (left, top, width, height)</p>
+</div></blockquote>
 </div></blockquote>
 <p>getBoundingRect( (CGraphicsItem)arg1) -&gt; None</p>
 </dd></dl>
@@ -278,10 +280,10 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CGraphicsIte
 <span class="sig-name descname"><span class="pre">getCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsPolyline.getCategory" title="Permalink to this definition"></a></dt>
 <dd><p>Get graphics item category.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>str: category (label)</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>str: category (label)</p>
+</div></blockquote>
 </div></blockquote>
 <p>getCategory( (CGraphicsItem)arg1) -&gt; None</p>
 </dd></dl>
@@ -319,10 +321,10 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CGraphicsIte
 <span class="sig-name descname"><span class="pre">isTextItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsPolyline.isTextItem" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether item type is TEXT. In case of object detection workflow, text graphics items should not be useful as input for another task. This method enables to filter only shape-based items (rectangle, polygon…) when processing graphics input.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>bool: True or False</p>
+</div></blockquote>
 </div></blockquote>
 <p>isTextItem( (CGraphicsItem)self) -&gt; bool</p>
 </dd></dl>
@@ -332,10 +334,10 @@ Derived from <a class="reference internal" href="ikomia.core.pycore.CGraphicsIte
 <span class="sig-name descname"><span class="pre">setCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)category</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsPolyline.setCategory" title="Permalink to this definition"></a></dt>
 <dd><p>Set the graphics item category. It’s just a generic way to identify the item.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>category (str): identification label</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>category (str): identification label</p>
+</div></blockquote>
 </div></blockquote>
 <p>setCategory( (CGraphicsItem)arg1, (str)arg2) -&gt; None</p>
 </dd></dl>

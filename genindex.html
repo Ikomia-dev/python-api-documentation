@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="#" />
@@ -42,7 +43,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -71,8 +72,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -201,13 +202,19 @@
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO.__init__">(ikomia.dataprocess.pydataprocess.CImageIO method)</a>
 </li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.__init__">(ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO.__init__">(ikomia.dataprocess.pydataprocess.CNumericIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.__init__">(ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectMeasure.html#ikomia.dataprocess.pydataprocess.CObjectMeasure.__init__">(ikomia.dataprocess.pydataprocess.CObjectMeasure method)</a>
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html#ikomia.dataprocess.pydataprocess.CPathIO.__init__">(ikomia.dataprocess.pydataprocess.CPathIO method)</a>
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html#ikomia.dataprocess.pydataprocess.CPluginProcessInterface.__init__">(ikomia.dataprocess.pydataprocess.CPluginProcessInterface method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.__init__">(ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html#ikomia.dataprocess.pydataprocess.CTaskFactory.__init__">(ikomia.dataprocess.pydataprocess.CTaskFactory method)</a>
 </li>
@@ -274,7 +281,11 @@
         <li><a href="_autosummary/_autosummaryv/ikomia.dnn.dnntrain.TrainProcess.html#ikomia.dnn.dnntrain.TrainProcess.addInput">(ikomia.dnn.dnntrain.TrainProcess method)</a>
 </li>
       </ul></li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.addInstance">addInstance() (ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput.addItem">addItem() (ikomia.dataprocess.pydataprocess.CGraphicsOutput method)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.addObject">addObject() (ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.addObjectMeasure">addObjectMeasure() (ikomia.dataprocess.pydataprocess.CBlobMeasureIO method)</a>
 </li>
@@ -416,6 +427,10 @@
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO">CImageIO (class in ikomia.dataprocess.pydataprocess)</a>
 </li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO">CInstanceSegIO (class in ikomia.dataprocess.pydataprocess)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html#ikomia.dataprocess.pydataprocess.CInstanceSegmentation">CInstanceSegmentation (class in ikomia.dataprocess.pydataprocess)</a>
+</li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.clear">clear() (ikomia.dataprocess.pydataprocess.CWorkflow method)</a>
 
       <ul>
@@ -439,7 +454,11 @@
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO.clearData">(ikomia.dataprocess.pydataprocess.CImageIO method)</a>
 </li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.clearData">(ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO.clearData">(ikomia.dataprocess.pydataprocess.CNumericIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.clearData">(ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html#ikomia.dataprocess.pydataprocess.CPathIO.clearData">(ikomia.dataprocess.pydataprocess.CPathIO method)</a>
 </li>
@@ -470,10 +489,14 @@
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO">CNumericIO (class in ikomia.dataprocess.pydataprocess)</a>
 </li>
-      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectMeasure.html#ikomia.dataprocess.pydataprocess.CObjectMeasure">CObjectMeasure (class in ikomia.dataprocess.pydataprocess)</a>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetection.html#ikomia.dataprocess.pydataprocess.CObjectDetection">CObjectDetection (class in ikomia.dataprocess.pydataprocess)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO">CObjectDetectionIO (class in ikomia.dataprocess.pydataprocess)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectMeasure.html#ikomia.dataprocess.pydataprocess.CObjectMeasure">CObjectMeasure (class in ikomia.dataprocess.pydataprocess)</a>
+</li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.computeBlobs">computeBlobs() (ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask method)</a>
 </li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.connect">connect() (ikomia.dataprocess.pydataprocess.CWorkflow method)</a>
@@ -536,9 +559,13 @@
         <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html#ikomia.dataprocess.pydataprocess.CVideoTrackingTask.createGraphicsMask">(ikomia.dataprocess.pydataprocess.CVideoTrackingTask method)</a>
 </li>
       </ul></li>
+      <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask.createInputGraphicsMask">createInputGraphicsMask() (ikomia.dataprocess.pydataprocess.C2dImageTask method)</a>
+</li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html#ikomia.dataprocess.pydataprocess.CIkomiaRegistry.createInstance">createInstance() (ikomia.dataprocess.pydataprocess.CIkomiaRegistry method)</a>
 </li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.createInteractionMask">createInteractionMask() (ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask method)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO">CSemanticSegIO (class in ikomia.dataprocess.pydataprocess)</a>
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html#ikomia.dataprocess.pydataprocess.CTaskFactory">CTaskFactory (class in ikomia.dataprocess.pydataprocess)</a>
 </li>
@@ -742,6 +769,28 @@
         <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html#ikomia.dataprocess.pydataprocess.CVideoTrackingTask.forwardInputImage">(ikomia.dataprocess.pydataprocess.CVideoTrackingTask method)</a>
 </li>
       </ul></li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.fromJson">fromJson() (ikomia.core.pycore.CWorkflowTaskIO method)</a>
+
+      <ul>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.fromJson">(ikomia.dataprocess.pydataprocess.CBlobMeasureIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html#ikomia.dataprocess.pydataprocess.CDatasetIO.fromJson">(ikomia.dataprocess.pydataprocess.CDatasetIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput.fromJson">(ikomia.dataprocess.pydataprocess.CGraphicsInput method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput.fromJson">(ikomia.dataprocess.pydataprocess.CGraphicsOutput method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO.fromJson">(ikomia.dataprocess.pydataprocess.CImageIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.fromJson">(ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO.fromJson">(ikomia.dataprocess.pydataprocess.CNumericIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.fromJson">(ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.fromJson">(ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -798,10 +847,22 @@
         <li><a href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_image_with_graphics">(in module ikomia.core.task)</a>
 </li>
       </ul></li>
+      <li><a href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.get_instance_segmentation_output">get_instance_segmentation_output() (ikomia.dataprocess.workflow.Workflow method)</a>
+
+      <ul>
+        <li><a href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_instance_segmentation_output">(in module ikomia.core.task)</a>
+</li>
+      </ul></li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.get_numeric_output">get_numeric_output() (ikomia.dataprocess.workflow.Workflow method)</a>
 
       <ul>
         <li><a href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_numeric_output">(in module ikomia.core.task)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.get_object_detection_output">get_object_detection_output() (ikomia.dataprocess.workflow.Workflow method)</a>
+
+      <ul>
+        <li><a href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_object_detection_output">(in module ikomia.core.task)</a>
 </li>
       </ul></li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.registry.IkomiaRegistry.html#ikomia.dataprocess.registry.IkomiaRegistry.get_online_algorithms">get_online_algorithms() (ikomia.dataprocess.registry.IkomiaRegistry method)</a>
@@ -810,6 +871,12 @@
 
       <ul>
         <li><a href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_path_output">(in module ikomia.core.task)</a>
+</li>
+      </ul></li>
+      <li><a href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.get_semantic_segmentation_output">get_semantic_segmentation_output() (ikomia.dataprocess.workflow.Workflow method)</a>
+
+      <ul>
+        <li><a href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_semantic_segmentation_output">(in module ikomia.core.task)</a>
 </li>
       </ul></li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.get_tasks">get_tasks() (ikomia.dataprocess.workflow.Workflow method)</a>
@@ -918,6 +985,10 @@
         <li><a href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.getChildren">(ikomia.dataprocess.workflow.Workflow method)</a>
 </li>
       </ul></li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.getClassNames">getClassNames() (ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.getColors">getColors() (ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
+</li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html#ikomia.dataprocess.pydataprocess.CVideoIO.getCurrentPos">getCurrentPos() (ikomia.dataprocess.pydataprocess.CVideoIO method)</a>
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO.getData">getData() (ikomia.dataprocess.pydataprocess.CImageIO method)</a>
@@ -1098,9 +1169,17 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.getInstance">getInstance() (ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.getInstanceCount">getInstanceCount() (ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.getInstances">getInstances() (ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.getInteractionMask">getInteractionMask() (ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask method)</a>
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput.getItems">getItems() (ikomia.dataprocess.pydataprocess.CGraphicsInput method)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.getMask">getMask() (ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html#ikomia.dataprocess.pydataprocess.CDatasetIO.getMaskPath">getMaskPath() (ikomia.dataprocess.pydataprocess.CDatasetIO method)</a>
 
@@ -1112,7 +1191,15 @@
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.getMeasures">getMeasures() (ikomia.dataprocess.pydataprocess.CBlobMeasureIO method)</a>
 </li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.getMergeMask">getMergeMask() (ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
       <li><a href="_autosummary/_autosummaryv/ikomia.core.pycore.CMeasure.html#ikomia.core.pycore.CMeasure.getName">getName() (ikomia.core.pycore.CMeasure static method)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.getObject">getObject() (ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.getObjectCount">getObjectCount() (ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.getObjects">getObjects() (ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
 </li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.getOutEdges">getOutEdges() (ikomia.dataprocess.pydataprocess.CWorkflow method)</a>
 
@@ -1247,7 +1334,7 @@
       <ul>
         <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.getProgressSteps">(ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask method)</a>
 </li>
-        <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#id0">(ikomia.dataprocess.pydataprocess.C2dImageTask method)</a>, <a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask.getProgressSteps">[1]</a>
+        <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask.getProgressSteps">(ikomia.dataprocess.pydataprocess.C2dImageTask method)</a>
 </li>
         <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.html#ikomia.dataprocess.pydataprocess.CVideoOFTask.getProgressSteps">(ikomia.dataprocess.pydataprocess.CVideoOFTask method)</a>
 </li>
@@ -1524,6 +1611,12 @@
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html#ikomia.dataprocess.pydataprocess.CTaskFactory.info">info (ikomia.dataprocess.pydataprocess.CTaskFactory attribute)</a>
 </li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.init">init() (ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+
+      <ul>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.init">(ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
+</li>
+      </ul></li>
       <li><a href="_autosummary/_autosummary/ikomia.dataprocess.registry.IkomiaRegistry.html#ikomia.dataprocess.registry.IkomiaRegistry.install_algorithm">install_algorithm() (ikomia.dataprocess.registry.IkomiaRegistry method)</a>
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType">IODataType (class in ikomia.core.pycore)</a>
@@ -1571,9 +1664,15 @@
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO.isDataAvailable">(ikomia.dataprocess.pydataprocess.CImageIO method)</a>
 </li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.isDataAvailable">(ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO.isDataAvailable">(ikomia.dataprocess.pydataprocess.CNumericIO method)</a>
 </li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.isDataAvailable">(ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
+</li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html#ikomia.dataprocess.pydataprocess.CPathIO.isDataAvailable">(ikomia.dataprocess.pydataprocess.CPathIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.isDataAvailable">(ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html#ikomia.dataprocess.pydataprocess.CVideoIO.isDataAvailable">(ikomia.dataprocess.pydataprocess.CVideoIO method)</a>
 </li>
@@ -1640,16 +1739,24 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html#ikomia.dataprocess.pydataprocess.CDataStringIO.load">load() (ikomia.dataprocess.pydataprocess.CDataStringIO method)</a>
+      <li><a href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.load">load() (ikomia.core.pycore.CWorkflowTaskIO method)</a>
 
       <ul>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html#ikomia.dataprocess.pydataprocess.CDataStringIO.load">(ikomia.dataprocess.pydataprocess.CDataStringIO method)</a>
+</li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput.load">(ikomia.dataprocess.pydataprocess.CGraphicsInput method)</a>
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput.load">(ikomia.dataprocess.pydataprocess.CGraphicsOutput method)</a>
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO.load">(ikomia.dataprocess.pydataprocess.CImageIO method)</a>
 </li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.load">(ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO.load">(ikomia.dataprocess.pydataprocess.CNumericIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.load">(ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.load">(ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
 </li>
         <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.load">(ikomia.dataprocess.pydataprocess.CWorkflow method)</a>
 </li>
@@ -1660,10 +1767,10 @@
         <li><a href="_autosummary/ikomia.dataprocess.workflow.html#ikomia.dataprocess.workflow.load">(in module ikomia.dataprocess.workflow)</a>
 </li>
       </ul></li>
-      <li><a href="_autosummary/ikomia.dnn.dataset.html#ikomia.dnn.dataset.load_coco_dataset">load_coco_dataset() (in module ikomia.dnn.dataset)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/ikomia.dnn.dataset.html#ikomia.dnn.dataset.load_coco_dataset">load_coco_dataset() (in module ikomia.dnn.dataset)</a>
+</li>
       <li><a href="_autosummary/ikomia.dnn.dataset.html#ikomia.dnn.dataset.load_pascalvoc_dataset">load_pascalvoc_dataset() (in module ikomia.dnn.dataset)</a>
 </li>
       <li><a href="_autosummary/ikomia.dnn.dataset.html#ikomia.dnn.dataset.load_via_dataset">load_via_dataset() (in module ikomia.dnn.dataset)</a>
@@ -1883,9 +1990,11 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html#ikomia.dataprocess.pydataprocess.CDatasetIO.save">save() (ikomia.dataprocess.pydataprocess.CDatasetIO method)</a>
+      <li><a href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.save">save() (ikomia.core.pycore.CWorkflowTaskIO method)</a>
 
       <ul>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html#ikomia.dataprocess.pydataprocess.CDatasetIO.save">(ikomia.dataprocess.pydataprocess.CDatasetIO method)</a>
+</li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html#ikomia.dataprocess.pydataprocess.CDataStringIO.save">(ikomia.dataprocess.pydataprocess.CDataStringIO method)</a>
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput.save">(ikomia.dataprocess.pydataprocess.CGraphicsInput method)</a>
@@ -1894,7 +2003,13 @@
 </li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO.save">(ikomia.dataprocess.pydataprocess.CImageIO method)</a>
 </li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.save">(ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO.save">(ikomia.dataprocess.pydataprocess.CNumericIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.save">(ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.save">(ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
 </li>
         <li><a href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html#ikomia.dataprocess.pydataprocess.CWorkflow.save">(ikomia.dataprocess.pydataprocess.CWorkflow method)</a>
 </li>
@@ -1983,6 +2098,8 @@
         <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html#ikomia.dataprocess.pydataprocess.CVideoIO.setChannelCount">(ikomia.dataprocess.pydataprocess.CVideoIO method)</a>
 </li>
       </ul></li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.setClassNames">setClassNames() (ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
+</li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO.setCurrentImage">setCurrentImage() (ikomia.dataprocess.pydataprocess.CImageIO method)</a>
 
       <ul>
@@ -2064,6 +2181,8 @@
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput.setItems">setItems() (ikomia.dataprocess.pydataprocess.CGraphicsInput method)</a>
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskWidget.html#ikomia.core.pycore.CWorkflowTaskWidget.setLayout">setLayout() (ikomia.core.pycore.CWorkflowTaskWidget method)</a>
+</li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.setMask">setMask() (ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput.setNewLayer">setNewLayer() (ikomia.dataprocess.pydataprocess.CGraphicsOutput method)</a>
 </li>
@@ -2235,6 +2354,28 @@
 </li>
       <li><a href="_autosummary/_autosummaryv/ikomia.core.pycore.TaskType.html#ikomia.core.pycore.TaskType">TaskType (class in ikomia.core.pycore)</a>
 </li>
+      <li><a href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.toJson">toJson() (ikomia.core.pycore.CWorkflowTaskIO method)</a>
+
+      <ul>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html#ikomia.dataprocess.pydataprocess.CBlobMeasureIO.toJson">(ikomia.dataprocess.pydataprocess.CBlobMeasureIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html#ikomia.dataprocess.pydataprocess.CDatasetIO.toJson">(ikomia.dataprocess.pydataprocess.CDatasetIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput.toJson">(ikomia.dataprocess.pydataprocess.CGraphicsInput method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput.toJson">(ikomia.dataprocess.pydataprocess.CGraphicsOutput method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO.toJson">(ikomia.dataprocess.pydataprocess.CImageIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO.toJson">(ikomia.dataprocess.pydataprocess.CInstanceSegIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO.toJson">(ikomia.dataprocess.pydataprocess.CNumericIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO.toJson">(ikomia.dataprocess.pydataprocess.CObjectDetectionIO method)</a>
+</li>
+        <li><a href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO.toJson">(ikomia.dataprocess.pydataprocess.CSemanticSegIO method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_autosummary/_autosummary/ikomia.utils.pyutils.CMemoryInfo.html#ikomia.utils.pyutils.CMemoryInfo.totalMemory">totalMemory() (ikomia.utils.pyutils.CMemoryInfo method)</a>

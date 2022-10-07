@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../modules.html">API Reference</a><ul class="current">
@@ -145,7 +146,7 @@
            <div itemprop="articleBody">
              
   <section id="module-ikomia.core.task">
-<span id="task"></span><h1>Task<a class="headerlink" href="#module-ikomia.core.task" title="Permalink to this headline"></a></h1>
+<span id="task"></span><h1>Task<a class="headerlink" href="#module-ikomia.core.task" title="Permalink to this heading"></a></h1>
 <p>Module dedicated to high-level features around task management.</p>
 <p>See also <a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> for all available methods from task object instance.</p>
 <p class="rubric">Import</p>
@@ -153,7 +154,7 @@
 </pre></div>
 </div>
 <p class="rubric">Classes</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -165,7 +166,7 @@
 </tbody>
 </table>
 <p class="rubric">Functions</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -183,25 +184,34 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.task.get_dataset_output" title="ikomia.core.task.get_dataset_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dataset_output</span></code></a>(task[, index])</p></td>
 <td><p>Get DATASET output(s) of the given task.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.task.get_graphics_output" title="ikomia.core.task.get_graphics_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_graphics_output</span></code></a>(task[, index])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.task.get_data_string_output" title="ikomia.core.task.get_data_string_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_string_output</span></code></a>(task[, index])</p></td>
+<td><p>Get data string output(s) of the given task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.task.get_graphics_output" title="ikomia.core.task.get_graphics_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_graphics_output</span></code></a>(task[, index])</p></td>
 <td><p>Get GRAPHICS output(s) of the given task.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.task.get_image_output" title="ikomia.core.task.get_image_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image_output</span></code></a>(task[, index])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.task.get_image_output" title="ikomia.core.task.get_image_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image_output</span></code></a>(task[, index])</p></td>
 <td><p>Get IMAGE output(s) of the given task.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.task.get_image_with_graphics" title="ikomia.core.task.get_image_with_graphics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image_with_graphics</span></code></a>(task[, image_index, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.task.get_image_with_graphics" title="ikomia.core.task.get_image_with_graphics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image_with_graphics</span></code></a>(task[, image_index, ...])</p></td>
 <td><p>Get image (numpy array) of a specific IMAGE output with graphics items from a specific GRAPHICS output burnt into it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.task.get_instance_segmentation_output" title="ikomia.core.task.get_instance_segmentation_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_instance_segmentation_output</span></code></a>(task[, index])</p></td>
+<td><p>Get Instance Segmentation output(s) of the given task.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.task.get_numeric_output" title="ikomia.core.task.get_numeric_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_numeric_output</span></code></a>(task[, index])</p></td>
 <td><p>Get NUMERIC output(s) of the given task.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.task.get_data_string_output" title="ikomia.core.task.get_data_string_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_string_output</span></code></a>(task[, index])</p></td>
-<td><p>Get data string output(s) of the given task.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.task.get_object_detection_output" title="ikomia.core.task.get_object_detection_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_object_detection_output</span></code></a>(task[, index])</p></td>
+<td><p>Get Object Detection output(s) of the given task.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.task.get_path_output" title="ikomia.core.task.get_path_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_path_output</span></code></a>(task[, index])</p></td>
 <td><p>Get ARRAY output(s) of the given task.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.task.set_parameters" title="ikomia.core.task.set_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_parameters</span></code></a>(task, params)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.task.get_semantic_segmentation_output" title="ikomia.core.task.get_semantic_segmentation_output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_semantic_segmentation_output</span></code></a>(task[, index])</p></td>
+<td><p>Get Semantic Segmentation output(s) of the given task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.task.set_parameters" title="ikomia.core.task.set_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_parameters</span></code></a>(task, params)</p></td>
 <td><p>Set parameters of the given task from a dict structure.</p></td>
 </tr>
 </tbody>
@@ -227,7 +237,7 @@ See <a class="reference internal" href="_autosummary/ikomia.dataprocess.registry
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ikomia.core.task.get_array_output">
-<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_array_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_array_output" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_array_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_array_output" title="Permalink to this definition"></a></dt>
 <dd><p>Get ARRAY output(s) of the given task. A task can have multiple ARRAY outputs so the index
 argument can be set to specify the wanted output.</p>
 <dl class="field-list simple">
@@ -238,7 +248,7 @@ argument can be set to specify the wanted output.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>output or list of outputs.</p>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html#ikomia.dataprocess.pydataprocess.CArrayIO" title="ikomia.dataprocess.pydataprocess.CArrayIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CArrayIO</span></code></a></p>
@@ -248,7 +258,7 @@ argument can be set to specify the wanted output.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ikomia.core.task.get_blob_measure_output">
-<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_blob_measure_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_blob_measure_output" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_blob_measure_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_blob_measure_output" title="Permalink to this definition"></a></dt>
 <dd><p>Get BLOB MEASURE output(s) of the given task. A task can have multiple BLOB MEASURE outputs so the index
 argument can be set to specify the wanted output.</p>
 <dl class="field-list simple">
@@ -259,7 +269,7 @@ argument can be set to specify the wanted output.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>output or list of outputs.</p>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html#ikomia.dataprocess.pydataprocess.CBlobMeasureIO" title="ikomia.dataprocess.pydataprocess.CBlobMeasureIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CBlobMeasureIO</span></code></a></p>
@@ -269,7 +279,7 @@ argument can be set to specify the wanted output.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ikomia.core.task.get_dataset_output">
-<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_dataset_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_dataset_output" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_dataset_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_dataset_output" title="Permalink to this definition"></a></dt>
 <dd><p>Get DATASET output(s) of the given task. A task can have multiple DATASET outputs so the index
 argument can be set to specify the wanted output.</p>
 <dl class="field-list simple">
@@ -280,7 +290,7 @@ argument can be set to specify the wanted output.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>output or list of outputs.</p>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html#ikomia.dataprocess.pydataprocess.CDatasetIO" title="ikomia.dataprocess.pydataprocess.CDatasetIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CDatasetIO</span></code></a></p>
@@ -289,8 +299,29 @@ argument can be set to specify the wanted output.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="ikomia.core.task.get_data_string_output">
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_data_string_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_data_string_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get data string output(s) of the given task. A task can have multiple NUMERIC outputs so the index
+argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task</strong> (<a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> or derived) – object instance.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html#ikomia.dataprocess.pydataprocess.CDataStringIO" title="ikomia.dataprocess.pydataprocess.CDataStringIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CDataStringIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="ikomia.core.task.get_graphics_output">
-<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_graphics_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_graphics_output" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_graphics_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_graphics_output" title="Permalink to this definition"></a></dt>
 <dd><p>Get GRAPHICS output(s) of the given task. A task can have multiple GRAPHICS outputs so the index
 argument can be set to specify the wanted output.</p>
 <dl class="field-list simple">
@@ -301,7 +332,7 @@ argument can be set to specify the wanted output.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>output or list of outputs.</p>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsOutput</span></code></a></p>
@@ -311,7 +342,7 @@ argument can be set to specify the wanted output.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ikomia.core.task.get_image_output">
-<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_image_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_image_output" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_image_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_image_output" title="Permalink to this definition"></a></dt>
 <dd><p>Get IMAGE output(s) of the given task. A task can have multiple IMAGE outputs so the index
 argument can be set to specify the wanted output.</p>
 <dl class="field-list simple">
@@ -322,7 +353,7 @@ argument can be set to specify the wanted output.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>output or list of outputs.</p>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO" title="ikomia.dataprocess.pydataprocess.CImageIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageIO</span></code></a></p>
@@ -353,8 +384,29 @@ into it. Index of IMAGE and GRAPHICS outputs must be given.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="ikomia.core.task.get_instance_segmentation_output">
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_instance_segmentation_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_instance_segmentation_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get Instance Segmentation output(s) of the given task. A task can have multiple Instance Segmentation outputs so the
+index argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task</strong> (<a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> or derived) – object instance.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html#ikomia.dataprocess.pydataprocess.CInstanceSegIO" title="ikomia.dataprocess.pydataprocess.CInstanceSegIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CInstanceSegIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="ikomia.core.task.get_numeric_output">
-<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_numeric_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_numeric_output" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_numeric_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_numeric_output" title="Permalink to this definition"></a></dt>
 <dd><p>Get NUMERIC output(s) of the given task. A task can have multiple NUMERIC outputs so the index
 argument can be set to specify the wanted output.</p>
 <dl class="field-list simple">
@@ -365,7 +417,7 @@ argument can be set to specify the wanted output.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>output or list of outputs.</p>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO" title="ikomia.dataprocess.pydataprocess.CNumericIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CNumericIO</span></code></a></p>
@@ -374,9 +426,9 @@ argument can be set to specify the wanted output.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="ikomia.core.task.get_data_string_output">
-<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_data_string_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_data_string_output" title="Permalink to this definition"></a></dt>
-<dd><p>Get data string output(s) of the given task. A task can have multiple NUMERIC outputs so the index
+<dt class="sig sig-object py" id="ikomia.core.task.get_object_detection_output">
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_object_detection_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_object_detection_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get Object Detection output(s) of the given task. A task can have multiple Object Detection outputs so the index
 argument can be set to specify the wanted output.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -386,17 +438,17 @@ argument can be set to specify the wanted output.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>output or list of outputs.</p>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html#ikomia.dataprocess.pydataprocess.CDataStringIO" title="ikomia.dataprocess.pydataprocess.CDataStringIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CDataStringIO</span></code></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO" title="ikomia.dataprocess.pydataprocess.CObjectDetectionIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectDetectionIO</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ikomia.core.task.get_path_output">
-<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_path_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_path_output" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_path_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_path_output" title="Permalink to this definition"></a></dt>
 <dd><p>Get ARRAY output(s) of the given task. A task can have multiple ARRAY outputs so the index
 argument can be set to specify the wanted output.</p>
 <dl class="field-list simple">
@@ -407,10 +459,31 @@ argument can be set to specify the wanted output.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>output or list of outputs.</p>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html#ikomia.dataprocess.pydataprocess.CPathIO" title="ikomia.dataprocess.pydataprocess.CPathIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPathIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ikomia.core.task.get_semantic_segmentation_output">
+<span class="sig-prename descclassname"><span class="pre">ikomia.core.task.</span></span><span class="sig-name descname"><span class="pre">get_semantic_segmentation_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.core.task.get_semantic_segmentation_output" title="Permalink to this definition"></a></dt>
+<dd><p>Get Semantic Segmentation output(s) of the given task. A task can have multiple Semantic Segmentation outputs so the
+index argument can be set to specify the wanted output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task</strong> (<a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> or derived) – object instance.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the output in case of multiple matches. With default -1, all outputs are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output if index is set, list of outputs otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html#ikomia.dataprocess.pydataprocess.CSemanticSegIO" title="ikomia.dataprocess.pydataprocess.CSemanticSegIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CSemanticSegIO</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>

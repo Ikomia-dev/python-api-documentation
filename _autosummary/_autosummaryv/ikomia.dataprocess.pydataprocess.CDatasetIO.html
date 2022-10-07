@@ -15,12 +15,13 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="CPathIO" href="ikomia.dataprocess.pydataprocess.CPathIO.html" />
-    <link rel="prev" title="CWidgetOutput" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" />
+    <link rel="next" title="CDataStringIO" href="ikomia.dataprocess.pydataprocess.CDataStringIO.html" />
+    <link rel="prev" title="CBlobMeasureIO" href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html" />
  
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -88,29 +89,34 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CDatasetIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">CDatasetIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegIO.html">CInstanceSegIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html">CObjectDetectionIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CSemanticSegIO.html">CSemanticSegIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html">CInstanceSegmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetection.html">CObjectDetection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.MapIntStr.html">MapIntStr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
@@ -164,8 +170,8 @@
             <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" class="btn btn-neutral float-left" title="CWidgetOutput" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ikomia.dataprocess.pydataprocess.CPathIO.html" class="btn btn-neutral float-right" title="CPathIO" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html" class="btn btn-neutral float-left" title="CBlobMeasureIO" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CDataStringIO.html" class="btn btn-neutral float-right" title="CDataStringIO" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -173,7 +179,7 @@
            <div itemprop="articleBody">
              
   <section id="cdatasetio">
-<h1>CDatasetIO<a class="headerlink" href="#cdatasetio" title="Permalink to this headline"></a></h1>
+<h1>CDatasetIO<a class="headerlink" href="#cdatasetio" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CDatasetIO">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CDatasetIO</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO" title="Permalink to this definition"></a></dt>
@@ -226,7 +232,7 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <p>A default implementation is provided in the pure Python API. See <a class="reference internal" href="../ikomia.dnn.datasetio.html#module-ikomia.dnn.datasetio" title="ikomia.dnn.datasetio"><code class="xref py py-mod docutils literal notranslate"><span class="pre">datasetio</span></code></a> for details.</p>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -256,7 +262,7 @@ Instances can be added as input or output of a <a class="reference internal" hre
 </tbody>
 </table>
 <p class="rubric">Overridden methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -265,19 +271,25 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.clearData" title="ikomia.dataprocess.pydataprocess.CDatasetIO.clearData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code></a>(self)</p></td>
 <td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.clearData" title="ikomia.core.pycore.CWorkflowTaskIO.clearData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clearData()</span></code></a>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.isAutoInput" title="ikomia.dataprocess.pydataprocess.CDatasetIO.isAutoInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAutoInput</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.fromJson" title="ikomia.dataprocess.pydataprocess.CDatasetIO.fromJson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromJson</span></code></a>(self, jsonStr)</p></td>
+<td><p>Set input/output data from JSON formatted string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.isAutoInput" title="ikomia.dataprocess.pydataprocess.CDatasetIO.isAutoInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAutoInput</span></code></a>(self)</p></td>
 <td><p>Check whether input data from external source is mandatory.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CDatasetIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.isDataAvailable" title="ikomia.dataprocess.pydataprocess.CDatasetIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
 <td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable" title="ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">isDataAvailable()</span></code></a>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.save" title="ikomia.dataprocess.pydataprocess.CDatasetIO.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(arg1, arg2)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.save" title="ikomia.dataprocess.pydataprocess.CDatasetIO.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(arg1, arg2)</p></td>
 <td><p>Virtual method to reimplement, save dataset structure as JSON.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.toJson" title="ikomia.dataprocess.pydataprocess.CDatasetIO.toJson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toJson</span></code></a>(self)</p></td>
+<td><p>Return input/output data in JSON formatted string (compact mode).</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Inherited methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -295,7 +307,7 @@ Instances can be added as input or output of a <a class="reference internal" hre
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -316,18 +328,18 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <dd><dl>
 <dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
-<dt>__init__( (object)arg1, (str)arg2) -&gt; None :</dt><dd><p>Construct a CDatasetIO object specifying the input or output name.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>str: name</p>
+<dt>__init__( (object)self, (str)name) -&gt; None :</dt><dd><p>Construct a CDatasetIO object specifying the input or output name.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>name (str): custom name</p>
+</div></blockquote>
 </dd>
-</dl>
-</dd>
-<dt>__init__( (object)arg1, (str)arg2, (str)arg3) -&gt; None :</dt><dd><p>Construct a CDatasetIO object specifying the name and the source format.</p>
-<dl>
-<dt>Args:</dt><dd><p>str: name</p>
-<p>str: unique string identifier</p>
-</dd>
-</dl>
+<dt>__init__( (object)self, (str)name, (str)sourceFormat) -&gt; None :</dt><dd><p>Construct a CDatasetIO object specifying the name and the source format.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>name (str): custom name</p>
+<p>sourceFormat (str): unique string identifier</p>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -344,12 +356,25 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <span class="sig-name descname"><span class="pre">copyStaticData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)io</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.copyStaticData" title="Permalink to this definition"></a></dt>
 <dd><p>Copy the static data from the given input or ouput. Static data are those which are not generated at runtime. Should be overriden for custom input or output.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a>: input or ouput instance from which data is copied</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a>: input or ouput instance from which data is copied</p>
+</div></blockquote>
 </div></blockquote>
 <p>copyStaticData( (CWorkflowTaskIO)self, (CWorkflowTaskIO)io) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CDatasetIO.fromJson">
+<span class="sig-name descname"><span class="pre">fromJson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDatasetIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)jsonStr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.fromJson" title="Permalink to this definition"></a></dt>
+<dd><p>Set input/output data from JSON formatted string. Must be reimplemented</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>str: data as JSON formatted string</p>
+</div></blockquote>
+</div></blockquote>
+<p>fromJson( (CDatasetIO)self, (str)jsonStr) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
@@ -357,10 +382,10 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <span class="sig-name descname"><span class="pre">getCategories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDatasetIO)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MapIntStr</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getCategories" title="Permalink to this definition"></a></dt>
 <dd><p>Virtual method to reimplement, return the categories of the dataset.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p><a class="reference internal" href="ikomia.dataprocess.pydataprocess.MapIntStr.html#ikomia.dataprocess.pydataprocess.MapIntStr" title="ikomia.dataprocess.pydataprocess.MapIntStr"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapIntStr</span></code></a>: list of categories</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p><a class="reference internal" href="ikomia.dataprocess.pydataprocess.MapIntStr.html#ikomia.dataprocess.pydataprocess.MapIntStr" title="ikomia.dataprocess.pydataprocess.MapIntStr"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapIntStr</span></code></a>: list of categories</p>
+</div></blockquote>
 </div></blockquote>
 <p>getCategories( (CDatasetIO)arg1) -&gt; MapIntStr</p>
 </dd></dl>
@@ -370,10 +395,10 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <span class="sig-name descname"><span class="pre">getCategoryCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDatasetIO)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getCategoryCount" title="Permalink to this definition"></a></dt>
 <dd><p>Virtual method to reimplement, return the number of instance categories (ie classes) in the dataset.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>int: number of categories</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>int: number of categories</p>
+</div></blockquote>
 </div></blockquote>
 <p>getCategoryCount( (CDatasetIO)arg1) -&gt; int</p>
 </dd></dl>
@@ -383,10 +408,10 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <span class="sig-name descname"><span class="pre">getGraphicsAnnotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDatasetIO)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)arg2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getGraphicsAnnotations" title="Permalink to this definition"></a></dt>
 <dd><p>Virtual method to reimplement, return the list of graphics items corresponding to dataset annotations.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>list of <a class="reference internal" href="ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a> or derived: graphics items</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>list of <a class="reference internal" href="ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a> or derived: graphics items</p>
+</div></blockquote>
 </div></blockquote>
 <p>getGraphicsAnnotations( (CDatasetIO)arg1, (str)arg2) -&gt; object</p>
 </dd></dl>
@@ -396,10 +421,10 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <span class="sig-name descname"><span class="pre">getImagePaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDatasetIO)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getImagePaths" title="Permalink to this definition"></a></dt>
 <dd><p>Virtual method to reimplement, return the file path list of all images contained in the dataset.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>str[]: path list</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>str[]: path list</p>
+</div></blockquote>
 </div></blockquote>
 <p>getImagePaths( (CDatasetIO)arg1) -&gt; object</p>
 </dd></dl>
@@ -409,10 +434,10 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <span class="sig-name descname"><span class="pre">getMaskPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDatasetIO)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)arg2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getMaskPath" title="Permalink to this definition"></a></dt>
 <dd><p>Virtual method to reimplement, return the file path list of segmentation masks contained in the dataset.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>str[]: path list</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>str[]: path list</p>
+</div></blockquote>
 </div></blockquote>
 <p>getMaskPath( (CDatasetIO)arg1, (str)arg2) -&gt; str</p>
 </dd></dl>
@@ -420,12 +445,12 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CDatasetIO.getUnitElementCount">
 <span class="sig-name descname"><span class="pre">getUnitElementCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.getUnitElementCount" title="Permalink to this definition"></a></dt>
-<dd><p>Get the number of unit element in terms of processing scheme. This value is used to define the number of progress steps for progress bar component. For an image, the count is 1. For Z-stack volume, the count is the number of Z levels. Should be overriden for custom input or output.</p>
+<dd><p>Get the number of unit element in terms of processing scheme. This value is used to define the number of progress steps for progress bar component in <strong>Ikomia Studio</strong>. For an image, the count is 1. For Z-stack volume, the count is the number of Z levels. Should be overriden for custom input or output.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>int: number of unit element to process</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>int: number of unit element to process</p>
+</div></blockquote>
 </div></blockquote>
 <p>getUnitElementCount( (CWorkflowTaskIO)self) -&gt; int</p>
 </dd></dl>
@@ -435,10 +460,10 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <span class="sig-name descname"><span class="pre">isAutoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.isAutoInput" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether input data from external source is mandatory.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>bool: True or False</p>
+</div></blockquote>
 </div></blockquote>
 <p>isAutoInput( (CWorkflowTaskIO)self) -&gt; bool</p>
 </dd></dl>
@@ -455,12 +480,38 @@ Instances can be added as input or output of a <a class="reference internal" hre
 <span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDatasetIO)arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)arg2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.save" title="Permalink to this definition"></a></dt>
 <dd><p>Virtual method to reimplement, save dataset structure as JSON.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>str: file path</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>str: file path</p>
+</div></blockquote>
 </div></blockquote>
 <p>save( (CDatasetIO)arg1, (str)arg2) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CDatasetIO.toJson">
+<span class="sig-name descname"><span class="pre">toJson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDatasetIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDatasetIO.toJson" title="Permalink to this definition"></a></dt>
+<dd><p>Return input/output data in JSON formatted string (compact mode).</p>
+<blockquote>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>string: JSON formatted string</p>
+</div></blockquote>
+</div></blockquote>
+<p>toJson( (CDatasetIO)self) -&gt; str</p>
+<dl>
+<dt>toJson( (CDatasetIO)self, (object)options) -&gt; str :</dt><dd><p>Return input/output data in JSON formatted string. Must be reimplemented and should managethe common option to set the JSON format. It can be [‘json_format’, ‘compact’] or [‘json_format’, ‘indented’].</p>
+<p>Args:</p>
+<blockquote>
+<div><p>list of str: format-specific options encoded as pairs (option_name, option_value)</p>
+</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>string: JSON formatted string</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>toJson( (CDatasetIO)self, (object)options) -&gt; str</p>
 </dd></dl>
 
 </dd></dl>
@@ -471,8 +522,8 @@ Instances can be added as input or output of a <a class="reference internal" hre
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html" class="btn btn-neutral float-left" title="CWidgetOutput" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ikomia.dataprocess.pydataprocess.CPathIO.html" class="btn btn-neutral float-right" title="CPathIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html" class="btn btn-neutral float-left" title="CBlobMeasureIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CDataStringIO.html" class="btn btn-neutral float-right" title="CDataStringIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

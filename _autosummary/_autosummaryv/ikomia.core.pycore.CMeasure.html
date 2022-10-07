@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -174,33 +175,38 @@
            <div itemprop="articleBody">
              
   <section id="cmeasure">
-<h1>CMeasure<a class="headerlink" href="#cmeasure" title="Permalink to this headline"></a></h1>
+<h1>CMeasure<a class="headerlink" href="#cmeasure" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CMeasure">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CMeasure</span></span><a class="headerlink" href="#ikomia.core.pycore.CMeasure" title="Permalink to this definition"></a></dt>
-<dd><p>Class to handle available measures that can be computed on blob object in image. Here is the list of possible measures (<code class="xref py py-class docutils literal notranslate"><span class="pre">MeasureId):</span></code>
-- Surface: <a class="reference external" href="https://docs.opencv.org/4.5.2/d3/dc0/group__imgproc__shape.html#ga2c759ed9f497d4a618048a2f56dc97f1">cv::contourArea</a>
-- Perimeter: <a class="reference external" href="https://docs.opencv.org/4.5.2/d3/dc0/group__imgproc__shape.html#ga8d26483c636be6b35c3ec6335798a47c">cv::arcLength</a>
-- Centroid: computed from moments or average on points coordinates if moments are not available <a class="reference external" href="https://docs.opencv.org/4.5.2/d8/d23/classcv_1_1Moments.html">cv::Moments</a>
-- Bbox: <a class="reference external" href="https://docs.opencv.org/4.5.2/d3/dc0/group__imgproc__shape.html#ga103fcbda2f540f3ef1c042d6a9b35ac7">cv::boundingRect</a>
-- Oriented bbox: <a class="reference external" href="https://docs.opencv.org/4.5.2/d3/dc0/group__imgproc__shape.html#ga3d476a3417130ae5154aea421ca7ead9">cv::minAreaRect</a>
-- Equivalent diameter: estimation based on blob surface
-- Elongation: computed from R. Mukundan and K.R. Ramakrishnan. Moment Functions in Image Analysis –Theory and Applications. World Scientific, 1998
-- Circularity: computed from surface and perimeter -&gt; circularity = (4*PI*surface) / (perimeter²)
-- Solidity: computed from the convex hull -&gt; solidity = surface / hullSurface</p>
+<dd><p>Class to handle available measures that can be computed on blob object in image (ie connected component).
+Here is the list of possible measures (<code class="xref py py-class docutils literal notranslate"><span class="pre">MeasureId)</span></code>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Surface: <a class="reference external" href="https://docs.opencv.org/4.5.2/d3/dc0/group__imgproc__shape.html#ga2c759ed9f497d4a618048a2f56dc97f1">cv::contourArea</a></p></li>
+<li><p>Perimeter: <a class="reference external" href="https://docs.opencv.org/4.5.2/d3/dc0/group__imgproc__shape.html#ga8d26483c636be6b35c3ec6335798a47c">cv::arcLength</a></p></li>
+<li><p>Centroid: computed from moments or average on points coordinates if moments are not available <a class="reference external" href="https://docs.opencv.org/4.5.2/d8/d23/classcv_1_1Moments.html">cv::Moments</a></p></li>
+<li><p>Bbox: <a class="reference external" href="https://docs.opencv.org/4.5.2/d3/dc0/group__imgproc__shape.html#ga103fcbda2f540f3ef1c042d6a9b35ac7">cv::boundingRect</a></p></li>
+<li><p>Oriented bbox: <a class="reference external" href="https://docs.opencv.org/4.5.2/d3/dc0/group__imgproc__shape.html#ga3d476a3417130ae5154aea421ca7ead9">cv::minAreaRect</a></p></li>
+<li><p>Equivalent diameter: estimation based on blob surface</p></li>
+<li><p>Elongation: computed from R. Mukundan and K.R. Ramakrishnan. Moment Functions in Image Analysis –Theory and Applications. World Scientific, 1998</p></li>
+<li><p>Circularity: computed from surface and perimeter -&gt; circularity = (4*PI*surface) / (perimeter²)</p></li>
+<li><p>Solidity: computed from the convex hull -&gt; solidity = surface / hullSurface</p></li>
+</ul>
+</div></blockquote>
 <p class="rubric">Import</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">CMeasure</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CMeasure.__init__" title="ikomia.core.pycore.CMeasure.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
-<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CMeasure.getAvailableMeasures" title="ikomia.core.pycore.CMeasure.getAvailableMeasures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAvailableMeasures</span></code></a>()</p></td>
 <td><p>Get available measures (static method).</p></td>
@@ -211,7 +217,7 @@
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -230,20 +236,20 @@
 <dt class="sig sig-object py" id="ikomia.core.pycore.CMeasure.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CMeasure.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
-<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
-<dt>__init__( (object)arg1, (int)arg2) -&gt; None :</dt><dd><p>Construct a measure with the given identifier.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p><a class="reference internal" href="ikomia.core.pycore.MeasureId.html#ikomia.core.pycore.MeasureId" title="ikomia.core.pycore.MeasureId"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeasureId</span></code></a>: measure identifier</p>
+<dt>__init__( (object)self, (int)id) -&gt; None :</dt><dd><p>Construct a measure with the given identifier.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>id (<a class="reference internal" href="ikomia.core.pycore.MeasureId.html#ikomia.core.pycore.MeasureId" title="ikomia.core.pycore.MeasureId"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeasureId</span></code></a>): measure identifier</p>
+</div></blockquote>
 </dd>
-</dl>
-</dd>
-<dt>__init__( (object)arg1, (int)arg2, (str)arg3) -&gt; None :</dt><dd><p>Construct a measure with the given identifier and name.</p>
-<dl>
-<dt>Args:</dt><dd><p><a class="reference internal" href="ikomia.core.pycore.MeasureId.html#ikomia.core.pycore.MeasureId" title="ikomia.core.pycore.MeasureId"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeasureId</span></code></a>: measure identifier</p>
-<p>str: measure name</p>
-</dd>
-</dl>
+<dt>__init__( (object)self, (int)id, (str)name) -&gt; None :</dt><dd><p>Construct a measure with the given identifier and name.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>id (<a class="reference internal" href="ikomia.core.pycore.MeasureId.html#ikomia.core.pycore.MeasureId" title="ikomia.core.pycore.MeasureId"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeasureId</span></code></a>): measure identifier</p>
+<p>name (str): measure name</p>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>

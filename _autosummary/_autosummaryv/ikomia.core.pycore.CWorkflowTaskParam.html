@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -174,24 +175,24 @@
            <div itemprop="articleBody">
              
   <section id="cworkflowtaskparam">
-<h1>CWorkflowTaskParam<a class="headerlink" href="#cworkflowtaskparam" title="Permalink to this headline"></a></h1>
+<h1>CWorkflowTaskParam<a class="headerlink" href="#cworkflowtaskparam" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTaskParam">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CWorkflowTaskParam</span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskParam" title="Permalink to this definition"></a></dt>
-<dd><p>Base class for the management of task parameters. It consists of two virtual methods that should be overriden to fill or get the structure holding parameters value. This structure is used internally by the system to save and load parameters values of task used in a workflow.</p>
+<dd><p>Base class for task parameters. Every specific task parameter class must inherit this base class.It consists of two virtual methods that should be overriden to fill or get the structure holding parameters value. This structure is used internally by the system to save and load parameters values of task used in a workflow.</p>
 <p class="rubric">Import</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">CWorkflowTaskParam</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskParam.__init__" title="ikomia.core.pycore.CWorkflowTaskParam.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
-<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskParam.getHashValue" title="ikomia.core.pycore.CWorkflowTaskParam.getHashValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHashValue</span></code></a>(self)</p></td>
 <td><p>Get hash value from parameters values.</p></td>
@@ -209,7 +210,7 @@
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTaskParam.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskParam.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl class="simple">
-<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -219,10 +220,10 @@
 <span class="sig-name descname"><span class="pre">getHashValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskParam)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskParam.getHashValue" title="Permalink to this definition"></a></dt>
 <dd><p>Get hash value from parameters values. The system uses this method to determine if task configuration has changed.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>int: hash value</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>int: hash value</p>
+</div></blockquote>
 </div></blockquote>
 <p>getHashValue( (CWorkflowTaskParam)self) -&gt; int</p>
 </dd></dl>
@@ -232,10 +233,10 @@
 <span class="sig-name descname"><span class="pre">getParamMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskParam)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ParamMap</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskParam.getParamMap" title="Permalink to this definition"></a></dt>
 <dd><p>Get task parameter names and values.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p><a class="reference internal" href="ikomia.core.pycore.ParamMap.html#ikomia.core.pycore.ParamMap" title="ikomia.core.pycore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a>: dict-like structure storing pairs of strings (parameter name, parameter value)</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p><a class="reference internal" href="ikomia.core.pycore.ParamMap.html#ikomia.core.pycore.ParamMap" title="ikomia.core.pycore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a>: dict-like structure storing pairs of strings (parameter name, parameter value)</p>
+</div></blockquote>
 </div></blockquote>
 <p>getParamMap( (CWorkflowTaskParam)self) -&gt; ParamMap</p>
 </dd></dl>
@@ -245,10 +246,10 @@
 <span class="sig-name descname"><span class="pre">setParamMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskParam)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(ParamMap)params</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskParam.setParamMap" title="Permalink to this definition"></a></dt>
 <dd><p>Set task parameter names and values from the given <a class="reference internal" href="ikomia.core.pycore.ParamMap.html#ikomia.core.pycore.ParamMap" title="ikomia.core.pycore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a> object (same use as Python dict). Numeric values must be converted from str to the desired numeric type before use.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p><a class="reference internal" href="ikomia.core.pycore.ParamMap.html#ikomia.core.pycore.ParamMap" title="ikomia.core.pycore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a>: pairs of strings (parameter name, parameter value)</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>params (<a class="reference internal" href="ikomia.core.pycore.ParamMap.html#ikomia.core.pycore.ParamMap" title="ikomia.core.pycore.ParamMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamMap</span></code></a>): pairs of strings (parameter name, parameter value)</p>
+</div></blockquote>
 </div></blockquote>
 <p>setParamMap( (CWorkflowTaskParam)self, (ParamMap)params) -&gt; None</p>
 </dd></dl>

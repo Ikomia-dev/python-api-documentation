@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -146,11 +147,11 @@
            <div itemprop="articleBody">
              
   <section id="ikomiaregistry">
-<h1>IkomiaRegistry<a class="headerlink" href="#ikomiaregistry" title="Permalink to this headline"></a></h1>
+<h1>IkomiaRegistry<a class="headerlink" href="#ikomiaregistry" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.registry.</span></span><span class="sig-name descname"><span class="pre">IkomiaRegistry</span></span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry" title="Permalink to this definition"></a></dt>
-<dd><p>Registry for all Ikomia algorithms (built-in and Marketplace). It stores all algorithms references and allows to
+<dd><p>Registry for all Ikomia algorithms (built-in and Ikomia HUB). It stores all algorithms references and allows to
 install, update and instanciate any of these algorithms.
 Derived from <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html#ikomia.dataprocess.pydataprocess.CIkomiaRegistry" title="ikomia.dataprocess.pydataprocess.CIkomiaRegistry"><code class="xref py py-class docutils literal notranslate"><span class="pre">CIkomiaRegistry</span></code></a>.</p>
 <p class="rubric">Import</p>
@@ -158,23 +159,23 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.__init__" title="ikomia.dataprocess.registry.IkomiaRegistry.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
-<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.create_algorithm" title="ikomia.dataprocess.registry.IkomiaRegistry.create_algorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_algorithm</span></code></a>(name[, parameters])</p></td>
 <td><p>Instanciate algorithm from its unique name.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.get_online_algorithms" title="ikomia.dataprocess.registry.IkomiaRegistry.get_online_algorithms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_online_algorithms</span></code></a>()</p></td>
-<td><p>Get the list of available algorithms from the Ikomia Marketplace.</p></td>
+<td><p>Get the list of available algorithms from Ikomia HUB.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.install_algorithm" title="ikomia.dataprocess.registry.IkomiaRegistry.install_algorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_algorithm</span></code></a>(name[, force])</p></td>
-<td><p>Launch algorithm installation from the Marketplace given its unique name.</p></td>
+<td><p>Launch algorithm installation from Ikomia HUB given its unique name.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.update_algorithm" title="ikomia.dataprocess.registry.IkomiaRegistry.update_algorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_algorithm</span></code></a>(name)</p></td>
 <td><p>Launch update of the given algorithm.</p></td>
@@ -185,7 +186,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 </tbody>
 </table>
 <p class="rubric">Inherited methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -213,7 +214,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 <dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl class="simple">
-<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -224,7 +225,7 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 <dd><p>Instanciate algorithm from its unique name. See <code class="xref py py-meth docutils literal notranslate"><span class="pre">getAlgorithms()</span></code> or
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_online_algorithms()</span></code> to get valid names.
 If algorithm is already in the registry, an object instance is directly returned. Otherwise,
-the function tries to install it from the Marketplace and add it to the registry if installation success.
+the function tries to install it from Ikomia HUB and add it to the registry if installation success.
 Finally the object instance is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -277,7 +278,7 @@ Before using an algorithm, you must instanciate it from its name using <a class=
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.get_online_algorithms">
 <span class="sig-name descname"><span class="pre">get_online_algorithms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.get_online_algorithms" title="Permalink to this definition"></a></dt>
-<dd><p>Get the list of available algorithms from the Ikomia Marketplace.
+<dd><p>Get the list of available algorithms from Ikomia HUB.
 Each algorithm is identified by a unique name.
 Each algorithm can then be instanciated from this name with the function
 <a class="reference internal" href="#ikomia.dataprocess.registry.IkomiaRegistry.create_algorithm" title="ikomia.dataprocess.registry.IkomiaRegistry.create_algorithm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_algorithm()</span></code></a>.</p>
@@ -320,7 +321,7 @@ Once registered, you are able to instanciate algorithm object and use it inside 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.install_algorithm">
 <span class="sig-name descname"><span class="pre">install_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.install_algorithm" title="Permalink to this definition"></a></dt>
-<dd><p>Launch algorithm installation from the Marketplace given its unique name.</p>
+<dd><p>Launch algorithm installation from Ikomia HUB given its unique name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -345,7 +346,7 @@ Once registered, you are able to instanciate algorithm object and use it inside 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.update_algorithm">
 <span class="sig-name descname"><span class="pre">update_algorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.update_algorithm" title="Permalink to this definition"></a></dt>
-<dd><p>Launch update of the given algorithm. It only concerns algorithms of the Marketplace.
+<dd><p>Launch update of the given algorithm. It only concerns algorithms of Ikomia HUB.
 The function checks version compatibility.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -357,7 +358,7 @@ The function checks version compatibility.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.registry.IkomiaRegistry.update_algorithms">
 <span class="sig-name descname"><span class="pre">update_algorithms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.registry.IkomiaRegistry.update_algorithms" title="Permalink to this definition"></a></dt>
-<dd><p>Launch automatic update of all algorithms in the registry. It only concerns algorithms of the Marketplace.
+<dd><p>Launch automatic update of all algorithms in the registry. It only concerns algorithms of Ikomia HUB.
 The function checks version compatibility.</p>
 </dd></dl>
 

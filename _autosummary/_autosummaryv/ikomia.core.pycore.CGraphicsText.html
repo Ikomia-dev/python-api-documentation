@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -174,34 +175,36 @@
            <div itemprop="articleBody">
              
   <section id="cgraphicstext">
-<h1>CGraphicsText<a class="headerlink" href="#cgraphicstext" title="Permalink to this headline"></a></h1>
+<h1>CGraphicsText<a class="headerlink" href="#cgraphicstext" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CGraphicsText">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CGraphicsText</span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsText" title="Permalink to this definition"></a></dt>
 <dd><p>Graphics item to display text in the overlay layer of an image. Such graphics is defined by:</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>top-left position (x,y)</p></li>
 <li><p>text (str)</p></li>
 </ul>
+</div></blockquote>
 <p>Derived from <a class="reference internal" href="ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a>.</p>
 <p class="rubric">Import</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">CGraphicsText</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CGraphicsText.__init__" title="ikomia.core.pycore.CGraphicsText.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
-<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Inherited methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -228,7 +231,7 @@
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -243,6 +246,9 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></p></td>
 <td><p>y coordinate of top-left point</p></td>
 </tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">property</span></code></p></td>
+<td><p>Visual properties <a class="reference internal" href="ikomia.core.pycore.GraphicsTextProperty.html#ikomia.core.pycore.GraphicsTextProperty" title="ikomia.core.pycore.GraphicsTextProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsTextProperty</span></code></a></p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Details</p>
@@ -250,32 +256,30 @@
 <dt class="sig sig-object py" id="ikomia.core.pycore.CGraphicsText.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsText.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
-<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
-<dt>__init__( (object)arg1, (str)arg2) -&gt; None :</dt><dd><p>Construct a graphics item with the given text.</p>
-<dl>
-<dt>Args:</dt><dd><p>arg1: self</p>
-<p>arg2 (str): text</p>
+<dt>__init__( (object)self, (str)text) -&gt; None :</dt><dd><p>Construct a graphics item with the given text.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>text (str): text to display</p>
+</div></blockquote>
 </dd>
-</dl>
+<dt>__init__( (object)self, (str)text, (float)x, (float)y) -&gt; None :</dt><dd><p>Construct a graphics item at the given position with the given text.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>text (str): text to display</p>
+<p>x (float): left coordinate</p>
+<p>y (float): top coordinate</p>
+</div></blockquote>
 </dd>
-<dt>__init__( (object)arg1, (str)arg2, (float)arg3, (float)arg4) -&gt; None :</dt><dd><p>Construct a graphics item at the given position with the given text.</p>
-<dl>
-<dt>Args:</dt><dd><p>arg1: self</p>
-<p>arg2 (str): text</p>
-<p>arg3 (float): left coordinate</p>
-<p>arg2 (float): top coordinate</p>
-</dd>
-</dl>
-</dd>
-<dt>__init__( (object)arg1, (str)arg2, (float)arg3, (float)arg4, (GraphicsTextProperty)arg5) -&gt; None :</dt><dd><p>Construct a graphics item at the given position with the given text.</p>
-<dl>
-<dt>Args:</dt><dd><p>arg1: self</p>
-<p>arg2 (str): text</p>
-<p>arg3 (float): left coordinate</p>
-<p>arg4 (<a class="reference internal" href="ikomia.core.pycore.GraphicsTextProperty.html#ikomia.core.pycore.GraphicsTextProperty" title="ikomia.core.pycore.GraphicsTextProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsTextProperty</span></code></a>): information and visual properties.</p>
-</dd>
-</dl>
+<dt>__init__( (object)self, (str)text, (float)x, (float)y, (GraphicsTextProperty)property) -&gt; None :</dt><dd><p>Construct a graphics item at the given position with the given text.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>text (str): text to display</p>
+<p>x (float): left coordinate</p>
+<p>y (float): top coordinate</p>
+<p>property (<a class="reference internal" href="ikomia.core.pycore.GraphicsTextProperty.html#ikomia.core.pycore.GraphicsTextProperty" title="ikomia.core.pycore.GraphicsTextProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphicsTextProperty</span></code></a>): information and visual properties.</p>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -285,10 +289,10 @@
 <span class="sig-name descname"><span class="pre">getBoundingRect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsText.getBoundingRect" title="Permalink to this definition"></a></dt>
 <dd><p>Get graphics item bounding rectangle.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>list of float: rectangle coordinate (left, top, width, height)</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>list of float: rectangle coordinate (left, top, width, height)</p>
+</div></blockquote>
 </div></blockquote>
 <p>getBoundingRect( (CGraphicsItem)arg1) -&gt; None</p>
 </dd></dl>
@@ -298,10 +302,10 @@
 <span class="sig-name descname"><span class="pre">getCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsText.getCategory" title="Permalink to this definition"></a></dt>
 <dd><p>Get graphics item category.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>str: category (label)</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>str: category (label)</p>
+</div></blockquote>
 </div></blockquote>
 <p>getCategory( (CGraphicsItem)arg1) -&gt; None</p>
 </dd></dl>
@@ -339,10 +343,10 @@
 <span class="sig-name descname"><span class="pre">isTextItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsText.isTextItem" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether item type is TEXT. In case of object detection workflow, text graphics items should not be useful as input for another task. This method enables to filter only shape-based items (rectangle, polygon…) when processing graphics input.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>bool: True or False</p>
+</div></blockquote>
 </div></blockquote>
 <p>isTextItem( (CGraphicsItem)self) -&gt; bool</p>
 </dd></dl>
@@ -352,10 +356,10 @@
 <span class="sig-name descname"><span class="pre">setCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)category</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CGraphicsText.setCategory" title="Permalink to this definition"></a></dt>
 <dd><p>Set the graphics item category. It’s just a generic way to identify the item.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>category (str): identification label</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>category (str): identification label</p>
+</div></blockquote>
 </div></blockquote>
 <p>setCategory( (CGraphicsItem)arg1, (str)arg2) -&gt; None</p>
 </dd></dl>

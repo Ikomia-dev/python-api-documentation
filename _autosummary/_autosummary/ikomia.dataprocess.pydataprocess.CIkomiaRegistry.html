@@ -15,12 +15,13 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="CWorkflow" href="ikomia.dataprocess.pydataprocess.CWorkflow.html" />
-    <link rel="prev" title="CTaskInfo" href="ikomia.dataprocess.pydataprocess.CTaskInfo.html" />
+    <link rel="next" title="CTaskInfo" href="ikomia.dataprocess.pydataprocess.CTaskInfo.html" />
+    <link rel="prev" title="CDnnTrainTask" href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html" />
  
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -88,29 +89,34 @@
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegIO.html">CInstanceSegIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html">CObjectDetectionIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegIO.html">CSemanticSegIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html">CInstanceSegmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetection.html">CObjectDetection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.MapIntStr.html">MapIntStr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">CIkomiaRegistry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
@@ -164,8 +170,8 @@
             <a href="../../_sources/_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="ikomia.dataprocess.pydataprocess.CTaskInfo.html" class="btn btn-neutral float-left" title="CTaskInfo" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ikomia.dataprocess.pydataprocess.CWorkflow.html" class="btn btn-neutral float-right" title="CWorkflow" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html" class="btn btn-neutral float-left" title="CDnnTrainTask" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CTaskInfo.html" class="btn btn-neutral float-right" title="CTaskInfo" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -173,12 +179,12 @@
            <div itemprop="articleBody">
              
   <section id="cikomiaregistry">
-<h1>CIkomiaRegistry<a class="headerlink" href="#cikomiaregistry" title="Permalink to this headline"></a></h1>
+<h1>CIkomiaRegistry<a class="headerlink" href="#cikomiaregistry" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CIkomiaRegistry">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CIkomiaRegistry</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CIkomiaRegistry" title="Permalink to this definition"></a></dt>
 <dd><p>Algorithms registry of the Ikomia platform.</p>
-<p>Class that enables to instanciate every algorithm from its name. CIkomiaRegistry objects communicate automatically with the Ikomia Marketplace to download algorithm package if necessary. It also include dedicated function to register new algorithms</p>
+<p>Class that enables to instanciate every algorithm from its name. CIkomiaRegistry objects communicate automatically with the Ikomia HUB to download algorithm package if necessary. It also include dedicated function to register new algorithms</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A pure Python derived class is also implemented to add higher level features. See <a class="reference internal" href="ikomia.dataprocess.registry.IkomiaRegistry.html#ikomia.dataprocess.registry.IkomiaRegistry" title="ikomia.dataprocess.registry.IkomiaRegistry"><code class="xref py py-class docutils literal notranslate"><span class="pre">IkomiaRegistry</span></code></a> for more information.</p>
@@ -188,14 +194,14 @@
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CIkomiaRegistry.__init__" title="ikomia.dataprocess.pydataprocess.CIkomiaRegistry.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
-<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CIkomiaRegistry.createInstance" title="ikomia.dataprocess.pydataprocess.CIkomiaRegistry.createInstance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createInstance</span></code></a>(self, name)</p></td>
 <td><p>Instanciate algorithm of the Ikomia registry from its name with default parameters.</p></td>
@@ -228,7 +234,7 @@
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CIkomiaRegistry.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CIkomiaRegistry.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl class="simple">
-<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -362,8 +368,8 @@ Once registered, you are able to instanciate algorithm object and use it inside 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ikomia.dataprocess.pydataprocess.CTaskInfo.html" class="btn btn-neutral float-left" title="CTaskInfo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ikomia.dataprocess.pydataprocess.CWorkflow.html" class="btn btn-neutral float-right" title="CWorkflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html" class="btn btn-neutral float-left" title="CDnnTrainTask" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CTaskInfo.html" class="btn btn-neutral float-right" title="CTaskInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

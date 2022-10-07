@@ -15,12 +15,13 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CGraphicsInput" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html" />
-    <link rel="prev" title="CNumericIO" href="ikomia.dataprocess.pydataprocess.CNumericIO.html" />
+    <link rel="prev" title="CDatasetIO" href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" />
  
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -88,29 +89,34 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">CDataStringIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegIO.html">CInstanceSegIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html">CObjectDetectionIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CSemanticSegIO.html">CSemanticSegIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html">CInstanceSegmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetection.html">CObjectDetection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.MapIntStr.html">MapIntStr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
 </ul>
@@ -164,7 +170,7 @@
             <a href="../../_sources/_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="ikomia.dataprocess.pydataprocess.CNumericIO.html" class="btn btn-neutral float-left" title="CNumericIO" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" class="btn btn-neutral float-left" title="CDatasetIO" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html" class="btn btn-neutral float-right" title="CGraphicsInput" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
@@ -173,25 +179,25 @@
            <div itemprop="articleBody">
              
   <section id="cdatastringio">
-<h1>CDataStringIO<a class="headerlink" href="#cdatastringio" title="Permalink to this headline"></a></h1>
+<h1>CDataStringIO<a class="headerlink" href="#cdatastringio" title="Permalink to this heading"></a></h1>
 <p>String specialization of C++ template class CNumericIO.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CDataStringIO">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CDataStringIO</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDataStringIO" title="Permalink to this definition"></a></dt>
-<dd><p>Define input or output for a task dedicated to manage data values. C++ implementation uses template to handle various data types. In Python, Ikomia API exposes only the double precision (float) and string specializations. The class is designed to handle row/column data structure, it consists on a list of values, a list of associated labels and a display type (see <a class="reference internal" href="ikomia.dataprocess.pydataprocess.NumericOutputType.html#ikomia.dataprocess.pydataprocess.NumericOutputType" title="ikomia.dataprocess.pydataprocess.NumericOutputType"><code class="xref py py-class docutils literal notranslate"><span class="pre">NumericOutputType</span></code></a>). For the specific case of plot display, a plot type property is available (see <a class="reference internal" href="ikomia.dataprocess.pydataprocess.PlotType.html#ikomia.dataprocess.pydataprocess.PlotType" title="ikomia.dataprocess.pydataprocess.PlotType"><code class="xref py py-class docutils literal notranslate"><span class="pre">PlotType</span></code></a>). Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a></p>
+<dd><p>Define input or output for a task consuming or producing data as numeric values. C++ implementation uses template to handle various data types. In Python, Ikomia API exposes only the double precision (float) and string specializations. The class is designed to handle row/column data structure, it consists on a list of values, a list of associated labels and a display type (see <a class="reference internal" href="ikomia.dataprocess.pydataprocess.NumericOutputType.html#ikomia.dataprocess.pydataprocess.NumericOutputType" title="ikomia.dataprocess.pydataprocess.NumericOutputType"><code class="xref py py-class docutils literal notranslate"><span class="pre">NumericOutputType</span></code></a>). For the specific case of plot display, a plot type property is available (see <a class="reference internal" href="ikomia.dataprocess.pydataprocess.PlotType.html#ikomia.dataprocess.pydataprocess.PlotType" title="ikomia.dataprocess.pydataprocess.PlotType"><code class="xref py py-class docutils literal notranslate"><span class="pre">PlotType</span></code></a>). Derived from <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a></p>
 <p class="rubric">Import</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">CDataStringIO</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO.__init__" title="ikomia.dataprocess.pydataprocess.CNumericIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
-<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html#ikomia.dataprocess.pydataprocess.CNumericIO.addValueList" title="ikomia.dataprocess.pydataprocess.CNumericIO.addValueList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addValueList</span></code></a>(self, values)</p></td>
 <td><p>Append a new value list.</p></td>
@@ -223,7 +229,7 @@
 </tbody>
 </table>
 <p class="rubric">Overridden methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -238,7 +244,7 @@
 </tbody>
 </table>
 <p class="rubric">Inherited methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -265,7 +271,7 @@
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -284,13 +290,13 @@
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CDataStringIO.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDataStringIO.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
-<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
-<dt>__init__( (object)arg1, (str)arg2) -&gt; None :</dt><dd><p>Construct a CNumericIO instance with the given name.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>arg1 (str): input or output name</p>
-</dd>
-</dl>
+<dt>__init__( (object)self, (str)name) -&gt; None :</dt><dd><p>Construct a CNumericIO instance with the given name.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>name (str): input or output custom name (to give insights to end user)</p>
+</div></blockquote>
 </dd>
 <dt>__init__( (object)arg1, (CDataStringIO)arg2) -&gt; None :</dt><dd><p>Copy constructor</p>
 </dd>
@@ -302,33 +308,33 @@
 <span class="sig-name descname"><span class="pre">addValueList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDataStringIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)values</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDataStringIO.addValueList" title="Permalink to this definition"></a></dt>
 <dd><p>Append a new value list.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>values (list): list of values (float or string)</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>values (list): list of values (float or string)</p>
+</div></blockquote>
 </div></blockquote>
 <dl>
 <dt>addValueList( (CDataStringIO)self, (object)values, (str)header_label) -&gt; None :</dt><dd><p>Append a new value list with the corresponding header label. A header label can be seen as a column name in a table representation.</p>
-<dl>
-<dt>Args:</dt><dd><p>values (list): list of values (float or string)</p>
+<p>Args:</p>
+<blockquote>
+<div><p>values (list): list of values (float or string)</p>
 <p>header_label (str): header label</p>
-</dd>
-</dl>
+</div></blockquote>
 </dd>
 <dt>addValueList( (CDataStringIO)self, (object)values, (object)labels) -&gt; None :</dt><dd><p>Append a new value list with a label for each value.</p>
-<dl>
-<dt>Args:</dt><dd><p>values (list): list of values (float or string)</p>
+<p>Args:</p>
+<blockquote>
+<div><p>values (list): list of values (float or string)</p>
 <p>labels (list of str): store label for each numeric value</p>
-</dd>
-</dl>
+</div></blockquote>
 </dd>
 <dt>addValueList( (CDataStringIO)self, (object)values, (str)header_label, (object)labels) -&gt; None :</dt><dd><p>Append a new value list with the corresponding header label and a label for each value.</p>
-<dl>
-<dt>Args:</dt><dd><p>values (list): list of values (float or string)</p>
+<p>Args:</p>
+<blockquote>
+<div><p>values (list): list of values (float or string)</p>
 <p>header_label (str): header label</p>
 <p>labels (list of str): store label for each numeric value</p>
-</dd>
-</dl>
+</div></blockquote>
 </dd>
 </dl>
 </dd></dl>
@@ -443,10 +449,10 @@
 <span class="sig-name descname"><span class="pre">isAutoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDataStringIO.isAutoInput" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether input data from external source is mandatory.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>bool: True or False</p>
+</div></blockquote>
 </div></blockquote>
 <p>isAutoInput( (CWorkflowTaskIO)self) -&gt; bool</p>
 </dd></dl>
@@ -462,22 +468,26 @@
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CDataStringIO.load">
 <span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDataStringIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDataStringIO.load" title="Permalink to this definition"></a></dt>
 <dd><p>Load data values (double or string) from previsouly exported file. At this time, file must be in CSV format.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – </p>
-</dd>
-</dl>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>path (str)</p>
+</div></blockquote>
+</div></blockquote>
+<p>load( (CDataStringIO)self, (str)path) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CDataStringIO.save">
 <span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CDataStringIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CDataStringIO.save" title="Permalink to this definition"></a></dt>
 <dd><p>Save data values (double or string) to file. At this time, file must be in CSV format.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – </p>
-</dd>
-</dl>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>path (str)</p>
+</div></blockquote>
+</div></blockquote>
+<p>save( (CDataStringIO)self, (str)path) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
@@ -510,7 +520,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ikomia.dataprocess.pydataprocess.CNumericIO.html" class="btn btn-neutral float-left" title="CNumericIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ikomia.dataprocess.pydataprocess.CDatasetIO.html" class="btn btn-neutral float-left" title="CDatasetIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html" class="btn btn-neutral float-right" title="CGraphicsInput" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

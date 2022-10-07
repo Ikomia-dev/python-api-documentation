@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Integrate your algorithm in Ikomia &mdash; Ikomia API  documentation</title>
+  <title>Create your algorithm for Ikomia platform &mdash; Ikomia API  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
@@ -15,12 +15,13 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Python environment" href="python_env.html" />
-    <link rel="prev" title="Welcome to Ikomia’s documentation" href="index.html" />
+    <link rel="prev" title="Display tools for debugging" href="display_tools.html" />
  
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,7 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Integrate your algorithm in Ikomia</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Create your algorithm for Ikomia platform</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#the-plugin-structure">The plugin structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="python_env.html">Python environment</a></li>
@@ -97,7 +99,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -133,12 +134,12 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Integrate your algorithm in Ikomia</li>
+      <li>Create your algorithm for Ikomia platform</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index_plugin.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Ikomia’s documentation" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="display_tools.html" class="btn btn-neutral float-left" title="Display tools for debugging" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="python_env.html" class="btn btn-neutral float-right" title="Python environment" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
@@ -146,17 +147,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="integrate-your-algorithm-in-ikomia">
-<h1>Integrate your algorithm in Ikomia<a class="headerlink" href="#integrate-your-algorithm-in-ikomia" title="Permalink to this headline"></a></h1>
+  <section id="create-your-algorithm-for-ikomia-platform">
+<h1>Create your algorithm for Ikomia platform<a class="headerlink" href="#create-your-algorithm-for-ikomia-platform" title="Permalink to this heading"></a></h1>
 <p>Ikomia platform is an Open Source ecosystem providing plug’n’play algorithms in Computer Vision. Such algorithms can then be tested and evaluated in
 Ikomia Studio for fast prototyping. Ikomia Studio is a desktop software (Qt based) that will help you to access and evaluate state of the art algorithms
-in a no-code way. It includes built-in algorithms from well-known libraries like <strong>OpenCV</strong> and give access to the Ikomia Marketplace. Ikomia Studio offers
+in a no-code way. It includes built-in algorithms from well-known libraries like <strong>OpenCV</strong> and give access to Ikomia HUB. Ikomia Studio offers
 the possibility to build complex <strong>workflows</strong> thanks to a flexible graph-based editor.</p>
 <p>The aim of this API is to offer a simple Python interface to add user-defined plugin into Ikomia platform. A plugin is a Python implementation of an
-algorithm executed on image based data. Once implemented, you will be able to handle your plugin like all others algorithms, use it in workflows.
-You will also be able to publish your method to the Marketplace and promote your work towards Ikomia community.</p>
+algorithm executed on image based data. Once implemented, you will be able to handle your plugin like all other algorithms and use it in workflows.
+You will also be able to publish it to the Ikomia HUB and promote your work towards Ikomia community.</p>
 <section id="the-plugin-structure">
-<h2>The plugin structure<a class="headerlink" href="#the-plugin-structure" title="Permalink to this headline"></a></h2>
+<h2>The plugin structure<a class="headerlink" href="#the-plugin-structure" title="Permalink to this heading"></a></h2>
 <p>In Ikomia platform, each plugin is intended for use in workflows to process image-based data. A workflow is thus composed of several connected tasks that get inputs,
 process them and give results through outputs. When you create your own plugin, there are some few essential components to deal with, each one being implemented by a specific class:</p>
 <blockquote>
@@ -193,7 +194,7 @@ process them and give results through outputs. When you create your own plugin, 
 </div></blockquote>
 </section>
 <section id="getting-started">
-<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h2>
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
 <p>You are almost ready to write your first Ikomia plugin. We just need to introduce how the Python environment is managed in Ikomia Studio.
 As a C++/Qt software, Ikomia Studio embeds a specific version of the Python interpreter.
 So you need to use this environment while implementing your plugin. More details are given in the following pages:</p>
@@ -214,7 +215,7 @@ So you need to use this environment while implementing your plugin. More details
 </div>
 </section>
 <section id="going-deeper">
-<h2>Going deeper<a class="headerlink" href="#going-deeper" title="Permalink to this headline"></a></h2>
+<h2>Going deeper<a class="headerlink" href="#going-deeper" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="plugin_parameters.html">Parameters management</a></li>
@@ -224,7 +225,7 @@ So you need to use this environment while implementing your plugin. More details
 </div>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
 <p>Here are source codes associated with the tutorials.</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -243,7 +244,7 @@ So you need to use this environment while implementing your plugin. More details
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Ikomia’s documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="display_tools.html" class="btn btn-neutral float-left" title="Display tools for debugging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="python_env.html" class="btn btn-neutral float-right" title="Python environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,7 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="python_env.html">Python environment</a></li>
@@ -89,7 +91,6 @@
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -125,7 +126,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+          <li><a href="index_plugin.html">Create your algorithm for Ikomia platform</a> &raquo;</li>
       <li>Dependencies management</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/dependencies.rst.txt" rel="nofollow"> View page source</a>
@@ -140,7 +141,7 @@
            <div itemprop="articleBody">
              
   <section id="dependencies-management">
-<h1>Dependencies management<a class="headerlink" href="#dependencies-management" title="Permalink to this headline"></a></h1>
+<h1>Dependencies management<a class="headerlink" href="#dependencies-management" title="Permalink to this heading"></a></h1>
 <p>As of any Python project, an Ikomia plugin may have some Python module dependencies.
 The philosophy behind Ikomia is to offer ready to use algorithms to users.
 From the plugin author perspective, it means that the plugin must include directives
@@ -153,7 +154,7 @@ and install dependencies automatically.</p>
 <p>Before publishing plugins, authors must include the necessary requirements files.</p>
 </div>
 <section id="requirements-file-structure">
-<h2>Requirements file structure<a class="headerlink" href="#requirements-file-structure" title="Permalink to this headline"></a></h2>
+<h2>Requirements file structure<a class="headerlink" href="#requirements-file-structure" title="Permalink to this heading"></a></h2>
 <p>Ikomia dependency management is fully based on pip. Please consult the pip official documentation
 to know about all features:</p>
 <ul class="simple">
@@ -162,7 +163,7 @@ to know about all features:</p>
 </ul>
 </section>
 <section id="multi-steps-installation">
-<h2>Multi-steps installation<a class="headerlink" href="#multi-steps-installation" title="Permalink to this headline"></a></h2>
+<h2>Multi-steps installation<a class="headerlink" href="#multi-steps-installation" title="Permalink to this heading"></a></h2>
 <p>In some cases, it could be necessary to split the installation process to force installation of dependencies
 prior to others. As such, Ikomia dependency system handles multiple requirements files
 and apply alphanumeric sort to define installation order. Authors can then insert several requirements file into the
@@ -186,7 +187,7 @@ plugin directory to solve dependencies issues.</p>
 then those listed in the file <em>requirements2.txt</em>.</p>
 </section>
 <section id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline"></a></h2>
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading"></a></h2>
 <p>The standard way to manage dependencies in Python and its pip package installer is to provide a valid <em>setup.py</em> script.
 Then, Python package can either be distributed from Wheel or from source. For the moment, Ikomia software can only install
 dependencies available in the official Python Package Index (PyPI) or via a git repository. Support for manual installation

@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -174,17 +175,17 @@
            <div itemprop="articleBody">
              
   <section id="cworkflowtaskiofactory">
-<h1>CWorkflowTaskIOFactory<a class="headerlink" href="#cworkflowtaskiofactory" title="Permalink to this headline"></a></h1>
+<h1>CWorkflowTaskIOFactory<a class="headerlink" href="#cworkflowtaskiofactory" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTaskIOFactory">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CWorkflowTaskIOFactory</span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIOFactory" title="Permalink to this definition"></a></dt>
-<dd><p>Abstract class defining the core structure of the task I/O factory. The system extensibility is based on the factory design pattern. Each task input/output must implement a factory class derived from this class. Then the system is able to instantiate dynamically a I/O object (even user-defined).</p>
+<dd><p>Abstract class defining the core structure of the task I/O factory. The system extensibility is based on the factory design pattern. Each task input/output must implement a factory class derived from this class. Then the system is able to instantiate dynamically any I/O object (even user-defined).</p>
 <p class="rubric">Import</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">CWorkflowTaskIOFactory</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -209,11 +210,14 @@
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIOFactory)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(IODataType)datatype</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CWorkflowTaskIO</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIOFactory.create" title="Permalink to this definition"></a></dt>
 <dd><p>Pure virtual method to create new task I/O instance with the given data type. Must be implemented.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>data type (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>)Returns:
-<a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p>data type (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>)</p>
+</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a> based object</p>
+</div></blockquote>
 </div></blockquote>
 <p>create( (CWorkflowTaskIOFactory)arg1, (IODataType)arg2) -&gt; None</p>
 </dd></dl>

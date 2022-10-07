@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,7 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="python_env.html">Python environment</a></li>
@@ -89,7 +91,6 @@
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -125,7 +126,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+          <li><a href="index_plugin.html">Create your algorithm for Ikomia platform</a> &raquo;</li>
       <li>Simple OpenCV plugin</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/opencv_plugin.rst.txt" rel="nofollow"> View page source</a>
@@ -140,7 +141,7 @@
            <div itemprop="articleBody">
              
   <section id="simple-opencv-plugin">
-<h1>Simple OpenCV plugin<a class="headerlink" href="#simple-opencv-plugin" title="Permalink to this headline"></a></h1>
+<h1>Simple OpenCV plugin<a class="headerlink" href="#simple-opencv-plugin" title="Permalink to this heading"></a></h1>
 <p>This section will show how to create a fully functional plugin applying basics OpenCV methods to images. It takes image as input and delivers processed image as output.</p>
 <p>We skip here all steps to create a new empty plugin. Please refer to <a class="reference internal" href="hello_world_plugin.html"><span class="doc">Hello World tutorial</span></a> if you are not familiar with it.</p>
 <dl class="simple">
@@ -156,19 +157,20 @@
 </dd>
 </dl>
 <section id="interface-implementation">
-<h2>Interface implementation<a class="headerlink" href="#interface-implementation" title="Permalink to this headline"></a></h2>
+<h2>Interface implementation<a class="headerlink" href="#interface-implementation" title="Permalink to this heading"></a></h2>
 <p>No features added from the default implementation.
 See <a class="reference internal" href="opencv_plugin_interface.html"><span class="doc">ocv_basics.py</span></a>.</p>
 </section>
 <section id="process-implementation">
-<h2>Process implementation<a class="headerlink" href="#process-implementation" title="Permalink to this headline"></a></h2>
+<h2>Process implementation<a class="headerlink" href="#process-implementation" title="Permalink to this heading"></a></h2>
 <p>The aim of our plugin is to process images, so our task is derived from <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a>.
 This base class comes with default inputs (image + graphics) and outputs (image) that fit our needs.</p>
 <p>Our process pipeline will be: <em>Convert to grayscale</em> -&gt; <em>Gaussian blur</em> -&gt; <em>Canny filter</em>.</p>
 <p>The first thing to do in our <em>ocv_basics_process.py</em> is importing OpenCV package (already installed with Ikomia Studio):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span><span class="p">,</span> <span class="n">cv2</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span>
 <span class="kn">import</span> <span class="nn">copy</span>
 <span class="c1"># Your imports below</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
 </pre></div>
 </div>
 <p>In the <em>run</em> method, we now have to retrieve source image from input, add OpenCV calls and set the output:</p>
@@ -212,9 +214,9 @@ This base class comes with default inputs (image + graphics) and outputs (image)
 <img alt="_images/opencv_plugin.jpg" src="_images/opencv_plugin.jpg" />
 </section>
 <section id="process-parameters">
-<h2>Process parameters<a class="headerlink" href="#process-parameters" title="Permalink to this headline"></a></h2>
+<h2>Process parameters<a class="headerlink" href="#process-parameters" title="Permalink to this heading"></a></h2>
 <p>We will focus now on adding some parameters to our process ((in <em>ocv_basics_process.py</em>).
-Let’s say we want to control blur strengh of the Gaussian filter, we have to manage at least 3 parameters:</p>
+Let’s say we want to control blur strength of the Gaussian filter, we have to manage at least 3 parameters:</p>
 <ul class="simple">
 <li><p>Kernel size</p></li>
 <li><p>Sigma X</p></li>
@@ -284,7 +286,7 @@ which are required to save/load values when user wants to save his workflow.</p>
 </div>
 </section>
 <section id="process-widget">
-<h2>Process widget<a class="headerlink" href="#process-widget" title="Permalink to this headline"></a></h2>
+<h2>Process widget<a class="headerlink" href="#process-widget" title="Permalink to this heading"></a></h2>
 <p>At this point, parameters are only available from source code.
 The role of the plugin widget is to open parameters configuration to the user.
 We will use PyQt framework for this example.</p>
@@ -301,7 +303,7 @@ Like the process class, the constructor receives an instance of the parameters s
         <span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">processMod</span><span class="o">.</span><span class="n">OCVBasicsParam</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">OCVBasicsParam</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">param</span>
 
@@ -346,7 +348,7 @@ Like the process class, the constructor receives an instance of the parameters s
         <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spin_sigma_y</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
         <span class="c1"># PyQt -&gt; Qt wrapping (C++ handle)</span>
-        <span class="n">layoutPtr</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">PyQtToQt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="p">)</span>
+        <span class="n">layoutPtr</span> <span class="o">=</span> <span class="n">qtconversion</span><span class="o">.</span><span class="n">PyQtToQt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="p">)</span>
 
         <span class="c1"># Set widget layout</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layoutPtr</span><span class="p">)</span>
@@ -379,7 +381,7 @@ It is called when user clicks the <em>Apply</em> button.</p>
 <p>Our plugin is now fully functional!</p>
 </section>
 <section id="process-metadata">
-<h2>Process metadata<a class="headerlink" href="#process-metadata" title="Permalink to this headline"></a></h2>
+<h2>Process metadata<a class="headerlink" href="#process-metadata" title="Permalink to this heading"></a></h2>
 <p>Finally, we will add some useful information about our plugin.
 Ikomia software manages such information and display it to the user (parameters widget, Ikomia Store).
 Metadata can be added in the constructor of the process factory class in <em>OCVBasics_process.py</em>.
@@ -410,7 +412,7 @@ We have to fill the member object <em>info</em>, see <a class="reference interna
 </div>
 </section>
 <section id="source-code">
-<h2>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline"></a></h2>
+<h2>Source code<a class="headerlink" href="#source-code" title="Permalink to this heading"></a></h2>
 <p><a class="reference internal" href="opencv_plugin_interface.html"><span class="doc">ocv_basics.py</span></a></p>
 <p><a class="reference internal" href="opencv_plugin_process.html"><span class="doc">ocv_basics_process.py</span></a></p>
 <p><a class="reference internal" href="opencv_plugin_widget.html"><span class="doc">ocv_basics_widget.py</span></a></p>

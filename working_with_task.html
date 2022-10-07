@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index_api.html">Algorithms for your application</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_api.html#registration-free">Registration (free)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_api.html#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_api.html#concepts">Concepts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_api.html#authentication">Authentication</a></li>
@@ -88,6 +89,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -123,7 +125,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_api.html">Algorithms for your application</a> &raquo;</li>
+          <li><a href="index_api.html">Implement Computer Vision workflows for your application</a> &raquo;</li>
       <li>Working with tasks</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/working_with_task.rst.txt" rel="nofollow"> View page source</a>
@@ -138,11 +140,11 @@
            <div itemprop="articleBody">
              
   <section id="working-with-tasks">
-<h1>Working with tasks<a class="headerlink" href="#working-with-tasks" title="Permalink to this headline"></a></h1>
+<h1>Working with tasks<a class="headerlink" href="#working-with-tasks" title="Permalink to this heading"></a></h1>
 <p>The recommended way to apply algorithms with Ikomia API is through the <a class="reference internal" href="_autosummary/ikomia.dataprocess.workflow.html#module-ikomia.dataprocess.workflow" title="ikomia.dataprocess.workflow"><code class="xref py py-mod docutils literal notranslate"><span class="pre">workflow</span></code></a> module.
 However, you have also access to algorithm at task level with the possibility to run it independently.</p>
 <section id="run-task-without-workflow">
-<h2>Run task without workflow<a class="headerlink" href="#run-task-without-workflow" title="Permalink to this headline"></a></h2>
+<h2>Run task without workflow<a class="headerlink" href="#run-task-without-workflow" title="Permalink to this heading"></a></h2>
 <p>The example below illustrates the steps to run a single algorithm.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">task</span>
 <span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
@@ -163,7 +165,7 @@ However, you have also access to algorithm at task level with the possibility to
 <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> for details.</p>
 </section>
 <section id="manage-parameters">
-<h2>Manage parameters<a class="headerlink" href="#manage-parameters" title="Permalink to this headline"></a></h2>
+<h2>Manage parameters<a class="headerlink" href="#manage-parameters" title="Permalink to this heading"></a></h2>
 <p>Algorithm behavior can be adjusted by setting task parameters (<a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.set_parameters" title="ikomia.core.task.set_parameters"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_parameters()</span></code></a>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">task</span>
 <span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
@@ -186,15 +188,15 @@ However, you have also access to algorithm at task level with the possibility to
 </div>
 </section>
 <section id="manage-inputs-outputs">
-<h2>Manage inputs/outputs<a class="headerlink" href="#manage-inputs-outputs" title="Permalink to this headline"></a></h2>
+<h2>Manage inputs/outputs<a class="headerlink" href="#manage-inputs-outputs" title="Permalink to this heading"></a></h2>
 <section id="inputs">
-<h3>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h3>
+<h3>Inputs<a class="headerlink" href="#inputs" title="Permalink to this heading"></a></h3>
 <p>From a task object instance, you access inputs with <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.getInput" title="ikomia.core.pycore.CWorkflowTask.getInput"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getInput()</span></code></a>.
 Depending on algorithm, inputs can be of various type. Please consult this <a class="reference internal" href="plugin_io.html"><span class="doc">page</span></a> to have more
 information about possible input types.</p>
 </section>
 <section id="outputs">
-<h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h3>
+<h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h3>
 <p>Like for workflows, the <a class="reference internal" href="_autosummary/ikomia.core.task.html#module-ikomia.core.task" title="ikomia.core.task"><code class="xref py py-mod docutils literal notranslate"><span class="pre">task</span></code></a> module provides useful functions to get common output types:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="_autosummary/ikomia.core.task.html#ikomia.core.task.get_image_output" title="ikomia.core.task.get_image_output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_image_output()</span></code></a></p></li>

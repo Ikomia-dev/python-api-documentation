@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,7 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="python_env.html">Python environment</a></li>
@@ -89,7 +91,6 @@
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -125,7 +126,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+          <li><a href="index_plugin.html">Create your algorithm for Ikomia platform</a> &raquo;</li>
       <li>Hello world plugin</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/hello_world_plugin.rst.txt" rel="nofollow"> View page source</a>
@@ -140,11 +141,11 @@
            <div itemprop="articleBody">
              
   <section id="hello-world-plugin">
-<h1>Hello world plugin<a class="headerlink" href="#hello-world-plugin" title="Permalink to this headline"></a></h1>
+<h1>Hello world plugin<a class="headerlink" href="#hello-world-plugin" title="Permalink to this heading"></a></h1>
 <p>In this first tutorial, we will create an empty plugin and introduce the core mechanisms.
 Basically, first steps of plugin creation can be done either manually or with our dedicated module.</p>
 <section id="with-ikomia-plugin-manager-recommended">
-<h2>With Ikomia Plugin Manager (recommended)<a class="headerlink" href="#with-ikomia-plugin-manager-recommended" title="Permalink to this headline"></a></h2>
+<h2>With Ikomia Plugin Manager (recommended)<a class="headerlink" href="#with-ikomia-plugin-manager-recommended" title="Permalink to this heading"></a></h2>
 <p>The simplest way to create plugins is to use the integrated Plugin Manager:</p>
 <img alt="_images/plugin_manager.jpg" src="_images/plugin_manager.jpg" />
 <p>The left table shows the list of all your plugins, you will find a list of action buttons to its right.
@@ -199,7 +200,7 @@ At this point, the plugin can be added to any workflow but does nothing.</p>
 </div>
 </section>
 <section id="with-you-prefered-python-ide">
-<h2>With you prefered Python IDE<a class="headerlink" href="#with-you-prefered-python-ide" title="Permalink to this headline"></a></h2>
+<h2>With you prefered Python IDE<a class="headerlink" href="#with-you-prefered-python-ide" title="Permalink to this heading"></a></h2>
 <p>Because an Ikomia plugin is a regular Python package, you can create it from scratch with the IDE of your choice.</p>
 <p>Here are the steps you should follow:</p>
 <ol class="arabic">
@@ -208,7 +209,7 @@ At this point, the plugin can be added to any workflow but does nothing.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir c:<span class="se">\U</span>sers<span class="se">\{</span>username<span class="o">}</span><span class="se">\I</span>komia<span class="se">\P</span>lugins<span class="se">\P</span>ython<span class="se">\h</span>ello_world
 </pre></div>
 </div>
-<p>Linux and Mac OS X</p>
+<p>Linux</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir ~/Ikomia/Plugins/Python/hello_world
 </pre></div>
 </div>
@@ -222,7 +223,7 @@ At this point, the plugin can be added to any workflow but does nothing.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c:<span class="se">\U</span>sers<span class="se">\{</span>username<span class="o">}</span><span class="se">\I</span>komia<span class="se">\P</span>ython<span class="se">\</span>
 </pre></div>
 </div>
-<p>Linux and Mac OS X</p>
+<p>Linux</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/Ikomia/Python/
 </pre></div>
 </div>

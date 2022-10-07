@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,7 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#going-deeper">Going deeper</a><ul class="current">
@@ -86,7 +88,6 @@
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -122,7 +123,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+          <li><a href="index_plugin.html">Create your algorithm for Ikomia platform</a> &raquo;</li>
       <li>Parameters management</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/plugin_parameters.rst.txt" rel="nofollow"> View page source</a>
@@ -137,9 +138,9 @@
            <div itemprop="articleBody">
              
   <section id="parameters-management">
-<h1>Parameters management<a class="headerlink" href="#parameters-management" title="Permalink to this headline"></a></h1>
+<h1>Parameters management<a class="headerlink" href="#parameters-management" title="Permalink to this heading"></a></h1>
 <section id="core-concept">
-<h2>Core concept<a class="headerlink" href="#core-concept" title="Permalink to this headline"></a></h2>
+<h2>Core concept<a class="headerlink" href="#core-concept" title="Permalink to this heading"></a></h2>
 <p>Algorithms often comes with parameters to adjust produced results. The Ikomia platform handles parameters in standalone class that will be shared across the process implementation and the UI widget.
 Basically, this class must inherit <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam" title="ikomia.core.pycore.CWorkflowTaskParam"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CWorkflowTaskParam</span></code></a> (C++ base class). It should include definition of your parameters variables as member and reimplement 2 methods:</p>
 <ul class="simple">
@@ -176,7 +177,7 @@ Basically, this class must inherit <a class="reference internal" href="_autosumm
 </div>
 </section>
 <section id="inherit-from-the-pure-python-base-class">
-<h2>Inherit from the pure Python base class<a class="headerlink" href="#inherit-from-the-pure-python-base-class" title="Permalink to this headline"></a></h2>
+<h2>Inherit from the pure Python base class<a class="headerlink" href="#inherit-from-the-pure-python-base-class" title="Permalink to this heading"></a></h2>
 <p>As an option, it is possible to inherit your parameter class from a pure Python base class
 (<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.task.TaskParam.html#ikomia.core.task.TaskParam" title="ikomia.core.task.TaskParam"><code class="xref py py-mod docutils literal notranslate"><span class="pre">TaskParam</span></code></a>) that make it easier. Indeed, parameters are managed directly
 in a dict member instead of defining one variable for each parameter. Another small advantage is that

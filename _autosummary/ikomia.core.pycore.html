@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../modules.html">API Reference</a><ul class="current">
@@ -173,11 +174,11 @@
            <div itemprop="articleBody">
              
   <section id="module-ikomia.core.pycore">
-<span id="pycore"></span><h1>PyCore<a class="headerlink" href="#module-ikomia.core.pycore" title="Permalink to this headline"></a></h1>
+<span id="pycore"></span><h1>PyCore<a class="headerlink" href="#module-ikomia.core.pycore" title="Permalink to this heading"></a></h1>
 <p>Module offering core features to handle <strong>tasks</strong>, <strong>I/O</strong>, <strong>parameters</strong> and <strong>widgets</strong>. It consists of Python bindings from C++ Ikomia Core.</p>
-<p>The extension capability of Ikomia platform is based on inheritance and this module offers the main base classes. The system uses the concept of worflow to process images. A worflow is a graph composed of processing tasks, each task comes with its parameters, its inputs and its outputs. Additionnally, a widget (for Graphical User Interface) is associated with the task to ensure user interaction. Through this API we provide base classes that you could override for each component.</p>
+<p>The extension capability of Ikomia platform is based on inheritance and this module offers the main base classes. The system uses the concept of worflow to process images. A worflow is a graph composed of processing tasks, each task comes with its parameters, its inputs and its outputs. Additionnally, a widget is associated with the task to ensure user interaction in Ikomia Studio. Through this API we provide base classes that you could override for each component.</p>
 <p class="rubric">Input/Output management</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -190,10 +191,10 @@
 <td><p>Enum - List of available measures</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CMeasure.html#ikomia.core.pycore.CMeasure" title="ikomia.core.pycore.CMeasure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CMeasure</span></code></a></p></td>
-<td><p>Class to handle available measures that can be computed on blob object in image.</p></td>
+<td><p>Class to handle available measures that can be computed on blob object in image (ie connected component).</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a></p></td>
-<td><p>Base class for the management of task inputs and outputs.</p></td>
+<td><p>Base class for task inputs and outputs.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CWorkflowTaskIOFactory.html#ikomia.core.pycore.CWorkflowTaskIOFactory" title="ikomia.core.pycore.CWorkflowTaskIOFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CWorkflowTaskIOFactory</span></code></a></p></td>
 <td><p>Abstract class defining the core structure of the task I/O factory.</p></td>
@@ -201,14 +202,14 @@
 </tbody>
 </table>
 <p class="rubric">Parameters management</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CWorkflowTaskParam.html#ikomia.core.pycore.CWorkflowTaskParam" title="ikomia.core.pycore.CWorkflowTaskParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CWorkflowTaskParam</span></code></a></p></td>
-<td><p>Base class for the management of task parameters.</p></td>
+<td><p>Base class for task parameters.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.ParamMap.html#ikomia.core.pycore.ParamMap" title="ikomia.core.pycore.ParamMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParamMap</span></code></a></p></td>
 <td><p>Data structure (same as Python dict) to store task parameters names and values</p></td>
@@ -216,7 +217,7 @@
 </tbody>
 </table>
 <p class="rubric">Task management</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -234,7 +235,7 @@
 </tbody>
 </table>
 <p class="rubric">Widget management</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -246,7 +247,7 @@
 </tbody>
 </table>
 <p class="rubric">Graphics management</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -286,22 +287,22 @@
 <td><p>Graphics item to display text in the overlay layer of an image.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.GraphicsEllipseProperty.html#ikomia.core.pycore.GraphicsEllipseProperty" title="ikomia.core.pycore.GraphicsEllipseProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GraphicsEllipseProperty</span></code></a></p></td>
-<td><p>Visual properties for <code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsEllipse</span></code> item.</p></td>
+<td><p>Visual properties for <a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CGraphicsEllipse.html#ikomia.core.pycore.CGraphicsEllipse" title="ikomia.core.pycore.CGraphicsEllipse"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsEllipse</span></code></a> item.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.GraphicsPointProperty.html#ikomia.core.pycore.GraphicsPointProperty" title="ikomia.core.pycore.GraphicsPointProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GraphicsPointProperty</span></code></a></p></td>
-<td><p>Visual properties for <code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsPoint</span></code> item.</p></td>
+<td><p>Visual properties for <a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CGraphicsPoint.html#ikomia.core.pycore.CGraphicsPoint" title="ikomia.core.pycore.CGraphicsPoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsPoint</span></code></a> item.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.GraphicsPolygonProperty.html#ikomia.core.pycore.GraphicsPolygonProperty" title="ikomia.core.pycore.GraphicsPolygonProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GraphicsPolygonProperty</span></code></a></p></td>
-<td><p>Visual properties for <code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsPolygon</span></code> item.</p></td>
+<td><p>Visual properties for <a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CGraphicsPolygon.html#ikomia.core.pycore.CGraphicsPolygon" title="ikomia.core.pycore.CGraphicsPolygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsPolygon</span></code></a> item.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.GraphicsPolylineProperty.html#ikomia.core.pycore.GraphicsPolylineProperty" title="ikomia.core.pycore.GraphicsPolylineProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GraphicsPolylineProperty</span></code></a></p></td>
-<td><p>Visual properties for <code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsPolyline</span></code> item.</p></td>
+<td><p>Visual properties for <a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CGraphicsPolyline.html#ikomia.core.pycore.CGraphicsPolyline" title="ikomia.core.pycore.CGraphicsPolyline"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsPolyline</span></code></a> item.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.GraphicsRectProperty.html#ikomia.core.pycore.GraphicsRectProperty" title="ikomia.core.pycore.GraphicsRectProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GraphicsRectProperty</span></code></a></p></td>
-<td><p>Visual properties for <code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsRectangle</span></code> item.</p></td>
+<td><p>Visual properties for <a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CGraphicsRectangle.html#ikomia.core.pycore.CGraphicsRectangle" title="ikomia.core.pycore.CGraphicsRectangle"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsRectangle</span></code></a> item.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.GraphicsTextProperty.html#ikomia.core.pycore.GraphicsTextProperty" title="ikomia.core.pycore.GraphicsTextProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GraphicsTextProperty</span></code></a></p></td>
-<td><p>Visual properties for <code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsText</span></code> item.</p></td>
+<td><p>Visual properties for <a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CGraphicsText.html#ikomia.core.pycore.CGraphicsText" title="ikomia.core.pycore.CGraphicsText"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsText</span></code></a> item.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummaryv/ikomia.core.pycore.CGraphicsConversion.html#ikomia.core.pycore.CGraphicsConversion" title="ikomia.core.pycore.CGraphicsConversion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CGraphicsConversion</span></code></a></p></td>
 <td><p>Expose conversion operations based on graphics objects and images.</p></td>

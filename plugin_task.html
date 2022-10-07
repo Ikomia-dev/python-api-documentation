@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,7 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#going-deeper">Going deeper</a><ul class="current">
@@ -86,7 +88,6 @@
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -122,7 +123,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+          <li><a href="index_plugin.html">Create your algorithm for Ikomia platform</a> &raquo;</li>
       <li>Task management</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/plugin_task.rst.txt" rel="nofollow"> View page source</a>
@@ -137,13 +138,18 @@
            <div itemprop="articleBody">
              
   <section id="task-management">
-<h1>Task management<a class="headerlink" href="#task-management" title="Permalink to this headline"></a></h1>
+<h1>Task management<a class="headerlink" href="#task-management" title="Permalink to this heading"></a></h1>
 <p>In Ikomia platform, a task is the implementation of a specific algorithm. We use inheritance to set a
 functional framework and simplify customization. Basically, any new Ikomia plugin must implement a
 task class derived from the base class <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> or from a
 specialization class which itself inherits from this base class.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#mandatory-methods-to-implement"><span class="std std-ref">Mandatory methods</span></a></p></li>
+<li><p><a class="reference internal" href="#recommended-methods-to-implement"><span class="std std-ref">Recommended methods</span></a></p></li>
+<li><p><a class="reference internal" href="#metadata"><span class="std std-ref">Metadata</span></a></p></li>
+</ul>
 <section id="mandatory-methods-to-implement">
-<h2>Mandatory methods to implement<a class="headerlink" href="#mandatory-methods-to-implement" title="Permalink to this headline"></a></h2>
+<h2>Mandatory methods to implement<a class="headerlink" href="#mandatory-methods-to-implement" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>Constructor</strong>: base class contructor must be called explicitly. This is also the place where you define inputs and outputs.</p></li>
 </ul>
@@ -190,18 +196,18 @@ specialization class which itself inherits from this base class.</p>
 </div>
 </section>
 <section id="recommended-methods-to-implement">
-<h2>Recommended methods to implement<a class="headerlink" href="#recommended-methods-to-implement" title="Permalink to this headline"></a></h2>
+<h2>Recommended methods to implement<a class="headerlink" href="#recommended-methods-to-implement" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>getProgressSteps()</strong>: Ikomia Studio only. For time consuming algorithms, it could be relevant to split execution into separate parts and give progression feedback after each part (if possible). If so, you have to first implement this method and return the number of execution parts. Then, in your <strong>run()</strong> method, you have to place a call to <strong>self.emitStepProgress()</strong> after each part to notify the main progress bar of Ikomia Studio.</p></li>
 <li><p><strong>stop()</strong>: method called when a user requests the process to stop. For time consuming algorithm it’s highly recommended to integrate a stop mechanism inside your algorithm execution code. This method is somehow just a callback.</p></li>
 </ul>
 </section>
 <section id="available-specializations">
-<h2>Available specializations<a class="headerlink" href="#available-specializations" title="Permalink to this headline"></a></h2>
+<h2>Available specializations<a class="headerlink" href="#available-specializations" title="Permalink to this heading"></a></h2>
 <p>To ease implementation of common image processing tasks, we provide some specialization classes from
 which you can inherit. They integrate useful features to speed your developpment.</p>
 <section id="simple-image-processing-algorithms">
-<h3>Simple image processing algorithms<a class="headerlink" href="#simple-image-processing-algorithms" title="Permalink to this headline"></a></h3>
+<h3>Simple image processing algorithms<a class="headerlink" href="#simple-image-processing-algorithms" title="Permalink to this heading"></a></h3>
 <p><a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a> : base class dedicated to algorithms processing image and producing at least a result image.</p>
 <blockquote>
 <div><ul class="simple">
@@ -225,7 +231,7 @@ which you can inherit. They integrate useful features to speed your developpment
 </div>
 </section>
 <section id="interactive-image-processing-algorithms">
-<h3>Interactive image processing algorithms<a class="headerlink" href="#interactive-image-processing-algorithms" title="Permalink to this headline"></a></h3>
+<h3>Interactive image processing algorithms<a class="headerlink" href="#interactive-image-processing-algorithms" title="Permalink to this heading"></a></h3>
 <p><a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html#ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask" title="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageInteractiveTask</span></code></a>: choose it as a base class
 if you need user interaction for your algorithm. The class embeds a graphics interaction layer.
 Every changes made by users on this layer are notified and corresponding actions can be implemented.
@@ -253,7 +259,7 @@ Every changes made by users on this layer are notified and corresponding actions
 </div>
 </section>
 <section id="video-processing-algorithms">
-<h3>Video processing algorithms<a class="headerlink" href="#video-processing-algorithms" title="Permalink to this headline"></a></h3>
+<h3>Video processing algorithms<a class="headerlink" href="#video-processing-algorithms" title="Permalink to this heading"></a></h3>
 <p><a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html#ikomia.dataprocess.pydataprocess.CVideoTask" title="ikomia.dataprocess.pydataprocess.CVideoTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CVideoTask</span></code></a>: choose it as a base class
 if your algorithm is dedicated to video or stream. The class inherits from
 <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a> adding only a mechanism to handle
@@ -274,11 +280,11 @@ start and stop events.</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Please consult source code of <a class="reference external" href="https://github.com/Ikomia-dev/infer_raft_optical_flow">infer_raft_optical_flow</a> for implementation example.</p>
+<p>Please consult source code of <a class="reference external" href="https://github.com/Ikomia-hub/infer_raft_optical_flow">infer_raft_optical_flow</a> for implementation example.</p>
 </div>
 </section>
 <section id="deep-learning-training-algorithms">
-<h3>Deep Learning training algorithms<a class="headerlink" href="#deep-learning-training-algorithms" title="Permalink to this headline"></a></h3>
+<h3>Deep Learning training algorithms<a class="headerlink" href="#deep-learning-training-algorithms" title="Permalink to this heading"></a></h3>
 <p><a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dnn.dnntrain.TrainProcess.html#ikomia.dnn.dnntrain.TrainProcess" title="ikomia.dnn.dnntrain.TrainProcess"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrainProcess</span></code></a>: choose it as a base class for any deep learning
 training algorithms. This base class integrated training monitoring features for <strong>MLflow</strong> and
 <strong>Tensorboard</strong>.</p>
@@ -298,14 +304,14 @@ training algorithms. This base class integrated training monitoring features for
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Please consult source code of <a class="reference external" href="https://github.com/Ikomia-dev/train_yolo_v5">train_yolov5</a> for implementation example.</p>
+<p>Please consult source code of <a class="reference external" href="https://github.com/Ikomia-hub/train_yolo_v5">train_yolov5</a> for implementation example.</p>
 </div>
 </section>
 </section>
 <section id="metadata">
-<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline"></a></h2>
+<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this heading"></a></h2>
 <p>Ikomia platform allows you to add additionnal information to your plugin. This will help users to
-know more about your algorithm and give essential visual elements for the marketplace.</p>
+know more about your algorithm and give essential visual elements in Ikomia HUB.</p>
 <p>These information are store in a factory class inherited from <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html#ikomia.dataprocess.pydataprocess.CTaskFactory" title="ikomia.dataprocess.pydataprocess.CTaskFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">CTaskFactory</span></code></a>.
 It aims to create instance of your process class. Plugin metadata are set in the constructor within the <strong>CTaskInfo</strong> member variable.
 You will find he full list of information in the <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html#ikomia.dataprocess.pydataprocess.CTaskInfo" title="ikomia.dataprocess.pydataprocess.CTaskInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">CTaskInfo</span></code></a> documentation.</p>

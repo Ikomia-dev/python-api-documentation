@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Algorithms for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
@@ -174,24 +175,24 @@
            <div itemprop="articleBody">
              
   <section id="cworkflowtaskio">
-<h1>CWorkflowTaskIO<a class="headerlink" href="#cworkflowtaskio" title="Permalink to this headline"></a></h1>
+<h1>CWorkflowTaskIO<a class="headerlink" href="#cworkflowtaskio" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTaskIO">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CWorkflowTaskIO</span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIO" title="Permalink to this definition"></a></dt>
-<dd><p>Base class for the management of task inputs and outputs. Each task can have as many inputs and outputs, and each must be derived from this class.</p>
+<dd><p>Base class for task inputs and outputs. Each task can have as many inputs and outputs. Each input/output class must inherit this class and override the needed methods.</p>
 <p class="rubric">Import</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">CWorkflowTaskIO</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.__init__" title="ikomia.core.pycore.CWorkflowTaskIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
-<td><p>__init__( (object)arg1) -&gt; None :</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.clearData" title="ikomia.core.pycore.CWorkflowTaskIO.clearData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code></a>(self)</p></td>
 <td><p>Clear the data stored in the object.</p></td>
@@ -199,22 +200,34 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.copyStaticData" title="ikomia.core.pycore.CWorkflowTaskIO.copyStaticData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copyStaticData</span></code></a>(self, io)</p></td>
 <td><p>Copy the static data from the given input or ouput.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.getUnitElementCount" title="ikomia.core.pycore.CWorkflowTaskIO.getUnitElementCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnitElementCount</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.fromJson" title="ikomia.core.pycore.CWorkflowTaskIO.fromJson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromJson</span></code></a>(self, jsonStr)</p></td>
+<td><p>Set input/output data from JSON formatted string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.getUnitElementCount" title="ikomia.core.pycore.CWorkflowTaskIO.getUnitElementCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnitElementCount</span></code></a>(self)</p></td>
 <td><p>Get the number of unit element in terms of processing scheme.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.isAutoInput" title="ikomia.core.pycore.CWorkflowTaskIO.isAutoInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAutoInput</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.isAutoInput" title="ikomia.core.pycore.CWorkflowTaskIO.isAutoInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isAutoInput</span></code></a>(self)</p></td>
 <td><p>Check whether input data from external source is mandatory.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable" title="ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable" title="ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>(self)</p></td>
 <td><p>Check whether input or output objects contain valid data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.setDisplayable" title="ikomia.core.pycore.CWorkflowTaskIO.setDisplayable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDisplayable</span></code></a>(self, displayable)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.load" title="ikomia.core.pycore.CWorkflowTaskIO.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(self, path)</p></td>
+<td><p>Load the input or output data from disk.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.save" title="ikomia.core.pycore.CWorkflowTaskIO.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(self, path)</p></td>
+<td><p>Save the input or output data to disk.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.setDisplayable" title="ikomia.core.pycore.CWorkflowTaskIO.setDisplayable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDisplayable</span></code></a>(self, displayable)</p></td>
 <td><p>Make the output displayable or not in Ikomia Studio.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO.toJson" title="ikomia.core.pycore.CWorkflowTaskIO.toJson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toJson</span></code></a>(self)</p></td>
+<td><p>Return input/output data in JSON formatted string with default options.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -237,20 +250,20 @@
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTaskIO.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIO.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl>
-<dt>__init__( (object)arg1) -&gt; None :</dt><dd><p>Default constructor</p>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
 </dd>
-<dt>__init__( (object)arg1, (IODataType)arg2) -&gt; None :</dt><dd><p>Constructor with parameters</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p><a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>: data type</p>
+<dt>__init__( (object)self, (IODataType)dataType) -&gt; None :</dt><dd><p>Constructor with parameters</p>
+<p>Args:</p>
+<blockquote>
+<div><p>dataType (<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): data type identifier</p>
+</div></blockquote>
 </dd>
-</dl>
-</dd>
-<dt>__init__( (object)arg1, (IODataType)arg2, (str)arg3) -&gt; None :</dt><dd><p>Constructor with parameters</p>
-<dl>
-<dt>Args:</dt><dd><p><a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>: data type</p>
-<p>str: name</p>
-</dd>
-</dl>
+<dt>__init__( (object)self, (IODataType)dataType, (str)name) -&gt; None :</dt><dd><p>Constructor with parameters</p>
+<p>Args:</p>
+<blockquote>
+<div><p>dataType(<a class="reference internal" href="ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): data type identifier</p>
+<p>name (str): custom name associated to input/output to give more insights to end user</p>
+</div></blockquote>
 </dd>
 <dt>__init__( (object)arg1, (CWorkflowTaskIO)arg2) -&gt; None :</dt><dd><p>Copy constructor</p>
 </dd>
@@ -269,23 +282,36 @@
 <span class="sig-name descname"><span class="pre">copyStaticData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)io</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIO.copyStaticData" title="Permalink to this definition"></a></dt>
 <dd><p>Copy the static data from the given input or ouput. Static data are those which are not generated at runtime. Should be overriden for custom input or output.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a>: input or ouput instance from which data is copied</p>
-</dd>
-</dl>
+<div><p>Args:</p>
+<blockquote>
+<div><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a>: input or ouput instance from which data is copied</p>
+</div></blockquote>
 </div></blockquote>
 <p>copyStaticData( (CWorkflowTaskIO)self, (CWorkflowTaskIO)io) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTaskIO.fromJson">
+<span class="sig-name descname"><span class="pre">fromJson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)jsonStr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIO.fromJson" title="Permalink to this definition"></a></dt>
+<dd><p>Set input/output data from JSON formatted string. This method must be overriden.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>jsonStr (str): data as JSON formatted string</p>
+</div></blockquote>
+</div></blockquote>
+<p>fromJson( (CWorkflowTaskIO)self, (str)jsonStr) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTaskIO.getUnitElementCount">
 <span class="sig-name descname"><span class="pre">getUnitElementCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIO.getUnitElementCount" title="Permalink to this definition"></a></dt>
-<dd><p>Get the number of unit element in terms of processing scheme. This value is used to define the number of progress steps for progress bar component. For an image, the count is 1. For Z-stack volume, the count is the number of Z levels. Should be overriden for custom input or output.</p>
+<dd><p>Get the number of unit element in terms of processing scheme. This value is used to define the number of progress steps for progress bar component in <strong>Ikomia Studio</strong>. For an image, the count is 1. For Z-stack volume, the count is the number of Z levels. Should be overriden for custom input or output.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>int: number of unit element to process</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>int: number of unit element to process</p>
+</div></blockquote>
 </div></blockquote>
 <p>getUnitElementCount( (CWorkflowTaskIO)self) -&gt; int</p>
 </dd></dl>
@@ -295,10 +321,10 @@
 <span class="sig-name descname"><span class="pre">isAutoInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIO.isAutoInput" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether input data from external source is mandatory.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True or False</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>bool: True or False</p>
+</div></blockquote>
 </div></blockquote>
 <p>isAutoInput( (CWorkflowTaskIO)self) -&gt; bool</p>
 </dd></dl>
@@ -308,12 +334,38 @@
 <span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIO.isDataAvailable" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether input or output objects contain valid data. For inputs, it is the case when the previous process contains valid output data. For outputs, it is the case when the associated task had been computed at least once. Should be overriden for custom input or output.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Returns:</dt><dd><p>bool: True if data is available, False otherwise</p>
-</dd>
-</dl>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>bool: True if data is available, False otherwise</p>
+</div></blockquote>
 </div></blockquote>
 <p>isDataAvailable( (CWorkflowTaskIO)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTaskIO.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIO.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load the input or output data from disk. This method must be overriden.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>path (str): file path</p>
+</div></blockquote>
+</div></blockquote>
+<p>load( (CWorkflowTaskIO)self, (str)path) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTaskIO.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIO.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save the input or output data to disk. This method must be overriden.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>path (str): file path</p>
+</div></blockquote>
+</div></blockquote>
+<p>save( (CWorkflowTaskIO)self, (str)path) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
@@ -325,6 +377,38 @@
 <dd class="field-odd"><p><strong>bool</strong> – True or False</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTaskIO.toJson">
+<span class="sig-name descname"><span class="pre">toJson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTaskIO.toJson" title="Permalink to this definition"></a></dt>
+<dd><p>Return input/output data in JSON formatted string with default options. This method must be overriden.</p>
+<blockquote>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>str: JSON formatted string</p>
+</div></blockquote>
+</div></blockquote>
+<p>toJson( (CWorkflowTaskIO)self) -&gt; str</p>
+<dl>
+<dt>toJson( (CWorkflowTaskIO)self, (object)options) -&gt; str :</dt><dd><p>Return input/output data in JSON formatted string. This method must be overriden. Options available depend on input/output type, a single option is available for all to set the JSON format:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>[‘json_format’, ‘compact’] (<strong>default</strong>)</p></li>
+<li><p>[‘json_format’, ‘indented’]</p></li>
+</ul>
+</div></blockquote>
+<p>Args:</p>
+<blockquote>
+<div><p>options (list of str): format-specific options encoded as pairs [option_name, option_value]</p>
+</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>str: JSON formatted string</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>toJson( (CWorkflowTaskIO)self, (object)options) -&gt; str</p>
 </dd></dl>
 
 </dd></dl>

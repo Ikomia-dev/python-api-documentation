@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,7 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#the-plugin-structure">The plugin structure</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index_plugin.html#getting-started">Getting started</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="python_env.html">Python environment</a></li>
@@ -89,7 +91,6 @@
 <li class="toctree-l2"><a class="reference internal" href="index_plugin.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index_api.html">Algorithms for your application</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -125,7 +126,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_plugin.html">Integrate your algorithm in Ikomia</a> &raquo;</li>
+          <li><a href="index_plugin.html">Create your algorithm for Ikomia platform</a> &raquo;</li>
       <li>Interactive plugin</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/interactive_plugin.rst.txt" rel="nofollow"> View page source</a>
@@ -140,7 +141,7 @@
            <div itemprop="articleBody">
              
   <section id="interactive-plugin">
-<h1>Interactive plugin<a class="headerlink" href="#interactive-plugin" title="Permalink to this headline"></a></h1>
+<h1>Interactive plugin<a class="headerlink" href="#interactive-plugin" title="Permalink to this heading"></a></h1>
 <p>In this tutorial, we will see how to implement a plugin managing user interaction through graphics objects input.
 We will illustrate this through the implementation of active contour algorithms from scikit-image library :</p>
 <ul class="simple">
@@ -167,8 +168,8 @@ Please refer to <a class="reference internal" href="hello_world_plugin.html"><sp
 <div class="line"><a class="reference internal" href="#interface-implementation"><span class="std std-ref">Interface implementation</span></a></div>
 <div class="line"><a class="reference internal" href="#process-implementation"><span class="std std-ref">Process implementation</span></a></div>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="#inputs"><span class="std std-ref">Inputs</span></a></div>
-<div class="line"><a class="reference internal" href="#outputs"><span class="std std-ref">Outputs</span></a></div>
+<div class="line"><a class="reference internal" href="working_with_task.html#inputs"><span class="std std-ref">Inputs</span></a></div>
+<div class="line"><a class="reference internal" href="working_with_task.html#outputs"><span class="std std-ref">Outputs</span></a></div>
 <div class="line"><a class="reference internal" href="#active-contour-methods"><span class="std std-ref">Active contour methods</span></a></div>
 <div class="line"><a class="reference internal" href="#results"><span class="std std-ref">Results</span></a></div>
 <div class="line"><a class="reference internal" href="#progress-bar"><span class="std std-ref">Progress bar</span></a></div>
@@ -179,7 +180,7 @@ Please refer to <a class="reference internal" href="hello_world_plugin.html"><sp
 <div class="line"><a class="reference internal" href="#id13"><span class="std std-ref">Source code</span></a></div>
 </div>
 <section id="plugin-files-structure">
-<span id="files-structure"></span><h2>Plugin files structure<a class="headerlink" href="#plugin-files-structure" title="Permalink to this headline"></a></h2>
+<span id="files-structure"></span><h2>Plugin files structure<a class="headerlink" href="#plugin-files-structure" title="Permalink to this heading"></a></h2>
 <ul>
 <li><p>skimage_morpho_snakes</p>
 <blockquote>
@@ -195,7 +196,7 @@ Please refer to <a class="reference internal" href="hello_world_plugin.html"><sp
 </ul>
 </section>
 <section id="dependencies">
-<span id="id1"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h2>
+<span id="id1"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>OpenCV: basic image operations (built-in in Ikomia software)</p></li>
 <li><p>scikit-image: active contour algorithms</p></li>
@@ -204,23 +205,24 @@ Please refer to <a class="reference internal" href="hello_world_plugin.html"><sp
 during plugin installation. More information about dependency management <a class="reference internal" href="dependencies.html"><span class="doc">here</span></a>.</p>
 </section>
 <section id="interface-implementation">
-<span id="id2"></span><h2>Interface implementation<a class="headerlink" href="#interface-implementation" title="Permalink to this headline"></a></h2>
+<span id="id2"></span><h2>Interface implementation<a class="headerlink" href="#interface-implementation" title="Permalink to this heading"></a></h2>
 <p>No features added from the default implementation.
-See <a class="reference external" href="https://github.com/Ikomia-dev/skimage_morpho_snakes/blob/main/skimage_morpho_snakes.py">skimage_morpho_snakes.py</a>.</p>
+See <a class="reference external" href="https://github.com/Ikomia-hub/skimage_morpho_snakes/blob/main/skimage_morpho_snakes.py">skimage_morpho_snakes.py</a>.</p>
 </section>
 <section id="process-implementation">
-<span id="id3"></span><h2>Process implementation<a class="headerlink" href="#process-implementation" title="Permalink to this headline"></a></h2>
+<span id="id3"></span><h2>Process implementation<a class="headerlink" href="#process-implementation" title="Permalink to this heading"></a></h2>
 <p>Import statements in <em>skimage_morpho_snakes_process.py</em>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span><span class="p">,</span> <span class="n">cv2</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">dataprocess</span>
 <span class="kn">import</span> <span class="nn">copy</span>
 <span class="c1"># your imports below</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
 <span class="kn">from</span> <span class="nn">skimage.segmentation</span> <span class="kn">import</span> <span class="p">(</span><span class="n">morphological_geodesic_active_contour</span><span class="p">,</span> <span class="n">inverse_gaussian_gradient</span><span class="p">,</span> <span class="n">morphological_chan_vese</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">img_as_float</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 <section id="inputs">
-<span id="id4"></span><h3>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h3>
+<span id="id4"></span><h3>Inputs<a class="headerlink" href="#inputs" title="Permalink to this heading"></a></h3>
 <p>Our active contour methods are designed to process 2D images, the corresponding base class from which our
 scikit_MorphoSnakesProcess class inherits is <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a>. It comes with built-in inputs :</p>
 <ul class="simple">
@@ -241,7 +243,7 @@ So we need to add a new image-based input of type <a class="reference internal" 
 </div>
 </section>
 <section id="outputs">
-<span id="id5"></span><h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h3>
+<span id="id5"></span><h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h3>
 <p>Here are outputs that our plugin should returned:</p>
 <ul class="simple">
 <li><p>Final level set as binary mask representing segmented objects (<a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a>): directly consummable by connected tasks in workflow.</p></li>
@@ -264,7 +266,7 @@ So we need to add a new image-based input of type <a class="reference internal" 
 </div>
 </section>
 <section id="active-contour-methods">
-<span id="id6"></span><h3>Active contour methods<a class="headerlink" href="#active-contour-methods" title="Permalink to this headline"></a></h3>
+<span id="id6"></span><h3>Active contour methods<a class="headerlink" href="#active-contour-methods" title="Permalink to this heading"></a></h3>
 <p>First, we should check the input type the user gives us for the initial level set.
 User can give us 2 types of input to define initial contour:</p>
 <ul class="simple">
@@ -325,7 +327,7 @@ We will use 2 methods of <a class="reference internal" href="_autosummary/_autos
 <img alt="_images/interactive_plugin.jpg" src="_images/interactive_plugin.jpg" />
 </section>
 <section id="results">
-<span id="id7"></span><h3>Results<a class="headerlink" href="#results" title="Permalink to this headline"></a></h3>
+<span id="id7"></span><h3>Results<a class="headerlink" href="#results" title="Permalink to this heading"></a></h3>
 <p>The first result is the binary mask representing the final level set of the active contour method.
 We simply have to set the content of the corresponding output with the numpy array returned
 by the scikit-image functions.</p>
@@ -351,7 +353,7 @@ to forward the original input to a given output (see <a class="reference interna
 </div>
 </section>
 <section id="progress-bar">
-<span id="id8"></span><h3>Progress bar<a class="headerlink" href="#progress-bar" title="Permalink to this headline"></a></h3>
+<span id="id8"></span><h3>Progress bar<a class="headerlink" href="#progress-bar" title="Permalink to this heading"></a></h3>
 <p>Note that functions <em>morphological_geodesic_active_contour()</em> and <em>morphological_chan_vese()</em> from scikit-image
 have one specificity that can be usefull for us. They have an <em>iter_callback</em> parameter called once per iteration
 we can use to refresh the progress bar of Ikomia software. We call <a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emitStepProgress" title="ikomia.core.pycore.CWorkflowTask.emitStepProgress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitStepProgress()</span></code></a>
@@ -376,7 +378,7 @@ in a lambda function given <em>to iter_callback</em> parameter:</p>
 </section>
 </section>
 <section id="process-parameters">
-<span id="id9"></span><h2>Process parameters<a class="headerlink" href="#process-parameters" title="Permalink to this headline"></a></h2>
+<span id="id9"></span><h2>Process parameters<a class="headerlink" href="#process-parameters" title="Permalink to this heading"></a></h2>
 <p>We will now focus on adding some parameters to our process. We want to control available parameters from scikit-image methods.</p>
 <p>Morphological active contour:</p>
 <ul class="simple">
@@ -468,7 +470,7 @@ Note the presence of functions <a class="reference internal" href="_autosummary/
 </div>
 </section>
 <section id="process-widget">
-<span id="id10"></span><h2>Process widget<a class="headerlink" href="#process-widget" title="Permalink to this headline"></a></h2>
+<span id="id10"></span><h2>Process widget<a class="headerlink" href="#process-widget" title="Permalink to this heading"></a></h2>
 <p>At this point, parameters are only available from source code. The role of the plugin widget is to open parameters
 configuration to the user. We will use PyQt framework for this example. We implement the widget part in the file
 <em>skimage_morpho_snakes_widget.py</em>. The widget layout is created in the constructor. Like the process class,
@@ -500,14 +502,14 @@ the appropriate parameters. We will use the <strong>QStackedWidget</strong> comp
         <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">setRowStretch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 
         <span class="c1"># PyQt -&gt; Qt wrapping</span>
-        <span class="n">layoutPtr</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">PyQtToQt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="p">)</span>
+        <span class="n">layoutPtr</span> <span class="o">=</span> <span class="n">qtconversion</span><span class="o">.</span><span class="n">PyQtToQt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="p">)</span>
 
         <span class="c1"># Set widget layout</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layoutPtr</span><span class="p">)</span>
 
         <span class="c1"># update left parameter panel</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">method</span> <span class="o">!=</span> <span class="s2">&quot;mgac&quot;</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">comboMethod</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Note: <em>self.gridLayout.setRowStretch(n, n)</em> forces items to stay on top of the gridlayout.</p>
@@ -528,14 +530,14 @@ the appropriate parameters. We will use the <strong>QStackedWidget</strong> comp
         <span class="bp">self</span><span class="o">.</span><span class="n">gridLayout</span><span class="o">.</span><span class="n">setRowStretch</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>MGAC method parameters (see <a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/scikit_MorphoSnakes_widget.py">source code</a> for details)</p>
+<p>MGAC method parameters (see <a class="reference external" href="https://github.com/Ikomia-hub/skimage_morpho_snakes/blob/main/skimage_morpho_snakes_widget.py">source code</a> for details)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MorphoSnakesWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskWidget</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">mgacWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="o">...</span>
 </pre></div>
 </div>
-<p>Chan Vese method parameters (see <a class="reference external" href="https://github.com/Ikomia-dev/IkomiaPluginsPython/blob/master/scikit_MorphoSnakes/scikit_MorphoSnakes_widget.py">source code</a> for details)</p>
+<p>Chan Vese method parameters (see <a class="reference external" href="https://github.com/Ikomia-hub/skimage_morpho_snakes/blob/main/skimage_morpho_snakes_widget.py">source code</a> for details)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MorphoSnakesWidget</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">CWorkflowTaskWidget</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">chanVeseWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -591,7 +593,7 @@ We do that by overriding <em>onApply()</em> method which is called when user cli
 </div>
 </section>
 <section id="process-metadata">
-<span id="id12"></span><h2>Process metadata<a class="headerlink" href="#process-metadata" title="Permalink to this headline"></a></h2>
+<span id="id12"></span><h2>Process metadata<a class="headerlink" href="#process-metadata" title="Permalink to this heading"></a></h2>
 <p>Finally, we will add some useful information about our plugin. Ikomia software manages such information and
 display it to the user (parameters widget, Ikomia Apps). Metadata can be added in the constructor of the process
 factory class in <em>skimage_morpho_snakes_process.py</em>. We have to fill the member object info,
@@ -599,11 +601,11 @@ see <a class="reference internal" href="_autosummary/_autosummary/ikomia.datapro
 <p><strong>Our plugin is now fully functional and interactive !</strong></p>
 </section>
 <section id="id13">
-<span id="id14"></span><h2>Source code<a class="headerlink" href="#id13" title="Permalink to this headline"></a></h2>
-<p><a class="reference external" href="https://github.com/Ikomia-dev/skimage_morpho_snakes/blob/main/requirements.txt">requirements.txt</a></p>
-<p><a class="reference external" href="https://github.com/Ikomia-dev/skimage_morpho_snakes/blob/main/skimage_morpho_snakes.py">skimage_morpho_snakes.py</a></p>
-<p><a class="reference external" href="https://github.com/Ikomia-dev/skimage_morpho_snakes/blob/main/skimage_morpho_snakes_process.py">skimage_morpho_snakes_process.py</a></p>
-<p><a class="reference external" href="https://github.com/Ikomia-dev/skimage_morpho_snakes/blob/main/skimage_morpho_snakes_widget.py">skimage_morpho_snakes_widget.py</a></p>
+<span id="id14"></span><h2>Source code<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://github.com/Ikomia-hub/skimage_morpho_snakes/blob/main/requirements.txt">requirements.txt</a></p>
+<p><a class="reference external" href="https://github.com/Ikomia-hub/skimage_morpho_snakes/blob/main/skimage_morpho_snakes.py">skimage_morpho_snakes.py</a></p>
+<p><a class="reference external" href="https://github.com/Ikomia-hub/skimage_morpho_snakes/blob/main/skimage_morpho_snakes_process.py">skimage_morpho_snakes_process.py</a></p>
+<p><a class="reference external" href="https://github.com/Ikomia-hub/skimage_morpho_snakes/blob/main/skimage_morpho_snakes_widget.py">skimage_morpho_snakes_widget.py</a></p>
 </section>
 </section>
 

@@ -15,6 +15,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index_api.html">Algorithms for your application</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index_api.html">Implement Computer Vision workflows for your application</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_api.html#registration-free">Registration (free)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_api.html#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_api.html#concepts">Concepts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_api.html#authentication">Authentication</a></li>
@@ -88,6 +89,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -123,7 +125,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index_api.html">Algorithms for your application</a> &raquo;</li>
+          <li><a href="index_api.html">Implement Computer Vision workflows for your application</a> &raquo;</li>
       <li>Going deeper with workflows</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/going_deeper_workflow.rst.txt" rel="nofollow"> View page source</a>
@@ -138,9 +140,9 @@
            <div itemprop="articleBody">
              
   <section id="going-deeper-with-workflows">
-<h1>Going deeper with workflows<a class="headerlink" href="#going-deeper-with-workflows" title="Permalink to this headline"></a></h1>
+<h1>Going deeper with workflows<a class="headerlink" href="#going-deeper-with-workflows" title="Permalink to this heading"></a></h1>
 <section id="set-workflow-inputs">
-<h2>Set workflow inputs<a class="headerlink" href="#set-workflow-inputs" title="Permalink to this headline"></a></h2>
+<h2>Set workflow inputs<a class="headerlink" href="#set-workflow-inputs" title="Permalink to this heading"></a></h2>
 <p>In the previous section, we use <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.run_on" title="ikomia.dataprocess.workflow.Workflow.run_on"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run_on()</span></code></a> to execute a workflow on common inputs.
 But this function can only be used for a workflow with a single input. In fact, a workflow object is also a task
 (<a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow" title="ikomia.dataprocess.workflow.Workflow"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Workflow</span></code></a> is derived from <code class="xref py py-mod docutils literal notranslate"><span class="pre">CWorkflowTask</span></code>) and you can add as many inputs as you want.
@@ -166,7 +168,7 @@ Please find below the generic way to set workflow inputs.</p>
 for this specific data type.</p>
 </section>
 <section id="get-a-specific-workflow-task">
-<h2>Get a specific workflow task<a class="headerlink" href="#get-a-specific-workflow-task" title="Permalink to this headline"></a></h2>
+<h2>Get a specific workflow task<a class="headerlink" href="#get-a-specific-workflow-task" title="Permalink to this heading"></a></h2>
 <p>In some cases, it may be necessary to access the task object instance directly. The <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow" title="ikomia.dataprocess.workflow.Workflow"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Workflow</span></code></a> class provides
 a single method to get a task from its name: <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.find_task" title="ikomia.dataprocess.workflow.Workflow.find_task"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find_task()</span></code></a>. When a workflow has several tasks with the
 same name, the function returns the list of candidates. Please note that the candidates are sorted according to their order of insertion in the workflow,
@@ -196,7 +198,7 @@ to get the task later. In this case, you should call <a class="reference interna
 </div>
 </section>
 <section id="get-workflow-outputs">
-<h2>Get workflow outputs<a class="headerlink" href="#get-workflow-outputs" title="Permalink to this headline"></a></h2>
+<h2>Get workflow outputs<a class="headerlink" href="#get-workflow-outputs" title="Permalink to this heading"></a></h2>
 <p>The generic way to get workflow outputs is to firstly get the task object and then get its outputs.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">workflow</span>
 
@@ -254,11 +256,11 @@ outputs (<a class="reference internal" href="_autosummary/_autosummary/ikomia.da
 </div>
 </section>
 <section id="handle-the-workflow-graph-structure">
-<h2>Handle the workflow graph structure<a class="headerlink" href="#handle-the-workflow-graph-structure" title="Permalink to this headline"></a></h2>
+<h2>Handle the workflow graph structure<a class="headerlink" href="#handle-the-workflow-graph-structure" title="Permalink to this heading"></a></h2>
 <p>A workflow is a graph where the nodes are the runnable tasks (algorithms) and the links between nodes are connections from task outputs to task inputs.
 Basically, you need two methods to build your own workflow:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.add_task" title="ikomia.dataprocess.workflow.Workflow.add_task"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code></a>: instanciate an algorithm object and add it to the workflow. All algorithms are identified by their unique names and the function uses this name to create instance (factory design pattern). Instanciation process firstly searches for installed algorithms in the registry. If not found, it searches in the Ikomia Marketplace and do all installation steps automatically. Note that this installation can take a while (download package and install dependencies) but it will be executed once.</p></li>
+<li><p><a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.add_task" title="ikomia.dataprocess.workflow.Workflow.add_task"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_task()</span></code></a>: instanciate an algorithm object and add it to the workflow. All algorithms are identified by their unique names and the function uses this name to create instance (factory design pattern). Instanciation process firstly searches for installed algorithms in the registry. If not found, it searches in Ikomia HUB and do all installation steps automatically. Note that this installation can take a while (download package and install dependencies) but it will be executed once.</p></li>
 <li><p><a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.connect_tasks" title="ikomia.dataprocess.workflow.Workflow.connect_tasks"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect_tasks()</span></code></a>: connect 2 tasks of the workflow so that output data from the source task will be forwarded to target task input when running the workflow.</p></li>
 </ul>
 <p>The first way to connect tasks is to let the system create connections automatically based on input and output data types. This will work well in simple scenarios.
@@ -300,12 +302,12 @@ by multiple output-input links. Adding a DT Filter with manual connections to th
 <a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.getEdgeInfo" title="ikomia.dataprocess.workflow.Workflow.getEdgeInfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getEdgeInfo()</span></code></a> for details.</p>
 </section>
 <section id="create-a-deep-learning-training-workflow">
-<h2>Create a Deep Learning training workflow<a class="headerlink" href="#create-a-deep-learning-training-workflow" title="Permalink to this headline"></a></h2>
+<h2>Create a Deep Learning training workflow<a class="headerlink" href="#create-a-deep-learning-training-workflow" title="Permalink to this heading"></a></h2>
 <p>Training deep learning models is an important use case of Ikomia API. The workflow approach is also well suited for this case and you can handle it
 with few lines of code. Basically, it will consist in 2 main tasks:</p>
 <ul class="simple">
-<li><p>a dataset loader that will convert your custom dataset structure into the Ikomia Dataset structure. This conversion is mandatory to leverage all training algorithms you can find in the Marketplace. We provide dataset loader of common formats like COCO, PascalVOC, YOLO…</p></li>
-<li><p>a training algorithm. You will find various algorithms in the Marketplace for classification, object detection, segmentation…</p></li>
+<li><p>a dataset loader that will convert your custom dataset structure into the Ikomia Dataset structure. This conversion is mandatory to leverage all training algorithms you can find in Ikomia HUB. We provide dataset loader of common formats like COCO, PascalVOC, YOLO…</p></li>
+<li><p>a training algorithm. You will find various algorithms in Ikomia HUB for classification, object detection, segmentation…</p></li>
 </ul>
 <p>Here is an example of a training workflow for a YOLOv4 model and a custom dataset in YOLO format (grapes detection):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
@@ -339,12 +341,12 @@ you will have access to metrics, parameters, artifacts in MLflow or Tensorboard 
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>If you need a model not present in the Marketplace, it is quiet easy to port your prefered model in Ikomia ecosystem.
+<p>If you need a model not present in Ikomia HUB, it is quiet easy to port your preferred model in Ikomia ecosystem.
 Documentation can be found <a class="reference internal" href="index_plugin.html"><span class="doc">here</span></a> and <a class="reference internal" href="plugin_task.html"><span class="doc">here</span></a>.</p>
 </div>
 </section>
 <section id="working-with-video-files">
-<h2>Working with video files<a class="headerlink" href="#working-with-video-files" title="Permalink to this headline"></a></h2>
+<h2>Working with video files<a class="headerlink" href="#working-with-video-files" title="Permalink to this heading"></a></h2>
 <p>Processing video files is available out of the box. Ikomia API leverages OpenCV video reader capabilities to apply
 any workflows on whole video. Basically, it will execute the workflow on every frames and return when all frames are
 processed. You should enable the auto-save mode (<a class="reference internal" href="_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.setAutoSave" title="ikomia.core.pycore.CWorkflowTask.setAutoSave"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setAutoSave()</span></code></a>) at
@@ -365,7 +367,7 @@ workflow or task level to save outputs to disk. Output folder can be set at eith
 </div>
 </section>
 <section id="working-with-video-streams">
-<h2>Working with video streams<a class="headerlink" href="#working-with-video-streams" title="Permalink to this headline"></a></h2>
+<h2>Working with video streams<a class="headerlink" href="#working-with-video-streams" title="Permalink to this heading"></a></h2>
 <p>At this time, we do not offer high level API to handle streams. On the other hand, it is very simple to
 run a workflow on each frame acquired by a third-party video library. Here is an example with OpenCV:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
@@ -397,7 +399,7 @@ run a workflow on each frame acquired by a third-party video library. Here is an
 </div>
 </section>
 <section id="get-workflow-time-metrics">
-<h2>Get workflow time metrics<a class="headerlink" href="#get-workflow-time-metrics" title="Permalink to this headline"></a></h2>
+<h2>Get workflow time metrics<a class="headerlink" href="#get-workflow-time-metrics" title="Permalink to this heading"></a></h2>
 <p>Ikomia API provides functions to get executing time of a workflow, globally and at task level.</p>
 <p>Get the total time (<a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html#ikomia.dataprocess.workflow.Workflow.getTotalElapsedTime" title="ikomia.dataprocess.workflow.Workflow.getTotalElapsedTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getTotalElapsedTime()</span></code></a>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">workflow</span>

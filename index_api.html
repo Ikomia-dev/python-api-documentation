@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Algorithms for your application &mdash; Ikomia API  documentation</title>
+  <title>Implement Computer Vision workflows for your application &mdash; Ikomia API  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/ikomia.css" type="text/css" />
@@ -15,12 +15,13 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="First steps with workflows" href="first_steps_workflow.html" />
-    <link rel="prev" title="Widget" href="opencv_plugin_widget.html" />
+    <link rel="prev" title="Welcome to Ikomia API documentation" href="index.html" />
  
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -45,7 +46,7 @@
     
     
     <div class="version">
-        0.7.0
+        0.8.0
     </div>
     
     
@@ -74,8 +75,8 @@
         
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Integrate your algorithm in Ikomia</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Algorithms for your application</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Implement Computer Vision workflows for your application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#registration-free">Registration (free)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#concepts">Concepts</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#workflow">Workflow</a></li>
@@ -94,6 +95,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="index_plugin.html">Create your algorithm for Ikomia platform</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
@@ -129,12 +131,12 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Algorithms for your application</li>
+      <li>Implement Computer Vision workflows for your application</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index_api.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="opencv_plugin_widget.html" class="btn btn-neutral float-left" title="Widget" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Ikomia API documentation" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="first_steps_workflow.html" class="btn btn-neutral float-right" title="First steps with workflows" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
@@ -142,46 +144,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="algorithms-for-your-application">
-<h1>Algorithms for your application<a class="headerlink" href="#algorithms-for-your-application" title="Permalink to this headline"></a></h1>
-<p>This part of the Ikomia API aims to leverage algorithms coming from the Marketplace into standalone application. It provides a simple and fast way to
+  <section id="implement-computer-vision-workflows-for-your-application">
+<h1>Implement Computer Vision workflows for your application<a class="headerlink" href="#implement-computer-vision-workflows-for-your-application" title="Permalink to this heading"></a></h1>
+<p>This part of the Ikomia API aims to leverage algorithms coming from Ikomia HUB into standalone application. It provides a simple and fast way to
 integrate state of the art methods to your image analysis pipeline. Ikomia API is framework-agnostic, algorithms can be implemented in your favorite
 Python library (PyTorch, TensorFlow, Scikit-image …).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are interested in integrating your own algorithm in Ikomia, please consult <a class="reference internal" href="index_plugin.html"><span class="doc">this documentation</span></a>.</p>
 </div>
+<section id="registration-free">
+<h2>Registration (free)<a class="headerlink" href="#registration-free" title="Permalink to this heading"></a></h2>
+<p>Leverage state of the art algorithms from Ikomia HUB is one of the big advantage of using Ikomia API. Then you will need a free Ikomia account so that
+you will be able to authenticate while using Ikomia API. If we don’t have the chance yet to count you among our users, we invite you to
+<a class="reference external" href="https://members.ikomia.com/accounts/signup/">register here</a>.</p>
+</section>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
-<p>You simply install Ikomia API via pip for Linux and Windows (CPU only):</p>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>You simply install Ikomia API via pip for Linux and Windows:</p>
 <div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>pip install ikomia
 </pre></div>
 </div>
-<p>With GPU enabled:</p>
-<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>pip install <span class="nv">ikomia</span><span class="o">==</span><span class="m">0</span>.7.0+cu11 -f https://packages.ikomia.com/ikomia/index.html
+<p>Another version is also available which provides a GPU-enabled version of OpenCV (CUDA 11, CuDNN 8). This version gives
+you access to OpenCV algorithms with GPU acceleration, especially the Deep Learning inference framework.</p>
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>pip install <span class="nv">ikomia</span><span class="o">==</span><span class="m">0</span>.8.0+cu11 -f https://packages.ikomia.com/ikomia/index.html
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For this beta version, we provide Python wheel for Python 3.7, 3.8 and 3.9. It includes OpenCV package (v4.5.2) with CUDA enabled (v11),
-and CuDNN 8. Thus, you must have CUDA 11 drivers for your graphic card and install machine learning framework compatible with CUDA 11.
-For Linux users, the wheel targets the platform manylinux2014 so that it should be compatible with most of recent distributions. For
-Windows, the wheel is only compatible with Windows 10.</p>
+<p>For this version, we provide Python wheels for Python 3.7, 3.8 and 3.9. It includes OpenCV package (v4.5.2). For GPU
+acceleration with your favorite framework (PyTorch, TensorFlow…), you must have installed CUDA 11 drivers for your
+graphic card and the GPU-enabled version of this framework.</p>
+<p>For Linux users, the wheel targets the platform manylinux2014 so that it should be compatible with most of recent
+distributions.</p>
+<p>For Windows, the wheel is only compatible with Windows 10.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>OpenCV</strong></p>
-<p>A GPU-enabled version of OpenCV is bundled within the Ikomia package. It includes all the core
-and contribution librairies with CUDA support. There is only one important constraint to respect, <strong>you must import Ikomia
-module before importing cv2 module</strong>.</p>
-<p>As a result, the package <em>opencv-python</em> from Pypi repository must not be installed in
-the same Python environment. This will lead to incompatibility issues.</p>
+<p>A version of OpenCV with specific options is bundled within the Ikomia package. It includes all the core
+and contribution librairies. There is only one important constraint to respect, <strong>you must import Ikomia
+module before importing cv2 module</strong>. As a result, the package <em>opencv-python</em> or <em>opencv-python-headless</em> from Pypi repository should not be installed in
+the same Python environment. This may lead to incompatibility issues.</p>
 </div>
 </section>
 <section id="concepts">
-<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline"></a></h2>
+<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this heading"></a></h2>
 <section id="workflow">
-<h3>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline"></a></h3>
+<h3>Workflow<a class="headerlink" href="#workflow" title="Permalink to this heading"></a></h3>
 <p>This is the core concept to leverage algorithms in your application. It consists in a graph-based structure that allows to build complex
 scenario by connecting tasks (ie algorithms) through inputs and outputs. Workflow can either be created from scratch or loading from file
 exported by the workflow editor of Ikomia Studio. In the second case, no code is needed, you just have to build your workflow graphically,
@@ -195,21 +205,21 @@ evaluate it on your data and export it when you are done.</p>
 </figure>
 </section>
 <section id="registry">
-<h3>Registry<a class="headerlink" href="#registry" title="Permalink to this headline"></a></h3>
+<h3>Registry<a class="headerlink" href="#registry" title="Permalink to this heading"></a></h3>
 <p>The registry module ensures the algorithm management in the Ikomia platform. The module manages operations like download, installation, update
 and instanciation. All algorithms are uniquely identified by their name. So you will handle tasks primarly by their names while implementing
 your workflow. When importing the Python ikomia module, you will have acces to the global Ikomia registry
 (<a class="reference internal" href="_autosummary/_autosummary/ikomia.dataprocess.registry.IkomiaRegistry.html#ikomia.dataprocess.registry.IkomiaRegistry" title="ikomia.dataprocess.registry.IkomiaRegistry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">IkomiaRegistry</span></code></a>).</p>
 </section>
 <section id="task">
-<h3>Task<a class="headerlink" href="#task" title="Permalink to this headline"></a></h3>
+<h3>Task<a class="headerlink" href="#task" title="Permalink to this heading"></a></h3>
 <p>A task represents the implementation of a specific algorithm. The common usage of the task object is to insert it in a workflow as a node and connect
-it to others tasks. But a task is also a standalone object that can be executed independently. In Ikomia platform, a task implementation have to
+it to others tasks. But a task is also a standalone object that can be executed independently. In Ikomia platform, a task implementation has to
 follow a specific architecture (plugin mechanism) as described in <a class="reference internal" href="index_plugin.html"><span class="doc">this section</span></a>. This API provides high level functions to
 facilitate the use of Ikomia tasks (<a class="reference internal" href="_autosummary/ikomia.core.task.html#module-ikomia.core.task" title="ikomia.core.task"><code class="xref py py-mod docutils literal notranslate"><span class="pre">task</span></code></a>).</p>
 </section>
 <section id="inputs-and-outputs">
-<h3>Inputs and outputs<a class="headerlink" href="#inputs-and-outputs" title="Permalink to this headline"></a></h3>
+<h3>Inputs and outputs<a class="headerlink" href="#inputs-and-outputs" title="Permalink to this heading"></a></h3>
 <p>Every task comes with a list of inputs and outputs. Tasks are connected within a workflow thanks to their inputs/outputs. Ikomia workflow
 is designed to deal with almost any algorithm based on image. So depending of the algorithm, you will have to deal with several types of
 inputs/outputs. This API provides a comprehensive list of I/O types to address common needs in Computer Vision. You will find more
@@ -217,12 +227,12 @@ information <a class="reference internal" href="plugin_io.html"><span class="doc
 </section>
 </section>
 <section id="authentication">
-<h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline"></a></h2>
-<p>Access to the Ikomia Marketplace is reserved for registered users. So if you need algorithms from the Marketplace in your workflow, you have
+<h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this heading"></a></h2>
+<p>Access to Ikomia HUB is reserved for registered users. So if you need algorithms from HUB in your workflow, you have
 to set your Ikomia credentials in environment variables: <strong>IKOMIA_USER</strong> and <strong>IKOMIA_PWD</strong>.</p>
 </section>
 <section id="in-practice">
-<h2>In practice<a class="headerlink" href="#in-practice" title="Permalink to this headline"></a></h2>
+<h2>In practice<a class="headerlink" href="#in-practice" title="Permalink to this heading"></a></h2>
 <p>Let’s dive now into the API with practical examples:</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -239,7 +249,7 @@ to set your Ikomia credentials in environment variables: <strong>IKOMIA_USER</st
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="opencv_plugin_widget.html" class="btn btn-neutral float-left" title="Widget" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Ikomia API documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="first_steps_workflow.html" class="btn btn-neutral float-right" title="First steps with workflows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
