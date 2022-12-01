@@ -46,7 +46,7 @@
     
     
     <div class="version">
-        0.8.0
+        0.8.1
     </div>
     
     
@@ -203,124 +203,127 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.beginTaskRun" title="ikomia.core.pycore.CWorkflowTask.beginTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">beginTaskRun</span></code></a>(self)</p></td>
 <td><p>Perform all initialization stuff before running the task.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps" title="ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitAddSubProgressSteps</span></code></a>(self, count)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.download" title="ikomia.core.pycore.CWorkflowTask.download"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download</span></code></a>(self, url, to)</p></td>
+<td><p>Download file from the given URL and save it to the given path.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps" title="ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitAddSubProgressSteps</span></code></a>(self, count)</p></td>
 <td><p>Send event to add or remove progress steps to the progress bar.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.emitGraphicsContextChanged" title="ikomia.core.pycore.CWorkflowTask.emitGraphicsContextChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitGraphicsContextChanged</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.emitGraphicsContextChanged" title="ikomia.core.pycore.CWorkflowTask.emitGraphicsContextChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitGraphicsContextChanged</span></code></a>(self)</p></td>
 <td><p>Send event to notify that graphics context has changed inside the task and display has to be updated.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.emitOutputChanged" title="ikomia.core.pycore.CWorkflowTask.emitOutputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitOutputChanged</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.emitOutputChanged" title="ikomia.core.pycore.CWorkflowTask.emitOutputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitOutputChanged</span></code></a>(self)</p></td>
 <td><p>Send event to notify that some outputs have changed and that display must be updated.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.emitStepProgress" title="ikomia.core.pycore.CWorkflowTask.emitStepProgress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitStepProgress</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.emitStepProgress" title="ikomia.core.pycore.CWorkflowTask.emitStepProgress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emitStepProgress</span></code></a>(self)</p></td>
 <td><p>Send step event to notify progress bar system.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.endTaskRun" title="ikomia.core.pycore.CWorkflowTask.endTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">endTaskRun</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.endTaskRun" title="ikomia.core.pycore.CWorkflowTask.endTaskRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">endTaskRun</span></code></a>(self)</p></td>
 <td><p>Performs all finalization stuff after running the task.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.executeActions" title="ikomia.core.pycore.CWorkflowTask.executeActions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">executeActions</span></code></a>(self, action)</p></td>
-<td><p>Execute actions according to the specific defined behavior.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.executeActions" title="ikomia.core.pycore.CWorkflowTask.executeActions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">executeActions</span></code></a>(self, action)</p></td>
+<td><p>Method called when a specific action is requested from the associated widget (see <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskWidget.html#ikomia.core.pycore.CWorkflowTaskWidget.emitSendProcessAction" title="ikomia.core.pycore.CWorkflowTaskWidget.emitSendProcessAction"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitSendProcessAction()</span></code></a>).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getElapsedTime" title="ikomia.core.pycore.CWorkflowTask.getElapsedTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElapsedTime</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getElapsedTime" title="ikomia.core.pycore.CWorkflowTask.getElapsedTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElapsedTime</span></code></a>(self)</p></td>
 <td><p>Get the time of the last execution in milliseconds.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getInput" title="ikomia.core.pycore.CWorkflowTask.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>(self, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getInput" title="ikomia.core.pycore.CWorkflowTask.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>(self, index)</p></td>
 <td><p>Get input at position index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getInputCount" title="ikomia.core.pycore.CWorkflowTask.getInputCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputCount</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getInputCount" title="ikomia.core.pycore.CWorkflowTask.getInputCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputCount</span></code></a>(self)</p></td>
 <td><p>Get the number of inputs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getInputDataType" title="ikomia.core.pycore.CWorkflowTask.getInputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputDataType</span></code></a>(self, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getInputDataType" title="ikomia.core.pycore.CWorkflowTask.getInputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputDataType</span></code></a>(self, index)</p></td>
 <td><p>Get input data type at position index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getInputs" title="ikomia.core.pycore.CWorkflowTask.getInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputs</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getInputs" title="ikomia.core.pycore.CWorkflowTask.getInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputs</span></code></a>(self)</p></td>
 <td><p>Get the whole list of inputs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getOutput" title="ikomia.core.pycore.CWorkflowTask.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>(self, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getOutput" title="ikomia.core.pycore.CWorkflowTask.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>(self, index)</p></td>
 <td><p>Get output at position index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getOutputCount" title="ikomia.core.pycore.CWorkflowTask.getOutputCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputCount</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getOutputCount" title="ikomia.core.pycore.CWorkflowTask.getOutputCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputCount</span></code></a>(self)</p></td>
 <td><p>Get the number of outputs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getOutputDataType" title="ikomia.core.pycore.CWorkflowTask.getOutputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputDataType</span></code></a>(self, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getOutputDataType" title="ikomia.core.pycore.CWorkflowTask.getOutputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputDataType</span></code></a>(self, index)</p></td>
 <td><p>Get output data type at position index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getOutputs" title="ikomia.core.pycore.CWorkflowTask.getOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputs</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getOutputs" title="ikomia.core.pycore.CWorkflowTask.getOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputs</span></code></a>(self)</p></td>
 <td><p>Get the whole list of outputs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getParam" title="ikomia.core.pycore.CWorkflowTask.getParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParam</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getParam" title="ikomia.core.pycore.CWorkflowTask.getParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParam</span></code></a>(self)</p></td>
 <td><p>Get task parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getParamValues" title="ikomia.core.pycore.CWorkflowTask.getParamValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParamValues</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getParamValues" title="ikomia.core.pycore.CWorkflowTask.getParamValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getParamValues</span></code></a>(self)</p></td>
 <td><p>Get values of task parameters.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="ikomia.core.pycore.CWorkflowTask.getProgressSteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProgressSteps</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.getProgressSteps" title="ikomia.core.pycore.CWorkflowTask.getProgressSteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProgressSteps</span></code></a>(self)</p></td>
 <td><p>Get the number of progress steps when the system runs the task.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.globalInputChanged" title="ikomia.core.pycore.CWorkflowTask.globalInputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalInputChanged</span></code></a>(self, is_new_sequence)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.globalInputChanged" title="ikomia.core.pycore.CWorkflowTask.globalInputChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalInputChanged</span></code></a>(self, is_new_sequence)</p></td>
 <td><p>Notify that the inputs of the workflow have changed.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.graphicsChanged" title="ikomia.core.pycore.CWorkflowTask.graphicsChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">graphicsChanged</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.graphicsChanged" title="ikomia.core.pycore.CWorkflowTask.graphicsChanged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">graphicsChanged</span></code></a>(self)</p></td>
 <td><p>Notify that graphics layers of input images have changed.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening" title="ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isGraphicsChangedListening</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening" title="ikomia.core.pycore.CWorkflowTask.isGraphicsChangedListening"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isGraphicsChangedListening</span></code></a>(self)</p></td>
 <td><p>Check whether the task is listening to graphics changed event.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.parametersModified" title="ikomia.core.pycore.CWorkflowTask.parametersModified"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parametersModified</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.parametersModified" title="ikomia.core.pycore.CWorkflowTask.parametersModified"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parametersModified</span></code></a>(self)</p></td>
 <td><p>Notify that the task parameters have changed.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.removeInput" title="ikomia.core.pycore.CWorkflowTask.removeInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeInput</span></code></a>(self, index)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.removeInput" title="ikomia.core.pycore.CWorkflowTask.removeInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeInput</span></code></a>(self, index)</p></td>
 <td><p>Remove input at the given position.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(self)</p></td>
 <td><p>Run the task.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setActionFlag" title="ikomia.core.pycore.CWorkflowTask.setActionFlag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActionFlag</span></code></a>(self, action, is_enable)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setActionFlag" title="ikomia.core.pycore.CWorkflowTask.setActionFlag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActionFlag</span></code></a>(self, action, is_enable)</p></td>
 <td><p>Enable or disable the given action.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setActive" title="ikomia.core.pycore.CWorkflowTask.setActive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActive</span></code></a>(self, is_active)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setActive" title="ikomia.core.pycore.CWorkflowTask.setActive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setActive</span></code></a>(self, is_active)</p></td>
 <td><p>Set the active state of the task.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setAutoSave" title="ikomia.core.pycore.CWorkflowTask.setAutoSave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAutoSave</span></code></a>(self, enable)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setAutoSave" title="ikomia.core.pycore.CWorkflowTask.setAutoSave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAutoSave</span></code></a>(self, enable)</p></td>
 <td><p>Enable/disable auto-save mode.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setInput" title="ikomia.core.pycore.CWorkflowTask.setInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInput</span></code></a>(self, input, index, is_new_sequence)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setInput" title="ikomia.core.pycore.CWorkflowTask.setInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInput</span></code></a>(self, input, index, is_new_sequence)</p></td>
 <td><p>Set input at position index with the given one.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setInputDataType" title="ikomia.core.pycore.CWorkflowTask.setInputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInputDataType</span></code></a>(self, data_type, index)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setInputDataType" title="ikomia.core.pycore.CWorkflowTask.setInputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInputDataType</span></code></a>(self, data_type, index)</p></td>
 <td><p>Set the data type for the input at position index.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setInputs" title="ikomia.core.pycore.CWorkflowTask.setInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInputs</span></code></a>(self, inputs, is_new_sequence)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setInputs" title="ikomia.core.pycore.CWorkflowTask.setInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInputs</span></code></a>(self, inputs, is_new_sequence)</p></td>
 <td><p>Set the whole list of inputs with the given one.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutput" title="ikomia.core.pycore.CWorkflowTask.setOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutput</span></code></a>(self, output, index)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutput" title="ikomia.core.pycore.CWorkflowTask.setOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutput</span></code></a>(self, output, index)</p></td>
 <td><p>Set output at position index with the given one.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutputDataType" title="ikomia.core.pycore.CWorkflowTask.setOutputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputDataType</span></code></a>(self, data_type, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutputDataType" title="ikomia.core.pycore.CWorkflowTask.setOutputDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputDataType</span></code></a>(self, data_type, index)</p></td>
 <td><p>Set the data type for the output at position index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutputs" title="ikomia.core.pycore.CWorkflowTask.setOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputs</span></code></a>(self, outputs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutputs" title="ikomia.core.pycore.CWorkflowTask.setOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputs</span></code></a>(self, outputs)</p></td>
 <td><p>Set the whole list of outputs with the given one.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutputFolder" title="ikomia.core.pycore.CWorkflowTask.setOutputFolder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputFolder</span></code></a>(self, folder)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setOutputFolder" title="ikomia.core.pycore.CWorkflowTask.setOutputFolder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputFolder</span></code></a>(self, folder)</p></td>
 <td><p>Set the output folder of the task when auto-save mode is enabled (see <a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setAutoSave" title="ikomia.core.pycore.CWorkflowTask.setAutoSave"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setAutoSave()</span></code></a>).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setParam" title="ikomia.core.pycore.CWorkflowTask.setParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParam</span></code></a>(self, param)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setParam" title="ikomia.core.pycore.CWorkflowTask.setParam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParam</span></code></a>(self, param)</p></td>
 <td><p>Set the task parameters object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setParamValues" title="ikomia.core.pycore.CWorkflowTask.setParamValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParamValues</span></code></a>(self, values)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.setParamValues" title="ikomia.core.pycore.CWorkflowTask.setParamValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setParamValues</span></code></a>(self, values)</p></td>
 <td><p>Set values of task parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.stop" title="ikomia.core.pycore.CWorkflowTask.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.stop" title="ikomia.core.pycore.CWorkflowTask.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
 <td><p>Notify that the task is requested to stop.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.updateStaticOutputs" title="ikomia.core.pycore.CWorkflowTask.updateStaticOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateStaticOutputs</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.updateStaticOutputs" title="ikomia.core.pycore.CWorkflowTask.updateStaticOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateStaticOutputs</span></code></a>(self)</p></td>
 <td><p>Updates the static information deduced from inputs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.workflowStarted" title="ikomia.core.pycore.CWorkflowTask.workflowStarted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflowStarted</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.workflowStarted" title="ikomia.core.pycore.CWorkflowTask.workflowStarted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflowStarted</span></code></a>(self)</p></td>
 <td><p>Notify that the workflow executing the task is started.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.workflowFinished" title="ikomia.core.pycore.CWorkflowTask.workflowFinished"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflowFinished</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CWorkflowTask.workflowFinished" title="ikomia.core.pycore.CWorkflowTask.workflowFinished"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflowFinished</span></code></a>(self)</p></td>
 <td><p>Notify that the workflow executing the task is started.</p></td>
 </tr>
 </tbody>
@@ -392,6 +395,20 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.download">
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)to</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.download" title="Permalink to this definition"></a></dt>
+<dd><p>Download file from the given URL and save it to the given path. The method returns only when download is complete.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>string</em>) – url of the file to download</p></li>
+<li><p><strong>to</strong> (<em>string</em>) – destination path</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps">
 <span class="sig-name descname"><span class="pre">emitAddSubProgressSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)count</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.emitAddSubProgressSteps" title="Permalink to this definition"></a></dt>
 <dd><p>Send event to add or remove progress steps to the progress bar.</p>
@@ -430,11 +447,11 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CWorkflowTask.executeActions">
 <span class="sig-name descname"><span class="pre">executeActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)action</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CWorkflowTask.executeActions" title="Permalink to this definition"></a></dt>
-<dd><p>Execute actions according to the specific defined behavior. In this base class, the method does nothing.</p>
+<dd><p>Method called when a specific action is requested from the associated widget (see <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskWidget.html#ikomia.core.pycore.CWorkflowTaskWidget.emitSendProcessAction" title="ikomia.core.pycore.CWorkflowTaskWidget.emitSendProcessAction"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitSendProcessAction()</span></code></a>).</p>
 <blockquote>
 <div><p>Args:</p>
 <blockquote>
-<div><p>action (<a class="reference internal" href="ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a>)</p>
+<div><p>action (int): action code</p>
 </div></blockquote>
 </div></blockquote>
 <p>executeActions( (CWorkflowTask)self, (int)action) -&gt; None</p>

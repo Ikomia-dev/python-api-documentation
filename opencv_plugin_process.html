@@ -46,7 +46,7 @@
     
     
     <div class="version">
-        0.8.0
+        0.8.1
     </div>
     
     
@@ -235,12 +235,12 @@
 
 <span class="c1"># --------------------</span>
 <span class="c1"># - Factory class to build process object</span>
-<span class="c1"># - Inherits dataprocess.CProcessFactory from Ikomia API</span>
+<span class="c1"># - Inherits dataprocess.CTaskFactory from Ikomia API</span>
 <span class="c1"># --------------------</span>
-<span class="k">class</span> <span class="nc">OCVBasicsFactory</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">OCVBasicsFactory</span><span class="p">(</span><span class="n">dataprocess</span><span class="o">.</span><span class="n">CTaskFactory</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CProcessFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">dataprocess</span><span class="o">.</span><span class="n">CTaskFactory</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># Set process information as string here</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ocv_basics&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">shortDescription</span> <span class="o">=</span> <span class="s2">&quot;OpenCV Canny&quot;</span>

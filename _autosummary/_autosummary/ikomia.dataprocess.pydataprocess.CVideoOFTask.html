@@ -46,7 +46,7 @@
     
     
     <div class="version">
-        0.8.0
+        0.8.1
     </div>
     
     
@@ -248,7 +248,7 @@
 <td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.endTaskRun" title="ikomia.core.pycore.CWorkflowTask.endTaskRun"><code class="xref py py-meth docutils literal notranslate"><span class="pre">endTaskRun()</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.executeActions" title="ikomia.dataprocess.pydataprocess.CVideoOFTask.executeActions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">executeActions</span></code></a>(self, action)</p></td>
-<td><p>Execute actions according to the specific defined behavior.</p></td>
+<td><p>Method called when a specific action is requested from the associated widget (see <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskWidget.html#ikomia.core.pycore.CWorkflowTaskWidget.emitSendProcessAction" title="ikomia.core.pycore.CWorkflowTaskWidget.emitSendProcessAction"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitSendProcessAction()</span></code></a>).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.forwardInputImage" title="ikomia.dataprocess.pydataprocess.CVideoOFTask.forwardInputImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">forwardInputImage</span></code></a>(self, input_index, ...)</p></td>
 <td><p>Forward input image at position input_index to output at position output_index.</p></td>
@@ -511,15 +511,15 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CVideoOFTask.executeActions">
-<span class="sig-name descname"><span class="pre">executeActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)action</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.executeActions" title="Permalink to this definition"></a></dt>
-<dd><p>Execute actions according to the specific defined behavior. In this base class, the method does nothing.</p>
+<span class="sig-name descname"><span class="pre">executeActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CVideoOFTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)action</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CVideoOFTask.executeActions" title="Permalink to this definition"></a></dt>
+<dd><p>Method called when a specific action is requested from the associated widget (see <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskWidget.html#ikomia.core.pycore.CWorkflowTaskWidget.emitSendProcessAction" title="ikomia.core.pycore.CWorkflowTaskWidget.emitSendProcessAction"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emitSendProcessAction()</span></code></a>).</p>
 <blockquote>
 <div><p>Args:</p>
 <blockquote>
-<div><p>action (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.ActionFlag.html#ikomia.core.pycore.ActionFlag" title="ikomia.core.pycore.ActionFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFlag</span></code></a>)</p>
+<div><p>action (int): action code</p>
 </div></blockquote>
 </div></blockquote>
-<p>executeActions( (CWorkflowTask)self, (int)action) -&gt; None</p>
+<p>executeActions( (CVideoOFTask)self, (int)action) -&gt; None</p>
 </dd></dl>
 
 <dl class="py method">
