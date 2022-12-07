@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataDictIO &mdash; Ikomia API  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="DisplayIO" href="../ikomia.dataprocess.displayIO.html" />
+    <link rel="prev" title="datadictIO" href="../ikomia.dataprocess.datadictIO.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #150E83" >
+
+    <a href="../../index.html" class="icon icon-home"> Ikomia API
+        
+
+        
+        
+        <img src="../../_static/app.png" class="logo" alt="Logo" />
+        
+    </a>
+
+    
+    
+    
+    <div class="version">
+        0.8.1
+    </div>
+    
+    
+
+    <!-- Github button -->
+    <a href="https://github.com/Ikomia-dev/IkomiaApi" class="btn btn-neutral" title="GitHub Ikomia API" target="_blank" rel="noopener noreferrer">
+        <img id="github-logo" src="_static/GitHub-Mark-32px.png" alt="">
+        <span style="vertical-align:middle">GitHub</span>
+    </a>
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+    
+        </div>
+    <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+        
+        
+        
+        
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.dataprocess.datadictIO.html">datadictIO</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DataDictIO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+</ul>
+</li>
+</ul>
+
+        
+        
+    </div>
+
+    <!-- Social media icons -->
+    <div class="social-list">
+        <a class="social-item" href="https://fr.linkedin.com/company/ikomia" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-linkedin-square"></i>
+        </a>
+        <a class="social-item" href="https://twitter.com/IkomiaOfficial" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-twitter-square"></i>
+        </a>
+        <a class="social-item" href="https://www.youtube.com/channel/UC0nIasJy6f-b-f0SOEsBlQw" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+            <i class="fa fa-youtube-play"></i>
+        </a>
+    </div>
+    
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Ikomia API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../modules.html">API Reference</a> &raquo;</li>
+          <li><a href="../ikomia.dataprocess.datadictIO.html">datadictIO</a> &raquo;</li>
+      <li>DataDictIO</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/_autosummary/_autosummary/ikomia.dataprocess.datadictIO.DataDictIO.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../ikomia.dataprocess.datadictIO.html" class="btn btn-neutral float-left" title="datadictIO" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ikomia.dataprocess.displayIO.html" class="btn btn-neutral float-right" title="DisplayIO" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="datadictio">
+<h1>DataDictIO<a class="headerlink" href="#datadictio" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ikomia.dataprocess.datadictIO.DataDictIO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.datadictIO.</span></span><span class="sig-name descname"><span class="pre">DataDictIO</span></span><a class="headerlink" href="#ikomia.dataprocess.datadictIO.DataDictIO" title="Permalink to this definition"></a></dt>
+<dd><p>Class implementing Ikomia workflow input/output object where data is stored as generic Python dict.
+Please note that such unformatted data are meant to be used as task output essentially.
+For complete compatibility with other API features, you must ensure that the dict content is fully
+JSON serializable. Inherit <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO" title="ikomia.core.pycore.CWorkflowTaskIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTaskIO</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>data</strong> – data dictionary</p>
+</dd>
+</dl>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess.datadictIO</span> <span class="kn">import</span> <span class="n">DataDictIO</span>
+</pre></div>
+</div>
+<p class="rubric">Overridden methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.datadictIO.DataDictIO.clearData" title="ikomia.dataprocess.datadictIO.DataDictIO.clearData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearData</span></code></a>()</p></td>
+<td><p>Clear whole data dict.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.datadictIO.DataDictIO.isDataAvailable" title="ikomia.dataprocess.datadictIO.DataDictIO.isDataAvailable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDataAvailable</span></code></a>()</p></td>
+<td><p>Check whether the dataset structure contains data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.datadictIO.DataDictIO.load" title="ikomia.dataprocess.datadictIO.DataDictIO.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(path)</p></td>
+<td><p>Load JSON as data dict I/O.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.datadictIO.DataDictIO.save" title="ikomia.dataprocess.datadictIO.DataDictIO.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(path)</p></td>
+<td><p>Save data dict as JSON.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.datadictIO.DataDictIO.toJson" title="ikomia.dataprocess.datadictIO.DataDictIO.toJson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toJson</span></code></a>(self)</p></td>
+<td><p>Return input/output data in JSON formatted string with default options.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.datadictIO.DataDictIO.fromJson" title="ikomia.dataprocess.datadictIO.DataDictIO.fromJson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromJson</span></code></a>(self, jsonStr)</p></td>
+<td><p>Set input/output data from JSON formatted string.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.datadictIO.DataDictIO.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.datadictIO.DataDictIO.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
+</dd>
+<dt>__init__( (object)self, (IODataType)dataType) -&gt; None :</dt><dd><p>Constructor with parameters</p>
+<p>Args:</p>
+<blockquote>
+<div><p>dataType (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): data type identifier</p>
+</div></blockquote>
+</dd>
+<dt>__init__( (object)self, (IODataType)dataType, (str)name) -&gt; None :</dt><dd><p>Constructor with parameters</p>
+<p>Args:</p>
+<blockquote>
+<div><p>dataType(<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html#ikomia.core.pycore.IODataType" title="ikomia.core.pycore.IODataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">IODataType</span></code></a>): data type identifier</p>
+<p>name (str): custom name associated to input/output to give more insights to end user</p>
+</div></blockquote>
+</dd>
+<dt>__init__( (object)arg1, (CWorkflowTaskIO)arg2) -&gt; None :</dt><dd><p>Copy constructor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.datadictIO.DataDictIO.clearData">
+<span class="sig-name descname"><span class="pre">clearData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.datadictIO.DataDictIO.clearData" title="Permalink to this definition"></a></dt>
+<dd><p>Clear whole data dict.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.datadictIO.DataDictIO.fromJson">
+<span class="sig-name descname"><span class="pre">fromJson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)jsonStr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.datadictIO.DataDictIO.fromJson" title="Permalink to this definition"></a></dt>
+<dd><p>Set input/output data from JSON formatted string. This method must be overriden.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>jsonStr (str): data as JSON formatted string</p>
+</div></blockquote>
+</div></blockquote>
+<p>fromJson( (CWorkflowTaskIO)self, (str)jsonStr) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.datadictIO.DataDictIO.isDataAvailable">
+<span class="sig-name descname"><span class="pre">isDataAvailable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.datadictIO.DataDictIO.isDataAvailable" title="Permalink to this definition"></a></dt>
+<dd><p>Check whether the dataset structure contains data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True or False</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.datadictIO.DataDictIO.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.datadictIO.DataDictIO.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load JSON as data dict I/O.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – file path where dataset is saved</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.datadictIO.DataDictIO.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.datadictIO.DataDictIO.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save data dict as JSON.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – file path where data is saved</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.datadictIO.DataDictIO.toJson">
+<span class="sig-name descname"><span class="pre">toJson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CWorkflowTaskIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.datadictIO.DataDictIO.toJson" title="Permalink to this definition"></a></dt>
+<dd><p>Return input/output data in JSON formatted string with default options. This method must be overriden.</p>
+<blockquote>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>str: JSON formatted string</p>
+</div></blockquote>
+</div></blockquote>
+<p>toJson( (CWorkflowTaskIO)self) -&gt; str</p>
+<dl>
+<dt>toJson( (CWorkflowTaskIO)self, (object)options) -&gt; str :</dt><dd><p>Return input/output data in JSON formatted string. This method must be overriden. Options available depend on input/output type, a single option is available for all to set the JSON format:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>[‘json_format’, ‘compact’] (<strong>default</strong>)</p></li>
+<li><p>[‘json_format’, ‘indented’]</p></li>
+</ul>
+</div></blockquote>
+<p>Args:</p>
+<blockquote>
+<div><p>options (list of str): format-specific options encoded as pairs [option_name, option_value]</p>
+</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>str: JSON formatted string</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>toJson( (CWorkflowTaskIO)self, (object)options) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ikomia.dataprocess.datadictIO.html" class="btn btn-neutral float-left" title="datadictIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ikomia.dataprocess.displayIO.html" class="btn btn-neutral float-right" title="DisplayIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Ikomia SAS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
