@@ -1,0 +1,878 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="CDnnTrainTask" href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html" /><link rel="prev" title="C2dImageInteractiveTask" href="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html" />
+
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.03.27 -->
+        <title>CClassificationTask - Ikomia API documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Ikomia API  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../_static/app.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Ikomia API  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Ikomia Guide</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../advanced_guide/index.html">Going deeper with workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced_guide/ik_namespace.html">The <code class="docutils literal notranslate"><span class="pre">ik</span></code> auto-completion system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced_guide/IO_management.html">Input/Output management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced_guide/save_and_load_workflow.html">Save and load your workflow</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/how_to_on_stream.html">First Steps with Camera Stream Processing with Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../object_detection/index.html">First Steps in Object Detection with Ikomia API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bonus/virtual_env.html">How to create a virtual environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../modules.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.ApiLanguage.html">ApiLanguage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.CException.html">CException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.CMemoryInfo.html">CMemoryInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.CTimer.html">CTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.OSType.html">OSType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.utils.pyutils.PluginState.html">PluginState</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.displayIO.html">DisplayIO</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.IODataType.html">IODataType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.MeasureId.html">MeasureId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CMeasure.html">CMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html">CWorkflowTaskIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskIOFactory.html">CWorkflowTaskIOFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskParam.html">CWorkflowTaskParam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.ActionFlag.html">ActionFlag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.TaskType.html">TaskType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html">CWorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskWidget.html">CWorkflowTaskWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CPointF.html">CPointF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.GraphicsItem.html">GraphicsItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.GraphicsShape.html">GraphicsShape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsItem.html">CGraphicsItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsComplexPolygon.html">CGraphicsComplexPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsEllipse.html">CGraphicsEllipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsPoint.html">CGraphicsPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsPolygon.html">CGraphicsPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsPolyline.html">CGraphicsPolyline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsRectangle.html">CGraphicsRectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsText.html">CGraphicsText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.GraphicsEllipseProperty.html">GraphicsEllipseProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.GraphicsPointProperty.html">GraphicsPointProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.GraphicsPolygonProperty.html">GraphicsPolygonProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.GraphicsPolylineProperty.html">GraphicsPolylineProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.GraphicsRectProperty.html">GraphicsRectProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.GraphicsTextProperty.html">GraphicsTextProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsConversion.html">CGraphicsConversion</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.core.task.html">Task</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.core.task.TaskParam.html">TaskParam</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html">CInstanceSegmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegmentationIO.html">CInstanceSegmentationIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectKeypoints.html">CObjectKeypoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CKeypointLink.html">CKeypointLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CKeypointsIO.html">CKeypointsIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetection.html">CObjectDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html">CObjectDetectionIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegmentationIO.html">CSemanticSegmentationIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CTextField.html">CTextField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CTextIO.html">CTextIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">CClassificationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegmentationTask.html">CInstanceSegmentationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CKeypointDetectionTask.html">CKeypointDetectionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetectionTask.html">CObjectDetectionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CSemanticSegmentationTask.html">CSemanticSegmentationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.registry.IkomiaRegistry.html">IkomiaRegistry</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.workflow.Workflow.html">Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dataprocess.datadictIO.html">DatadictIO</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.datadictIO.DataDictIO.html">DataDictIO</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dnn.dnntrain.TrainProcess.html">TrainProcess</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummaryv/ikomia.dnn.datasetio.IkDatasetIO.html">IkDatasetIO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">Release Notes</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="cclassificationtask">
+<h1>CClassificationTask<a class="headerlink" href="#cclassificationtask" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CClassificationTask</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask" title="Permalink to this definition">#</a></dt>
+<dd><p>Base class for classification task in Computer Vision. It defines a task with the following properties:</p>
+<p>Inputs:</p>
+<ul class="simple">
+<li><p>image (<a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO" title="ikomia.dataprocess.pydataprocess.CImageIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageIO</span></code></a>)</p></li>
+<li><p>graphics (<a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html#ikomia.dataprocess.pydataprocess.CGraphicsInput" title="ikomia.dataprocess.pydataprocess.CGraphicsInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsInput</span></code></a>)</p></li>
+</ul>
+<p>Outputs:</p>
+<ul class="simple">
+<li><p>image IO (<a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html#ikomia.dataprocess.pydataprocess.CImageIO" title="ikomia.dataprocess.pydataprocess.CImageIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CImageIO</span></code></a>): by default source image is forwarded.</p></li>
+<li><p>object detection IO (<a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO" title="ikomia.dataprocess.pydataprocess.CObjectDetectionIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectDetectionIO</span></code></a>): filled if input graphics items are passed. In this case, classification is computed for each individual object.</p></li>
+<li><p>graphics output (<a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsOutput</span></code></a>): text item with top-1 class if classification is computed on whole image.</p></li>
+<li><p>data output (<a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html#ikomia.dataprocess.pydataprocess.CDataStringIO" title="ikomia.dataprocess.pydataprocess.CDataStringIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CDataStringIO</span></code></a>): sorted list of class scores if classification is computed on whole image.</p></li>
+</ul>
+<p>Derived from <a class="reference internal" href="ikomia.dataprocess.pydataprocess.C2dImageTask.html#ikomia.dataprocess.pydataprocess.C2dImageTask" title="ikomia.dataprocess.pydataprocess.C2dImageTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">C2dImageTask</span></code></a>.</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">CClassificationTask</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.__init__" title="ikomia.dataprocess.pydataprocess.CClassificationTask.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.add_object" title="ikomia.dataprocess.pydataprocess.CClassificationTask.add_object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_object</span></code></a>(self, graphics_item, class_index, ...)</p></td>
+<td><p>Add classification result for individual object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_input_objects" title="ikomia.dataprocess.pydataprocess.CClassificationTask.get_input_objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_input_objects</span></code></a>(self)</p></td>
+<td><p>Get input graphics items on which classification can be computed individually.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_names" title="ikomia.dataprocess.pydataprocess.CClassificationTask.get_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_names</span></code></a>(self)</p></td>
+<td><p>Get class names.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_objects_results" title="ikomia.dataprocess.pydataprocess.CClassificationTask.get_objects_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_objects_results</span></code></a>(self)</p></td>
+<td><p>Get classification results when applied on individual objects (input graphics items).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_object_sub_image" title="ikomia.dataprocess.pydataprocess.CClassificationTask.get_object_sub_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_object_sub_image</span></code></a>(self, item)</p></td>
+<td><p>Get ROI image for the given graphics item.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_image_with_graphics" title="ikomia.dataprocess.pydataprocess.CClassificationTask.get_image_with_graphics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image_with_graphics</span></code></a>(self)</p></td>
+<td><p>Get visualization image where all extracted information are embedded (graphics items).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_whole_image_results" title="ikomia.dataprocess.pydataprocess.CClassificationTask.get_whole_image_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_whole_image_results</span></code></a>(self)</p></td>
+<td><p>Get classification results when applied on whole image (no input graphics items given).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.is_whole_image_classification" title="ikomia.dataprocess.pydataprocess.CClassificationTask.is_whole_image_classification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_whole_image_classification</span></code></a>(self)</p></td>
+<td><p>Check whether input graphics items are given for individual classification.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.read_class_names" title="ikomia.dataprocess.pydataprocess.CClassificationTask.read_class_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_class_names</span></code></a>(self, path)</p></td>
+<td><p>Populate class names from the given text file (one line per class).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.set_colors" title="ikomia.dataprocess.pydataprocess.CClassificationTask.set_colors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_colors</span></code></a>(self, colors)</p></td>
+<td><p>Set colors associated with class names.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.set_names" title="ikomia.dataprocess.pydataprocess.CClassificationTask.set_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_names</span></code></a>(self, names)</p></td>
+<td><p>Set class names.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.set_whole_image_results" title="ikomia.dataprocess.pydataprocess.CClassificationTask.set_whole_image_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_whole_image_results</span></code></a>(self, names, confidences)</p></td>
+<td><p>Set whole image classification results.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_add_sub_progress_steps" title="ikomia.dataprocess.pydataprocess.CClassificationTask.emit_add_sub_progress_steps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emit_add_sub_progress_steps</span></code></a>(self, count)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emit_add_sub_progress_steps" title="ikomia.core.pycore.CWorkflowTask.emit_add_sub_progress_steps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emit_add_sub_progress_steps()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_graphics_context_changed" title="ikomia.dataprocess.pydataprocess.CClassificationTask.emit_graphics_context_changed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emit_graphics_context_changed</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emit_graphics_context_changed" title="ikomia.core.pycore.CWorkflowTask.emit_graphics_context_changed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emit_graphics_context_changed()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_output_changed" title="ikomia.dataprocess.pydataprocess.CClassificationTask.emit_output_changed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emit_output_changed</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emit_output_changed" title="ikomia.core.pycore.CWorkflowTask.emit_output_changed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emit_output_changed()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_step_progress" title="ikomia.dataprocess.pydataprocess.CClassificationTask.emit_step_progress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emit_step_progress</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emit_step_progress" title="ikomia.core.pycore.CWorkflowTask.emit_step_progress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emit_step_progress()</span></code></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Overridden methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.end_task_run" title="ikomia.dataprocess.pydataprocess.CClassificationTask.end_task_run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">end_task_run</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.end_task_run" title="ikomia.core.pycore.CWorkflowTask.end_task_run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">end_task_run()</span></code></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Inherited methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_input</span></code>(self, input)</p></td>
+<td><p>Add new input to the task.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_output</span></code>(self, output)</p></td>
+<td><p>Add new output to the task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_graphics_mask</span></code>(self, origin, processed, ...)</p></td>
+<td><p>Apply the mask generated from graphics to the result image so that only masked areas seems to be processed.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_graphics_mask_to_binary</span></code>(self, origin, ...)</p></td>
+<td><p>Apply the mask generated from graphics to the binary source image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">begin_task_run</span></code>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.begin_task_run" title="ikomia.core.pycore.CWorkflowTask.begin_task_run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">begin_task_run()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_input_graphics_mask</span></code>(self, index, ...)</p></td>
+<td><p>Generate a binary mask image from the task graphics input at the specified index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_graphics_mask</span></code>(self, width, height, ...)</p></td>
+<td><p>Generate a binary mask image from the given graphics input object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">execute_actions</span></code>(self, action)</p></td>
+<td><p>Method called when a specific action is requested from the associated widget (see <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTaskWidget.html#ikomia.core.pycore.CWorkflowTaskWidget.emit_send_process_action" title="ikomia.core.pycore.CWorkflowTaskWidget.emit_send_process_action"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emit_send_process_action()</span></code></a>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">forward_input_image</span></code>(self, input_index, ...)</p></td>
+<td><p>Forward input image at position input_index to output at position output_index.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_elapsed_time</span></code>(self)</p></td>
+<td><p>Get the time of the last execution in milliseconds.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_graphics_mask</span></code>(self, index)</p></td>
+<td><p>Get the binary mask generated from graphics input at position index.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_input</span></code>(self, index)</p></td>
+<td><p>Get input at position index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_input_count</span></code>(self)</p></td>
+<td><p>Get the number of inputs.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_input_data_type</span></code>(self, index)</p></td>
+<td><p>Get input data type at position index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_inputs</span></code>(self)</p></td>
+<td><p>Get the whole list of inputs.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_output</span></code>(self, index)</p></td>
+<td><p>Get output at position index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_output_count</span></code>(self)</p></td>
+<td><p>Get the number of outputs.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_output_data_type</span></code>(self, index)</p></td>
+<td><p>Get output data type at position index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_outputs</span></code>(self)</p></td>
+<td><p>Get the whole list of outputs.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_parameters</span></code>(self)</p></td>
+<td><p>Get values of task parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_progress_steps</span></code>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.get_progress_steps" title="ikomia.core.pycore.CWorkflowTask.get_progress_steps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_progress_steps()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">global_input_changed</span></code>(self, is_new_sequence)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.global_input_changed" title="ikomia.core.pycore.CWorkflowTask.global_input_changed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">global_input_changed()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">graphics_changed</span></code>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.graphics_changed" title="ikomia.core.pycore.CWorkflowTask.graphics_changed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">graphics_changed()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_graphics_changed_listening</span></code>(self)</p></td>
+<td><p>Check whether the task is listening to graphics changed event.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_mask_available</span></code>(self, index)</p></td>
+<td><p>Check whether a binary mask from graphics input is available at position index.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parameters_modified</span></code>(self)</p></td>
+<td><p>Notify that the task parameters have changed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_input</span></code>(self, index)</p></td>
+<td><p>Remove input at the given position.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.run" title="ikomia.core.pycore.CWorkflowTask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_action_flag</span></code>(self, action, is_enable)</p></td>
+<td><p>Enable or disable the given action.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active</span></code>(self, is_active)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.set_active" title="ikomia.core.pycore.CWorkflowTask.set_active"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_active()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_input</span></code>(self, input, index)</p></td>
+<td><p>Set input at position index with the given one.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_input_data_type</span></code>(self, data_type, index)</p></td>
+<td><p>Set the data type for the input at position index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_inputs</span></code>(self, inputs)</p></td>
+<td><p>Set the whole list of inputs with the given one.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_output</span></code>(self, output, index)</p></td>
+<td><p>Set output at position index with the given one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_output_color_map</span></code>(self, index, ...)</p></td>
+<td><p>Bind a display color map to an image output.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_output_data_type</span></code>(self, data_type, index)</p></td>
+<td><p>Set the data type for the output at position index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_outputs</span></code>(self, outputs)</p></td>
+<td><p>Set the whole list of outputs with the given one.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_parameters</span></code>(self, values)</p></td>
+<td><p>Set values of task parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code>(self)</p></td>
+<td><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.stop" title="ikomia.core.pycore.CWorkflowTask.stop"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stop()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_static_outputs</span></code>(self)</p></td>
+<td><p>Determine output data type automatically from input data types.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Attributes</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>Task name (must be unique)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></p></td>
+<td><p>Main purpose or data type on which the task is dedicated to.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Details</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.__init__" title="Permalink to this definition">#</a></dt>
+<dd><dl>
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
+</dd>
+<dt>__init__( (object)self, (str)name) -&gt; None :</dt><dd><p>Construct CClassificationTask object with the given name.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>name (str): task name, must be unique</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.add_object">
+<span class="sig-name descname"><span class="pre">add_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)graphics_item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)class_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)confidence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.add_object" title="Permalink to this definition">#</a></dt>
+<dd><p>Add classification result for individual object. See <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_input_objects" title="ikomia.dataprocess.pydataprocess.CClassificationTask.get_input_objects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_input_objects()</span></code></a> and <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_object_sub_image" title="ikomia.dataprocess.pydataprocess.CClassificationTask.get_object_sub_image"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_object_sub_image()</span></code></a> for more information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>graphics_item</strong> (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a> based object) – </p></li>
+<li><p><strong>class_index</strong> (<em>int</em>) – index is used to retrieve class name</p></li>
+<li><p><strong>confidence</strong> (<em>float</em>) – confidence score of top-1 class</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.get_input_objects">
+<span class="sig-name descname"><span class="pre">get_input_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_input_objects" title="Permalink to this definition">#</a></dt>
+<dd><p>Get input graphics items on which classification can be computed individually. One can iterate over this list to compute classification for each object. Use <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_object_sub_image" title="ikomia.dataprocess.pydataprocess.CClassificationTask.get_object_sub_image"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_object_sub_image()</span></code></a> to retieve object ROI image and <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.add_object" title="ikomia.dataprocess.pydataprocess.CClassificationTask.add_object"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_object()</span></code></a> to store classification result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>graphics items</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a> based objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.get_names">
+<span class="sig-name descname"><span class="pre">get_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_names" title="Permalink to this definition">#</a></dt>
+<dd><p>Get class names. Call <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.read_class_names" title="ikomia.dataprocess.pydataprocess.CClassificationTask.read_class_names"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read_class_names()</span></code></a> to populate names from text file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>class names</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.get_objects_results">
+<span class="sig-name descname"><span class="pre">get_objects_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CObjectDetectionIO</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_objects_results" title="Permalink to this definition">#</a></dt>
+<dd><p>Get classification results when applied on individual objects (input graphics items). Results are given as a <a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO" title="ikomia.dataprocess.pydataprocess.CObjectDetectionIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectDetectionIO</span></code></a> instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>classification results</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html#ikomia.dataprocess.pydataprocess.CObjectDetectionIO" title="ikomia.dataprocess.pydataprocess.CObjectDetectionIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">CObjectDetectionIO</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.get_object_sub_image">
+<span class="sig-name descname"><span class="pre">get_object_sub_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(CGraphicsItem)item</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_object_sub_image" title="Permalink to this definition">#</a></dt>
+<dd><p>Get ROI image for the given graphics item. We use the bounding rect property of <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a> to compute ROI. Input graphics items can be retrieved with <a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_input_objects" title="ikomia.dataprocess.pydataprocess.CClassificationTask.get_input_objects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_input_objects()</span></code></a>. Classification can then be computed on the ROI to get individual object class.Args:</p>
+<blockquote>
+<div><p>graphics item (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CGraphicsItem.html#ikomia.core.pycore.CGraphicsItem" title="ikomia.core.pycore.CGraphicsItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsItem</span></code></a> based object)</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ROI image</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>2D Numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.get_image_with_graphics">
+<span class="sig-name descname"><span class="pre">get_image_with_graphics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_image_with_graphics" title="Permalink to this definition">#</a></dt>
+<dd><p>Get visualization image where all extracted information are embedded (graphics items).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>visualization image</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>2D Numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.get_whole_image_results">
+<span class="sig-name descname"><span class="pre">get_whole_image_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_whole_image_results" title="Permalink to this definition">#</a></dt>
+<dd><p>Get classification results when applied on whole image (no input graphics items given). It gives a sorted list of tuple storing class name and confidence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>classification results</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of tuples (name, confidence)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.is_whole_image_classification">
+<span class="sig-name descname"><span class="pre">is_whole_image_classification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.is_whole_image_classification" title="Permalink to this definition">#</a></dt>
+<dd><p>Check whether input graphics items are given for individual classification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if no input graphics items are given (whole image classification), False otherwise</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.read_class_names">
+<span class="sig-name descname"><span class="pre">read_class_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.read_class_names" title="Permalink to this definition">#</a></dt>
+<dd><p>Populate class names from the given text file (one line per class).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path to class names definition file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.set_colors">
+<span class="sig-name descname"><span class="pre">set_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)colors</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.set_colors" title="Permalink to this definition">#</a></dt>
+<dd><p>Set colors associated with class names. The given list must have the same size as names list. If not provided, random colors are generated while populating the name list (<a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.read_class_names" title="ikomia.dataprocess.pydataprocess.CClassificationTask.read_class_names"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read_class_names()</span></code></a>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>list</strong> (<em>colors</em><em> (</em><em>list of</em>) – r, g, b integer values in range [0, 255])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.set_names">
+<span class="sig-name descname"><span class="pre">set_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)names</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.set_names" title="Permalink to this definition">#</a></dt>
+<dd><p>Set class names. The function generate associated random colors if none is defined.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>names</strong> (<em>list</em><em> of </em><em>str</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.set_whole_image_results">
+<span class="sig-name descname"><span class="pre">set_whole_image_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)confidences</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.set_whole_image_results" title="Permalink to this definition">#</a></dt>
+<dd><p>Set whole image classification results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>names</strong> (<em>str list</em>) – sorted list with respect to confidence score</p></li>
+<li><p><strong>confidences</strong> (<em>str list</em>) – sorted list (descending)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.emit_add_sub_progress_steps">
+<span class="sig-name descname"><span class="pre">emit_add_sub_progress_steps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)count</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_add_sub_progress_steps" title="Permalink to this definition">#</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emit_add_sub_progress_steps" title="ikomia.core.pycore.CWorkflowTask.emit_add_sub_progress_steps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emit_add_sub_progress_steps()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.emit_graphics_context_changed">
+<span class="sig-name descname"><span class="pre">emit_graphics_context_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_graphics_context_changed" title="Permalink to this definition">#</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emit_graphics_context_changed" title="ikomia.core.pycore.CWorkflowTask.emit_graphics_context_changed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emit_graphics_context_changed()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.emit_output_changed">
+<span class="sig-name descname"><span class="pre">emit_output_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_output_changed" title="Permalink to this definition">#</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emit_output_changed" title="ikomia.core.pycore.CWorkflowTask.emit_output_changed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emit_output_changed()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.emit_step_progress">
+<span class="sig-name descname"><span class="pre">emit_step_progress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_step_progress" title="Permalink to this definition">#</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.emit_step_progress" title="ikomia.core.pycore.CWorkflowTask.emit_step_progress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">emit_step_progress()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CClassificationTask.end_task_run">
+<span class="sig-name descname"><span class="pre">end_task_run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CClassificationTask)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.end_task_run" title="Permalink to this definition">#</a></dt>
+<dd><p>See <a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask.end_task_run" title="ikomia.core.pycore.CWorkflowTask.end_task_run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">end_task_run()</span></code></a>.</p>
+<p>end_task_run( (CClassificationTask)self) -&gt; None</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">CDnnTrainTask</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">C2dImageInteractiveTask</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Ikomia SAS
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">CClassificationTask</a><ul>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask"><code class="docutils literal notranslate"><span class="pre">CClassificationTask</span></code></a><ul>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.__init__"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.add_object"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.add_object()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_input_objects"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.get_input_objects()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_names"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.get_names()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_objects_results"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.get_objects_results()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_object_sub_image"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.get_object_sub_image()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_image_with_graphics"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.get_image_with_graphics()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.get_whole_image_results"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.get_whole_image_results()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.is_whole_image_classification"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.is_whole_image_classification()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.read_class_names"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.read_class_names()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.set_colors"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.set_colors()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.set_names"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.set_names()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.set_whole_image_results"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.set_whole_image_results()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_add_sub_progress_steps"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.emit_add_sub_progress_steps()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_graphics_context_changed"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.emit_graphics_context_changed()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_output_changed"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.emit_output_changed()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.emit_step_progress"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.emit_step_progress()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CClassificationTask.end_task_run"><code class="docutils literal notranslate"><span class="pre">CClassificationTask.end_task_run()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    </body>
+</html>

@@ -1,101 +1,211 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="GraphicsItem" href="ikomia.core.pycore.GraphicsItem.html" /><link rel="prev" title="CWorkflowTaskWidget" href="ikomia.core.pycore.CWorkflowTaskWidget.html" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CPointF &mdash; Ikomia API  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/ikomia.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.03.27 -->
+        <title>CPointF - Ikomia API documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="GraphicsItem" href="ikomia.core.pycore.GraphicsItem.html" />
-    <link rel="prev" title="CWorkflowTaskWidget" href="ikomia.core.pycore.CWorkflowTaskWidget.html" />
- 
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-</head>
-
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: #150E83" >
-
-    <a href="../../index.html" class="icon icon-home"> Ikomia API
-        
-
-        
-        
-        <img src="../../_static/app.png" class="logo" alt="Logo" />
-        
-    </a>
-
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
     
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
     
-    
-    <div class="version">
-        0.8.1
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
     </div>
-    
-    
-
-    <!-- Github button -->
-    <a href="https://github.com/Ikomia-dev/IkomiaApi" class="btn btn-neutral" title="GitHub Ikomia API" target="_blank" rel="noopener noreferrer">
-        <img id="github-logo" src="_static/GitHub-Mark-32px.png" alt="">
-        <span style="vertical-align:middle">GitHub</span>
-    </a>
-
-    
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-    
-        </div>
-    <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
-        
-        
-        
-        
-        
-        <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index_api.html">Implement Computer Vision workflows for your application</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index_plugin.html">Create your algorithm for Ikomia platform</a></li>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Ikomia API  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../_static/app.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Ikomia API  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Ikomia Guide</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../advanced_guide/index.html">Going deeper with workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced_guide/ik_namespace.html">The <code class="docutils literal notranslate"><span class="pre">ik</span></code> auto-completion system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced_guide/IO_management.html">Input/Output management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced_guide/save_and_load_workflow.html">Save and load your workflow</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/how_to_on_stream.html">First Steps with Camera Stream Processing with Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../object_detection/index.html">First Steps in Object Detection with Ikomia API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bonus/virtual_env.html">How to create a virtual environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../modules.html">API Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../modules.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.ApiLanguage.html">ApiLanguage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.CException.html">CException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.CMemoryInfo.html">CMemoryInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.CTimer.html">CTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.OSType.html">OSType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.PluginState.html">PluginState</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.displayIO.html">DisplayIO</a></li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.IODataType.html">IODataType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.MeasureId.html">MeasureId</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CMeasure.html">CMeasure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html">CWorkflowTaskIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIOFactory.html">CWorkflowTaskIOFactory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskParam.html">CWorkflowTaskParam</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.ParamMap.html">ParamMap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.ActionFlag.html">ActionFlag</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.TaskType.html">TaskType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html">CWorkflowTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskWidget.html">CWorkflowTaskWidget</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">CPointF</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">CPointF</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.GraphicsItem.html">GraphicsItem</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.GraphicsShape.html">GraphicsShape</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsItem.html">CGraphicsItem</a></li>
@@ -115,93 +225,136 @@
 <li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsConversion.html">CGraphicsConversion</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.core.task.html">Task</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.dataprocess.displayIO.html">DisplayIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.models.html">Torchvision models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.core.task.html">Task</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.task.TaskParam.html">TaskParam</a></li>
 </ul>
 </li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html">CInstanceSegmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegmentationIO.html">CInstanceSegmentationIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectKeypoints.html">CObjectKeypoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CKeypointLink.html">CKeypointLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CKeypointsIO.html">CKeypointsIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetection.html">CObjectDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html">CObjectDetectionIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CSemanticSegmentationIO.html">CSemanticSegmentationIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTextField.html">CTextField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTextIO.html">CTextIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CClassificationTask.html">CClassificationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CInstanceSegmentationTask.html">CInstanceSegmentationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CKeypointDetectionTask.html">CKeypointDetectionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CObjectDetectionTask.html">CObjectDetectionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CSemanticSegmentationTask.html">CSemanticSegmentationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.registry.IkomiaRegistry.html">IkomiaRegistry</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.workflow.Workflow.html">Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dataprocess.datadictIO.html">DatadictIO</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.datadictIO.DataDictIO.html">DataDictIO</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dnn.dnntrain.TrainProcess.html">TrainProcess</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dnn.datasetio.IkDatasetIO.html">IkDatasetIO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">Release Notes</a></li>
 </ul>
 
-        
-        
-    </div>
-
-    <!-- Social media icons -->
-    <div class="social-list">
-        <a class="social-item" href="https://fr.linkedin.com/company/ikomia" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
-            <i class="fa fa-linkedin-square"></i>
-        </a>
-        <a class="social-item" href="https://twitter.com/IkomiaOfficial" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
-            <i class="fa fa-twitter-square"></i>
-        </a>
-        <a class="social-item" href="https://www.youtube.com/channel/UC0nIasJy6f-b-f0SOEsBlQw" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
-            <i class="fa fa-youtube-play"></i>
-        </a>
-    </div>
-    
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #150E83" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Ikomia API</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../modules.html">API Reference</a> &raquo;</li>
-          <li><a href="../ikomia.core.pycore.html">PyCore</a> &raquo;</li>
-      <li>CPointF</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/_autosummary/_autosummaryv/ikomia.core.pycore.CPointF.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="ikomia.core.pycore.CWorkflowTaskWidget.html" class="btn btn-neutral float-left" title="CWorkflowTaskWidget" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ikomia.core.pycore.GraphicsItem.html" class="btn btn-neutral float-right" title="GraphicsItem" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-  </div>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <section id="cpointf">
-<h1>CPointF<a class="headerlink" href="#cpointf" title="Permalink to this heading"></a></h1>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="cpointf">
+<h1>CPointF<a class="headerlink" href="#cpointf" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CPointF">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CPointF</span></span><a class="headerlink" href="#ikomia.core.pycore.CPointF" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.core.pycore.</span></span><span class="sig-name descname"><span class="pre">CPointF</span></span><a class="headerlink" href="#ikomia.core.pycore.CPointF" title="Permalink to this definition">#</a></dt>
 <dd><p>Generic 2D point class.</p>
 <p class="rubric">Import</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.core</span> <span class="kn">import</span> <span class="n">CPointF</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.core.pycore.CPointF.__init__" title="ikomia.core.pycore.CPointF.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
 <td><p>Default constructor</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 <p class="rubric">Attributes</p>
+<div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></p></td>
 <td><p>x-coordinate</p></td>
@@ -211,10 +364,11 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p class="rubric">Details</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ikomia.core.pycore.CPointF.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CPointF.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.core.pycore.CPointF.__init__" title="Permalink to this definition">#</a></dt>
 <dd><p>Default constructor</p>
 <dl>
 <dt>__init__( (object)self, (float)x, (float)y) -&gt; None :</dt><dd><p>Construct 2D point with the given coordinates.</p>
@@ -231,35 +385,85 @@
 
 </section>
 
-
-           </div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="ikomia.core.pycore.GraphicsItem.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">GraphicsItem</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="ikomia.core.pycore.CWorkflowTaskWidget.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">CWorkflowTaskWidget</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Ikomia SAS
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ikomia.core.pycore.CWorkflowTaskWidget.html" class="btn btn-neutral float-left" title="CWorkflowTaskWidget" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ikomia.core.pycore.GraphicsItem.html" class="btn btn-neutral float-right" title="GraphicsItem" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
     </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">CPointF</a><ul>
+<li><a class="reference internal" href="#ikomia.core.pycore.CPointF"><code class="docutils literal notranslate"><span class="pre">CPointF</span></code></a><ul>
+<li><a class="reference internal" href="#ikomia.core.pycore.CPointF.__init__"><code class="docutils literal notranslate"><span class="pre">CPointF.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2020, Ikomia SAS.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+          </div>
         </div>
       </div>
-    </section>
+      
+      
+    </aside>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    </body>
 </html>

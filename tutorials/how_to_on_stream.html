@@ -1,0 +1,522 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="First Steps in Object Detection with Ikomia API" href="../object_detection/index.html" /><link rel="prev" title="Save and load your workflow" href="../advanced_guide/save_and_load_workflow.html" />
+
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.03.27 -->
+        <title>First Steps with Camera Stream Processing with Ikomia - Ikomia API documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Ikomia API  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/app.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Ikomia API  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Ikomia Guide</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../advanced_guide/index.html">Going deeper with workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced_guide/ik_namespace.html">The <code class="docutils literal notranslate"><span class="pre">ik</span></code> auto-completion system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced_guide/IO_management.html">Input/Output management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced_guide/save_and_load_workflow.html">Save and load your workflow</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">First Steps with Camera Stream Processing with Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object_detection/index.html">First Steps in Object Detection with Ikomia API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../bonus/virtual_env.html">How to create a virtual environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.utils.displayIO.html">DisplayIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.core.pycore.html">PyCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.core.task.html">Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.registry.html">Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.datadictIO.html">DatadictIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.dnntrain.html">DnnTrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.dataset.html">Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="first-steps-with-camera-stream-processing-with-ikomia">
+<h1>First Steps with Camera Stream Processing with Ikomia<a class="headerlink" href="#first-steps-with-camera-stream-processing-with-ikomia" title="Permalink to this heading">#</a></h1>
+<p>Camera stream processing refers to the real-time analysis and manipulation of images and video streams captured from a camera.
+This technique is widely used in various applications, such as computer vision, surveillance, robotics, and entertainment, among others.</p>
+<p>In computer vision, camera stream processing is used for object detection and recognition, face detection, motion tracking, and image segmentation.</p>
+<p>In <strong>surveillance</strong>, camera stream processing is used for detecting anomalies and events, such as intrusion detection and crowd behavior analysis.</p>
+<p>In <strong>robotics</strong>, camera stream processing is used for autonomous navigation, object detection, and obstacle avoidance.</p>
+<p>In <strong>entertainment</strong>, camera stream processing is used for augmented reality, virtual reality, and gesture recognition.</p>
+<p>Overall, camera stream processing plays a crucial role in various fields and enables many exciting applications that were once considered impossible.</p>
+<p>To get started with camera stream processing, we will use OpenCV and <code class="docutils literal notranslate"><span class="pre">VideoCapture</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In this part, you need to be familiar with Ikomia Workflow.</p>
+<p>Please read the <a class="reference internal" href="../getting_started.html"><span class="doc std std-doc">Getting Started</span></a> and <a class="reference internal" href="../advanced_guide/index.html"><span class="doc std std-doc">Going deeper with worflows</span></a> before this tutorial.</p>
+</div>
+<section id="process-stream-from-your-webcam">
+<h2>Process Stream from your Webcam<a class="headerlink" href="#process-stream-from-your-webcam" title="Permalink to this heading">#</a></h2>
+<section id="test-your-webcam-without-ikomia-workflow">
+<h3>Test your Webcam without Ikomia Workflow<a class="headerlink" href="#test-your-webcam-without-ikomia-workflow" title="Permalink to this heading">#</a></h3>
+<p>Start by testing your webcam with the following code :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.utils.displayIO</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">stream</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Read image from stream</span>
+    <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    
+    <span class="c1"># Test if streaming is OK</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ret</span><span class="p">:</span>
+        <span class="k">continue</span>
+    
+    <span class="c1"># Display image with OpenCV</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">viewer</span><span class="o">=</span><span class="s2">&quot;opencv&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Ikomia Demo&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Press &#39;q&#39; to quit the streaming process</span>
+    <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+        <span class="k">break</span>
+
+<span class="c1"># After the loop release the stream object</span>
+<span class="n">stream</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="c1"># Destroy all windows</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In this code, we used <code class="docutils literal notranslate"><span class="pre">cv2.cvtColor()</span></code> because OpenCV reads images as BGR (Blue, Red, Green) buffers whereas Ikomia needs RGB images.</p>
+</section>
+<section id="basic-process-with-ikomia-workflow">
+<h3>Basic Process with Ikomia Workflow<a class="headerlink" href="#basic-process-with-ikomia-workflow" title="Permalink to this heading">#</a></h3>
+<p>We introduce Ikomia Workflow in the process and we integrate color conversion directly in the workflow.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess.workflow</span> <span class="kn">import</span> <span class="n">Workflow</span>
+<span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
+<span class="kn">from</span> <span class="nn">ikomia.utils.displayIO</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">stream</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Init the workflow</span>
+<span class="n">wf</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
+
+<span class="c1"># Add color conversion to workflow</span>
+<span class="n">cvt</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">ocv_color_conversion</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)),</span> <span class="n">auto_connect</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Read image from stream</span>
+    <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="c1"># Test if streaming is OK</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ret</span><span class="p">:</span>
+        <span class="k">continue</span>
+        
+    <span class="c1"># Run workflow on image</span>
+    <span class="n">wf</span><span class="o">.</span><span class="n">run_on</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+    
+    <span class="c1"># Display results from &quot;cvt&quot;</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">cvt</span><span class="o">.</span><span class="n">get_output</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">get_image</span><span class="p">(),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Demo&quot;</span><span class="p">,</span> <span class="n">viewer</span><span class="o">=</span><span class="s2">&quot;opencv&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Press &#39;q&#39; to quit the streaming process</span>
+    <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+        <span class="k">break</span>
+
+<span class="c1"># After the loop release the stream object</span>
+<span class="n">stream</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="c1"># Destroy all windows</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="face-detection">
+<h3>Face detection<a class="headerlink" href="#face-detection" title="Permalink to this heading">#</a></h3>
+<p>We just add a face detector to the workflow and display the corresponding results.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess.workflow</span> <span class="kn">import</span> <span class="n">Workflow</span>
+<span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
+<span class="kn">from</span> <span class="nn">ikomia.utils.displayIO</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">stream</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Init the workflow</span>
+<span class="n">wf</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
+
+<span class="c1"># Add color conversion</span>
+<span class="n">cvt</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">ocv_color_conversion</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)),</span> <span class="n">auto_connect</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Add face detection</span>
+<span class="n">face</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">infer_face_detection_kornia</span><span class="p">(</span><span class="n">conf_thres</span><span class="o">=</span><span class="s2">&quot;0.8&quot;</span><span class="p">),</span> <span class="n">auto_connect</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    
+    <span class="c1"># Test if streaming is OK</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ret</span><span class="p">:</span>
+        <span class="k">continue</span>
+        
+    <span class="c1"># Run workflow on image</span>
+    <span class="n">wf</span><span class="o">.</span><span class="n">run_on</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+
+    <span class="c1"># Display results from &quot;face&quot;</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">face</span><span class="o">.</span><span class="n">get_image_with_graphics</span><span class="p">(),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Demo&quot;</span><span class="p">,</span> <span class="n">viewer</span><span class="o">=</span><span class="s2">&quot;opencv&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Press &#39;q&#39; to quit the streaming process</span>
+    <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+        <span class="k">break</span>
+
+<span class="c1"># After the loop release the stream object</span>
+<span class="n">stream</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="c1"># Destroy all windows</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="blurring-face-detection">
+<h3>Blurring Face Detection<a class="headerlink" href="#blurring-face-detection" title="Permalink to this heading">#</a></h3>
+<p>We just add a blurring algorithm for each detected face and display the corresponding results.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess.workflow</span> <span class="kn">import</span> <span class="n">Workflow</span>
+<span class="kn">from</span> <span class="nn">ikomia.utils</span> <span class="kn">import</span> <span class="n">ik</span>
+<span class="kn">from</span> <span class="nn">ikomia.utils.displayIO</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">stream</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Init the workflow</span>
+<span class="n">wf</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
+
+<span class="c1"># Add color conversion</span>
+<span class="n">cvt</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">ocv_color_conversion</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)),</span> <span class="n">auto_connect</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Add face detection</span>
+<span class="n">face</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">infer_face_detection_kornia</span><span class="p">(</span><span class="n">conf_thres</span><span class="o">=</span><span class="s2">&quot;0.8&quot;</span><span class="p">),</span> <span class="n">auto_connect</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Add face blurring</span>
+<span class="n">blur</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">ocv_stack_blur</span><span class="p">(</span><span class="n">kSizeHeight</span><span class="o">=</span><span class="s2">&quot;61&quot;</span><span class="p">,</span> <span class="n">kSizeWidth</span><span class="o">=</span><span class="s2">&quot;61&quot;</span><span class="p">),</span> <span class="n">auto_connect</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    
+    <span class="c1"># Test if streaming is OK</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ret</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+    <span class="c1"># Run workflow on image</span>
+    <span class="n">wf</span><span class="o">.</span><span class="n">run_on</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+
+    <span class="c1"># Display results from &quot;face&quot; and &quot;blur&quot;</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">face</span><span class="o">.</span><span class="n">get_image_with_graphics</span><span class="p">(),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Demo Face Detection&quot;</span><span class="p">,</span> <span class="n">viewer</span><span class="o">=</span><span class="s2">&quot;opencv&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">blur</span><span class="o">.</span><span class="n">get_output</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">get_image</span><span class="p">(),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Demo Blurry Face Detection&quot;</span><span class="p">,</span> <span class="n">viewer</span><span class="o">=</span><span class="s2">&quot;opencv&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Press &#39;q&#39; to quit the streaming process</span>
+    <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+        <span class="k">break</span>
+
+<span class="c1"># After the loop release the stream object</span>
+<span class="n">stream</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="c1"># Destroy all windows</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="troubleshooting-tips">
+<h2>Troubleshooting Tips<a class="headerlink" href="#troubleshooting-tips" title="Permalink to this heading">#</a></h2>
+<p>Here are some common errors that users may encounter when processing camera streams, along with some troubleshooting tips:</p>
+<ol class="arabic simple">
+<li><p><strong>“Error opening video capture device”</strong>: This error occurs when the video capture device cannot be opened. This could be due to the device being busy or not connected properly. Make sure that the device is connected and try restarting the application.</p></li>
+<li><p><strong>“Unable to retrieve frame”</strong>: This error occurs when the application is unable to retrieve frames from the video capture device. This could be due to the device being busy or not connected properly. Make sure that the device is connected and try restarting the application.</p></li>
+<li><p><strong>“Memory allocation error”</strong>: This error occurs when the application is unable to allocate memory for image processing. This could be due to insufficient memory on the system. Try closing other applications to free up memory.</p></li>
+</ol>
+<p>If you encounter any other errors or issues, try searching for solutions online or consulting the documentation for the specific library or application you are using.</p>
+</section>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.opencv.org/master/">OpenCV documentation</a></p></li>
+<li><p><a class="reference external" href="https://docs.opencv.org/master/d9/df8/tutorial_root.html">OpenCV tutorials</a></p></li>
+<li><p><a class="reference external" href="https://docs.opencv.org/master/d8/dfe/classcv_1_1VideoCapture.html">VideoCapture documentation</a></p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../object_detection/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">First Steps in Object Detection with Ikomia API</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../advanced_guide/save_and_load_workflow.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Save and load your workflow</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Ikomia SAS
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">First Steps with Camera Stream Processing with Ikomia</a><ul>
+<li><a class="reference internal" href="#process-stream-from-your-webcam">Process Stream from your Webcam</a><ul>
+<li><a class="reference internal" href="#test-your-webcam-without-ikomia-workflow">Test your Webcam without Ikomia Workflow</a></li>
+<li><a class="reference internal" href="#basic-process-with-ikomia-workflow">Basic Process with Ikomia Workflow</a></li>
+<li><a class="reference internal" href="#face-detection">Face detection</a></li>
+<li><a class="reference internal" href="#blurring-face-detection">Blurring Face Detection</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#troubleshooting-tips">Troubleshooting Tips</a></li>
+<li><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    </body>
+</html>

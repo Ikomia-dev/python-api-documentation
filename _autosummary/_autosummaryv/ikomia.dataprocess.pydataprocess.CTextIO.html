@@ -1,0 +1,747 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="CVideoIO" href="ikomia.dataprocess.pydataprocess.CVideoIO.html" /><link rel="prev" title="CTextField" href="ikomia.dataprocess.pydataprocess.CTextField.html" />
+
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.03.27 -->
+        <title>CTextIO - Ikomia API documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Ikomia API  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../_static/app.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Ikomia API  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Ikomia Guide</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../advanced_guide/index.html">Going deeper with workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced_guide/ik_namespace.html">The <code class="docutils literal notranslate"><span class="pre">ik</span></code> auto-completion system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced_guide/IO_management.html">Input/Output management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced_guide/save_and_load_workflow.html">Save and load your workflow</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/how_to_on_stream.html">First Steps with Camera Stream Processing with Ikomia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../object_detection/index.html">First Steps in Object Detection with Ikomia API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bonus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bonus/virtual_env.html">How to create a virtual environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../modules.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.utils.pyutils.html">PyUtils</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.ApiLanguage.html">ApiLanguage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.CException.html">CException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.CMemoryInfo.html">CMemoryInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.CTimer.html">CTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.OSType.html">OSType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.PluginState.html">PluginState</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.qtconversion.html">QtConversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.utils.displayIO.html">DisplayIO</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.core.pycore.html">PyCore</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.IODataType.html">IODataType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.MeasureId.html">MeasureId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CMeasure.html">CMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html">CWorkflowTaskIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIOFactory.html">CWorkflowTaskIOFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskParam.html">CWorkflowTaskParam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.ActionFlag.html">ActionFlag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.TaskType.html">TaskType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CWorkflowTask.html">CWorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskWidget.html">CWorkflowTaskWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CPointF.html">CPointF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.GraphicsItem.html">GraphicsItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.GraphicsShape.html">GraphicsShape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsItem.html">CGraphicsItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsComplexPolygon.html">CGraphicsComplexPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsEllipse.html">CGraphicsEllipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsPoint.html">CGraphicsPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsPolygon.html">CGraphicsPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsPolyline.html">CGraphicsPolyline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsRectangle.html">CGraphicsRectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsText.html">CGraphicsText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.GraphicsEllipseProperty.html">GraphicsEllipseProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.GraphicsPointProperty.html">GraphicsPointProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.GraphicsPolygonProperty.html">GraphicsPolygonProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.GraphicsPolylineProperty.html">GraphicsPolylineProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.GraphicsRectProperty.html">GraphicsRectProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.GraphicsTextProperty.html">GraphicsTextProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.pycore.CGraphicsConversion.html">CGraphicsConversion</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.core.task.html">Task</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.core.task.TaskParam.html">TaskParam</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html">CInstanceSegmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CInstanceSegmentationIO.html">CInstanceSegmentationIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectKeypoints.html">CObjectKeypoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CKeypointLink.html">CKeypointLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CKeypointsIO.html">CKeypointsIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetection.html">CObjectDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html">CObjectDetectionIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CSemanticSegmentationIO.html">CSemanticSegmentationIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTextField.html">CTextField</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">CTextIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CClassificationTask.html">CClassificationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CInstanceSegmentationTask.html">CInstanceSegmentationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CKeypointDetectionTask.html">CKeypointDetectionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CObjectDetectionTask.html">CObjectDetectionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CSemanticSegmentationTask.html">CSemanticSegmentationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dataprocess.registry.html">Registry</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.registry.IkomiaRegistry.html">IkomiaRegistry</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dataprocess.workflow.html">Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.workflow.Workflow.html">Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dataprocess.datadictIO.html">DatadictIO</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.datadictIO.DataDictIO.html">DataDictIO</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dnn.dnntrain.html">DnnTrain</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dnn.dnntrain.TrainProcess.html">TrainProcess</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ikomia.dnn.datasetio.html">DatasetIO</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikomia.dnn.datasetio.IkDatasetIO.html">IkDatasetIO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ikomia.dnn.dataset.html">Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">Release Notes</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="ctextio">
+<h1>CTextIO<a class="headerlink" href="#ctextio" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ikomia.dataprocess.pydataprocess.</span></span><span class="sig-name descname"><span class="pre">CTextIO</span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO" title="Permalink to this definition">#</a></dt>
+<dd><p>Define input or output managing common information extracted by OCR task. Such task are able to automatically detect text fields in image and get class label, text value, confidence and polygon for each one. For each field, information are stored in a <a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTextField.html#ikomia.dataprocess.pydataprocess.CTextField" title="ikomia.dataprocess.pydataprocess.CTextField"><code class="xref py py-class docutils literal notranslate"><span class="pre">CTextField</span></code></a> instance.</p>
+<p class="rubric">Import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ikomia.dataprocess</span> <span class="kn">import</span> <span class="n">CTextIO</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.__init__" title="ikomia.dataprocess.pydataprocess.CTextIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(arg1)</p></td>
+<td><p>__init__( (object)self) -&gt; None :</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.add_text_field" title="ikomia.dataprocess.pydataprocess.CTextIO.add_text_field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_text_field</span></code></a>(self, id, label, text, ...)</p></td>
+<td><p>Add detected text fields with bounding box.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.finalize" title="ikomia.dataprocess.pydataprocess.CTextIO.finalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">finalize</span></code></a>(self)</p></td>
+<td><p>Method to call after all fields are added.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_graphics_io" title="ikomia.dataprocess.pydataprocess.CTextIO.get_graphics_io"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_graphics_io</span></code></a>(self)</p></td>
+<td><p>Get internal graphics output instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_text_field_count" title="ikomia.dataprocess.pydataprocess.CTextIO.get_text_field_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_text_field_count</span></code></a>(self)</p></td>
+<td><p>Get the number of detected text fields.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_text_field" title="ikomia.dataprocess.pydataprocess.CTextIO.get_text_field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_text_field</span></code></a>(self, index)</p></td>
+<td><p>Get text field information at a given index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_text_fields" title="ikomia.dataprocess.pydataprocess.CTextIO.get_text_fields"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_text_fields</span></code></a>(self)</p></td>
+<td><p>Get all detected text fields.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.init" title="ikomia.dataprocess.pydataprocess.CTextIO.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init</span></code></a>(self, task_name, ref_image_index)</p></td>
+<td><p>Initialisation step to set associated task (name) and reference image.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Overridden methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.clear_data" title="ikomia.dataprocess.pydataprocess.CTextIO.clear_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_data</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.clear_data" title="ikomia.core.pycore.CWorkflowTaskIO.clear_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear_data()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.is_data_available" title="ikomia.dataprocess.pydataprocess.CTextIO.is_data_available"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_data_available</span></code></a>(self)</p></td>
+<td><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.is_data_available" title="ikomia.core.pycore.CWorkflowTaskIO.is_data_available"><code class="xref py py-meth docutils literal notranslate"><span class="pre">is_data_available()</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.load" title="ikomia.dataprocess.pydataprocess.CTextIO.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(self, path)</p></td>
+<td><p>Load text field detection input/output from JSON file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.save" title="ikomia.dataprocess.pydataprocess.CTextIO.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(self, path)</p></td>
+<td><p>Save text field detection input/output to JSON file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.to_json" title="ikomia.dataprocess.pydataprocess.CTextIO.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(self)</p></td>
+<td><p>Return input/output data in JSON formatted string (compact mode).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.from_json" title="ikomia.dataprocess.pydataprocess.CTextIO.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(self, json_str)</p></td>
+<td><p>Set input/output data from JSON formatted string.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Inherited methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_static_data</span></code>(self, io)</p></td>
+<td><p>Copy the static data from the given input or ouput.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_unit_element_count</span></code>(self)</p></td>
+<td><p>Get the number of unit elements in terms of processing scheme.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Attributes</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">auto_save</span></code></p></td>
+<td><p>Auto-save status</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_type</span></code></p></td>
+<td><p>I/O data type</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dim_count</span></code></p></td>
+<td><p>Number of dimensions</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></p></td>
+<td><p>Custom description to explain input/output type and use</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">displayable</span></code></p></td>
+<td><p>Displayable status (Ikomia Studio)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>I/O name</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">source_file_path</span></code></p></td>
+<td><p>Path to the source file used as workflow input (if any)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Details</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(object)arg1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.__init__" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>__init__( (object)self) -&gt; None :</dt><dd><p>Default constructor</p>
+</dd>
+<dt>__init__( (object)arg1, (CTextIO)arg2) -&gt; None :</dt><dd><p>Copy constructor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.add_text_field">
+<span class="sig-name descname"><span class="pre">add_text_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)confidence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)box_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)box_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)box_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(float)box_height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(object)color</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.add_text_field" title="Permalink to this definition">#</a></dt>
+<dd><p>Add detected text fields with bounding box.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>id (int): object identifier</p>
+<p>label (str): class label</p>
+<p>text (str): field value</p>
+<p>confidence (double): prediction confidence</p>
+<p>box_x (double): left coordinate of object bounding box</p>
+<p>box_y (double): top coordinate of object bounding box</p>
+<p>box_width (double): width of object bounding box</p>
+<p>box_height (double): height of object bounding box</p>
+<p>color (int list - rgba): display color</p>
+</div></blockquote>
+</div></blockquote>
+<dl>
+<dt>add_text_field( (CTextIO)self, (int)id, (str)label, (str)text, (float)confidence, (object)polygon, (object)color) -&gt; None :</dt><dd><p>Add detected text fields with polygon.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>id (int): object identifier</p>
+<p>label (str): class label</p>
+<p>text (str): field value</p>
+<p>confidence (double): prediction confidence</p>
+<p>polygon (list of <a class="reference internal" href="ikomia.core.pycore.CPointF.html#ikomia.core.pycore.CPointF" title="ikomia.core.pycore.CPointF"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPointF</span></code></a>): polygon points coordinates</p>
+<p>color (int list - rgba): display color</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.clear_data">
+<span class="sig-name descname"><span class="pre">clear_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.clear_data" title="Permalink to this definition">#</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.clear_data" title="ikomia.core.pycore.CWorkflowTaskIO.clear_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear_data()</span></code></a>.</p>
+<p>clear_data( (CTextIO)self) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.finalize">
+<span class="sig-name descname"><span class="pre">finalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.finalize" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to call after all fields are added. It will compute data output that will be shown as table in Ikomia Studio.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.get_graphics_io">
+<span class="sig-name descname"><span class="pre">get_graphics_io</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CGraphicsOutput</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_graphics_io" title="Permalink to this definition">#</a></dt>
+<dd><p>Get internal graphics output instance. It stores graphics items representing polygon, labels and value of detected text fields in image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>graphics output instance</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CGraphicsOutput.html#ikomia.dataprocess.pydataprocess.CGraphicsOutput" title="ikomia.dataprocess.pydataprocess.CGraphicsOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGraphicsOutput</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.get_text_field_count">
+<span class="sig-name descname"><span class="pre">get_text_field_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_text_field_count" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the number of detected text fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>object count</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.get_text_field">
+<span class="sig-name descname"><span class="pre">get_text_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CTextField</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_text_field" title="Permalink to this definition">#</a></dt>
+<dd><p>Get text field information at a given index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – field index</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>field information instance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTextField.html#ikomia.dataprocess.pydataprocess.CTextField" title="ikomia.dataprocess.pydataprocess.CTextField"><code class="xref py py-class docutils literal notranslate"><span class="pre">CTextField</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.get_text_fields">
+<span class="sig-name descname"><span class="pre">get_text_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_text_fields" title="Permalink to this definition">#</a></dt>
+<dd><p>Get all detected text fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>detected fields</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="ikomia.dataprocess.pydataprocess.CTextField.html#ikomia.dataprocess.pydataprocess.CTextField" title="ikomia.dataprocess.pydataprocess.CTextField"><code class="xref py py-class docutils literal notranslate"><span class="pre">CTextField</span></code></a> list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.init">
+<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)task_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(int)ref_image_index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.init" title="Permalink to this definition">#</a></dt>
+<dd><p>Initialisation step to set associated task (name) and reference image. The reference image is the task output index where the graphics information (label, box) will be displayed as an overlay layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_name</strong> (<em>str</em>) – task that contains the output</p></li>
+<li><p><strong>ref_image_index</strong> (<em>int</em>) – zero-based index of the output containing the reference image</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.is_data_available">
+<span class="sig-name descname"><span class="pre">is_data_available</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.is_data_available" title="Permalink to this definition">#</a></dt>
+<dd><p>See <a class="reference internal" href="ikomia.core.pycore.CWorkflowTaskIO.html#ikomia.core.pycore.CWorkflowTaskIO.is_data_available" title="ikomia.core.pycore.CWorkflowTaskIO.is_data_available"><code class="xref py py-meth docutils literal notranslate"><span class="pre">is_data_available()</span></code></a>.</p>
+<p>is_data_available( (CTextIO)self) -&gt; bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.load" title="Permalink to this definition">#</a></dt>
+<dd><p>Load text field detection input/output from JSON file.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>path (str): path to JSON file</p>
+</div></blockquote>
+</div></blockquote>
+<p>load( (CTextIO)self, (str)path) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.save" title="Permalink to this definition">#</a></dt>
+<dd><p>Save text field detection input/output to JSON file.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>path (str): path to JSON file</p>
+</div></blockquote>
+</div></blockquote>
+<p>save( (CTextIO)self, (str)path) -&gt; None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.to_json" title="Permalink to this definition">#</a></dt>
+<dd><p>Return input/output data in JSON formatted string (compact mode).</p>
+<blockquote>
+<div><p>Returns:</p>
+<blockquote>
+<div><p>string: JSON formatted string</p>
+</div></blockquote>
+</div></blockquote>
+<p>to_json( (CTextIO)self) -&gt; str</p>
+<dl>
+<dt>to_json( (CTextIO)self, (object)options) -&gt; str :</dt><dd><p>Return input/output data in JSON formatted string. JSON format options can be set, possible values are:</p>
+<ul class="simple">
+<li><p>[‘json_format’, ‘compact’] (<strong>default</strong>)</p></li>
+<li><p>[‘json_format’, ‘indented’]</p></li>
+</ul>
+<p>Args:</p>
+<blockquote>
+<div><p>list of str: format-specific options encoded as pairs [option_name, option_value]</p>
+</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>string: JSON formatted string</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>to_json( (CTextIO)self, (object)options) -&gt; str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.pydataprocess.CTextIO.from_json">
+<span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">(CTextIO)self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">(str)json_str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span> <span class="pre">:</span></span></span><a class="headerlink" href="#ikomia.dataprocess.pydataprocess.CTextIO.from_json" title="Permalink to this definition">#</a></dt>
+<dd><p>Set input/output data from JSON formatted string.</p>
+<blockquote>
+<div><p>Args:</p>
+<blockquote>
+<div><p>str: data as JSON formatted string</p>
+</div></blockquote>
+</div></blockquote>
+<p>from_json( (CTextIO)self, (str)json_str) -&gt; None</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="ikomia.dataprocess.pydataprocess.CVideoIO.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">CVideoIO</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="ikomia.dataprocess.pydataprocess.CTextField.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">CTextField</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Ikomia SAS
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">CTextIO</a><ul>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO"><code class="docutils literal notranslate"><span class="pre">CTextIO</span></code></a><ul>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.__init__"><code class="docutils literal notranslate"><span class="pre">CTextIO.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.add_text_field"><code class="docutils literal notranslate"><span class="pre">CTextIO.add_text_field()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.clear_data"><code class="docutils literal notranslate"><span class="pre">CTextIO.clear_data()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.finalize"><code class="docutils literal notranslate"><span class="pre">CTextIO.finalize()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_graphics_io"><code class="docutils literal notranslate"><span class="pre">CTextIO.get_graphics_io()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_text_field_count"><code class="docutils literal notranslate"><span class="pre">CTextIO.get_text_field_count()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_text_field"><code class="docutils literal notranslate"><span class="pre">CTextIO.get_text_field()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.get_text_fields"><code class="docutils literal notranslate"><span class="pre">CTextIO.get_text_fields()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.init"><code class="docutils literal notranslate"><span class="pre">CTextIO.init()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.is_data_available"><code class="docutils literal notranslate"><span class="pre">CTextIO.is_data_available()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.load"><code class="docutils literal notranslate"><span class="pre">CTextIO.load()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.save"><code class="docutils literal notranslate"><span class="pre">CTextIO.save()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.to_json"><code class="docutils literal notranslate"><span class="pre">CTextIO.to_json()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.pydataprocess.CTextIO.from_json"><code class="docutils literal notranslate"><span class="pre">CTextIO.from_json()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    </body>
+</html>
