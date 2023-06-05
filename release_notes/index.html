@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="Dataset" href="../_autosummary/ikomia.dnn.dataset.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="TorchDatasetMapper" href="../_autosummary/ikomia.dnn.torch.datasetmapper.html" />
 
     <!-- Generated with Sphinx 6.2.1 and Furo 2023.03.27 -->
         <title>Release Notes - Ikomia API documentation</title>
@@ -183,18 +183,121 @@
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../modules.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.html">PyUtils</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ikomia.utils.pyutils.html">PyUtils</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.utils.pyutils.ApiLanguage.html">ApiLanguage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.utils.pyutils.CException.html">CException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.utils.pyutils.CMemoryInfo.html">CMemoryInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.utils.pyutils.CTimer.html">CTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.utils.pyutils.OSType.html">OSType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.utils.pyutils.PluginState.html">PluginState</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.utils.displayIO.html">DisplayIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.core.pycore.html">PyCore</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.core.task.html">Task</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.html">PyDataProcess</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.registry.html">Registry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.workflow.html">Workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.datadictIO.html">DatadictIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.dnntrain.html">DnnTrain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.datasetio.html">DatasetIO</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ikomia.core.pycore.html">PyCore</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.IODataType.html">IODataType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.MeasureId.html">MeasureId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CMeasure.html">CMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskIO.html">CWorkflowTaskIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskIOFactory.html">CWorkflowTaskIOFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskParam.html">CWorkflowTaskParam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.ActionFlag.html">ActionFlag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.TaskType.html">TaskType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTask.html">CWorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CWorkflowTaskWidget.html">CWorkflowTaskWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CPointF.html">CPointF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.GraphicsItem.html">GraphicsItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.GraphicsShape.html">GraphicsShape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CGraphicsItem.html">CGraphicsItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CGraphicsComplexPolygon.html">CGraphicsComplexPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CGraphicsEllipse.html">CGraphicsEllipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CGraphicsPoint.html">CGraphicsPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CGraphicsPolygon.html">CGraphicsPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CGraphicsPolyline.html">CGraphicsPolyline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CGraphicsRectangle.html">CGraphicsRectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CGraphicsText.html">CGraphicsText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.GraphicsEllipseProperty.html">GraphicsEllipseProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.GraphicsPointProperty.html">GraphicsPointProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.GraphicsPolygonProperty.html">GraphicsPolygonProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.GraphicsPolylineProperty.html">GraphicsPolylineProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.GraphicsRectProperty.html">GraphicsRectProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.GraphicsTextProperty.html">GraphicsTextProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.pycore.CGraphicsConversion.html">CGraphicsConversion</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ikomia.core.task.html">Task</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.core.task.TaskParam.html">TaskParam</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.pydataprocess.html">PyDataProcess</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CPluginProcessInterface.html">CPluginProcessInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CTaskFactory.html">CTaskFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CArrayIO.html">CArrayIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CBlobMeasureIO.html">CBlobMeasureIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDatasetIO.html">CDatasetIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CDataStringIO.html">CDataStringIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsInput.html">CGraphicsInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CGraphicsOutput.html">CGraphicsOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CImageIO.html">CImageIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegmentation.html">CInstanceSegmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CInstanceSegmentationIO.html">CInstanceSegmentationIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectKeypoints.html">CObjectKeypoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CKeypointLink.html">CKeypointLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CKeypointsIO.html">CKeypointsIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.NumericOutputType.html">NumericOutputType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CNumericIO.html">CNumericIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectMeasure.html">CObjectMeasure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetection.html">CObjectDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CObjectDetectionIO.html">CObjectDetectionIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CPathIO.html">CPathIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CSemanticSegmentationIO.html">CSemanticSegmentationIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CTextField.html">CTextField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CTextIO.html">CTextIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CVideoIO.html">CVideoIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetOutput.html">CWidgetOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.PlotType.html">PlotType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageTask.html">C2dImageTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.C2dImageInteractiveTask.html">C2dImageInteractiveTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CClassificationTask.html">CClassificationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CDnnTrainTask.html">CDnnTrainTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CIkomiaRegistry.html">CIkomiaRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CInstanceSegmentationTask.html">CInstanceSegmentationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CKeypointDetectionTask.html">CKeypointDetectionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CObjectDetectionTask.html">CObjectDetectionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CSemanticSegmentationTask.html">CSemanticSegmentationTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CTaskInfo.html">CTaskInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoTask.html">CVideoTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoOFTask.html">CVideoOFTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CVideoTrackingTask.html">CVideoTrackingTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.pydataprocess.CWorkflow.html">CWorkflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dataprocess.pydataprocess.CWidgetFactory.html">CWidgetFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.registry.html">Registry</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.registry.IkomiaRegistry.html">IkomiaRegistry</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.workflow.html">Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.workflow.Workflow.html">Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ikomia.dataprocess.datadictIO.html">DatadictIO</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.dataprocess.datadictIO.DataDictIO.html">DataDictIO</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ikomia.dnn.dnntrain.html">DnnTrain</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dnn.dnntrain.TrainProcess.html">TrainProcess</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ikomia.dnn.datasetio.html">DatasetIO</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummaryv/ikomia.dnn.datasetio.IkDatasetIO.html">IkDatasetIO</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Release Notes</a></li>
@@ -237,6 +340,45 @@
 <p>Version history of the Ikomia API.</p>
 <details>
   <summary>0.9.0</summary>
+<hr class="docutils" />
+<p>This release introduces many break changes as we change the naming convention of the Python bindings from the C++ core. The complete API is now in Snake Case style for all functions, there is no more difference between pure Python and C++ API. These changes may occur during the consolidation period of the API marked by the 0.x.x versions.</p>
+<p><strong>New features</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>OpenCV 4.7.0
+Python 3.10 support
+MLFlow 1.30
+Remove authentication to install and load algorithms from Ikomia HUB
+Algorithms lazy loading to speed up API initialization
+New base classes for common computer vision tasks:
+    object detection
+    semantic segmentation
+    instance segmentation
+    keypoints detection
+Add workflow text I/O
+Add internal algorithms: OpenCV Blur and StackBlur
+Add automatic conversion from instance segmentation I/O to semantic I/O
+</pre></div>
+</div>
+<p><strong>Improvements</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>New auto-completion system (ik module)
+New documentation
+Algorithm parameters are set from dict structure (not C++ structure anymore)
+Filtering process for object detection, instance segmentation and semantic segmentation outputs
+Handle print() function for many API objects
+System to find best video writer back-end and codec for video export
+displayIO module (now part of ikomia.utils)
+Warn user when an algorithm is not connected to any other algorithm in a workflow
+</pre></div>
+</div>
+<p><strong>Bug fixes</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Fix object detection graphics export
+Fix elapsed time computation for training workflows
+Fix JSON serialization of image I/O
+Fix wrong output filenames on batch processing
+Fix synchronous download method for workflow tasks
+...
+</pre></div>
+</div>
+<hr class="docutils" />
 </details>
 <details>
   <summary>0.8.1</summary>
@@ -281,7 +423,6 @@
 <li><p>…</p></li>
 </ul>
 <hr class="docutils" />
-<hr class="docutils" />
 </details>
 <ul class="simple">
 <li><p>0.7.0</p></li>
@@ -300,14 +441,14 @@
         
         <div class="related-pages">
           
-          <a class="prev-page" href="../_autosummary/ikomia.dnn.dataset.html">
+          <a class="prev-page" href="../_autosummary/ikomia.dnn.torch.datasetmapper.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Dataset</div>
+                <div class="title">TorchDatasetMapper</div>
                 
               </div>
             </a>

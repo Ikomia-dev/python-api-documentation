@@ -192,6 +192,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../_autosummary/_autosummary/ikomia.utils.pyutils.PluginState.html">PluginState</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.utils.pyqtutils.html">PyQtUtils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.utils.qtconversion.html">QtConversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.utils.displayIO.html">DisplayIO</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../_autosummary/ikomia.core.pycore.html">PyCore</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -295,6 +296,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.torch.models.html">Torchvision models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/ikomia.dnn.torch.datasetmapper.html">TorchDatasetMapper</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
@@ -438,7 +441,7 @@ We also specify the output folder path (<code class="docutils literal notranslat
 
 <span class="c1"># Add an Object Detection algorithm  </span>
 <span class="n">yolo</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">infer_yolo_v7</span><span class="p">(</span>
-        <span class="n">model_path</span><span class="o">=</span><span class="s2">&quot;output_folder/[timestamp]/weights/best.pt&quot;</span><span class="p">,</span> 
+        <span class="n">model_weight_file</span><span class="o">=</span><span class="s2">&quot;output_folder/[timestamp]/weights/best.pt&quot;</span><span class="p">,</span> 
         <span class="n">conf_thres</span><span class="o">=</span><span class="s2">&quot;0.4&quot;</span>
     <span class="p">),</span> 
     <span class="n">auto_connect</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
