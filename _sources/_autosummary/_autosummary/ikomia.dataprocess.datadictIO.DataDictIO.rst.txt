@@ -8,8 +8,7 @@ DataDictIO
    .. rubric:: Import
    .. code-block:: python
 
-
-            from ikomia.dataprocess.datadictIO import DataDictIO
+         from ikomia.dataprocess.datadictIO import DataDictIO
 
 
    .. rubric:: Overridden methods
