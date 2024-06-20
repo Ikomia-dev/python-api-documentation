@@ -24,7 +24,6 @@ CImageIO
         ~CImageIO.get_overlay_mask
         ~CImageIO.is_overlay_available
         ~CImageIO.set_channel_count
-        ~CImageIO.set_current_image
         ~CImageIO.set_image
         ~CImageIO.set_overlay_mask
 
@@ -68,7 +67,6 @@ CImageIO
     .. automethod:: load
     .. automethod:: save
     .. automethod:: set_channel_count
-    .. automethod:: set_current_image
     .. automethod:: set_image
     .. automethod:: set_overlay_mask
     .. automethod:: to_json
