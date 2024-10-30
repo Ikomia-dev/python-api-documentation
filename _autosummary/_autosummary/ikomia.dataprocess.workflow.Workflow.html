@@ -481,7 +481,10 @@ Derived from <a class="reference internal" href="ikomia.dataprocess.pydataproces
 <tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_parameters" title="ikomia.dataprocess.workflow.Workflow.set_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_parameters</span></code></a>(params[, task_obj, ...])</p></td>
 <td><p>Set task parameters as a simple key-value dict.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_workflow_parameters" title="ikomia.dataprocess.workflow.Workflow.set_workflow_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_workflow_parameters</span></code></a>(params)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_task_enabled" title="ikomia.dataprocess.workflow.Workflow.set_task_enabled"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_task_enabled</span></code></a>([task, name, index, enabled])</p></td>
+<td><p>Enable/Disable task for running.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_workflow_parameters" title="ikomia.dataprocess.workflow.Workflow.set_workflow_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_workflow_parameters</span></code></a>(params)</p></td>
 <td><p>Set workflow parameters.</p></td>
 </tr>
 </tbody>
@@ -1243,6 +1246,22 @@ You can get parameters keys for each by calling:</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.set_task_enabled">
+<span class="sig-name descname"><span class="pre">set_task_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><span class="pre">CWorkflowTask</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.set_task_enabled" title="Link to this definition">¶</a></dt>
+<dd><p>Enable/Disable task for running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task</strong> (<a class="reference internal" href="../_autosummaryv/ikomia.core.pycore.CWorkflowTask.html#ikomia.core.pycore.CWorkflowTask" title="ikomia.core.pycore.CWorkflowTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">CWorkflowTask</span></code></a> based object) – algorithm instance</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – algorithm unique name</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – zero-based index of the wanted task. If -1, the function modifies all candidates parameters.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em>) – True if algorithm has to be ran, False otherwise</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ikomia.dataprocess.workflow.Workflow.set_workflow_parameters">
 <span class="sig-name descname"><span class="pre">set_workflow_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ikomia.dataprocess.workflow.Workflow.set_workflow_parameters" title="Link to this definition">¶</a></dt>
 <dd><p>Set workflow parameters. Available parameters are those exposed when workflow is saved.
@@ -1436,6 +1455,7 @@ This feature could be interesting if you want to process a list of images and mo
 <li><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_input"><code class="docutils literal notranslate"><span class="pre">Workflow.set_input()</span></code></a></li>
 <li><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_output_folder"><code class="docutils literal notranslate"><span class="pre">Workflow.set_output_folder()</span></code></a></li>
 <li><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_parameters"><code class="docutils literal notranslate"><span class="pre">Workflow.set_parameters()</span></code></a></li>
+<li><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_task_enabled"><code class="docutils literal notranslate"><span class="pre">Workflow.set_task_enabled()</span></code></a></li>
 <li><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.set_workflow_parameters"><code class="docutils literal notranslate"><span class="pre">Workflow.set_workflow_parameters()</span></code></a></li>
 <li><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.save"><code class="docutils literal notranslate"><span class="pre">Workflow.save()</span></code></a></li>
 <li><a class="reference internal" href="#ikomia.dataprocess.workflow.Workflow.stop"><code class="docutils literal notranslate"><span class="pre">Workflow.stop()</span></code></a></li>
